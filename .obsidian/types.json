@@ -1,0 +1,18 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "CTRL": "number",
+    "FOR": "number",
+    "VOL": "number",
+    "VIT": "number",
+    "INT": "number",
+    "bonus VIT": "number",
+    "bonus VOL": "number",
+    "bonus FOR": "number",
+    "bonus CTRL": "number",
+    "bonus INT": "number",
+    "level": "number"
+  }
+}

@@ -1,0 +1,9 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - joueur == "visible"
+    order:
+      - file.name
+      - joueur

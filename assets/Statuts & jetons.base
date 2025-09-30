@@ -1,0 +1,12 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "gameplay/statuts & jetons"
+    order:
+      - file.name
+      - Négatif
+      - Ignoré si défendu
+    columnSize:
+      note.Négatif: 172

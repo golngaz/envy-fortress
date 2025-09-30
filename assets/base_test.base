@@ -1,0 +1,17 @@
+formulas:
+  test: if(file.ext == "png", 'c\'est une image', 'rien à voir')
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - joueur != "visible"
+    order:
+      - file.name
+      - file.folder
+      - file.ctime
+      - file.ext
+      - formula.test
+    sort:
+      - property: formula.test
+        direction: DESC
