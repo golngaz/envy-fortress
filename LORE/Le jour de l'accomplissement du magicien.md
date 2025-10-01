@@ -1,0 +1,3 @@
+Un jour, [[Le Magicien]] accompli un exploit, celui de créer des portails franchissable. dans le passé. Il avait réussit à en faire apparaître un par membre de sa famille. Son but était initialement de récolter des données sur ces personnes du passé. Mais il fit une découverte plus que surprenante, il semble qu'il ait récupérer **bien plus** de données que prévus.
+
+Après une nuit d'excitation et de folie lié à sa découverte, il pris une décision extrême afin de confirmer ses doutes. Cette décision lui permettrait de voir de ses yeux si les données recueilli semblaient bien être ce qu'il pensait, mais le condamnait peut être à quitter son enveloppe charnelle à tout jamais.
