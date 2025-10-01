@@ -1,6 +1,7 @@
 ---
 difficulty: 1
 ---
+
 > [!tip] Narration
 > Lorsque le sol tremble et que le monolithe s’illumine d’une lueur rouge sombre, trois silhouettes se détachent lentement de la pierre.  
 Leurs casques de chevaliers ternis par le temps résonnent d’un bruit métallique tandis qu’ils s’avancent à pas mesurés. Ce ne sont pas de simples animaux : ce sont les **lapins soldats**

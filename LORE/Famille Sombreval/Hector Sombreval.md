@@ -1,0 +1,3 @@
+> [!todo]
+> Représente l'orgueil
+
