@@ -10,7 +10,7 @@ Mais quand je pousse la porte de la maison, tout ça s’efface. Les équations,
 
 Alors, laisse-moi te les présenter.
 
-Il y a mon père, [[Hector Sombreval|Hector]], qui dirige la maison. Ma mère, [[Isolde Sombreval|Isolde]], mon grand frère [[Rafael Sombreval|Rafael]], toujours prêt à défendre les siens. Mon grand frère [[Elias Sombreval|Elias]], plein de vie et de rires. Ma tante [[Carmela Sombreval|Carmela]], qui vit avec nous depuis toujours. Et enfin [[Dulcina Sombreval|Dulcina]], ma petite sœur dont je dois prendre soin chaque matin avant d’aller travailler.
+Il y a mon père, [[Hector Sombreval|Hector]], qui dirige la maison. Ma mère, [[Isolde Sombreval|Isolde]], mon grand frère [[Rafael Sombreval|Rafael]] qui est le plus bruyant. Mon grand frère [[Elias Sombreval|Elias]], plein de vie et de rires. Ma tante [[Carmela Sombreval|Carmela]], qui vit avec nous depuis toujours. Et enfin [[Dulcina Sombreval|Dulcina]], ma petite sœur dont je dois prendre soin chaque matin avant d’aller travailler.
 
 Voilà ma famille. On n’a pas grand-chose, on est même rejetés par beaucoup. À cause de Lucien, mon grand-père, dont on raconte les crimes de guerre comme une tache indélébile, les gens nous évitent, nous méprisent. Mais ça n’a pas d’importance. Nous avons appris à nous suffire à nous-mêmes. Et malgré la pauvreté, malgré la honte qui colle à notre nom, nous sommes unis.
 
