@@ -1,3 +1,6 @@
+---
+joueur: visible
+---
 
 
 # Phases de combat

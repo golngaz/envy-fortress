@@ -24,7 +24,7 @@ views:
 
 ## Ne rien faire
 
-Le joueur peut décider de ne pas aller plus loin mais il remarquera qu'il fait de plus en plus chaud, le soleil semble devenir une fournaise et rougis, ils commencent à perdre des points de vies à cause des [[Température|jetons température]] si des [[Jet de sauvegarde|JdS]] de [[Constitution (CON)]]
+Le joueur peut décider de ne pas aller plus loin mais il remarquera qu'il fait de plus en plus chaud, le soleil semble devenir une fournaise et rougis, ils commencent à perdre des points de vies à cause des [[Jeton Température|jetons température]] si des [[Jet de sauvegarde|JdS]] de [[Constitution (CON)]]
 
 ## Toucher le monolithe
 

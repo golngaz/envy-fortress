@@ -1,7 +1,7 @@
 ---
 joueur: visible
-Ignoré si défendu: "false"
-Négatif: "true"
+ignore bouclier: false
+Négatif: true
 ---
 Dégât simple, n'applique pas forcément de brûlure (sauf si précisé).
 

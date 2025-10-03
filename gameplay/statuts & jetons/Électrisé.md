@@ -1,7 +1,8 @@
 ---
-Ignoré si défendu: "false"
-Négatif: "true"
 joueur: visible
+ignore bouclier: true
+Négatif: true
+max: 2
 ---
 Au début du tour le joueur effectue un [[Gameplay#Jet de sauvegarde|JdS]] 1D20, DD13.
 

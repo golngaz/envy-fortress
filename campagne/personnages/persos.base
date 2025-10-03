@@ -1,0 +1,47 @@
+formulas:
+  CON: note["bonus CON"] + note["classe"].asFile().properties["CON"]
+  CTRL: note["bonus CTRL"] + note["classe"].asFile().properties["CTRL"]
+  FOR: note["bonus FOR"] + note["classe"].asFile().properties["FOR"]
+  INT: note["bonus INT"] + note["classe"].asFile().properties["INT"]
+  VIT: note["bonus VIT"] + note["classe"].asFile().properties["VIT"]
+  VOL: note["bonus VOL"] + note["classe"].asFile().properties["VOL"]
+  Poid: 30 + 3 * formula.CON + note.level * 10
+  Vitesse: 1+(formula.VIT / 3 + (note.level/2).floor())
+  PV: 8 + 4 * note.level + formula.CON * note.level * 0.30
+  Tours: (formula.Vitesse/6).floor()
+  cases: formula.Vitesse%6
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder == "campagne/personnages"
+        - file.ext == "md"
+    order:
+      - file.name
+      - level
+      - classe
+      - formula.CON
+      - formula.CTRL
+      - formula.FOR
+      - formula.INT
+      - formula.VIT
+      - formula.VOL
+      - bonus CON
+      - bonus CTRL
+      - bonus FOR
+      - bonus INT
+      - bonus VIT
+      - bonus VOL
+      - formula.PV
+      - formula.Vitesse
+      - formula.Poid
+      - formula.Tours
+      - formula.cases
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.level: 43
+      formula.Tours: 77
+      note.bonus CON: 106

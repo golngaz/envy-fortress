@@ -28,4 +28,4 @@ Si jamais les joueurs trainent trop :
 > 
 > L’herbe verdoyante commence à jaunir par endroits, comme si le monde lui-même se desséchait sous vos yeux. 
 
-"Vous prenez tous un jeton [[Température]]" et l'on passe en tour par tour
+"Vous prenez tous un jeton [[Jeton Température]]" et l'on passe en tour par tour

@@ -13,6 +13,13 @@
     "bonus FOR": "number",
     "bonus CTRL": "number",
     "bonus INT": "number",
-    "level": "number"
+    "level": "number",
+    "ignore bouclier": "checkbox",
+    "Négatif": "checkbox",
+    "max": "number",
+    "PV CON bonus facteur": "number",
+    "PV bonus CON facteur": "number",
+    "poids": "number",
+    "test": "multitext"
   }
 }

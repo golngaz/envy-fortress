@@ -1,3 +1,6 @@
+---
+joueur: visible
+---
 # Principe  
 
 La roue comporte **6 cases** disposées en cercle. Il y a une flèche qui définit le début et la fin d'un **tour**. Le premier tour global, on place cette flèche au début de la case 1.

@@ -1,1 +1,4 @@
+---
+joueur: visible
+---
 Le tour global est effectué quand tous les personnages (ennemis + joueurs) ont joué 1 fois (même si leur tour a été passé)

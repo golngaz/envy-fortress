@@ -7,4 +7,4 @@ joueur: visible
 
 | DD (1D10) | Dégâts                                | Effet                              |
 | --------- | ------------------------------------- | ---------------------------------- |
-| 1+        | valeur du dé en [[Feu\|dégât de feu]] | applique 2 [[Brûlure]] à l'ennemi. |
+| 1+        | valeur du dé en [[Feu\|dégât de feu]] | applique 2 [[Jeton Brûlure]] à l'ennemi. |

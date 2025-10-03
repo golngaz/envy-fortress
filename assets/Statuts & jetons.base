@@ -7,6 +7,6 @@ views:
     order:
       - file.name
       - Négatif
-      - Ignoré si défendu
+      - max
     columnSize:
-      note.Négatif: 172
+      file.name: 1080

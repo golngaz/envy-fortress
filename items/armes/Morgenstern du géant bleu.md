@@ -1,5 +1,5 @@
 ---
-poids: "110"
+poids: 100
 ---
 Enorme massue, bien trop lourde pour le commun des mortels.
 

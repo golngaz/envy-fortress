@@ -65,5 +65,5 @@ This is an inline math expression $e^{2i\pi} = 1$.
 <iframe src="http://localhost:8025/" style="width:100%; height:500px;overflow:auto;"
 ```></iframe>
 
-![[base_test.base]]
+![[documents_pour_les_joueurs.base]]
 
