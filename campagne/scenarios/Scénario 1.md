@@ -43,7 +43,7 @@ Toucher le monolithe :
 >
 > L’espoir d’obtenir enfin des réponses se mêle à la curiosité brûlante qui vous dévore… mais l’imposante créature qui se dresse devant vous, armée de son arme monstrueuse, vous rappelle que ce passage ne se gagnera qu’au prix d’un affrontement. Et cet affrontement semble tenir davantage du miracle que de la simple victoire.
 
-2. [[combats/Le Soldat Bleu|Le Soldat bleu]]
+2. [[campagne/combats/Le Soldat Bleu|Le Soldat bleu]]
 
 Lorsque [[monstres/Le Soldat Bleu|Le Soldat Bleu]] est battu, Il se fige d'une matière qui semble être la même que celle du monolithe
 
