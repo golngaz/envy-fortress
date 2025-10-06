@@ -20,6 +20,7 @@
     "PV CON bonus facteur": "number",
     "PV bonus CON facteur": "number",
     "poids": "number",
-    "test": "multitext"
+    "test": "multitext",
+    "tours": "number"
   }
 }

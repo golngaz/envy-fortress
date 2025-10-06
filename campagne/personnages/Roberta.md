@@ -12,24 +12,19 @@ inventaire:
   - "[[Vieux baton]]"
   - "[[Morgenstern du géant bleu]]"
 ---
+# Passif
 
-```base
-formulas:
-  poids: note.inventaire.map(value.asFile().properties.poids).join(' - ')
-properties:
-  formula.poids:
-    displayName: les poids
-views:
-  - type: table
-    name: Table
-    filters:
-      and:
-        - file.folder == "campagne/personnages"
-        - file.ext == "md"
-    order:
-      - file.name
-      - poids
-      - formula.poids
+![[Le Mage#Passif]]
 
-```
+# Compétences
+
+![[Hall Humettes]]
+
+# Arme
+
+![[Vieux baton]]
+
+# Défense
+
+![[Reflet]]
 

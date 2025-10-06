@@ -23,3 +23,6 @@ views:
 
 ```
 
+
+![[exemple fiche perso.png|300]]
+

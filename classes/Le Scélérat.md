@@ -1,11 +1,11 @@
 ---
 joueur: visible
 CON: 0
-CTRL: 0
+CTRL: 4
 FOR: 0
 INT: 0
-VIT: 0
-VOL: 0
+VIT: 2
+VOL: 2
 ---
 
 Fourbe par nature, un scélérat n'est pas très vaillant. Cependant il possède un qualité qui manque à beaucoup : l'opportunisme.
