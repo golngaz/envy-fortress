@@ -17,7 +17,7 @@ Ronde pourtant délimité par une fin, le vide. Le tout est arrondis. Les joueur
 > 
 > La sensation est vertigineuse. Chaque pas près du bord vous donne l’impression d’être minuscule, prisonnier d’un monde clos, flottant au milieu de nulle part… sous l’œil impassible du monolithe bleu.
 
-Si jamais les joueurs trainent trop :
+Si jamais les joueurs traînent trop :
 
 > [!tip] Narration
 > Peu à peu, une lourdeur inhabituelle s’installe dans l’air. Au début, presque imperceptible… mais rapidement, vous sentez la température grimper autour de vous.  

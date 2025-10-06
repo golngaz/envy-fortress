@@ -47,8 +47,18 @@ Toucher le monolithe :
 
 Lorsque [[monstres/Le Soldat Bleu|Le Soldat Bleu]] est battu, Il se fige d'une matière qui semble être la même que celle du monolithe
 
+## Porte dorée
+
+Prendre la porte dorée nous amène dans une salle qui semble magique, coupée de tout plan physique, avec tout de même cette sensation de descendre comme dans un "ascenseur". 
+### Questions & mystères 
+* Insister sur le fait que l'ascenseur semble vraiment à part, il n'y a pas de murs, seulement une sorte de sol magique, quand la porte se ferme, tout mur disparait et on a l'impression que l'on tient juste sur sur une plateforme qui descend en empruntant un plan à part
+* Les joueurs pourraient tomber, s'il essayent de sauter, le joueur disparaît pour apparaître
+
+Arrivé en bas, les joueurs gagnent un niveau et arrive devant un panneau indiquant qu'à partir de ce point, toute mort devient définitive signée "Le Magicien".
+
 # Plan
 
 1. Toucher le monolithe
 2. Battre les lapins
 3. Battre le boss
+4. Prendre la porte dorée
