@@ -80,3 +80,108 @@ _« Ce qui est à toi doit être à moi. »_
 
 
 ![[Pasted image 20250925185050.png]]
+
+## ⚙️ 1. Cohérence systémique — donner un _coût narratif ou mécanique_ au soin
+
+### a) **Énergie vitale / corruption / contrepartie**
+
+- Les sorts de soin **épuisent la force vitale du lanceur** ou **déséquilibrent le flux magique** du groupe.  
+    → Par exemple : chaque soin hors combat génère un **malus temporaire** (fatigue, -1 à l’initiative, ou désavantage au prochain jet de concentration).  
+    → Ou encore : chaque utilisation hors combat augmente un **niveau de “corruption”** ou “déséquilibre astral” qui attire des créatures ou affaiblit la magie à venir.
+    
+
+### b) **Risque d’échec / de contrepartie**
+
+- Hors combat, soigner demande **un rituel plus long et risqué**, avec un **jet de réussite** : un échec donne un soin partiel ou un effet secondaire (douleur, cicatrice magique, souvenir douloureux…).
+    
+
+### c) **Ancrer les soins dans un cycle**
+
+- Tu peux introduire un **cycle de puissance magique** (marées magiques, phases lunaires, souffle des esprits, etc.) qui **limite le nombre de soins efficaces entre deux combats**.  
+    → Exemple : un personnage ne peut bénéficier de soins “pleins” qu’une fois par segment (ex. : matinée / après-midi / nuit).
+    
+
+---
+
+## 🏕️ 2. Approche diégétique — donner un sens _in-universe_ à la récupération
+
+### a) **Les sanctuaires (safe zones)**
+
+> Comme tes “épées de Dark Souls”, mais avec une logique interne.
+
+- Chaque “sanctuaire” ou “source de mana” **réveille le lien magique** des personnages.  
+    → Les sorts de soin n’ont **leur plein effet** que dans ces lieux (ailleurs, ils ne soignent qu’une petite portion).  
+    → Ces sanctuaires peuvent être rares, dangereux à atteindre, ou liés à une faction.
+    
+
+### b) **Soins liés à l’environnement**
+
+- Certaines zones ont **des résonances magiques** :  
+    → Forêt sacrée, ruines infusées de mana, campement béni, etc.  
+    → Le soin dépend du lieu : plus le lieu est “aligné” avec l’énergie du soigneur, plus le sort est puissant.  
+    Cela pousse les joueurs à réfléchir à _où_ se soigner.
+    
+
+### c) **Repos ritualisé**
+
+- Les personnages doivent **effectuer un rituel de repos** (méditation, offrandes, prières, alignement des flux).  
+    → Ce rituel prend un temps réel de jeu ou nécessite un composant (herbe rare, encens, offrande de mana…).  
+    → Cela crée une limite naturelle : impossible de se soigner n’importe où, n’importe quand.
+    
+
+---
+
+## 🧪 3. Économie et objets
+
+### a) **Potions, herbes, onguents**
+
+- Potions de soin ou bandages **raffinés mais limités** : disponibles via PNJ ou fabrication, mais avec rareté et coût.  
+    → Ça rend la ressource “temps de soin” ou “économie” plus tangible sans interdire les sorts.
+    
+
+### b) **Catalyseurs de soin**
+
+- Les sorts de soin nécessitent un **focus** (cristal, pierre, symbole, essence divine) qui se **vide à chaque session ou combat**, et qu’il faut **recharger**.  
+    → Ça justifie mécaniquement et narrativement la limite sans interdire le sort lui-même.
+    
+
+---
+
+## 💀 4. Variante plus “tension dramatique”
+
+Tu peux introduire un **état de blessure persistante** :
+
+- Chaque fois qu’un joueur tombe en combat, il gagne une **blessure grave** (fracture, choc, cicatrice spirituelle).
+    
+- Ces blessures **ne peuvent pas être soignées par magie standard**, seulement par des repos prolongés, un guérisseur PNJ, ou un rituel complet.  
+    → Ça garde les sorts de soin utiles (pour éviter la mort), mais empêche le full heal constant.
+    
+
+---
+
+## 💡 Exemple concret de combinaison :
+
+> Dans ton univers :
+
+- Les sorts de soin consomment de la **résonance vitale** : hors des “sources de flux”, ils ne restaurent que 25 % de leur effet.
+    
+- Les sanctuaires (avec un symbole récurrent, genre une épée de lumière, un arbre cristallin, une stèle d’obsidienne) **réinitialisent la résonance**.
+    
+- Les potions ou catalyseurs peuvent compenser ponctuellement.
+    
+- Certains lieux ou objets (amulette, rune, artefact) permettent de **retenir un peu de flux** pour un soin complet hors sanctuaire (une sorte de charge de secours).
+    
+
+---
+
+Souhaites-tu que je t’aide à concevoir **un système concret de récupération** (avec règles chiffrées, types de sanctuaires et mécaniques de soin hors combat) adapté à ton JDR ?  
+Si oui, donne-moi :
+
+1. Le **ton** de ton univers (dark fantasy, héroïque, magique, mythologique, etc.)
+    
+2. Le **nombre de classes** ou archétypes (pour adapter la logique du soin)
+    
+3. Si le système de combat est **tour par tour, en PA ou en narration libre**
+    
+
+Je te ferai un système cohérent, équilibré et diégétique.
