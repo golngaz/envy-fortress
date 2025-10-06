@@ -40,12 +40,14 @@ Le joueur peut faire 1 action par défaut, au choix
 
 * Utiliser un sort
 * Attaquer
-* Action contextuelle
-* Déplacement zone
+* Utiliser une potion
+* Passer son tour (+2 PA)
 
 # Fin du combat
 
 * Les PJ reçoivent les loots
 	* Pièces de bronze, argent ou or de chacun des ennemis
 	* Armes des ennemis
-* Les PJ gardent les
+	* loots des monstres + loot du combat
+
+* Les PJ gardent les PV actuels, ils peuvent retirer tous les jetons d'altération
