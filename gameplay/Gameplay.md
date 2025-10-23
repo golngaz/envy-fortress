@@ -63,7 +63,7 @@ Sauf indication contraire, un échec
 
 Utilisés pour marquer des protections, malédictions, avantages temporaires.
 
-![[Statuts & jetons.base]]
+![[Altérations.base]]
 
 
 # Points de vie

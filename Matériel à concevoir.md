@@ -4,7 +4,7 @@ Ces fiches doivent contenir l'inventaire mettre une croix devant pour les armes 
 
 # Jetons 
 
-![[Statuts & jetons.base]]
+![[Altérations.base]]
 
 Coller les logos sur les jetons, voir [[assets/images/jetons/jetons1.png]]
 

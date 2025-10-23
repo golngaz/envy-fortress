@@ -5,7 +5,7 @@ views:
     name: Table
     filters:
       and:
-        - file.folder == "combats"
+        - file.folder == "campagne/combats"
     order:
       - file.name
       - file.folder

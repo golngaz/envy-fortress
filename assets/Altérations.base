@@ -3,7 +3,7 @@ views:
     name: Table
     filters:
       and:
-        - file.folder == "gameplay/statuts & jetons"
+        - file.folder == "gameplay/Altérations"
     order:
       - file.name
       - Négatif
