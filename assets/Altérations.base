@@ -9,4 +9,5 @@ views:
       - Négatif
       - max
     columnSize:
-      file.name: 1080
+      file.name: 262
+      note.max: 296

@@ -6,5 +6,13 @@
       ],
       "key": "Numpad5"
     }
+  ],
+  "editor:toggle-source": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "R"
+    }
   ]
 }

@@ -1,8 +1,6 @@
 ---
 joueur: visible
 ---
-
-
 # Phases de combat
 
 Elle fonctionne en tour par tour, le joueur commence sauf indication contraire. 
@@ -57,7 +55,7 @@ Sauf indication contraire, un échec
 
 ### Jet de sauvegarde
 
-![[Jet de sauvegarde]]
+![[Jet de sauvegarde#^7688d0]]
 
 ### Jetons et statuts  
 
@@ -68,7 +66,7 @@ Utilisés pour marquer des protections, malédictions, avantages temporaires.
 
 # Points de vie
 
-Lorsqu'un PJ meurt en combat, il ne peut plus jouer le combat. (On peut le considéré comme "A terre")
+Lorsqu'un PJ meurt en combat, il ne peut plus jouer le combat. (On peut le considéré comme "A terre").
 S'il était mort lors d'un combat, il peut continuer l'aventure en dehors, mais garde ses PV à 1, et pourra combattre.
 S'il est mort en dehors du combat, il n'est plus disponible jusqu'à la prochaine "Safe zone" (il ne sera plus disponible dans les combats).
 
