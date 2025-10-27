@@ -3,7 +3,7 @@ joueur: visible
 CON: 0
 CTRL: 0
 FOR: 10
-INT: 0
+INT: 10
 VIT: 0
 VOL: 2
 ---
@@ -12,24 +12,22 @@ VOL: 2
   <img src="f1a5a8ad-d709-4b3b-8c51-78c758c6ce4e.png" width="250">
 </p>
 
-La lapin rouge aux yeux bleus sert d'exemple de fiche monstre que peut lire le MJ pour y appliquer ses effets
+La lapin rouge aux yeux bleus sert d'exemple de fiche monstre que peut lire le MJ pour y appliquer ses effets.
 
 > [!tip]
 > Les stats d'un ennemies sont utiles aux [[Jet de sauvegarde|JdS]]
 
 
+# Compétences
 
-# Attaques
+## Coup de boule (FOR)
 
-## Coup de boule
-
-
-| DD (1D20) | Effet        | Effet 2      | Effet 3        | Condition                            |
+| DD (1D20) | Attaque      | Attaque      | Effet          | Condition                            |
 | --------- | ------------ | ------------ | -------------- | ------------------------------------ |
-| 2+        | Dégats du dé |              |                |                                      |
-| 15+       | Dégats du dé | +5 dégats    | Brule la cible |                                      |
-| 20+       | Dégats du dé | +5 dégats    | Brule la cible |                                      |
-| 20+       | Dégats du dé | Dégats du dé | Brule la cible | a fait 10 ou moins le tour précédent |
+| 2+        | Dégâts du dé |              |                |                                      |
+| 15+       | Dégâts du dé | +5 dégâts    | Brule la cible |                                      |
+| 20+       | Dégâts du dé | +5 dégâts    | Brule la cible |                                      |
+| 20+       | Dégâts du dé | Dégâts du dé | Brule la cible | a fait 10 ou moins le tour précédent |
 
 <div style="page-break-before: always;"></div>
 
@@ -41,15 +39,15 @@ La lapin rouge aux yeux bleus sert d'exemple de fiche monstre que peut lire le M
 
 ## Feu Infernal
 
-| DD (1D5) | Effet       | Effet                        | [[Jet de sauvegarde\|JdS]]  |
-| -------- | ----------- | ---------------------------- | --------------------------- |
-| 2+       | dégât du dé | Applique 2 [[Jeton Brûlure]] | [[Constitution (CON)\|CON]] |
+| DD (1D5) | Effet       | Effet                        | [[Jet de sauvegarde\|JdS]]            |
+| -------- | ----------- | ---------------------------- | ------------------------------------- |
+| 2+       | dégât du dé | Applique 2 [[Jeton Brûlure]] | [[Constitution (CON)\|CON]] DD10 +INT |
 
 # Défense
 
 ## Tu as osé
 
-| DD (1D5) | Degât                    | Effet               | JdS                         |
+| DD (1D5) | Dégât                    | Effet               | JdS                         |
 | -------- | ------------------------ | ------------------- | --------------------------- |
 | 1+       | Inflige les dégâts du dé | Inflige une brûlure | [[Constitution (CON)\|CON]] |
 

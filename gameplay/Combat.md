@@ -4,7 +4,7 @@ joueur: visible
  
  # Intro
 
-Les PJ remettent la roue des PA à zero. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient.
+Les PJ remettent la roue des PA à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient.
 
 # [[Tour global]]
  

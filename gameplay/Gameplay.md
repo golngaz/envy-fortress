@@ -15,7 +15,6 @@ Ces attaque sont divisés en plusieurs catégories
 Les joueurs jouent selon un priorité lié à leur vitesse, voir [[Système de Vitesse (Roue d’Initiative)]].
 
 Sans dépassement, chaque personnage joue à son tour, une seule fois et indépendamment du nombre de joueurs alliés/ennemis.
-
 ### Attaques simples
 
 On jette des dés correspondants de l'attaque en question, au résultat, on ajoute les [[affinités]] du personnage, ainsi que ses [[bonus d'affinités]] (liés à des jetons de statuts, bonus permanents ou [[arme]]).
