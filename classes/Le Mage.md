@@ -15,6 +15,8 @@ Plutôt centré sur le contrôle de la partie, le mage n'a pas le droit à l'err
 > [!abstract] Passif
 > **Préparé** : au début du tour, gagne un PA supplémentaire
 
+^49332a
+
 # Arme de départ
 
 ![[Vieux baton]]

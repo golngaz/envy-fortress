@@ -12,3 +12,6 @@ Leurs casques de chevaliers, ternis par le temps, résonnent d’un bruit métal
   
 3 [[Lapin soldat|lapins soldat]] apparaissent et sortent du monolithe. Ils n'attaquent pas immédiatement mais vous regardent d'un air de défiance.
 
+![[gardiens-du-monolithe.base]]
+![[gardiens-du-monolithe.base]]
+![[gardiens-du-monolithe.base]]

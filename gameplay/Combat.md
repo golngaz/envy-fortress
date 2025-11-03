@@ -4,11 +4,11 @@ joueur: visible
  
  # Intro
 
-Les PJ remettent la roue des PA à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient.
+Les PJ remettent la roue des PA à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient. La [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] est réinitialisé face à la première case.
 
 # [[Tour global]]
  
- ![[Tour global]]
+ ![[Tour global#^c5a7a4]]
 
 ## Déplacements
 

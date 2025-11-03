@@ -1,11 +1,12 @@
 ---
 joueur: visible
-CON: 0
+CON: 10
 CTRL: 0
 FOR: 10
 INT: 10
 VIT: 0
 VOL: 2
+level: 10
 ---
 
 <p style="text-align:center;">

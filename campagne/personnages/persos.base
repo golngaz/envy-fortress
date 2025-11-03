@@ -6,10 +6,19 @@ formulas:
   VIT: note["bonus VIT"] + note["classe"].asFile().properties["VIT"]
   VOL: note["bonus VOL"] + note["classe"].asFile().properties["VOL"]
   Poid: 30 + 3 * formula.CON + note.level * 10
-  Vitesse: 1+(formula.VIT / 3 + (note.level/2).floor())
-  PV: 8 + 4 * note.level + formula.CON * note.level * 0.30
-  Tours: (formula.Vitesse/6).floor()
-  cases: formula.Vitesse%6
+  PV: (8 + 4 * note.level + formula.CON * note.level * 0.30).floor()
+  Tours: (formula["cases ABS"]/6).floor()
+  cases: formula["cases ABS"]%6
+  +CON: (formula.CON/6).floor()
+  cases ABS: (1 + formula.VIT/3).floor()
+  +FOR: (formula.FOR/6).floor()
+  +INT: (formula.INT/6).floor()
+  +VIT: (formula.VIT/6).floor()
+  +VOL: (formula.VOL/6).floor()
+  +CTRL: (formula.CTRL/6).floor()
+properties:
+  formula.Tours:
+    displayName: tours
 views:
   - type: table
     name: Table
@@ -22,26 +31,25 @@ views:
       - level
       - classe
       - formula.CON
+      - formula.+CON
       - formula.CTRL
+      - formula.+CTRL
       - formula.FOR
+      - formula.+FOR
       - formula.INT
+      - formula.+INT
       - formula.VIT
+      - formula.+VIT
       - formula.VOL
-      - bonus CON
-      - bonus CTRL
-      - bonus FOR
-      - bonus INT
-      - bonus VIT
-      - bonus VOL
+      - formula.+VOL
       - formula.PV
-      - formula.Vitesse
-      - formula.Poid
-      - formula.Tours
       - formula.cases
+      - formula.Tours
+      - formula.Poid
+      - formula.cases ABS
     sort:
       - property: file.name
         direction: ASC
     columnSize:
-      note.level: 43
+      note.level: 64
       formula.Tours: 77
-      note.bonus CON: 106

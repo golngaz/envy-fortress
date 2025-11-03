@@ -1,7 +1,7 @@
 ---
 classe: "[[Le Mage]]"
 bonus CON: 0
-bonus VIT: 0
+bonus VIT: 5
 bonus CTRL: 2
 bonus FOR: 0
 bonus VOL: 0
@@ -14,17 +14,15 @@ inventaire:
 ---
 # Passif
 
-![[Le Mage#Passif]]
+![[Le Mage#^49332a]]
 
 # Compétences
 
-![[Hall Humettes]]
-
+![[Hall Humettes#^6345ae]]
 # Arme
 
-![[Vieux baton]]
-
+![[Vieux baton#^471cc6]]
 # Défense
 
-![[Reflet]]
+![[Reflet#^80b9ab]]
 

@@ -25,6 +25,7 @@ Chaque pion (joueur ou ennemi) avance sur la roue à chaque [[tour global]] selo
 # Détermination de l’ordre de jeu  
   
 Au **début de chaque tour global**, l’ordre des tours individuels est déterminé par son ordre sur la roue : le joueur le plus éloigné de la flèche commence et le joueur collé à la flèche sera dernier.
+Le premier tour, tout les joueurs et ennemis lancent 1D6 pour déterminer la case de départ. On ajoute à ce dé le [[Bonus de nombre de cases]]
 
 ## En cas d’égalité :  
 * Celui ayant la **Vitesse la plus élevée** est prioritaire.  

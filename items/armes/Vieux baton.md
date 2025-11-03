@@ -9,3 +9,6 @@ poids: 12
 | DD (1D5) | Dégâts       | Spécial                  |
 | -------- | ------------ | ------------------------ |
 | 1+       | Valeur du dé | +1 au dégats de type feu |
+
+^471cc6
+

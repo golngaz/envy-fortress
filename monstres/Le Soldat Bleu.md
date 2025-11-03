@@ -5,6 +5,7 @@ FOR: 10
 INT: 0
 VIT: 0
 VOL: 2
+level: 1
 ---
 
 Au début du tour, il a une apparence de géant, mais vulnérable, il a aussi un simple casque de soldat qui est bleu. Mais celui ci semble magique. Après un tour ou les joueurs l'attaque, il s'enveloppe d'une armure spirituelle bleu un peu visible à l’œil nu.

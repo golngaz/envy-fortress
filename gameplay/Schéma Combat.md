@@ -22,7 +22,7 @@ flowchart TD
   G6 -->|Sort| G7["Utiliser un sort"]
   G6 -->|Attaquer| G8["Attaquer"]
   G6 -->|Potion| G9["Utiliser une potion"]
-  G6 -->|Passer| G10["Se concentrer (+2 PA)"]
+  G6 -->|Se concentrer| G10["Se concentrer (+2 PA)"]
   G7 --> H["Fin du tour du joueur"]
   G8 --> H
   G9 --> H
