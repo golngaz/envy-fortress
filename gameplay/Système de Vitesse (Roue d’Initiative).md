@@ -38,7 +38,7 @@ Le premier tour, tout les joueurs et ennemis lancent 1D6 pour déterminer la cas
 Lorsqu'un ou plusieurs pions dépassent la flèche de départ, ils rejouent immédiatement. Si un pion fait plusieurs tours, il peut rejouer autant de fois que nécessaires.
 
 > [!success]  Je confirme  
-  Il est en effet possible qu’un joueur ou un ennemi joue plusieurs fois d’affilée, voire presque à l’infini, en combinant ses actions avec des compétences de [[Vitesse (VIT)]]. Il suffit simplement d’être plus rapide. (ou de disposer d’une défense capable de contre-attaquer efficacement ?)  
+  Il est en effet possible qu’un joueur ou un ennemi joue plusieurs fois d’affilée, voire presque à l’infini, en combinant ses actions avec des sorts de [[Vitesse (VIT)]]. Il suffit simplement d’être plus rapide. (ou de disposer d’une défense capable de contre-attaquer efficacement ?)  
 > > [!tip] Imagine cette situation…    
 > > Tu joues au *jeu des mains*, où l’objectif est de taper la main de ton adversaire. Mais il est beaucoup plus rapide que toi : tant qu’il esquive, tu ne peux jamais frapper. Il enchaîne les mouvements et frappe en boucle dès que tu es hors de portée, te laissant complètement bloqué tant que ta vitesse est insuffisante.
 

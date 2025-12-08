@@ -19,7 +19,7 @@ La lapin rouge aux yeux bleus sert d'exemple de fiche monstre que peut lire le M
 > Les stats d'un ennemies sont utiles aux [[Jet de sauvegarde|JdS]]
 
 
-# Compétences
+# Sorts
 
 ## Coup de boule (FOR)
 

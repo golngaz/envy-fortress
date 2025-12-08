@@ -31,16 +31,16 @@ Le joueur peut faire 1 action par défaut, au choix
 * Utiliser un sort
 * Attaquer
 * Utiliser une potion
-* Passer son tour (+2 PA)
+* Se concentrer (+2 PA)
 
 ### Ennemis
 
 1. L'ennemi attaque un joueur aléatoirement en [[Mode normal]]. C'est le MJ qui choisie la meilleure décision d'après lui en [[Mode difficile]].
-2. L'ennemi lance un dé pour déterminer une attaque s'il en a plusieurs (attaque avec son arme ou compétence, le choix est précisé sur la fiche du monstre). S'il n'en a qu'une, il l'utilise à chaque tour.
+2. L'ennemi lance un dé pour déterminer une attaque s'il en a plusieurs (attaque avec son arme ou sort, le choix est précisé sur la fiche du monstre). S'il n'en a qu'une, il l'utilise à chaque tour.
 	* Si le joueur est touché, il applique les altérations d'état s'il y en a en posant le jeton correspondant dans le tableau "Etat" dans la fiche de personnage, sur la ligne correspondante au nombre de tours à appliquer. (Certaines altérations nécessiteront des jets de dés).
 	* Si le joueur n'est pas touché car il l'a bloqué/esquivé, les altérations ne s'appliquent généralement pas, sauf si précisé. Dans le cas des attaques bloqués, cela dépends des types d'[[Altérations.base|Altérations]].
 
-3. Le joueur ciblé peut maintenant utiliser sa compétence spéciale de défense. Généralement, il lance un dé selon le DD affiché et applique les effets annoncés dans le tableau.
+3. Le joueur ciblé peut maintenant utiliser son sort spécial de défense. Généralement, il lance un dé selon le DD affiché et applique les effets annoncés dans le tableau.
 
 # Fin du combat
 

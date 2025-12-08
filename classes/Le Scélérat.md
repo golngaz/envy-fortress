@@ -14,7 +14,7 @@ Le scélérat possède un don pour les fourberies mais peut prendre rapidement d
 
 
 > [!abstract] Passif
-> **Fourberie** : s'il a utilisé une compétence, il peut tout de même attaquer en infligeant la moitié des dégâts (après défense)
+> **Fourberie** : s'il a utilisé un sort, il peut tout de même attaquer en infligeant la moitié des dégâts (après défense)
 
 
 > [!todo]

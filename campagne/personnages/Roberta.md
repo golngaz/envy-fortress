@@ -16,7 +16,7 @@ inventaire:
 
 ![[Le Mage#^49332a]]
 
-# Compétences
+# Sorts
 
 ![[Hall Humettes#^6345ae]]
 # Arme
