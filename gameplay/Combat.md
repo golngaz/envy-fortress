@@ -19,7 +19,7 @@ Les PJ remettent la roue des PA à zéro. Les points de vies ne changent pas en 
 ### Joueur
 
 1. Le joueur gagne +1 PA
-2. Le joueur applique les effets des différents jetons de statuts (dégâts, altérations, températures, etc.). Ainsi que les bonus lui permettant de gagner des PA ou autre.
+2. Le joueur applique les effets des différents jetons de statuts (dégâts, altérations, températures, etc.). Ainsi que les bonus lui permettant de gagner des PA ou autre gains. On applique les effets dans l'ordre désiré par le joueur.
 3. Il décale les jetons sur la fiche d'un tour en dessous pour chaque jeton. (Retire le jeton, lorsqu'il arrive à 0).
 4. Il gagne 1 PA + 1 PA par jeton PA. En comptant les temporaires et les permanents.
 5. Il peut effectuer une [[#Action]].
@@ -28,7 +28,7 @@ Les PJ remettent la roue des PA à zéro. Les points de vies ne changent pas en 
 
 Le joueur peut faire 1 action par défaut, au choix
 
-* Utiliser un sort
+* Utiliser un sort (-x PA)
 * Attaquer
 * Utiliser une potion
 * Se concentrer (+2 PA)
@@ -40,7 +40,15 @@ Le joueur peut faire 1 action par défaut, au choix
 	* Si le joueur est touché, il applique les altérations d'état s'il y en a en posant le jeton correspondant dans le tableau "Etat" dans la fiche de personnage, sur la ligne correspondante au nombre de tours à appliquer. (Certaines altérations nécessiteront des jets de dés).
 	* Si le joueur n'est pas touché car il l'a bloqué/esquivé, les altérations ne s'appliquent généralement pas, sauf si précisé. Dans le cas des attaques bloqués, cela dépends des types d'[[Altérations.base|Altérations]].
 
-3. Le joueur ciblé peut maintenant utiliser son sort spécial de défense. Généralement, il lance un dé selon le DD affiché et applique les effets annoncés dans le tableau.
+3. Le joueur ciblé **peut** maintenant utiliser son sort spécial de défense. Généralement, il lance un dé selon le DD affiché et applique les effets annoncés dans le tableau.
+
+## Dépense des PA
+
+Le coût en PA est écrit sur le sort en question, sauf indication contraire, chaque utilisation nécessite d'avoir les PA nécessaires, les sorts de défenses peuvent coûter des PA où avoir des effets supplémentaires en dépensant des PA.
+
+## Commandes de contrôle
+
+todo (possibilité de "tricher" avec une compétence unique à ajouter au niveau 2 du personnage).
 
 # Fin du combat
 
