@@ -18,7 +18,7 @@ Les PJ remettent la roue des PA à zéro. Les points de vies ne changent pas en 
 
 ### Joueur
 
-1. Le joueur gagne +1 PA
+1. Le joueur gagne +1 PA (+ modificateur [[Intelligence (INT)]] PA )
 2. Le joueur applique les effets des différents jetons de statuts (dégâts, altérations, températures, etc.). Ainsi que les bonus lui permettant de gagner des PA ou autre gains. On applique les effets dans l'ordre désiré par le joueur.
 3. Il décale les jetons sur la fiche d'un tour en dessous pour chaque jeton. (Retire le jeton, lorsqu'il arrive à 0).
 4. Il gagne 1 PA + 1 PA par jeton PA. En comptant les temporaires et les permanents.
@@ -29,9 +29,26 @@ Les PJ remettent la roue des PA à zéro. Les points de vies ne changent pas en 
 Le joueur peut faire 1 action par défaut, au choix
 
 * Utiliser un sort (-x PA)
-* Attaquer
+* [[Attaquer]]
 * Utiliser une potion
 * Se concentrer (+2 PA)
+
+#### Action bonus
+
+Le joueur peut aussi utiliser son sort de [[Shell Control]]
+
+##### Utiliser un sort
+
+Le joueur peut utiliser un sort déjà équipé afin d'attaquer un ennemi préalablement désigné par le joueur. Le joueur dépense le coût en PA du sort à utiliser.
+ Il est nécessaire de regarder les conditions éventuelles du sort, chaque sort est unique.
+
+##### Attaquer
+
+![[Attaquer#^9f4a2d]]
+
+##### se concentrer
+
+Passe son tour au joueur et gagne 2 PA.
 
 ### Ennemis
 
