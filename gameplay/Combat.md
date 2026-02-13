@@ -35,20 +35,36 @@ Le joueur peut faire 1 action par défaut, au choix
 
 #### Action bonus
 
-Le joueur peut aussi utiliser son sort de [[Shell Control]]
+Le joueur peut aussi utiliser son sort de [[Shell Control]] s'il consomme les points de [[Shell Control]] qu'il a accumulé.
+
 
 ##### Utiliser un sort
 
 Le joueur peut utiliser un sort déjà équipé afin d'attaquer un ennemi préalablement désigné par le joueur. Le joueur dépense le coût en PA du sort à utiliser.
  Il est nécessaire de regarder les conditions éventuelles du sort, chaque sort est unique.
 
+> [!tip] Info
+> Le coût en PA est écrit sur le sort en question, sauf indication contraire, chaque utilisation nécessite d'avoir les PA nécessaires, les sorts de défenses peuvent coûter des PA où avoir des effets supplémentaires en dépensant d'éventuels PA.
+
 ##### Attaquer
 
 ![[Attaquer#^9f4a2d]]
 
-##### se concentrer
+
+##### Se concentrer
 
 Passe son tour au joueur et gagne 2 PA.
+
+
+#### Défense ennemie
+
+Après une attaque ou un sort, l'ennemi utilise sa compétence de défense s'il en a une et la résout selon le tableau (l'ennemi pourra alors contre attaquer, renvoyer une partie des dégâts, attaquer à chaque dégâts reçus, ou simplement **réduire** tout ou parti des dégâts qu'il allait recevoir).
+L'ennemi utilise forcément sa défense en [[Mode normal]] et le MJ peut décider de ne pas l'utiliser en [[Mode difficile]]. Il peut ou doit l'utiliser si un ennemi du même camp l'attaque. Il en est de même pour les [[Jet de sauvegarde|Jets de sauvegardes]], que l'ennemi doit/peut (selon la difficulté) lancer pour les sorts le permettant.
+
+#### Défense
+
+Le joueur possède aussi une unique compétence de défense qu'il aura équipé au préalable. Le joueur **peut** résoudre sa compétence de défense, comme les ennemis, et contrer,  renvoyer, réduire etc. en réaction à une attaque (ennemi comme allié).
+Généralement, il lance un dé selon le DD affiché et applique les effets annoncés dans le tableau.
 
 ### Ennemis
 
@@ -57,16 +73,8 @@ Passe son tour au joueur et gagne 2 PA.
 	* Si le joueur est touché, il applique les altérations d'état s'il y en a en posant le jeton correspondant dans le tableau "Etat" dans la fiche de personnage, sur la ligne correspondante au nombre de tours à appliquer. (Certaines altérations nécessiteront des jets de dés).
 	* Si le joueur n'est pas touché car il l'a bloqué/esquivé, les altérations ne s'appliquent généralement pas, sauf si précisé. Dans le cas des attaques bloqués, cela dépends des types d'[[Altérations.base|Altérations]].
 
-3. Le joueur ciblé **peut** maintenant utiliser son sort spécial de défense. Généralement, il lance un dé selon le DD affiché et applique les effets annoncés dans le tableau.
-
-## Dépense des PA
-
-Le coût en PA est écrit sur le sort en question, sauf indication contraire, chaque utilisation nécessite d'avoir les PA nécessaires, les sorts de défenses peuvent coûter des PA où avoir des effets supplémentaires en dépensant des PA.
-
-## Commandes de contrôle
-
-todo (possibilité de "tricher" avec une compétence unique à ajouter au niveau 2 du personnage).
-
+3. Si le joueur ciblé est attaqué par une attaque ou un sort, il **peut** maintenant utiliser son sort spécial de défense. Certains sorts possèdent des [[Jet de sauvegarde|Jets de sauvegardes]] à réussir afin d'éviter un sort, le joueur **peut** annuler l'effet d'un sort s'il réussi son jet.
+# ![[Shell Control]]
 # Fin du combat
 
 * Les PJ reçoivent les loots
@@ -75,3 +83,4 @@ todo (possibilité de "tricher" avec une compétence unique à ajouter au niveau
 	* loots des monstres + loot du combat
 
 * Les PJ gardent les PV actuels, ils peuvent retirer tous les jetons d'altération
+* Les PJ gardent leurs points de [[Shell Control]].

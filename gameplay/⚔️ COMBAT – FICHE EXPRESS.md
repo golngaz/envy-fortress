@@ -27,6 +27,9 @@
 🗡️ Attaquer  
 🧪 Potion  
 🧠 Concentration (+2 PA, skip)
+🛡️ Défense spéciale si ennemi ciblé (+ JdS)
+🛡️ Bloqué/esquivé = pas d’alté (sauf exception) 
+💥 Touché = dégâts + altérations/effets
 
 🎁 **Bonus** : Shell Control
 
@@ -39,9 +42,9 @@
 - 🧠 difficile = MJ
 
 ⚔️ Attaque (dé si choix)  
-💥 Touché = dégâts + altérations  
+🛡️ Défense spéciale si joueur ciblé (+ JdS)
 🛡️ Bloqué/esquivé = pas d’alté (sauf exception)  
-🛡️ Défense spéciale joueur possible (jet DD)
+💥 Touché = dégâts + altérations/effets
 
 ---
 
