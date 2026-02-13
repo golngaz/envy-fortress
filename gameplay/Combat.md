@@ -4,7 +4,7 @@ joueur: visible
 
 # Intro
 
-Les PJ remettent la roue des PA à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient. La [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] est réinitialisé face à la première case.
+Les PJ remettent les PA à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient. La [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] est réinitialisé face à la première case.
 
 # [[Tour global]]
  
@@ -71,7 +71,7 @@ Généralement, il lance un dé selon le DD affiché et applique les effets anno
 1. L'ennemi attaque un joueur aléatoirement en [[Mode normal]]. C'est le MJ qui choisie la meilleure décision d'après lui en [[Mode difficile]].
 2. L'ennemi lance un dé pour déterminer une attaque s'il en a plusieurs (attaque avec son arme ou sort, le choix est précisé sur la fiche du monstre). S'il n'en a qu'une, il l'utilise à chaque tour.
 	* Si le joueur est touché, il applique les altérations d'état s'il y en a en posant le jeton correspondant dans le tableau "Etat" dans la fiche de personnage, sur la ligne correspondante au nombre de tours à appliquer. (Certaines altérations nécessiteront des jets de dés).
-	* Si le joueur n'est pas touché car il l'a bloqué/esquivé, les altérations ne s'appliquent généralement pas, sauf si précisé. Dans le cas des attaques bloqués, cela dépends des types d'[[Altérations.base|Altérations]].
+	* Si le joueur n'est pas touché car il l'a bloqué/esquivé/réduit 100% des dégâts, les altérations ne s'appliquent généralement pas, sauf si précisé. Dans le cas des attaques bloqués, cela dépends des types d'[[Altérations.base|Altérations]].
 
 3. Si le joueur ciblé est attaqué par une attaque ou un sort, il **peut** maintenant utiliser son sort spécial de défense. Certains sorts possèdent des [[Jet de sauvegarde|Jets de sauvegardes]] à réussir afin d'éviter un sort, le joueur **peut** annuler l'effet d'un sort s'il réussi son jet.
 # ![[Shell Control]]
