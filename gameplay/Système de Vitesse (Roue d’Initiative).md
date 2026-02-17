@@ -3,14 +3,14 @@ joueur: visible
 ---
 # Principe  
 
-La roue comporte **6 cases** disposées en cercle. Il y a une flèche qui définit le début et la fin d'un **tour**. Le premier tour global, on place cette flèche au début de la case 1.
+La roue comporte **6 cases** disposées en cercle. Il y a une [[Système de Vitesse (Roue d’Initiative)#Flèche|Flèche]] qui définit le début et la fin d'un **tour**. Le premier tour global, on place cette flèche au début de la case 1.
 Chaque pion (joueur ou ennemi) avance sur la roue à chaque [[tour global]] selon sa **valeur de Vitesse** :  
 - **Vitesse de base = +0** → avance de **1 case par tour**. 
 - Si vitesse finalement négative, alors le pion ne bouge pas.
 
 
 > [!example]    
-> Vitesse +2 → avance de **3 cases par tour** (1 de base + 2 bonus).    
+> Vitesse +2 (VIT+2) → avance de **3 cases par tour** (1 de base + 2 bonus).    
 > Vitesse +8 → avance de **9 cases par tour**, soit **1 tour complet (6) + 3 cases** (modulo 6).
 
 1. La flèche de départ se replace immédiatement sur la case du joueur le plus lent qu'elle marquait déjà. (c'est le joueurs le plus lent qui va alors toujours définir le début et la fin d'un tour à chaque tour global).
@@ -21,7 +21,10 @@ Chaque pion (joueur ou ennemi) avance sur la roue à chaque [[tour global]] selo
 > Un joueur A est sur la case 2 et la flèche sur la case 4 avec le joueur B. Le joueur B avance de 2 case et le joueur A de 3. Le joueur A se retrouve en case 5, le joueur B en case 6, la flèche est alors déplacée sur la case 5.
 
 ---  
-  
+# Flèche
+
+Indicateur déterminant le début du tour sur la roue, elle se déplace en suivant le dernier joueur.
+
 # Détermination de l’ordre de jeu  
   
 Au **début de chaque tour global**, l’ordre des tours individuels est déterminé par son ordre sur la roue : le joueur le plus éloigné de la flèche commence et le joueur collé à la flèche sera dernier.
@@ -44,6 +47,8 @@ Lorsqu'un ou plusieurs pions dépassent la flèche de départ, ils rejouent imm�
 
 > [!note] Note
 > Les égalités fonctionnent de la même manière que [[#En cas d’égalité|précédemment]] (faire 2 tours et tomber sur la même case qu'un joueur qui n'en a fait qu'un ne constitue pas une égalité).
+
+# ![[Repousser]]
 
 # Résumé
 

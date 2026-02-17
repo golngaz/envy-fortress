@@ -1,5 +1,6 @@
 
-
+> [!danger] Note MJ
+> Le départ du premier scénario est un peu scripté, les joueurs peuvent faire peu de choses et dont finalement pressé par le temps. Avant d'entrer dans la forteresse, ils sont injecté par un programme qui s'occupe de les cloner en boucle pour tenter de les "inséminer" de force dans la forteresse. S'il meurent, il réapparaîtrons en boucle, seul le gardien des lieux (trop fort) garde des PV sans changement. Il représentent un changement, une brisure dans un espace hors du temps figé depuis l'équivalent de siècles ou millénaires. Bref ils peuvent même tenter un suicide, il réapparaîtrons toujours au nord
 # Introduction
 
 Vous vous retrouvez dans une salle mystique, vous demandant de choisir votre classe, vous avez à votre disposition : 
@@ -18,7 +19,7 @@ views:
 ```
 
 
-![[Plaine de l'ennui (Toit)]]
+![[Plaine de l'ennui (Couronne de la forteresse)]]
 
 # Options
 

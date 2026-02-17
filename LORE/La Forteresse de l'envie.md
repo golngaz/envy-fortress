@@ -5,5 +5,5 @@ Une **forteresse immense et ancienne** flotte majestueusement dans le **vide d�
 Elle est composée de six étages.
 
 
-# [[Plaine de l'ennui (Toit)]]
+# [[Plaine de l'ennui (Couronne de la forteresse)]]
 # [[Le palais d'Icare]]

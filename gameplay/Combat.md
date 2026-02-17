@@ -2,13 +2,13 @@
 joueur: visible
 ---
 
-# Intro
+# Introduction
 
-Les PJ remettent les PA à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient. La [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] est réinitialisé face à la première case.
+Les PJ remettent les PA à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient, de même pour les points de [[Shell Control]]. La [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] est réinitialisé sur la première case.
 
-# [[Tour global]]
+# [[tour global]]
  
- ![[Tour global#^c5a7a4]]
+ ![[tour global#^c5a7a4]]
 
 ## Déplacements
 
@@ -65,6 +65,28 @@ L'ennemi utilise forcément sa défense en [[Mode normal]] et le MJ peut décide
 
 Le joueur possède aussi une unique compétence de défense qu'il aura équipé au préalable. Le joueur **peut** résoudre sa compétence de défense, comme les ennemis, et contrer,  renvoyer, réduire etc. en réaction à une attaque (ennemi comme allié).
 Généralement, il lance un dé selon le DD affiché et applique les effets annoncés dans le tableau.
+
+##### Jet de défense
+
+Dépend de la défense du personnage, en général il est possible de diviser/bloquer un certains nombre de dégâts selon les différentes conditions et DD annoncés.
+
+Les arrondis se feront toujours supérieur
+chaque ligne remplace la précédente sur **la même colonne**. Si la case est vide, elle **applique** la ligne précédente sur la même colonne
+
+> [!example]
+> 
+> 
+> | DD (1D20)  | Effet             |     Effet              |
+> | --- | ----------------- | ----------------- |
+> | 5+  | bloque le nombre  |                   |
+> | 8+  |      bloque le nombre            | 1 Brûlure à l'attaquant |
+> | 11+ | 1/2 dégats        | 2 Brûlures à l'attaquant                  |
+> | 20+ | Annule les dégats | Soigne de 5       |
+> 
+> * Sur un 20 à défendre, si le personnage lance un 13, il va recevoir effectivement 10 dégats et aura appliqué 2 brûlures à l'attaquant
+> * Si le personnage arrive à faire un 20, les dégât sont annulés et il se soigne à la place de 5. L'attaquant ne sera **pas** brûlé
+> * sur un 9, le joueur bloque 9 et applique une brûlure à l'attaquant
+> * Sur un 1, le joueur le bloque rien et n'applique aucun effet
 
 ### Ennemis
 
