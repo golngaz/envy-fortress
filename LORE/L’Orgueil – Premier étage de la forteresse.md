@@ -3,6 +3,16 @@
 > Corriger
 
 
+Au centre de l'étage immense se situe un labyrinthe dont le centre est traversé par le monolithe emprunté par nos aventuriers.
+
+On peut y apercevoir un vieil homme mais aussi le plafond d'une hauteur sans précédent (impossible de le distinguer dans la pénombre).
+Et s'il insistent pour observer, on peut commencer à voir à ce qui ressemble à de gigantesques colonnes.
+
+
+# Sommet de la vieille tour
+
+En sortie du labyrinthe, les joueurs peuvent apercevoir une corniche au bout de laquelle veille une ancienne tour en ruine. Si les joueurs la montent, ils peuvent avoir une vue à 360° sur l'étage
+
 > [!tip] Narration
 > Voici l’espace qui s’offre à vous :    
 > Une salle close, et pourtant infinie, où les murs refusent d’être atteints.    
@@ -15,37 +25,17 @@
 > comme si ce sol voulait faire de chacun un roi.  
 >   
 > Des colonnes titanesques s’élancent vers un plafond jamais visible.    
-> Leurs chapiteaux portent les visages de souverains pétrifiés, rois de pierre aux regards baissés, toujours emplis de mépris.    
-> Leur gloire est dorée, mais craquelée — fissures noires, brûlures anciennes, comme si l’orgueil même avait consumé leur chair minérale.  
+> Leurs chapiteaux portent les visages de souverains pétrifiés, rois de pierre aux regards baissés, toujours emplis de mépris.
 >   
-> Entre ces piliers s’érigent des miroirs, dressés comme des portiques sacrés.    
-> Dans chacun, vos images se transforment : plus nobles, plus éclatantes, plus parées de triomphes qu’aucun de vous n’a jamais connus.    
-> Mais aucune ne coïncide, et l’illusion vous poursuit —    
-> ici, le reflet se veut plus vrai que la chair.  
->   
-> De lourdes tentures pourpres habillent les murs invisibles.    
+> De lourdes tentures pourpres habillent ces colonnes.  
 > Velours épais, broderies d’or, devises de puissance, emblèmes de royaumes oubliés.    
-> Et le tissu palpite, se gonfle d’un souffle mystérieux, comme si la fierté du lieu l’animait encore.    
-> Écoutez bien : il chuchote, et dans ses fibres s’entendent des louanges.    
-> Louanges sans nom, louanges sans fin.  
->   
-> Le silence n’est pas vide.    
-> Il est dense, gorgé de voix effacées, comme si chaque pierre retenait encore l’orgueil de ceux qui s’y sont crus éternels.    
-> Aucune phrase n’émerge, mais la certitude persiste, oppressante :    
-> ici, l’éternité ne s’écrit qu’en vanité.  
->   
-> Et le sol se soulève parfois en marches, en piédestaux.    
-> Estrades invisibles qui vous forcent à grimper, toujours plus haut, toujours au-dessus.    
-> Mais plus vous vous élevez, plus la salle grandit avec vous, refusant qu’on la domine.    
-> Chaque pas promet la gloire — chaque pas rappelle qu’elle n’appartient jamais.  
+> Et le tissu palpite, se gonfle d’un souffle mystérieux, comme si la fierté du lieu l’animait encore.
 >   
 > Là-bas, au loin, luit une couronne suspendue dans l’ombre.    
-> Elle brille, attire, promet.    
-> Vous avancez, mais elle se retire toujours, insaisissable, se riant du désir.    
-> L’espace lui-même se plie à cette farce : un chemin qui n’est pas chemin, une conquête qui n’est pas victoire.  
+> Elle brille, attire, promet.
 >   
 > Tout ici respire la majesté morte.    
-> Tout ici exhale le défi silencieux.    
-> C’est un sanctuaire où l’orgueil règne sans autel ni prière,    
-> où celui qui contemple finit par n’adorer que son propre reflet.
+> Tout ici exhale le défi silencieux.
+> 
 
+Les joueurs peuvent y trouver des armes @todo armes mauvaise mais l'une d'entre elles possède un passif intéressant malgré les faibles dégâts.
