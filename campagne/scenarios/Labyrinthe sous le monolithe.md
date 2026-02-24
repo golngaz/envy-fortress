@@ -8,6 +8,15 @@ Au centre de l'étage immense se situe un labyrinthe dont le centre est travers�
 On peut y apercevoir un vieil homme mais aussi le plafond d'une hauteur sans précédent (impossible de le distinguer dans la pénombre).
 Et s'il insistent pour observer, on peut commencer à voir à ce qui ressemble à de gigantesques colonnes.
 
+# Notre premier niveau
+
+Les joueurs vont tous passer au niveau 2. Mais cette mécanique est canon, les joueurs débloquent des niveaux d'accès. Le PnJ sur place leur explique qui leur suffit de crier "[[Shell Access]]" Qui leur permet d'avoir accès à leur "fiche personnage". Préparer les sorts etc.. Et distribuer les stats et choisir les sorts de leur monté de niveau.
+
+Il débloqueront aussi dans ce menu, leurs premiers sorts de [[Shell Control]].
+
+## Premier PNJ
+
+Un homme ayant un chapeau, il semble être impalpable, immatériel. Un sourire inquiétant, il à l'air même très heureux de voir les héros, difficile à froisser. Il à aussi l'air seul et nostalgique. Il porte un chapeau pointu et sa tenue semble peu discernable. Sur un jet de perception, il semble porter une longue tunique blanche en coton très fine.
 
 # Sommet de la vieille tour
 
@@ -39,3 +48,5 @@ En sortie du labyrinthe, les joueurs peuvent apercevoir une corniche au bout de 
 > 
 
 Les joueurs peuvent y trouver des armes @todo armes mauvaise mais l'une d'entre elles possède un passif intéressant malgré les faibles dégâts.
+
+

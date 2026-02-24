@@ -6,4 +6,6 @@ Elle est composée de six étages.
 
 
 # [[Plaine de l'ennui (Couronne de la forteresse)]]
-# [[Le palais d'Icare]]
+# [[Labyrinthe sous le monolithe]]
+
+## [[Le palais d'Icare]]
