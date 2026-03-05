@@ -43,6 +43,10 @@ Toucher le monolithe :
 > Ses yeux invisibles vous fixent, et malgré l’absence de traits, vous sentez dans son attitude une soif de combat inébranlable. L’air s’alourdit, oppressé par son aura. Puis, derrière la masse colossale, là où se dressait le monolithe, une porte dorée se révèle lentement, scintillant comme une promesse.
 >
 > L’espoir d’obtenir enfin des réponses se mêle à la curiosité brûlante qui vous dévore… mais l’imposante créature qui se dresse devant vous, armée de son arme monstrueuse, vous rappelle que ce passage ne se gagnera qu’au prix d’un affrontement. Et cet affrontement semble tenir davantage du miracle que de la simple victoire.
+> 
+> Cependant, il tient de son autre main, une grande cage, et votre intuition vous dit qu'elle est la uniquement pour vous.
+
+
 
 2. [[campagne/combats/Le Soldat Bleu|Le Soldat bleu]]
 

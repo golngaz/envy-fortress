@@ -1,0 +1,1 @@
+Personnes créés par [[Le Magicien]] lui même. Ces personnes possèdent leur propre conscience mais peuvent parfois avoir celle ci manipulé/bloqué par le contrôle du magicien.

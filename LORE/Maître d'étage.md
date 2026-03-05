@@ -1,0 +1,1 @@
+Nom donné au décisionnaire de l'étage, membre de la [[Famille Sombreval]], mais de dimension "aléatoire". Chaque maître d'étage avait un pouvoir sur son étage et un pouvoir supérieur à tout étage maître d'étage supérieur.

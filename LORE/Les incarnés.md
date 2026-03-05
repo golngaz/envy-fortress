@@ -1,0 +1,1 @@
+Nom attribué aux personnes qui sont apparus dans la forteresse depuis une plaine de l'ennuie.

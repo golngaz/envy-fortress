@@ -5,11 +5,11 @@ On l’appelle **Ilyan**, bien que son nom de naissance ait été effacé des re
 
 ### Son passé
 
-Ilyan est né au palais, fils unique de l’empereur — un souverain dont la fierté était devenue doctrine. L’Empire s’était construit sur l’idée que la grandeur devait être visible : palais plus hauts, statues plus colossales, armées plus éclatantes que celles des royaumes voisins. L’orgueil y était vertu officielle.
+Ilyan est né au palais, fils unique de l’empereur, né dans la forteresse — un souverain dont la fierté était devenue doctrine. L’Etage s’était construit sur l’idée que la grandeur devait être visible : palais plus hauts, statues plus colossales, armées éclatantes que celles des étages inférieurs. L’orgueil y était vertu officielle.
 
 Dès l’enfance, Ilyan fut éduqué pour régner. On lui apprit à parler plus fort que les autres, à ne jamais plier, à ne jamais douter. Mais il observait en silence les serviteurs aux gestes mesurés, les soldats blessés qu’on cachait après les parades, les villages saignés d’impôts pour financer des monuments.
 
-Il n’a jamais aimé les miroirs du palais. Trop polis. Trop flatteurs.
+Il n’a jamais aimé le sol marbré du palais. Trop polis. Trop flatteurs.
 
 L’événement qui scella sa rupture fut une campagne punitive menée contre une province qui avait refusé de payer un tribut exceptionnel destiné à financer une statue monumentale à l’effigie de l’empereur. Ilyan accompagna l’armée, officiellement pour apprendre l’art du commandement. Il y découvrit la peur, la faim, et l’absurdité d’un massacre décidé pour préserver l’image d’un homme.
 
@@ -17,7 +17,7 @@ L’événement qui scella sa rupture fut une campagne punitive menée contre un
 
 Dans une cour où l’orgueil était loi, le doute était trahison.
 
-Il fut renié le soir même. Son nom retiré des archives. Ses emblèmes arrachés. Exilé sous escorte jusqu’à la lisière de la grande forêt du nord, territoire jugé trop instable et trop ancien pour mériter d’être conquis.
+Il fut renié le soir même. Son nom retiré des archives. Ses emblèmes arrachés. Exilé sous escorte jusqu’à la lisière de la grande forêt du sud, territoire jugé trop instable et trop ancien pour mériter d’être conquis.
 
 ### La forêt
 
