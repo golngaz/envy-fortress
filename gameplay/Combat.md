@@ -35,13 +35,17 @@ Le joueur peut faire 1 action par défaut, au choix
 
 #### Action bonus
 
-Le joueur peut aussi utiliser son sort de [[Shell Control]] s'il consomme les points de [[Shell Control]] qu'il a accumulé.
+Le joueur peut aussi utiliser son sort de [[Shell Control]] s'il consomme les 10 points de [[Shell Control]] qu'il a accumulé.
 
 
 ##### Utiliser un sort
 
-Le joueur peut utiliser un sort déjà équipé afin d'attaquer un ennemi préalablement désigné par le joueur. Le joueur dépense le coût en PA du sort à utiliser.
+Le joueur peut utiliser un des 6 sorts équipés afin d'attaquer un ennemi préalablement désigné par le joueur. Le joueur dépense le coût en PA du sort à utiliser (ou autres conditions).
  Il est nécessaire de regarder les conditions éventuelles du sort, chaque sort est unique.
+
+##### Sorts passifs
+
+Les sort dit passifs s'équipent de la même manière que les autres sorts, et sont toujours valable tant que leurs conditions sont respecté et qu'il est équipé.
 
 > [!tip] Info
 > Le coût en PA est écrit sur le sort en question, sauf indication contraire, chaque utilisation nécessite d'avoir les PA nécessaires, les sorts de défenses peuvent coûter des PA où avoir des effets supplémentaires en dépensant d'éventuels PA.

@@ -3,11 +3,13 @@ views:
     name: Table
     filters:
       and:
-        - file.folder == "gameplay/Altérations"
+        - file.folder == "Altérations"
     order:
       - file.name
       - Négatif
+      - ignore bouclier
       - max
     columnSize:
       file.name: 262
-      note.max: 296
+      note.ignore bouclier: 143
+      note.max: 108

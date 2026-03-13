@@ -6,7 +6,7 @@ formulas:
   VIT: note["bonus VIT"] + note["classe"].asFile().properties["VIT"]
   VOL: note["bonus VOL"] + note["classe"].asFile().properties["VOL"]
   Poid: 30 + 3 * formula.CON + note.level * 10
-  PV: (8 + 4 * note.level + formula.CON * note.level * 0.30).floor()
+  PV: 8 + 4 * note.level + (formula["+CON"] * note.level *1.5).ceil()
   Tours: (formula["cases ABS"]/6).floor()
   cases: formula["cases ABS"]%6
   +CON: (formula.CON/6).floor()
@@ -48,8 +48,8 @@ views:
       - formula.Poid
       - formula.cases ABS
     sort:
-      - property: file.name
-        direction: ASC
+      - property: formula.CTRL
+        direction: DESC
     columnSize:
       note.level: 64
       formula.Tours: 77

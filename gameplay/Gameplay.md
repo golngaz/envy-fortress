@@ -5,7 +5,7 @@ joueur: visible
 
 # Jet de sauvegarde
 
-![[Jet de sauvegarde#^7688d0]]
+![[Jet de sauvegarde]]
 
 # Jetons et statuts  
 
@@ -24,7 +24,7 @@ S'il est mort en dehors du combat, il n'est plus disponible jusqu'à la prochain
 > Si toute l'équipe est morte. C'est la fin du jeu. Sauf cas spéciaux liés au scénario.
 
 > [!tip] Note
-> S'il restait des statuts pouvant ressusciter un joueur à retardement, les tours passent normalement, les ennemies jouent leur tour (tapent dans le vide si nécessaire). Jusqu'à ce que le tour activant l'effet arrive bel est bien.
+> S'il restait des statuts pouvant ressusciter un joueur à retardement, les tours passent normalement, les ennemies jouent leur tour (tapent dans le vide si nécessaire). Jusqu'à ce que le tour activant l'effet arrive bel et bien.
 
 # Inventaire
 
@@ -34,3 +34,23 @@ Les joueurs peuvent jeter leurs équipement, mais celui est immédiatement dési
 # Combats
 
 ![[Combat]]
+
+# Préparation
+
+Les joueurs commencent par décider de leur personnage, **pas de background**, mais ils peuvent décider de leur apparence et personnalité, ainsi que de leur nom. Ils choisissent ainsi leur classe, et répartissent les 12 premiers points du niveau 1 dans leurs **statistiques**  (CON, CTRL, VIT, FOR, INT, VOL).
+Les joueurs possèdent ainsi leurs statistiques de personnage (parfois appelé statistiques bonus) ainsi que les statistiques de base de leurs classe. Ils renseignent sur leur fiche, la somme de leur statistiques de base et leurs statistiques bonus
+
+## Équiper les sorts
+
+Les joueurs gagnent des sorts en fonction de la campagne, ils s'arrangent entre eux pour se distribuer les sorts/sorts passifs à l'avance, changeable uniquement dans les [[Safe zones]], et au tout début de la partie. Les joueurs peuvent équiper 6 sorts au maximum, ainsi qu'un sort bonus de [[Shell Control]]. Ils disposent alors ces sorts sur le plateau et mettent les autres de côté.
+En début de partie, les joueurs n'auront probablement pas 6 sorts d'un coup, il peuvent donner plus de sorts à un joueur qu'à un autre s'ils le désirent, mais ne peuvent pas n'avoir aucun sort actif.
+Il n'est pas possible d'équiper les sorts de niveau supérieurs aux sien.
+
+# Ajout d'un niveau aux joueurs
+
+A certains moments clés de l'histoire, le MJ décidera de leur faire gagner un niveau. Le niveau 2 doit être gagné rapidement. Les sorts de niveau x sont débloqué, si les joueurs possédaient déjà les sorts sans pouvoir les équiper, ils le peuvent maintenant (et ils peuvent toujours utiliser les niveaux inférieur).
+Chaque niveau rapporte 6 points à distribuer dans les différentes **statistiques**. Le niveau 1 commence avec 12 points.
+
+# Safe zones
+
+![[Safe zones]]
