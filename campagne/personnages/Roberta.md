@@ -1,5 +1,5 @@
 ---
-classe: "[[Le Mage]]"
+classe: "[[Mage]]"
 bonus CON: 0
 bonus VIT: 5
 bonus CTRL: 3
@@ -14,7 +14,7 @@ inventaire:
 ---
 # Passif
 
-![[Le Mage#^49332a]]
+![[Mage#^49332a]]
 
 # Sorts
 

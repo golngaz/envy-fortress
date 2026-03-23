@@ -1,5 +1,5 @@
 ---
-classe: "[[Le Chevalier]]"
+classe: "[[Chevalier]]"
 bonus CON: 12
 bonus VIT: 0
 bonus CTRL: 0
