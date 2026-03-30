@@ -1,6 +1,6 @@
 formulas:
   Poid: 30 + 3 * note.CON + note.level * 10
-  PV: (8 + 4 * note.level + note.CON * note.level * 0.30).floor()
+  PV: 8 + 4 * note.level + (formula["+CON"] * note.level *1.5).ceil()
   Tours: (formula["cases ABS"]/6).floor()
   cases: formula["cases ABS"]%6
   +CON: (note.CON/6).floor()
@@ -23,7 +23,6 @@ views:
     order:
       - file.name
       - level
-      - classe
       - CON
       - CTRL
       - FOR
@@ -39,7 +38,6 @@ views:
       - formula.PV
       - formula.cases
       - formula.Tours
-      - formula.Poid
       - formula.cases ABS
     sort:
       - property: file.name
@@ -47,4 +45,10 @@ views:
     columnSize:
       file.name: 129
       note.level: 64
+      note.CON: 71
+      note.CTRL: 74
+      note.FOR: 67
+      note.INT: 58
+      note.VIT: 66
+      note.VOL: 70
       formula.Tours: 77

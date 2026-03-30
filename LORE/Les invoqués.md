@@ -1,1 +1,1 @@
-Personnes créés par [[Le Magicien]] lui même. Ces personnes possèdent leur propre conscience mais peuvent parfois avoir celle ci manipulé/bloqué par le contrôle du magicien.
+Personnes créés par [[Le Magicien]] lui même. Ces personnes possèdent leur propre conscience mais peuvent parfois avoir celle ci manipulé/bloqué par le contrôle du magicien. Les invoqués ont toujours vécus dans la forteresse contrairement aux [[Les incarnés|incarnés]] qui proviennent d'autres mondes.
