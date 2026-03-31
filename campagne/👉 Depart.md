@@ -9,7 +9,7 @@ Les joueurs se réveillent dans un champ infini, sans souvenir de leur passé.
 
 En progressant, ils découvrent qu’ils sont en réalité piégés dans une gigantesque forteresse flottant dans le vide, créée par un mage du monde réel.
 
-Qui êtes-vous ? Voir [[Création de personnages]]
+Qui êtes-vous ? Voir [[Création de personnage]]
 
 
 ## **Mécaniques principales**

@@ -3,6 +3,18 @@ joueur: visible
 ---
 
 
+# Création de personnage
+
+La création d'un personnage commence par le choix d'une **classe**, qui définit les **statistiques de base** du personnage. Par exemple, un Guerrier possède des valeurs brutes en `CON`, `FOR`, `VIT`, `CTRL`, `INT` et `VOL` propres à sa classe.
+
+Une fois la classe choisie, le joueur répartit des **points de bonus** supplémentaires par-dessus ces stats de base (visibles dans le frontmatter de la fiche personnage via les champs `bonus CON`, `bonus VIT`, etc.).
+
+La **stat finale** d'un personnage est donc la somme de la valeur de classe et de son bonus personnel. Par exemple, un Mage avec `bonus INT: 4` ajoutera 4 à l'`INT` de base de sa classe.
+
+Le personnage est ensuite équipé d'un **inventaire** (armes, objets), chaque item étant lié à sa propre fiche via un lien Obsidian (ex. [[Vieux baton]]).
+
+Enfin, la fiche est construite en **transclusion** : les blocs de règles (passif, sorts, armes, défense) sont directement importés depuis les fiches de classe et d'items grâce à la syntaxe `![[NomDeLaFiche#^blockID]]`, ce qui garantit que toute mise à jour d'une règle se répercute automatiquement sur tous les personnages concernés.
+
 # Jet de sauvegarde
 
 ![[Jet de sauvegarde]]
