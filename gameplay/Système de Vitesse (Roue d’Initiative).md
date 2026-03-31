@@ -55,6 +55,6 @@ Lorsqu'un ou plusieurs pions dépassent la flèche de départ, ils rejouent imm�
 Voici les étapes résumés au début de chaque tour global
 
 1. Déplacement des joueurs en fonction de leur valeur de vitesse
-2. La flèche de marquage de tour est déplacée **en même temps** sur le joueur le premier joueur devant elle (elle le "suit").
-3. Les joueurs aillant dépassé le joueur le plus lent (marqué avec la flèche) rejouent.
-4. Les joueurs jouent leur tour normalement, les plus éloignés de la flèche sont les plus rapides.
+2. La flèche de marquage de tour est déplacée **en même temps** sur le premier joueur devant elle (elle le "suit").
+3. Les joueurs aillant dépassé le joueur le plus lent (marqué avec la flèche) rejouent autant de fois.
+4. Les joueurs jouent leur tour normalement, en fonction de leur priorité. Les plus éloignés de la flèche sont les plus rapides.

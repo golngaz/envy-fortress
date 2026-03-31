@@ -8,3 +8,4 @@ difficulty: 1
 
 
 ![[monstres/Le Soldat Bleu|Le Soldat Bleu]]
+
