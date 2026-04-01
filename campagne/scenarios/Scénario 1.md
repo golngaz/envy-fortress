@@ -27,6 +27,10 @@ views:
 
 Le joueur peut décider de ne pas aller plus loin mais il remarquera qu'il fait de plus en plus chaud, le soleil semble devenir une fournaise et rougis, ils commencent à perdre des points de vies à cause des [[Jeton Température|jetons température]] si des [[Jet de sauvegarde|JdS]] de [[Constitution (CON)]]
 
+## Suicide
+
+Si les joueurs meurent ou décident de se suicider, ils réapparaîtrons immédiatement près du combat.
+
 ## Toucher le monolithe
 
 3 Lapins blancs apparaissent mais paraissent un peu agressifs… Tout du moins, sur la défensive, ils portent un casque de soldat gris.

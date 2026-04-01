@@ -100,7 +100,25 @@ chaque ligne remplace la précédente sur **la même colonne**. Si la case est v
 	* Si le joueur n'est pas touché car il l'a bloqué/esquivé/réduit 100% des dégâts, les altérations ne s'appliquent généralement pas, sauf si précisé. Dans le cas des attaques bloqués, cela dépends des types d'[[Altérations.base|Altérations]].
 
 3. Si le joueur ciblé est attaqué par une attaque ou un sort, il **peut** maintenant utiliser son sort spécial de défense. Certains sorts possèdent des [[Jet de sauvegarde|Jets de sauvegardes]] à réussir afin d'éviter un sort, le joueur **peut** annuler l'effet d'un sort s'il réussi son jet.
-# ![[Shell Control]]
+# Shell Control
+
+![[Shell Control]]
+
+# Entrée/Sortie d'un joueur
+
+Voici une version corrigée et reformulée :
+
+---
+
+# Entrée/Sortie d'un joueur
+
+Les joueurs ne peuvent pas quitter un combat en cours, sauf si une règle spéciale définie par le MJ le permet (selon le scénario ou des conditions particulières).
+
+Un combat peut débuter sans que tous les joueurs y participent. Les joueurs absents sont tout de même représentés sur la [[Système de Vitesse (Roue d'Initiative)|Roue d'initiative]] et se déplacent normalement selon leurs statistiques de [[Vitesse (VIT)]]. Ils ne peuvent cependant ni être ciblés, ni attaquer. Lorsque c'est leur tour dans le combat, ils peuvent interagir avec l'environnement extérieur au combat pour une séquence d'actions équivalant à une dizaine de secondes environ — c'est le MJ qui tranche en cas de doute.
+
+> [!example] Exemple
+>  Le combat débute avec les joueurs A et C ainsi que l'ennemi X. Le joueur B n'y participe pas, mais est tout de même placé sur la roue. Lorsque son tour arrive, il décide de courir vers ses alliés : le MJ estime qu'il parcourt une cinquantaine de mètres. B souhaite ensuite actionner un levier, mais le MJ considère qu'il n'a plus le temps — il devra attendre son prochain tour pour le faire.
+
 # Fin du combat
 
 * Les PJ reçoivent les loots
