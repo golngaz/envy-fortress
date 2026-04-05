@@ -63,7 +63,7 @@ Passe son tour au joueur et gagne 2 PA.
 #### Défense ennemie
 
 Après une attaque ou un sort, l'ennemi utilise sa compétence de défense s'il en a une et la résout selon le tableau (l'ennemi pourra alors contre attaquer, renvoyer une partie des dégâts, attaquer à chaque dégâts reçus, ou simplement **réduire** tout ou parti des dégâts qu'il allait recevoir).
-L'ennemi utilise forcément sa défense en [[Mode normal]] et le MJ peut décider de ne pas l'utiliser en [[Mode difficile]]. Il peut ou doit l'utiliser si un ennemi du même camp l'attaque. Il en est de même pour les [[Jet de sauvegarde|Jets de sauvegardes]], que l'ennemi doit/peut (selon la difficulté) lancer pour les sorts le permettant.
+L'ennemi utilise forcément sa défense en [[Mode normal]] et le MJ peut décider de ne pas l'utiliser en [[Mode difficile]]. Un ennemi (comme les PJ) est toujours obligé de lancer les Jets de sauvegardes.
 
 #### Défense
 
@@ -80,24 +80,24 @@ chaque ligne remplace la précédente sur **la même colonne**. Si la case est v
 > [!example]
 > 
 > 
-> | DD (1D20)  | Effet             |     Effet              |
-> | --- | ----------------- | ----------------- |
-> | 5+  | bloque le nombre  |                   |
-> | 8+  |      bloque le nombre            | 1 Brûlure à l'attaquant |
-> | 11+ | 1/2 dégats        | 2 Brûlures à l'attaquant                  |
-> | 20+ | Annule les dégats | Soigne de 5       |
+> | DD (1D20) | Effet              | Effet 2      | Effet 3     |
+> |-----------|--------------------|---------------------------|-------------|
+> | 5+        | Bloque le nombre   |                           |             |
+> | 8+        | Bloque le nombre   | 1 Brûlure à l'attaquant   |             |
+> | 11+       | Dégâts / 2         | 2 Brûlures à l'attaquant  |             |
+> | 20        | Annule les dégâts  | 2 Brûlures à l'attaquant  | Soigne de 5 |
 > 
-> * Sur un 20 à défendre, si le personnage lance un 13, il va recevoir effectivement 10 dégats et aura appliqué 2 brûlures à l'attaquant
-> * Si le personnage arrive à faire un 20, les dégât sont annulés et il se soigne à la place de 5. L'attaquant ne sera **pas** brûlé
-> * sur un 9, le joueur bloque 9 et applique une brûlure à l'attaquant
-> * Sur un 1, le joueur le bloque rien et n'applique aucun effet
+> * Sur un DD 20, si le personnage fait 13, il subit des dégâts réduits de moitié et inflige 2 brûlures à l’attaquant
+> * Si le personnage fait 20, les dégâts sont annulés et il se soigne de 5, sans appliquer de brûlure
+> * Sur un 9, le joueur bloque le nombre et applique 1 brûlure à l’attaquant
+> * Sur un 1, le joueur ne bloque rien et n’applique aucun effet
 
 ### Ennemis
 
 1. L'ennemi attaque un joueur aléatoirement en [[Mode normal]]. C'est le MJ qui choisie la meilleure décision d'après lui en [[Mode difficile]].
 2. L'ennemi lance un dé pour déterminer une attaque s'il en a plusieurs (attaque avec son arme ou sort, le choix est précisé sur la fiche du monstre). S'il n'en a qu'une, il l'utilise à chaque tour.
-	* Si le joueur est touché, il applique les altérations d'état s'il y en a en posant le jeton correspondant dans le tableau "Etat" dans la fiche de personnage, sur la ligne correspondante au nombre de tours à appliquer. (Certaines altérations nécessiteront des jets de dés).
-	* Si le joueur n'est pas touché car il l'a bloqué/esquivé/réduit 100% des dégâts, les altérations ne s'appliquent généralement pas, sauf si précisé. Dans le cas des attaques bloqués, cela dépends des types d'[[Altérations.base|Altérations]].
+	* Si le joueur est touché, il applique les altérations d'état **s'il y en a** en posant le jeton correspondant dans le tableau "Etat" dans la fiche de personnage, sur la ligne correspondante au nombre de tours à appliquer. (Certaines altérations nécessiteront des jets de dés).
+	* Si le joueur n'est pas touché car il a bloqué/esquivé/réduit 100% des dégâts, les altérations ne s'appliquent généralement pas, sauf si précisé. Dans le cas des attaques bloqués, cela dépends des types d'[[Altérations.base|Altérations]].
 
 3. Si le joueur ciblé est attaqué par une attaque ou un sort, il **peut** maintenant utiliser son sort spécial de défense. Certains sorts possèdent des [[Jet de sauvegarde|Jets de sauvegardes]] à réussir afin d'éviter un sort, le joueur **peut** annuler l'effet d'un sort s'il réussi son jet.
 # Shell Control
@@ -106,19 +106,18 @@ chaque ligne remplace la précédente sur **la même colonne**. Si la case est v
 
 # Entrée/Sortie d'un joueur
 
-Voici une version corrigée et reformulée :
-
----
-
-# Entrée/Sortie d'un joueur
-
 Les joueurs ne peuvent pas quitter un combat en cours, sauf si une règle spéciale définie par le MJ le permet (selon le scénario ou des conditions particulières).
 
 Un combat peut débuter sans que tous les joueurs y participent. Les joueurs absents sont tout de même représentés sur la [[Système de Vitesse (Roue d'Initiative)|Roue d'initiative]] et se déplacent normalement selon leurs statistiques de [[Vitesse (VIT)]]. Ils ne peuvent cependant ni être ciblés, ni attaquer. Lorsque c'est leur tour dans le combat, ils peuvent interagir avec l'environnement extérieur au combat pour une séquence d'actions équivalant à une dizaine de secondes environ — c'est le MJ qui tranche en cas de doute.
 
-> [!example] Exemple
->  Le combat débute avec les joueurs A et C ainsi que l'ennemi X. Le joueur B n'y participe pas, mais est tout de même placé sur la roue. Lorsque son tour arrive, il décide de courir vers ses alliés : le MJ estime qu'il parcourt une cinquantaine de mètres. B souhaite ensuite actionner un levier, mais le MJ considère qu'il n'a plus le temps — il devra attendre son prochain tour pour le faire.
+Si le joueur se rapproche et est vue par un ennemi qui était en combat avec les PJ, il rejoint alors le combat et met fin à son tour.
 
+Le joueur hors combat ne pourra jamais influencer le combat en cours, même en servant d'éléments de la map (faire effondrer un objet sur un ennemi, le pousser quand il ne vous voit pas etc...). Ce qu'il peut toujours faire pour agir sur des ennemis ou carte éloigné(s) du combat.
+
+> [!example] Exemple
+>  Le combat débute avec les joueurs A et C ainsi que l'ennemi X. Le joueur B n'y participe pas, mais est tout de même placé sur la roue. Lorsque son tour arrive, il décide de courir vers ses alliés : le MJ estime qu'il parcourt une cinquantaine de mètres. B souhaite ensuite actionner un levier pour rejoindre la salle du combat, mais le MJ considère qu'il n'a plus le temps — il devra attendre son prochain tour pour le faire.
+
+Il est possible, dans certains cas, d'exploiter tout de même cette situation pour en effet, par exemple, pour activer un levier et mettre fin au combat. Mais dans ce cas, le levier **fera "parti"** du combat (ennemi "levier" ayant ses propres mécaniques avec qui les ennemis pourront interagir à chaque tour).
 # Fin du combat
 
 * Les PJ reçoivent les loots

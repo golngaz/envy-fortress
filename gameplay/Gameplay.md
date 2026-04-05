@@ -1,8 +1,6 @@
 ---
 joueur: visible
 ---
-
-
 # Création de personnage
 
 La création d'un personnage commence par le choix d'une **classe**, qui définit les **statistiques de base** du personnage. Par exemple, un Guerrier possède des valeurs brutes en `CON`, `FOR`, `VIT`, `CTRL`, `INT` et `VOL` propres à sa classe.
@@ -13,8 +11,17 @@ La **stat finale** d'un personnage est donc la somme de la valeur de classe et d
 
 Le personnage est ensuite équipé d'un **inventaire** (armes, objets), chaque item étant lié à sa propre fiche via un lien Obsidian (ex. [[Vieux baton]]).
 
-Enfin, la fiche est construite en **transclusion** : les blocs de règles (passif, sorts, armes, défense) sont directement importés depuis les fiches de classe et d'items grâce à la syntaxe `![[NomDeLaFiche#^blockID]]`, ce qui garantit que toute mise à jour d'une règle se répercute automatiquement sur tous les personnages concernés.
+## Premier niveau
 
+Le personnage débute le jeu au niveau 1 avec 12 points de statistiques à répartir. Il faudra ensuite écrire ces statistiques (en ajoutant celles de la classe). On écrit ensuite le modificateur de statistique sur la fiche, dans la case (+ ...).
+
+On y ajoute aussi toutes les autres statistiques calculées par le projet obsidian 
+
+* PV
+* Poids
+* Cases
+* Tours
+* @todo compléter
 # Jet de sauvegarde
 
 ![[Jet de sauvegarde]]
