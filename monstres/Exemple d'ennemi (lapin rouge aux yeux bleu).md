@@ -8,7 +8,6 @@ VIT: 0
 VOL: 2
 level: 10
 ---
-
 <p style="text-align:center;">
   <img src="f1a5a8ad-d709-4b3b-8c51-78c758c6ce4e.png" width="250">
 </p>
@@ -27,9 +26,8 @@ La lapin rouge aux yeux bleus sert d'exemple de fiche monstre que peut lire le M
 | --------- | ------------ | ------------ | -------------- | ------------------------------------ |
 | 2+        | Dégâts du dé |              |                |                                      |
 | 15+       | Dégâts du dé | +5 dégâts    | Brule la cible |                                      |
-| 20+       | Dégâts du dé | +5 dégâts    | Brule la cible |                                      |
 | 20+       | Dégâts du dé | Dégâts du dé | Brule la cible | a fait 10 ou moins le tour précédent |
-
+La condition s'applique uniquement à l'effet dans ce cas précis.
 <div style="page-break-before: always;"></div>
 
 > [!tip] Note
