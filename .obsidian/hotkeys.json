@@ -69,5 +69,13 @@
       ],
       "key": "T"
     }
+  ],
+  "workspace:close-tab-group": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "'"
+    }
   ]
 }

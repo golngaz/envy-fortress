@@ -1,0 +1,4 @@
+Le MJ fixe librement le DD selon ce qu'il estime approprié à la situation. À titre indicatif, un DD de 5 représente une tâche simple que presque n'importe qui pourrait tenter, autour de 10 une difficulté standard qui demande un minimum de compétence, et au-delà de 15 quelque chose de vraiment ardu qui mettra même un personnage spécialisé en difficulté.
+
+> [!example] Exemple
+> Le groupe arrive devant une vieille porte en bois condamnée. Le MJ estime que l'enfoncer est faisable mais pas trivial — il fixe un DD de 8 en JdS(FOR+). Le guerrier du groupe, avec une FOR+ de 3, lance son D20 et obtient 6 : 6 + 3 = 9, la porte cède dans un craquement. Le mage, avec une FOR+ de 0, aurait eu beaucoup moins de chances d'y arriver seul.

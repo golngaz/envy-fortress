@@ -3,6 +3,8 @@ toc: true
 visible: true
 ---
 [[Création de personnage]]
+[[Phases de progression]]
+[[Degré de difficulté (DD)]]
 [[Jet de sauvegarde]]
 [[Jetons et statuts]]
 [[Points de vies & Mort]]
