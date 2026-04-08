@@ -7,8 +7,11 @@ VIT: 0
 VOL: 2
 level: 1
 ---
+![[geant bleu.png]]
 
-Au début du tour, il a une apparence de géant, mais vulnérable, il a aussi un simple casque de soldat qui est bleu. Mais celui ci semble magique. Après un tour ou les joueurs l'attaque, il s'enveloppe d'une armure spirituelle bleu un peu visible à l’œil nu.
+Au début du tour, il a une apparence de géant, mais vulnérable, il possède aussi un simple casque de soldat. Mais celui ci semble magique. Après un tour ou les joueurs l'attaque, il s'enveloppe d'une armure spirituelle bleu un peu visible à l’œil nu.
+
+* [[Jet d'observation (INT)]] Permet de repérer sa vulnérabilité.
 
 > [!abstract] Passif
 > Lorsqu'il est attaqué pendant le tour des joueurs, il s'équipe de son [[#Armure spirituelle]]

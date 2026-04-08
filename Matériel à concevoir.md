@@ -10,7 +10,7 @@ Coller les logos sur les jetons, voir [[assets/images/jetons/jetons1.png]]
 
 # Roue de vitesse
 
-![[Pasted image 20250925171440.png]]
+![[exemple roue d'initiative.png]]
 
 # [[Livret - Règles]]
 

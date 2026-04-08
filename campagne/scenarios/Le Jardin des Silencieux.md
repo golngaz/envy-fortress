@@ -10,6 +10,6 @@ Les joueurs se retrouvent au centre de la forteresse au premier étage. Ils sort
 
 
 
-![[Pasted image 20260217113225.png|400]]
+![[blueprint forteresse test.png|400]]
 
 Ils sont entourés de murs verts comme dans un labyrinthe et un homme se tient prêt à les accueillir. 

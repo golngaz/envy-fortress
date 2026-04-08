@@ -8,7 +8,7 @@ VOL: 2
 level: 1
 ---
 
-![[5e75e3e8-ef69-43bc-b606-7439bbdc7c20.png|300]]
+![[lapin soldat.png|300]]
 
 > [!note]
 > Il à l'air inoffensif
