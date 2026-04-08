@@ -19,7 +19,7 @@ Plutôt centré sur le contrôle de la partie, le mage n'a pas le droit à l'err
 
 # Arme de départ
 
-![[Vieux baton]]
+![[Vieux bâton]]
 
 Sorts de départ
 

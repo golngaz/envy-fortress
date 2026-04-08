@@ -9,7 +9,7 @@ bonus INT: 4
 level: 1
 joueur: visible
 inventaire:
-  - "[[Vieux baton]]"
+  - "[[Vieux bâton]]"
   - "[[Morgenstern du géant bleu]]"
 ---
 # Passif
@@ -21,7 +21,7 @@ inventaire:
 ![[Hall Humettes#^6345ae]]
 # Arme
 
-![[Vieux baton#^471cc6]]
+![[Vieux bâton#^471cc6]]
 # Défense
 
 ![[Reflet#^80b9ab]]

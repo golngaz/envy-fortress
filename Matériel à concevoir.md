@@ -12,7 +12,7 @@ Coller les logos sur les jetons, voir [[assets/images/jetons/jetons1.png]]
 
 ![[exemple roue d'initiative.png]]
 
-# [[Livret - Règles]]
+# [[Livret - Règles à flatifier]]
 
 
 ![[assets/images/jetons/jetons1.png|200]]

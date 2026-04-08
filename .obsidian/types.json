@@ -21,6 +21,8 @@
     "PV bonus CON facteur": "number",
     "poids": "number",
     "test": "multitext",
-    "tours": "number"
+    "tours": "number",
+    "toc": "checkbox",
+    "visible": "checkbox"
   }
 }

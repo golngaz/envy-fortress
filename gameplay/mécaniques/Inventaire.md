@@ -1,0 +1,2 @@
+Les joueurs possèdent un inventaire individuel, chaque objet possède un poids et ils ne peuvent pas dépasser le montant total calculé sur la base de leurs statistiques de [[Constitution (CON)]]. Le poids max est noté sur la fiche personnage et est mise à jour uniquement quand cette statistique change, lors d'un changement de niveau. 
+Les joueurs peuvent jeter leurs équipement, mais celui est immédiatement désintégré de la forteresse.
