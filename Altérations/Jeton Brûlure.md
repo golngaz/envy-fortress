@@ -3,7 +3,6 @@ joueur: visible
 ignore bouclier: false
 Négatif: true
 max: 20
-tours: "2"
 ---
 A chaque début de tour d'un personnage, chaque brûlure inflige 2 [[Bruts|Dégât brut]] (sauf indication contraire).
 
