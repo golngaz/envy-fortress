@@ -68,6 +68,12 @@
         "Mod"
       ],
       "key": "T"
+    },
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
     }
   ],
   "workspace:close-tab-group": [
