@@ -2,7 +2,6 @@
 joueur: visible
 ignore bouclier: true
 Négatif: true
-tours: 1
 max: 20
 ---
 Représente la **chaleur excessive** subie par un personnage.  
