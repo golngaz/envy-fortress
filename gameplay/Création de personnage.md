@@ -22,11 +22,23 @@ Chaque classe confère automatiquement un **passif unique** au personnage, sans 
 
 *Exemple : le Guerrier bénéficie du passif **Honneurs**, qui lui permet de gagner un Bouclier à chaque succès critique en mêlée.*
 
-## Choisir et équiper ses sorts
+## S'équiper
 
-Les sorts de départ sont issus d'une **liste commune à tous les personnages**. Les joueurs s'arrangent en groupe pour se les répartir librement, avant le début de la partie ou dans une **Safe zone**. Chacun doit avoir **au moins un sort actif** et peut en équiper **6 au maximum**, plus **1 sort bonus de Shell Control**. Une fois les sorts choisis, le joueur les dispose sur son plateau et met les autres de côté.
+### Sorts
 
-En début de campagne, il est probable que les joueurs n'aient pas encore 6 sorts chacun — il est alors tout à fait possible de donner plus de sorts à un joueur qu'à un autre selon les besoins du groupe. Les sorts peuvent être interchangés librement, mais uniquement en **Safe zone** ou en tout début de partie. Il n'est **pas possible d'équiper un sort de niveau supérieur au sien**.
+Les sorts de départ sont issus d'une **liste commune à tous les personnages**. Les joueurs s'arrangent en groupe pour se les répartir librement, avant le début de la partie ou dans une [[Safe zones|safe zone]]. Chacun doit avoir **au moins un sort actif** et peut en équiper **6 au maximum**, plus **1 sort bonus de Shell Control**. Une fois les sorts choisis, le joueur les dispose sur son plateau et met les autres de côté.
+
+En début de campagne, il est probable que les joueurs n'aient pas encore 6 sorts chacun — il est alors tout à fait possible de donner plus de sorts à un joueur qu'à un autre selon les besoins du groupe. Les sorts peuvent être inter-changés librement, mais uniquement en **Safe zone** ou en tout début de partie. Il n'est **pas possible d'équiper un sort de niveau supérieur au sien**.
+
+### Sort de défense
+
+Ce sort fonctionne comme les autres sorts à équiper, uniquement pendant les [[Safe zones]], avec les mêmes contraintes.
+### Arme
+
+Les joueurs doivent aussi choisir à l'avance une arme à s'équiper. Il peut effectuer ça dans les [[Safe zones]] et en [[Phases de progression]]. Il peut équiper une arme de son inventaire ou de l'inventaire d'un autre personnage.
+Il peut choisir d'équiper l'arme de son choix. Certaines armes magiques ou puissantes nécessitent un **Niveau minimum** à posséder pour pouvoir s'en équiper. Les joueurs peuvent choisir de garder une arme pour un futur changement de niveau.
+Il ne peut néanmoins pas changer d'avis pendant un combat. 
+
 ## Constituer son inventaire
 
 Le personnage reçoit un **inventaire de départ** composé d'armes et d'objets, liés à sa classe ou à ses choix. Chaque item est référencé dans le wiki Obsidian via un lien dédié (ex. *[[Vieux bâton]]*).
