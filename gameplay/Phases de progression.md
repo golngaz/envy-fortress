@@ -12,10 +12,10 @@ La plupart des situations hors combat peuvent se résoudre de trois manières : 
 Certaines situations impliquent aussi une dimension sociale — convaincre un PNJ[^2], intimider un marchand, détecter qu'on vous ment. Dans ces cas, le MJ peut demander un jet mais doit également tenir compte de ce que le joueur dit réellement : un bon argument bien joué peut faire baisser le DD, ou rendre le jet inutile.
 
 > [!example] Exemple
-> Un joueur tente de convaincre un garde de les laisser entrer dans une zone interdite. Il invente une histoire crédible sur une mission urgente. Le MJ juge que l'argument est bien construit et abaisse le DD de 12 à 8. Le joueur lance un JdS(VOL+) — c'est sa capacité à rester convaincant et à ne pas se démonter sous la pression — et obtient 10. Le garde les laisse passer, non sans méfiance.
+> Un joueur tente de convaincre un garde de les laisser entrer dans une zone interdite. Il invente une histoire crédible sur une mission urgente. Le MJ juge que l'argument est bien construit et abaisse le DD de 12 à 8. Le joueur lance un **JdS (VOL+)** — c'est sa capacité à rester convaincant et à ne pas se démonter sous la pression — et obtient 10. Le garde les laisse passer, non sans méfiance.
 
 > [!example] Exemple
-> L'équipe explore une salle piégée. Le MJ demande un JdS(CTRL+) DD 11 pour désamorcer le mécanisme. Le joueur échoue de peu — le MJ décide que le piège ne se déclenche pas, mais que le mécanisme est maintenant instable et que toute nouvelle tentative se fera avec un DD de 14. L'échec fait avancer la situation sans la bloquer.
+> L'équipe explore une salle piégée. Le MJ demande un **JdS (CTRL+) (DD11)** pour désamorcer le mécanisme. Le joueur échoue de peu — le MJ décide que le piège ne se déclenche pas, mais que le mécanisme est maintenant instable et que toute nouvelle tentative se fera avec un DD de 14. L'échec fait avancer la situation sans la bloquer.
 
 ### Jets hors combat
 

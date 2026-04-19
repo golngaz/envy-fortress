@@ -20,4 +20,4 @@ level: 1
 # Drop
 
 * 10 Pièces de bronze
-* 
+* [[Lanterne de la tour]]

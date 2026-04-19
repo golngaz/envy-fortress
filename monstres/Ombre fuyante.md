@@ -14,7 +14,7 @@ level: 1
 # Passifs
 
 > [!tip] Regard déclencheur
-> En combat, au début du tour de l'ombre, le dernier joueur à l'avoir attaqué doit résister à la peur **JdS(VOL+)**. En cas d'échec, l'ombre effectue une attaque supplémentaire contre ce joueur.
+> En combat, au début du tour de l'ombre, le dernier joueur à l'avoir attaqué doit résister à la peur **JdS (VOL+)**. En cas d'échec, l'ombre effectue une attaque supplémentaire contre ce joueur.
 
 # Attaques
 

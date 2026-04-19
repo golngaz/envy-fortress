@@ -19,6 +19,8 @@ formulas:
 properties:
   formula.Tours:
     displayName: tours
+  formula.Poid:
+    displayName: Poids
 views:
   - type: table
     name: Table
