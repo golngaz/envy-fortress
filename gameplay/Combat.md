@@ -2,8 +2,12 @@
 joueur: visible
 ---
 
-Les PJ remettent les PA à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient, de même pour les points de [[Shell Control]]. La [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] est réinitialisé sur la première case.
+Les PJ remettent les [[Point d'action|PA]] à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient, de même pour les points de [[Shell Control]]. La [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] est réinitialisé sur la première case.
 
+# Points d'action
+
+![[Point d'action#^b74d02]]
+![[Point d'action#^d2621e]]
 # Tour global
  
  ![[tour global#^c5a7a4]]
@@ -18,7 +22,7 @@ Le tour commence avec les déplacements. Voir [[Système de Vitesse (Roue d’In
 
 1. Le joueur gagne +1 PA (+ modificateur [[Intelligence (INT)]] PA )
 2. Le joueur applique les effets des différents jetons de statuts (dégâts, altérations, températures, etc.). Ainsi que les bonus lui permettant de gagner des PA ou autre gains. On applique les effets dans l'ordre désiré par le joueur.
-3. Il décale les jetons sur la fiche d'un tour en dessous pour chaque jeton. (Retire le jeton, lorsqu'il arrive à 0).
+3. Il décale les jetons sur la fiche d'un tour en dessous pour chaque jeton (on dit qu'il **réduit de 1 le jeton**). (Retire le jeton, lorsqu'il arrive à 0).
 4. Il gagne 1 PA + 1 PA par jeton PA. En comptant les temporaires et les permanents.
 5. Il peut effectuer une [[#Action]].
 
