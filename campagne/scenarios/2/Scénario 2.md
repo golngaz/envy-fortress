@@ -1,5 +1,5 @@
 ![[La petite fille]]
-![[Labyrinthe sous le monolithe]]
+![[église & labyrinthe]]
 
 # Rencontre avec [[Illyan de la forêt ignorée|Illyan]]
 

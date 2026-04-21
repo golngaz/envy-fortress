@@ -3,10 +3,17 @@
 > Corriger
 
 
-Au centre de l'étage immense se situe un labyrinthe dont le centre est traversé par le monolithe emprunté par nos aventuriers.
+Au pied du monolithe d'où viennent de descendre nos aventuriers, se situe une église un peu délabré. Les lieux sont plutot vide, on sent que le lieux était bien plus fréquenté à une époque antérieure. 
 
-On peut y apercevoir un vieil homme mais aussi le plafond d'une hauteur sans précédent (impossible de le distinguer dans la pénombre).
-Et s'il insistent pour observer, on peut commencer à voir à ce qui ressemble à de gigantesques colonnes.
+Il y a des vitraux d'église et, s'il demande de regarder plus attentivement certains, sur un [[Jet d'observation (INT)]], les joueurs peuvent distinguer une personne avec un bâton et un chapeau pointu sur plusieurs d'entre eux.
+
+Près de la porte, est posté [[L'architecte]].
+En sortant de l'église, les joueurs peuvent comprendre qu'ils se situent au centre d'un labyrinthe.
+Ils peuvent tenter de tricher et grimper tout en haut sur un [[Jet de réflexe (VIT)]]. et un [[Jet de puissance (FOR)]] au dernier effort. En s'aidant ils peuvent tous monter avec un [[Jet de puissance (FOR)]]. Ils perdent 1PV par échec. 
+
+A défaut de vouloir/pouvoir faire monter les autres et sortir comme ça du labyrinthe, d'en haut ils peuvent déjà avoir une vue à 360 de l'étage. Il semble faire nuit, mais pas d'étoiles, on peut voir des grandes colonnes de marbres titanesques en direction d'un château, entouré d'un village. (On rappelle qu'ils ne savent pas dans quelle "époque" ils sont). Le style du château semble cliché mais en bon état. Ce n'est pas suffisant pour savoir s'il y a de la vie là bas.
+
+Ils peuvent aussi apercevoir une tour non loin dans la même direction et une forêt dans le pourtour don l'orée n'est pas loin.
 
 # Notre premier niveau
 
