@@ -15,6 +15,6 @@ Un beau jour, un incarné apparu, ayant l'apparence de la sœur du magicien, il 
 
 La plaine de l'ennui représente le "toit" de la forteresse. Elle est recouverte d'une herbe fine et exempt de toute vie, excepté les invocations pouvant être relâchées par le monolithe. La rumeur voudrait que les êtres apparaissant sur cette plaine finisse par se jeter dans le vide d'ennui, car il n'y a rien à faire sur cette terre. Les êtres en ce lui ne peuvent pas mourir ni connaître la faim et finissent par chercher une issue à leur ennui en se jetant dans le néant de l'oubli.
 Cette plaine est surveillée par [[Isolde Sombreval]] qui scrute l'apparition d'humains pour les rapatrier afin de les interroger et faire des rapprochement avec des membres de sa famille (plus précisément, la famille du [[Le Magicien|magicien]]).
-# [[Labyrinthe sous le monolithe]]
+# [[église & labyrinthe]]
 
 ## [[Le palais d'Icare]]
