@@ -9,7 +9,7 @@ VOL: 0
 ---
 
 > [!abstract] Passif
-> **Je suis le vent** : pour chaque ennemi doublé, il gagne 1 PA. S'il se fait doubler, il **perd** 1PA.
+> **Je suis le vent** : pour chaque ennemi doublé sur la roue de vitesse, il gagne 1 PA. S'il se fait doubler, il **perd** 1PA.
 
 > [!abstract] Passif
 > **Premier arrivé, premier servi** : S'il dépasse la ligne de départ, il gagne 1PA

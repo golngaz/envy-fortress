@@ -10,7 +10,7 @@ VOL: 2
 
 Fourbe par nature, un scélérat n'est pas très vaillant. Cependant il possède un qualité qui manque à beaucoup : l'opportunisme.
 Tournez lui le dos et vous allez vous prendre quelque coup de couteau, attaquez le et il partira se cacher.
-Le scélérat possède un don pour les fourberies mais peut prendre rapidement des décision ce qui lui permettra de souvent avoir un coup d'avance.
+Le scélérat possède un don pour les fourberies mais peut prendre rapidement des décision qui lui permettront souvent d'avoir un coup d'avance.
 
 
 > [!abstract] Passif

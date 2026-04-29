@@ -14,5 +14,5 @@ Dans un groupe, l’Architecte excelle dans le **contrôle et l’altération du
 
 
 > [!abstract] Passif
-> **Inarrêtable** : Chaque fois que lui qu’un allié utilise une compétence de [[Shell Control]], l’Architecte gagne **2 points de Shell Control**.
+> **Inarrêtable** : Chaque fois que lui ou un allié utilise une compétence de [[Shell Control]], l’Architecte gagne **2 points de Shell Control**.
 
