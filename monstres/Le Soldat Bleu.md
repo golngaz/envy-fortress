@@ -14,7 +14,8 @@ Au début du tour, il a une apparence de géant, mais vulnérable, il possède a
 * [[Jet d'observation (INT)]] Permet de repérer sa vulnérabilité.
 
 > [!abstract] Passif
-> Lorsqu'il est attaqué pendant le tour des joueurs, il s'équipe de son [[#Armure spirituelle]]
+> Lorsqu'il est attaqué pendant le tour des joueurs, il s'équipe de son [[#Armure spirituelle]] après l'attaque. un [[Jet d'observation (INT)]] pour distinguer cette information.
+> Après avoir lancé une fois l'attaque [[Bannissement du soldat bleu]] sur un joueur, il perds **définitivement** cette armure. un [[Jet d'observation (INT)]] pour comprendre qu'il l'a perdu.
 
 # Arme
 
@@ -26,7 +27,7 @@ Au début du tour, il a une apparence de géant, mais vulnérable, il possède a
 | DD (1D20) | Attaque           |
 | --------- | ----------------- |
 | 1-17      | Attaque de base   |
-| 18+       | ![[Bannissement]] |
+| 18+       | ![[Bannissement du soldat bleu#^d136ef]]![[Bannissement du soldat bleu#^464216]] |
 
 ## Défense
 
@@ -38,4 +39,5 @@ Au début du tour, il a une apparence de géant, mais vulnérable, il possède a
 # Drop
 
 * [[Morgenstern du géant bleu]]
+* 1 pièce de cuivre par joueur.
 

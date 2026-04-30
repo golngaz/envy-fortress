@@ -1,0 +1,2 @@
+Cela fait déjà 50 ans que le bouffon du roi a fui ses obligations. Ce dernier, très intelligent de prime abord, était parfait pour mettre en valeur [[Le roi du premier étage - Maître d'étage]].
+Il vit la folie du roi s'amplifier d'année en années et décida de fuir en direction de la forêt, mais ce dernier n'était pas en reste et il avait volé quelques [[fragments]]

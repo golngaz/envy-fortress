@@ -10,5 +10,5 @@ difficulty: 1
 </audio>
 
 
-![[monstres/Le Soldat Bleu|Le Soldat Bleu]]
+[[monstres/Le Soldat Bleu|Le Soldat Bleu]]
 

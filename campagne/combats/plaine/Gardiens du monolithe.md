@@ -11,13 +11,8 @@ Leurs casques de chevaliers, ternis par le temps, résonnent d’un bruit métal
 > Mais leur posture martiale, figée et tendue, ne laisse aucun doute : franchir leur territoire revient à les provoquer.  
 
 <audio controls>
-  <source src="https://cdn1.suno.ai/0e9eadd1-8ea4-48be-b9f2-7046344bf90b.m4a" type="audio/mp4">
+  <source src="https://cdn1.suno.ai/90052e3c-5769-4c7d-9c3b-57f741657fc3.m4a" type="audio/mp4">
 </audio>
 
 3 [[Lapin soldat|lapins soldat]] apparaissent et sortent du monolithe. Ils n'attaquent pas immédiatement mais vous regardent d'un air de défiance.
 
-
-
-![[gardiens-du-monolithe.base]]
-![[gardiens-du-monolithe.base]]
-![[gardiens-du-monolithe.base]]

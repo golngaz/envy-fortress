@@ -4,5 +4,8 @@ ignore bouclier: true
 Négatif: true
 max: 20
 ---
-Représente la **chaleur excessive** subie par un personnage.  
-Au début de son tour, le personnage subit **1 point de dégâts par jeton de Température**, puis perd tous ses jetons. Ce statut reflète les conditions environnementales extrêmes ou les effets magiques liés à la chaleur.
+Représente une accumulation de chaleur dangereuse affectant un personnage, généralement causée par des conditions environnementales extrêmes ou des effets magiques.
+
+A chaque fois qu'un jeton température est **ajouté**, le joueur subit 1 dégât. 
+**Si** un jeton est ajouté en présence d'autres jetons, chacun des jetons **augmente**. Si un jeton atteint le palier 12, il se transforme en [[Jeton Brûlure]] (2).
+
