@@ -2,10 +2,10 @@
 joueur: visible
 CON: 6
 CTRL: 0
-FOR: 2
+FOR: 6
 INT: 0
-VIT: 0
-VOL: 0
+VIT: 3
+VOL: 3
 ---
 Il n'est pas la pour rigoler, il sait se battre et il aime se battre… Il a aussi une grosse armure.
 
