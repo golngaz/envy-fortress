@@ -1,5 +1,5 @@
 ---
-PA: 3, 2 ou 0
+PA: "3"
 joueur: visible
 ---
 

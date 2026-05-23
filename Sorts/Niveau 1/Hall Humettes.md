@@ -1,5 +1,5 @@
 ---
-PA: "1"
+PA: "3"
 joueur: visible
 ---
 > [!quote] Citation

@@ -4,17 +4,20 @@ joueur: visible
 # Flèche
 
 Indicateur déterminant le début du tour sur la roue, elle se déplace en suivant le dernier joueur.
+On la place au début de la première case au début du combat.
 
 # Détermination de l’ordre de jeu  
   
 Au **début de chaque tour global**, l’ordre des tours individuels est déterminé par son ordre sur la roue : le joueur le plus éloigné de la flèche commence et le joueur collé à la flèche sera dernier.
-Le premier tour, tout les joueurs et ennemis lancent 1D6 pour déterminer la case de départ. On ajoute à ce dé le [[Bonus de nombre de cases]]
+Le premier tour, tout les joueurs se placent sur la première case. On ajoute à ce dé le [[Bonus de nombre de cases]]
 # Principe  
 
 La roue comporte **6 cases** disposées en cercle. Il y a une [[Système de Vitesse (Roue d’Initiative)#Flèche|Flèche]] qui définit le début et la fin d'un **tour**. Le premier tour global, on place cette flèche au début de la case 1.
 Chaque pion (joueur ou ennemi) avance sur la roue à chaque [[tour global]] selon sa **valeur de Vitesse** :  
 - **Vitesse de base = +0** → avance de **1 case par tour**. 
 - Si vitesse finalement négative, alors le pion ne bouge pas.
+
+TODO revoir la roue avec les modificateurs écrits directement sur la fiche personnage
 
 
 > [!example]    

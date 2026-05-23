@@ -14,13 +14,3 @@ Plutôt centré sur le contrôle de la partie, le mage n'a pas le droit à l'err
 > [!abstract] Passif
 > **Préparé** : au début du tour, gagne un PA supplémentaire
 
-^49332a
-
-TODO virer armes de départ pour la classe.
-# Arme de départ
-
-![[Vieux bâton]]
-
-Sorts de départ
-
-![[Hall Humettes]]

@@ -38,7 +38,7 @@ La condition s'applique uniquement à l'effet dans ce cas précis.
 
 ## Feu Infernal
 
-| DD (1D5) | Effet       | Effet                        | [[Jet de sauvegarde\|JdS]]            |
+| DD (1D4) | Effet       | Effet                        | [[Jet de sauvegarde\|JdS]]            |
 | -------- | ----------- | ---------------------------- | ------------------------------------- |
 | 2+       | dégât du dé | Applique 2 [[Jeton Brûlure]] | [[Constitution (CON)\|CON]] DD10 +INT |
 
@@ -46,7 +46,7 @@ La condition s'applique uniquement à l'effet dans ce cas précis.
 
 ## Tu as osé
 
-| DD (1D5) | Dégât                    | Effet               | JdS                         |
+| DD (1D4) | Dégât                    | Effet               | JdS                         |
 | -------- | ------------------------ | ------------------- | --------------------------- |
 | 1+       | Inflige les dégâts du dé | Inflige une brûlure | [[Constitution (CON)\|CON]] |
 
