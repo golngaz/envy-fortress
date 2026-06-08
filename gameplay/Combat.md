@@ -20,11 +20,10 @@ Le tour commence avec les déplacements. Voir [[Système de Vitesse (Roue d’In
 
 ### Joueur
 
-1. Le joueur gagne +1 PA (+ modificateur [[Intelligence (INT)]] PA )
+1. Le joueur gagne +1 PA
 2. Le joueur applique les effets des différents jetons de statuts (dégâts, altérations, températures, etc.). Ainsi que les bonus lui permettant de gagner des PA ou autre gains. On applique les effets dans l'ordre désiré par le joueur.
 3. Il décale les jetons sur la fiche d'un tour en dessous pour chaque jeton (on dit qu'il **réduit de 1 le jeton**). (Retire le jeton, lorsqu'il arrive à 0).
-4. Il gagne 1 PA + 1 PA par jeton PA. En comptant les temporaires et les permanents.
-5. Il peut effectuer une [[#Action]]. et une [[#Action bonus]], dans l'ordre qu'il souhaite.
+4. Il peut effectuer une [[#Action]]. et une [[#Action bonus]], dans l'ordre qu'il souhaite.
 
 #### Action
 
@@ -41,8 +40,17 @@ Le joueur peut aussi utiliser son sort de [[Shell Control]] s'il consomme les 10
 
 ##### Utiliser un sort
 
-Le joueur peut utiliser un des 6 sorts équipés afin d'attaquer un ennemi préalablement désigné par le joueur. Le joueur dépense le coût en PA du sort à utiliser (ou autres conditions).
- Il est nécessaire de regarder les conditions éventuelles du sort, chaque sort est unique.
+Le joueur peut utiliser un des 6 sorts équipés afin d'attaquer un ennemi préalablement désigné par le joueur. Le joueur **dépense le coût en PA** du sort à utiliser (ou autres conditions).
+Il est nécessaire de regarder les conditions éventuelles du sort, chaque sort est unique.
+Généralement il est nécessaire de lancer un dé, le dé à prendre est précisé dans la première case. On ajoute le modificateur si précisé (exemple : **1D20(+INT)**), signifie qu'on lance un dé 20 et on y ajoute le modificateur de `INT`). Puis l'on regarde dans chaque ligne les effets à appliquer selon le résultat obtenu. Sur 4+ on applique l'effet de la ligne si on obtient 4 ou +.
+Lorsqu'un effet est présent sous un autre effet, dans la même colonne. On ignore alors les autres lignes. (généralement, un sort cumule des effets en + ou fait grossir les "conséquences").
+
+Si le résultat d'un sort est négatif ou "ne fait rien". Le cout en PA aura quand même été dépensé et ne peut être remboursé.
+
+Les modificateurs de sorts doivent **toujours** s'appliquer (même en négatif !).
+
+> [!warning] Echec critique
+> Si un joueur obtient 1, c'est un échec critique, ce qui signifie qu'on **ne prends pas compte des modificateurs** dans ce cas là.
 
 ##### Sorts passifs
 
@@ -70,6 +78,7 @@ L'ennemi utilise forcément sa défense en [[Mode normal]] et le MJ peut décide
 
 Le joueur possède aussi une unique compétence de défense qu'il aura équipé au préalable. Le joueur **peut** résoudre sa compétence de défense, comme les ennemis, et contrer,  renvoyer, réduire etc. en réaction à une attaque (ennemi comme allié).
 Généralement, il lance un dé selon le DD affiché et applique les effets annoncés dans le tableau.
+En cas de doute, les sorts de défense fonctionnent de la même manière que les sorts normaux, au détail près qu'ils ne coûtent *généralement* pas de PA.
 
 ##### Jet de défense
 

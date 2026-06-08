@@ -1,0 +1,1 @@
+Permet de prendre le contrôle d'un joueur ou d'un ennemi afin d'effectuer 1 attaque de son kit immédiatement et gratuitement (il applique ses propres modificateurs). Cependant, il **perds tous ses PA**. S'il cible un allié, ce dernier perds les PA qu'il aurait dû dépenser pour le sort.

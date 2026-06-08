@@ -1,10 +1,10 @@
 ---
 joueur: visible
-CON: 0
-CTRL: 4
+CON: 4
+CTRL: 6
 FOR: 0
 INT: 0
-VIT: 2
+VIT: 6
 VOL: 2
 ---
 

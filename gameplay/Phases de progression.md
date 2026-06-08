@@ -5,7 +5,7 @@ Lorsqu'un joueur tente quelque chose d'incertain, le MJ[^1] peut lui demander un
 
 Un jet n'est jamais obligatoire. Si l'action est triviale pour le personnage, ou si l'issue ne change rien à l'histoire, le MJ peut simplement décider du résultat sans passer par les dés. Les jets existent pour créer de la tension et de l'incertitude là où elles ont du sens — pas pour ralentir inutilement le jeu.
 
-### Situations et résolutions
+## Situations et résolutions
 
 La plupart des situations hors combat peuvent se résoudre de trois manières : par la **narration pure** si l'issue est évidente, par un **jet unique** si l'incertitude est ponctuelle, ou par une **séquence de jets** si l'action est longue et complexe. C'est toujours le MJ qui tranche.
 
@@ -17,7 +17,7 @@ Certaines situations impliquent aussi une dimension sociale — convaincre un PN
 > [!example] Exemple
 > L'équipe explore une salle piégée. Le MJ demande un **JdS (CTRL+) (DD11)** pour désamorcer le mécanisme. Le joueur échoue de peu — le MJ décide que le piège ne se déclenche pas, mais que le mécanisme est maintenant instable et que toute nouvelle tentative se fera avec un DD de 14. L'échec fait avancer la situation sans la bloquer.
 
-### Jets hors combat
+## Jets hors combat
 
 ![[Jet de réflexe (VIT)#^db5509]]
 

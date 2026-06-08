@@ -5,10 +5,6 @@ Créer un personnage, c'est lui donner vie étape par étape : un nom, une ident
 
 Avant toute chose, le joueur donne un nom à son personnage. C'est le point de départ de son identité.
 
-## Choisir une classe
-
-Le joueur choisit une classe parmi celles disponibles. Chaque classe attribue des **valeurs de base** aux six statistiques du jeu : `CON`, `FOR`, `VIT`, `CTRL`, `INT` et `VOL`. Ces valeurs reflètent les aptitudes naturelles du personnage selon son archétype — un Guerrier sera robuste et puissant, un Mage agile mentalement, etc.
-
 
 ## Répartir les statistiques personnelles
 
@@ -16,6 +12,18 @@ Par-dessus les statistiques de classe, le joueur dispose de **12 points de bonus
 
 La **statistique finale** d'un personnage est toujours la somme de sa valeur de classe et de son bonus personnel. Par exemple, un Mage qui investit 4 points en `bonus INT` ajoutera 4 à l'`INT` de base de sa classe.
 
+## Choisir une classe
+
+Le joueur choisit une classe parmi celles disponibles. Chaque classe attribue des **valeurs de base** aux six statistiques du jeu : `CON`, `FOR`, `VIT`, `CTRL`, `INT` et `VOL`. Ces valeurs reflètent les aptitudes naturelles du personnage selon son archétype — un Guerrier sera robuste et puissant, un Mage agile mentalement, etc.
+Les six statistiques sont alors ajoutés à celles calculés précédemment par le joueur.
+
+## Appliquer les modificateurs
+
+Maintenant que les statistiques ne bougeront plus jusqu'au prochain gain de niveau, les joueurs marquent leurs modificateurs de statistiques sur leur fiche personnage.
+Calcul : *((stat) / 6) - 1* (arrondi à l'inférieur). Exemple, John a 8 en `CON`, 0 en `INT` et 13 en `FOR`. Il obtient alors
+(8 / 6) - 1 = 0.333 soit +0 `CON`
+(0 / 6) - 1 = -1 `INT`
+(13 / 6) - 1 = 2.1666 soit +1 en `FOR`
 ## Hériter du passif de classe
 
 Chaque classe confère automatiquement un **passif unique** au personnage, sans choix à faire. Ce passif représente une aptitude distinctive de l'archétype.
@@ -28,7 +36,7 @@ Chaque classe confère automatiquement un **passif unique** au personnage, sans 
 
 Les sorts de départ sont issus d'une **liste commune à tous les personnages**. Les joueurs s'arrangent en groupe pour se les répartir librement, avant le début de la partie ou dans une [[Safe zones|safe zone]]. Chacun doit avoir **au moins un sort actif** et peut en équiper **6 au maximum**, plus **1 sort bonus de Shell Control**. Une fois les sorts choisis, le joueur les dispose sur son plateau et met les autres de côté.
 
-En début de campagne, il est probable que les joueurs n'aient pas encore 6 sorts chacun — il est alors tout à fait possible de donner plus de sorts à un joueur qu'à un autre selon les besoins du groupe. Les sorts peuvent être inter-changés librement, mais uniquement en **Safe zone** ou en tout début de partie. Il n'est **pas possible d'équiper un sort de niveau supérieur au sien**.
+En début de campagne, il est probable que les joueurs n'aient pas encore 6 sorts chacun — il est alors tout à fait possible de donner plus de sorts à un joueur qu'à un autre selon les besoins du groupe. Les sorts peuvent être interchangés librement, mais uniquement en **Safe zone** ou en tout début de partie. Il n'est **pas possible d'équiper un sort de niveau supérieur au sien**.
 
 ### Sort de défense
 
@@ -64,4 +72,3 @@ On y ajoute aussi toutes les autres statistiques calculées par le projet Obsidi
 * `Poids`
 * `Cases`
 * `Tours`
-* @ **TODO** compléter 

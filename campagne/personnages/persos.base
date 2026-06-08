@@ -9,13 +9,13 @@ formulas:
   PV: 8 + 4 * note.level + (formula["+CON"] * note.level *1.5).ceil()
   Tours: (formula["cases ABS"]/6).floor()
   cases: formula["cases ABS"]%6
-  +CON: (formula.CON/6).floor()
+  +CON: (formula.CON/6).floor() - 1
   cases ABS: (1 + formula.VIT/3).floor()
-  +FOR: (formula.FOR/6).floor()
-  +INT: (formula.INT/6).floor()
-  +VIT: (formula.VIT/6).floor()
-  +VOL: (formula.VOL/6).floor()
-  +CTRL: (formula.CTRL/6).floor()
+  +FOR: (formula.FOR/6).floor() - 1
+  +INT: (formula.INT/6).floor() - 1
+  +VIT: (formula.VIT/6).floor() - 1
+  +VOL: (formula.VOL/6).floor() - 1
+  +CTRL: (formula.CTRL/6).floor() - 1
 properties:
   formula.Tours:
     displayName: tours
@@ -50,6 +50,8 @@ views:
       - formula.Poid
       - formula.cases ABS
     sort:
+      - property: formula.+VIT
+        direction: DESC
       - property: formula.CTRL
         direction: DESC
     columnSize:

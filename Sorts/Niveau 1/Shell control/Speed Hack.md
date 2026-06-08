@@ -1,0 +1,1 @@
+Résout les effets de tous les ennemis immédiatement 2 fois.

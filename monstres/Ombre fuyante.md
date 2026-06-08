@@ -20,11 +20,10 @@ level: 1
 
 ## Saisissement
 
-| DD (1D5) | Attaque | |
-| -------- | -------- | ---- |
-| 2+ | dégât du dé | |
-| 4+ | dégât du dé - 1 | +1 [[Bruts\|Dégât brut]] |
-| 5 | dégât du dé en [[Bruts\|Dégât brut]] | |
+| DD (1D4) | Attaque                              |                          |
+| -------- | ------------------------------------ | ------------------------ |
+| 2+       | dégât du dé                          |                          |
+| 4+       | dégât du dé - 1                      | +1 [[Bruts\|Dégât brut]] |
 
 # Drop
 

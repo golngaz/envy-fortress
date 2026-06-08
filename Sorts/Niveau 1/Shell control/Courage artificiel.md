@@ -1,0 +1,1 @@
+Tous les alliés du lanceur gagnent +10 PA.

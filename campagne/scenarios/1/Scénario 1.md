@@ -31,13 +31,13 @@ Le joueur peut décider de ne pas aller plus loin mais il remarquera qu'il fait 
 
 Si les joueurs meurent ou décident de se suicider, ils réapparaîtrons immédiatement près du combat.
 
-## Toucher le monolithe
+##  S'approcher du monolithe
 
 3 Lapins blancs apparaissent mais paraissent un peu agressifs… Tout du moins, sur la défensive, ils portent un casque de soldat gris.
 
 1. [[Lapin soldat]]
 
-Toucher le monolithe : 
+## Toucher le monolithe : 
 
 > [!tip] Narration
 > Vos mains effleurent enfin la surface froide du rocher. À cet instant précis, le sol se met à vibrer, un grondement sourd résonnant dans vos os. Sous vos yeux, le monolithe se déchire et se métamorphose lentement : la pierre se plie, se sculpte d’elle-même, prenant l’apparence d’un soldat gigantesque. Son corps est nu de toute armure, façonné d’une peau lisse et bleuâtre, mais sa tête est dissimulée sous un imposant casque de chevalier, seul vestige d’une protection ancienne.
@@ -63,7 +63,7 @@ Prendre la porte dorée nous amène dans une salle qui semble magique, coupée d
 * Insister sur le fait que l'ascenseur semble vraiment à part, il n'y a pas de murs, seulement une sorte de sol magique, quand la porte se ferme, tout mur disparait et on a l'impression que l'on tient juste sur sur une plateforme qui descend en empruntant un plan à part
 * Les joueurs pourraient tomber, s'il essayent de sauter, le joueur disparaît pour apparaître
 
-Arrivé en bas, les joueurs gagnent un niveau et arrive devant un panneau indiquant qu'à partir de ce point, toute mort devient définitive signée "Le Magicien".
+Arrivé en bas, les joueurs **gagnent un niveau** et arrivent devant un panneau indiquant qu'à partir de ce point, toute mort devient définitive signée "Le Magicien".
 
 # Plan
 

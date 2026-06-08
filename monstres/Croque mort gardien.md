@@ -19,18 +19,18 @@ level: 3
 # Attaques
 
 
-| DD (1D5) |                     |
+| DD (1D4) |                     |
 | -------- | ------------------- |
 | 1        | [[#Invocation]]     |
 | 2+       | [[#Coup de chaîne]] |
 
 ## Coup de chaîne
 
-| DD (1D5) | Attaque | |
-| -------- | -------- | ---- |
-| 2+ | dégât du dé | |
-| 4+ | dégât du dé | +1 [[Bruts\|Dégât brut]] |
-| 5 | dégât du dé | +2 [[Bruts\|Dégât brut]] + cible entravée jusqu'à la fin de son prochain tour |
+| DD (1D4) | Attaque     |                                                                               |
+| -------- | ----------- | ----------------------------------------------------------------------------- |
+| 2+       | dégât du dé |                                                                               |
+| 4+       | dégât du dé | +1 [[Bruts\|Dégât brut]]                                                      |
+| 5        | dégât du dé | +2 [[Bruts\|Dégât brut]] + cible entravée jusqu'à la fin de son prochain tour |
 
 ## Invocation
 
