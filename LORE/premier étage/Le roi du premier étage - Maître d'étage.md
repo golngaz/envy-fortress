@@ -1,1 +1,1 @@
-Son nom était [[LORE/Famille Sombreval/Hector Sombreval|Hector Sombreval]].
+Son nom était [[LORE/Famille Sombreval/Hector Sombreval|Hector Sombreval]]. Elu en l'an 520.

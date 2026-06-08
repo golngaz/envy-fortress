@@ -1,0 +1,1 @@
+Créé en l'an 1024, on ne sais pas si cet étage est le dernier pouvant apparaître, mais il semble clair qu'il fut conçu pour sa simplicité et son accueil qui semble être proches des clichés que l'on peut se faire d'un paradis immaculé.
