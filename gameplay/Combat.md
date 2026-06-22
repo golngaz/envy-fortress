@@ -113,7 +113,16 @@ chaque ligne remplace la précédente sur **la même colonne**. Si la case est v
 
 # Entrée/Sortie d'un joueur
 
-Les joueurs ne peuvent pas quitter un combat en cours, sauf si une règle spéciale définie par le MJ le permet (selon le scénario ou des conditions particulières).
+Les joueurs ne peuvent pas quitter librement un combat en cours. Mais un combat peut **s'arrêter**, ou un personnage **fuir**, dans les cas ci-dessous.
+
+> [!info] Arrêter ou fuir un combat
+> Possible si l'**une** de ces conditions est réunie **et** que le MJ la valide :
+> - **un camp ne veut plus se battre** (reddition, supplication, désengagement mutuel) ;
+> - **les conditions s'y prêtent** : voie de fuite, objectif atteint, ennemi neutralisé ou sans intérêt à se battre, distance suffisante sur la roue ;
+> - **le MJ le décide**.
+>
+> **Trêve** (les deux camps renoncent) : le combat s'arrête aussitôt, on repasse en temps réel et on applique la fin de combat habituelle.
+> **Fuite** (un seul personnage) : déclarée à son tour. Hors de portée de tout ennemi → il part sans jet ; sinon, **JdS (VIT+)** pour rompre le contact (échec = tour perdu, il reste engagé). Un ennemi peut le poursuivre ou le laisser filer.
 
 Un combat peut débuter sans que tous les joueurs y participent. Les joueurs absents sont tout de même représentés sur la [[Système de Vitesse (Roue d'Initiative)|Roue d'initiative]] et se déplacent normalement selon leurs statistiques de [[Vitesse (VIT)]]. Ils ne peuvent cependant ni être ciblés, ni attaquer. Lorsque c'est leur tour dans le combat, ils peuvent interagir avec l'environnement extérieur au combat pour une séquence d'actions équivalant à une dizaine de secondes environ — c'est le MJ qui tranche en cas de doute.
 

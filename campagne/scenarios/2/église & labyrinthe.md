@@ -12,9 +12,25 @@ Il y a des **vitraux** : sur plusieurs d'entre eux, à qui regarde attentivement
 > [!note] Ancrage (système de mort)
 > Le monolithe de l'église est le **premier [[Fragment du monolithe|fragment]] ancrable** de l'étage. Dès que les joueurs s'y lient (en le touchant / s'y reposant), il devient leur **point de résurrection** sur ce palier. À mémoriser : c'est ici qu'ils reviendront s'ils tombent.
 
-## La personne qui en sait trop — [[L'architecte]]
+## À la porte — [[L'architecte]] (la personne qui en sait trop)
 
-Près de la porte se tient [[L'architecte]]. Il **en sait beaucoup trop** : il connaît la vraie nature des lieux, le rôle des fragments, et la manière d'« ouvrir » le monolithe. Méfiant, il parle par énigmes — mais il peut orienter les joueurs sur le rituel d'accès (voir plus bas) et leur donner le tout premier vernis de géopolitique de l'étage.
+**Génos**, un vieil homme, est appuyé près du portail ; il les regarde sortir du monolithe comme on regarde un mauvais présage. *(Il ne donne son nom qu'une fois en confiance.)* Il **en sait beaucoup trop** : la vraie nature des lieux (une machine), le rôle des fragments, la commande [[Shell Access]]. C'est la **première vraie source d'info** de l'étage. Fiche complète et répliques : [[L'architecte]].
+
+> [!quote] Premier contact (méfiant)
+> « Tiens. Encore quelqu'un qui sort de la pierre. Vous n'êtes pas d'ici — personne d'ici n'ose plus approcher le monolithe. Dites-moi d'où vous venez, et je déciderai si je vous parle. »
+
+Il **teste** les joueurs (il craint des espions impériaux). Tant qu'ils ne l'ont pas rassuré — ils ne connaissent rien à l'Empire, ils viennent « d'ailleurs » — ou résolu l'énigme seuls, il reste avare. Une fois en confiance, il lâche, par bribes :
+
+> [!quote] La géopolitique de l'étage, dans sa bouche (s'ils l'interrogent)
+> **Sur l'Empire** : « Ici, c'est l'Empire un seul homme compte : le roi [[LORE/Famille Sombreval/Hector Sombreval|Hector]]. »
+> **Sur la forêt** : « Au sud, la forêt. L'Empereur n'y va pas. »
+> **Sur l'église** : « Cette église, c'est moi qui l'ai finie. Elle attends son retour »
+
+> [!quote] Sur la mort (le système de fragments)
+> « Vous mourrez en ce monde. Mais de ce que je vois, ce ne sera peu être pas la fin. »
+
+> [!quote] Indice d'énigme
+> « Tout ce que vous trouverez, rapportez-le à l'homme pieux, il en est le gardien. » 
 
 ## L'arrivée de la fille inconnue
 
@@ -63,9 +79,12 @@ Affichés tels quels (gauche→droite), les fragments ne forment qu'un charabia.
 > [!note]- Ce que le tableau raconte vraiment (MJ uniquement)
 > Les six vitraux = l'origine de la forteresse par [[Le Magicien]] : sa solitude, la première salle, la plaine et le ciel, l'apparition des [[Les incarnés|incarnés]], le monolithe et son gardien, puis l'« apparition » d'une femme à son image. Le 7e (la prière) rappelle l'ancien culte rendu au « dieu » du monolithe — d'où le **cri-prière**. **À ne jamais expliciter aux joueurs ici** : toute la beauté, c'est qu'ils décrivent un dieu créant un monde sans qu'on le leur dise.
 
-# Sortie — le labyrinthe
+# Sortie — le [[Le Jardin des Silencieux|Jardin des Silencieux]] (labyrinthe)
 
-En sortant de l'église, les joueurs comprennent qu'ils sont au **centre d'un labyrinthe** de murs végétaux verts.
+En sortant de l'église, les joueurs comprennent qu'ils sont au **centre d'un labyrinthe** de murs végétaux verts : le **[[Le Jardin des Silencieux|Jardin des Silencieux]]**, qui encercle le sanctuaire.
+
+> [!danger] Danger de zone — les Silencieux
+> Des créatures errent dans les haies. **Les regarder fait perdre la moitié de ses PV** ; **deux regards d'affilée** sur la même déclenchent un **combat**. Traversée et détail : [[Le Jardin des Silencieux]].
 
 Ils peuvent tenter de **tricher en grimpant** : [[Jet de réflexe (VIT)]] puis [[Jet de puissance (FOR)]] au dernier effort. En s'entraidant, tous peuvent monter sur un [[Jet de puissance (FOR)]] ; chaque échec coûte 1 PV. À défaut de faire monter tout le monde, on peut au moins prendre **de la hauteur** pour une vue à 360°.
 
@@ -73,6 +92,16 @@ Ils peuvent tenter de **tricher en grimpant** : [[Jet de réflexe (VIT)]] puis [
 > Il fait nuit, mais **sans étoiles**. Au loin se dressent de **grandes colonnes de marbre titanesques** en direction d'un **château** entouré d'un **village** ; le style est clinquant mais en bon état. On distingue aussi une **tour** non loin, dans la même direction, et l'**orée d'une forêt** toute proche dans le pourtour. *(Les joueurs ignorent toujours à quelle « époque » ils se trouvent.)*
 
 Cette vue plante la **carte mentale** de l'étage : église (centre) → tour (proche) → château/village (nord, l'Empire) → forêt (pourtour, la Résistance).
+
+# Le fragment sur le chemin — entre l'église et la tour
+
+En quittant le labyrinthe vers la tour, les joueurs croisent, **à mi-chemin**, un **éclat bleu** planté dans le sol : un véritable [[LORE/Fragment du monolithe|fragment du monolithe]] tombé là, distinct de la grande colonne de l'église.
+
+> [!tip] Narration
+> Au bord du sentier, un **éclat bleu** de la taille d'un poing est fiché dans la pierre. Il pulse faiblement, du même froid que l'œil du monolithe. Quand on l'approche, on sent une attache — comme si quelque chose, en vous, reconnaissait ce point et voulait s'y raccrocher.
+
+> [!note] Ancrage (système de mort) — à ne pas survoler
+> C'est le **premier vrai fragment ancrable sur le chemin** : s'y lier (le toucher / s'y reposer) en fait le **point de résurrection** des PJ. **C'est ici qu'ils réapparaîtront** s'ils tombent juste après — notamment face au [[campagne/combats/étage 1/Le bouffon (combat)|bouffon]], à la sortie de la tour. Voir [[LORE/Fragment du monolithe]] pour le mécanisme complet. Assure-toi qu'ils le remarquent (au besoin via un [[Jet d'observation (INT)]]) **avant** d'atteindre la tour.
 
 # Sommet de la vieille tour
 
@@ -107,6 +136,13 @@ Ce qu'on y apprend / trouve :
 - Des **armes** (@todo armes) globalement médiocres, mais l'une possède un **passif intéressant** malgré ses faibles dégâts.
 - Possible **fragment** ancrable supplémentaire (point de résurrection avancé).
 - Combat optionnel : [[Garde de la tour]].
+
+## Sortie de la tour — le bouffon
+
+En **redescendant et en sortant** de la tour, les joueurs tombent sur une silhouette qui leur barre le passage : [[LORE/premier étage/Le bouffon|le bouffon]]. Toute la scène (reconnaissance, le passage caché des briques au fond de la tour, le combat **ingagnable**, la première mort et la découverte du respawn au fragment ci-dessus, le retour facultatif et l'esquive vers le nord-ouest) est détaillée dans sa fiche : [[campagne/combats/étage 1/Le bouffon (combat)|Le bouffon — combat de la tour]].
+
+> [!warning] Avant cette scène
+> Vérifie que les PJ ont bien **croisé le fragment sur le chemin** : c'est leur point de résurrection quand le bouffon les tue.
 
 # Suite
 

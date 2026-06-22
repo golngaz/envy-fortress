@@ -11,7 +11,7 @@ Maître d'étage : [[LORE/Famille Sombreval/Hector Sombreval|Hector Sombreval]],
 - Capitale : le **château**, au nord, avec ses colonnes de marbre titanesques et ses bannières dorées. Tout au nord, le [[Le palais d'Icare|palais d'Icare]] — monument de la démesure d'un homme qui s'en vanta trop, et y perdit tout.
 
 ## 2. La Résistance de la forêt
-- Menée — sans qu'il l'ait jamais voulu — par [[Illyan de la forêt ignorée|Illyan]], **fils renié de l'Empereur**, exilé pour avoir osé douter en public. Il incarne la **modestie** : l'exact négatif de l'orgueil de son père. *(Information sensible : son lien de sang avec Hector est un quasi-secret.)*
+- Menée — sans qu'il l'ait jamais voulu — par [[Ilyan de la forêt ignorée|Ilyan]], **fils renié de l'Empereur**, exilé pour avoir osé douter en public. Il incarne la **modestie** : l'exact négatif de l'orgueil de son père. *(Information sensible : son lien de sang avec Hector est un quasi-secret.)*
 - Composition : déserteurs, paysans fugitifs ruinés par l'impôt, artisans, érudits bannis pour avoir trop questionné. Cellules dispersées, campements mobiles pour échapper aux patrouilles.
 - Doctrine : *« Nous ne renverserons pas un trône pour en ériger un autre. »* Ils construisent en cercle, pas en hauteur.
 
@@ -27,7 +27,7 @@ Maître d'étage : [[LORE/Famille Sombreval/Hector Sombreval|Hector Sombreval]],
 
 # Tensions & lignes de faille
 - Un **empereur de plus en plus fou**, une cour qui n'ose rien dire.
-- Une **résistance qui s'organise** mais craint d'être infiltrée — et redoute que l'identité d'Illyan ne la divise.
+- Une **résistance qui s'organise** mais craint d'être infiltrée — et redoute que l'identité d'Ilyan ne la divise.
 - Un **clergé** détenteur de vérités dangereuses, que l'Empire préférerait voir disparaître.
 - Des **villages exsangues** qui peuvent basculer.
 - Un **Bouffon** imprévisible qui détient des fragments convoités de tous.

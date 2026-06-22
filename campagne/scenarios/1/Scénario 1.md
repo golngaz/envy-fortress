@@ -52,7 +52,7 @@ Si les joueurs meurent ou décident de se suicider, ils réapparaîtrons immédi
 
 
 
-2. [[campagne/combats/plaine/Le Soldat Bleu|Le Soldat bleu]]
+2. [[campagne/combats/plaine/Le Soldat Bleu (combat)|Le Soldat bleu]]
 
 Lorsque [[monstres/Le Soldat Bleu|Le Soldat Bleu]] est battu, Il se fige d'une matière qui semble être la même que celle du monolithe
 

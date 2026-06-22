@@ -21,5 +21,11 @@ Ce qui la rend précieuse aux yeux des joueurs, ce ne sont pas ses capacités �
 ## Interactions
 
 Les joueurs peuvent lui poser des questions, elle n'en saura pas beaucoup plus que les joueurs dans un premier temps. Et au niveau de son passé, elle est amnésique, elle est de bonne foi en disant qu'elle ne se souvient de rien. 
+> [!quote] Répliques prêtes (Dulcina)
+> **Qui es-tu ?** — « Dulcina. C'est tout ce que je sais. Le reste, c'est… du brouillard. Des visages, mais pas de noms. »
+> **Pourquoi nous avoir suivis ?** — « Parce que rester là-haut toute seule, c'était pire. Vous, au moins, vous bougez. »
+> **Tu sais où on est ?** — « Pas plus que vous. Peut-être moins. »
+> **Si on la brusque** — *(elle se recroqueville)* « Je vous ai rien fait, moi… »
+
 * Si les joueurs veulent vraiment savoir si elle ment, ils pourront faire un [[Jet d'observation (INT)]].
 * S'ils décident de l'attaquer, on ne lance pas le combat, elle ne pourra pas se défendre et mourra sur place.
