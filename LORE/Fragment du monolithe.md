@@ -13,3 +13,14 @@ Les fragments, quant à eux, ne restent pas toujours entre les mains de leurs po
 Afin d’éviter les abus et maintenir la stabilité des étages, le Magicien mit en place une hiérarchie stricte. Chaque fragment est associé à un niveau d’accès : un fragment de niveau 2, par exemple, ne peut être utilisé que par une personne disposant d’un accès aux étages 1 et 2.
 
 Cependant, posséder un niveau d’accès ne garantit pas un libre passage. L’entrée dans un étage reste soumise à l’autorisation du [[Maître d'étage]], s'il est vivant.
+
+# Les fragments comme points d'ancrage (résurrection)
+
+Tous les fragments, où qu'ils soient tombés, demeurent **reliés au monolithe principal** — l'unique colonne qui transperce la forteresse de haut en bas et dont la base plonge **tout en bas**, au [[Shell Access|cœur]] de la structure. Un fragment n'est jamais vraiment isolé : c'est un **nœud** du même réseau, une terminaison du monolithe-mère.
+
+Pour un [[Les incarnés|incarné]], cette propriété est vitale. En se liant à un fragment (en le touchant, en s'y reposant), il y **ancre son état**. S'il vient à mourir, le monolithe le **ré-instancie au dernier fragment** auquel il s'est lié — comme une sauvegarde rechargée depuis le cœur de la machine. La mort n'est donc pas une fin, mais un **retour en arrière** : on se réveille au dernier fragment ancré, intact, là où l'on s'était lié pour la dernière fois.
+
+Les fragments sont **dispersés sur chaque étage** : les trouver, les activer et s'y lier dessine la véritable carte de progression d'un incarné. Plus on descend, plus on se rapproche du monolithe principal — et du cœur dont tout dépend.
+
+> [!note] Conséquence
+> C'est ce mécanisme qui rend les incarnés si précieux (et si difficiles à éliminer pour de bon) : tant qu'un fragment ancré subsiste, ils reviennent. Détruire un incarné durablement suppose de couper son lien au réseau — ou de l'achever loin de tout fragment ancré.

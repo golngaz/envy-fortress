@@ -63,7 +63,17 @@ Prendre la porte dorée nous amène dans une salle qui semble magique, coupée d
 * Insister sur le fait que l'ascenseur semble vraiment à part, il n'y a pas de murs, seulement une sorte de sol magique, quand la porte se ferme, tout mur disparait et on a l'impression que l'on tient juste sur sur une plateforme qui descend en empruntant un plan à part
 * Les joueurs pourraient tomber, s'il essayent de sauter, le joueur disparaît pour apparaître
 
-Arrivé en bas, les joueurs **gagnent un niveau** et arrivent devant un panneau indiquant qu'à partir de ce point, toute mort devient définitive signée "Le Magicien".
+Arrivé en bas, les joueurs **gagnent un niveau** et arrivent devant un panneau.
+
+> [!quote] Le panneau (signé « Le Magicien »)
+> « Ici prend fin le cycle de la Couronne. Plus bas, tu ne renaîtras plus dans le ciel.
+> Lie-toi aux **fragments du monolithe** dispersés sur chaque étage : c'est là, et nulle part ailleurs, que tu reviendras si tu tombes.
+> Avance, et le cœur t'attend. »
+
+> [!info] Système de mort (hybride) — règle MJ
+> Fini la réapparition libre de la Couronne. À partir d'ici, la mort renvoie le joueur à **son dernier [[Fragment du monolithe|fragment]] ancré** (un fragment qu'il a touché/activé), avec ses PV restaurés. Tous les fragments sont reliés au monolithe principal qui descend jusqu'au cœur, tout en bas.
+> - Tant qu'aucun fragment n'est ancré sur un étage, le dernier ancrage **antérieur** reste le point de retour (au pire, le premier fragment du début de l'étage).
+> - On peut y rattacher un coût à la mort (cf. règles : perte de jetons, de ressources, repop des ennemis non-boss…) sans que la mort soit définitive.
 
 # Plan
 
