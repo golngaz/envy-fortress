@@ -15,10 +15,9 @@
 
 ## 🧙 Tour Joueur
 
-➕ +1 PA  (+ Modif INT PA)
-💥 Applique effets (jetons)  
+➕ +1 PA
+💥 Applique effets des jetons
 ⬇️ Décale jetons (0 = retiré)  
-⚡ +1 PA + PA des jetons  
 🎬 **1 action**
 
 ### 🎬 Actions (1)

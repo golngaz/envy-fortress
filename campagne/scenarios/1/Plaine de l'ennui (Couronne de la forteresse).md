@@ -4,7 +4,7 @@
 > Le ciel au-dessus est d’un bleu éclatant, toujours baigné d’une lumière immuable.  
 > Le silence est total : pas de vent, pas d’oiseaux, aucun mouvement. Tout semble figé, artificiel, comme une peinture vivante.  
 > 
-> Et pourtant, malgré cette uniformité, vos yeux finissent toujours par accrocher **un gigantesque monolithe bleu**, haut d’une dizaine de mètres.  
+> Et pourtant, malgré cette uniformité, vos yeux finissent toujours par accrocher **un gigantesque monolithe bleu-noir**, haut d’une dizaine de mètres.  
 > Lisse, sans fissure, il est orné d’un unique œil monochromatique, froid, immobile… mais qui donne l’impression d’observer chacun de vos gestes.
 
 
@@ -15,7 +15,7 @@ Ronde pourtant délimité par une fin, le vide. Le tout est arrondis. Les joueur
 > L’herbe verte s’interrompt brusquement, remplacée par un gouffre sans fond qui encercle ce monde de toutes parts.  
 > La “terre” elle-même semble ronde, comme un disque suspendu au milieu du néant.  
 > 
-> La sensation est vertigineuse. Chaque pas près du bord vous donne l’impression d’être minuscule, prisonnier d’un monde clos, flottant au milieu de nulle part… sous l’œil impassible du monolithe bleu.
+> La sensation est vertigineuse. Chaque pas près du bord vous donne l’impression d’être minuscule, prisonnier d’un monde clos, flottant au milieu de nulle part… sous l’œil impassible du monolithe bleu-noir.
 
 Si jamais les joueurs traînent trop :
 

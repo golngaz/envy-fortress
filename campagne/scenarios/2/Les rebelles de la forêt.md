@@ -8,7 +8,7 @@ Suite de [[église & labyrinthe]]. Les joueurs gagnent l'**orée de la forêt** 
 La Résistance ne se montre pas : elle **observe** d'abord. Les joueurs sont **pris en embuscade** par une patrouille rebelle (arcs, filets, pas d'intention de tuer) qui les soupçonne d'être des **espions impériaux** — un groupe d'étrangers bien équipés qui sort du monolithe central, ça ne court pas les bois.
 
 > [!quote] La patrouille surgit (chef de patrouille)
-> « Pas un geste. Mains où on les voit. » *(arcs bandés, un filet prêt)* « Vous sortez du pilier bleu, équipés comme des chiens de l'Empereur, et vous croyez traverser nos bois tranquilles ? Espions, éclaireurs, ou pire. Donnez-moi une raison de ne pas vous abattre. »
+> « Pas un geste. Mains où on les voit. » *(arcs bandés, un filet prêt)* « Vous sortez du pilier bleu-noir, équipés comme des chiens de l'Empereur, et vous croyez traverser nos bois tranquilles ? Espions, éclaireurs, ou pire. Donnez-moi une raison de ne pas vous abattre. »
 
 > [!quote] S'ils protestent / s'expliquent
 > *(à ses hommes)* « 'Ils viennent d'ailleurs.' Ils disent tous ça quand on les coince. » *(aux joueurs)* « On ne croit pas les mots, ici. On croit ce que les gens font. Vous voulez qu'on vous écoute ? Prouvez-le. »
@@ -60,7 +60,7 @@ Une **patrouille impériale tombe toujours pile au bon endroit** : il y a un **i
 
 # 4. Le tournant — retourner l'orgueil contre Hector
 
-Le fil de l'étage converge ici : Hector ne se bat pas, il se **piège** par son péché. Le **pacte d'Orgueil** (cf. [[Brainstorm]] : +2 en attaque mais **aucun soin ni bonus allié**, *« Je n'ai besoin de personne »*) le décrit autant qu'il décrit une tentation joueur. Pistes de résolution (au choix / combinables) :
+Le fil de l'étage converge ici : Hector ne se bat pas, il se **piège** par son péché. Le **pacte d'Orgueil** (cf. [[brainstorm - idées]] : +2 en attaque mais **aucun soin ni bonus allié**, *« Je n'ai besoin de personne »*) le décrit autant qu'il décrit une tentation joueur. Pistes de résolution (au choix / combinables) :
 
 - **L'humiliation publique** : exposer aux villages et à la cour ce que l'Empire cache (les blessés dissoutis, les villages saignés, la défaite niée). L'orgueil ne survit pas au ridicule. Ilyan : *« Quelle grandeur exige qu'on écrase ceux qui la portent ? »*
 - **Le duel qu'il ne peut refuser** : un Empereur orgueilleux ne décline pas un défi public → on l'isole de sa cour et de ses soins (le pacte d'orgueil rendu littéral) pour le rendre enfin vulnérable.

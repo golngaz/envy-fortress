@@ -1,2 +1,2 @@
 A certains moments clés de l'histoire, le MJ décidera de leur faire gagner un niveau. Les sorts de niveau x sont débloqué, si les joueurs possédaient déjà les sorts sans pouvoir les équiper, ils le peuvent maintenant (et ils peuvent toujours utiliser les niveaux inférieur).
-Chaque niveau rapporte 6 points à distribuer dans les différentes **statistiques**. Le niveau 1 commence avec 6 points (+6 points déplaçable).
+Chaque niveau rapporte **6 points** à répartir dans les **statistiques**. Le **niveau 1** en accorde le double — **12 points** — auxquels s'ajoutent les statistiques de la **classe choisie** (toujours **18 points** au total), soit **30 points** de statistiques au niveau 1.

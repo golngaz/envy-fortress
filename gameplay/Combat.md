@@ -124,7 +124,7 @@ Les joueurs ne peuvent pas quitter librement un combat en cours. Mais un combat 
 > **Trêve** (les deux camps renoncent) : le combat s'arrête aussitôt, on repasse en temps réel et on applique la fin de combat habituelle.
 > **Fuite** (un seul personnage) : déclarée à son tour. Hors de portée de tout ennemi → il part sans jet ; sinon, **JdS (VIT+)** pour rompre le contact (échec = tour perdu, il reste engagé). Un ennemi peut le poursuivre ou le laisser filer.
 
-Un combat peut débuter sans que tous les joueurs y participent. Les joueurs absents sont tout de même représentés sur la [[Système de Vitesse (Roue d'Initiative)|Roue d'initiative]] et se déplacent normalement selon leurs statistiques de [[Vitesse (VIT)]]. Ils ne peuvent cependant ni être ciblés, ni attaquer. Lorsque c'est leur tour dans le combat, ils peuvent interagir avec l'environnement extérieur au combat pour une séquence d'actions équivalant à une dizaine de secondes environ — c'est le MJ qui tranche en cas de doute.
+Un combat peut débuter sans que tous les joueurs y participent. Les joueurs absents sont tout de même représentés sur la [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] et se déplacent normalement selon leurs statistiques de [[Vitesse (VIT)]]. Ils ne peuvent cependant ni être ciblés, ni attaquer. Lorsque c'est leur tour dans le combat, ils peuvent interagir avec l'environnement extérieur au combat pour une séquence d'actions équivalant à une dizaine de secondes environ — c'est le MJ qui tranche en cas de doute.
 
 Si le joueur se rapproche et est vue par un ennemi qui était en combat avec les PJ, il rejoint alors le combat et met fin à son tour.
 

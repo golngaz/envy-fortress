@@ -24,6 +24,11 @@
 - Sortir du labyrinthe / prendre de la hauteur → **carte mentale** de l'étage.
 - **Tour en ruine** : exposition sur l'orgueil, armes (dont une à passif), combat optionnel [[Garde de la tour]].
 
+## 3bis. La geôle des suppliciés (optionnel)
+→ [[La geôle des suppliciés]]
+- Après la tour : un bâtiment-prison où des gens se torturent. Premiers indices sur les **[[Bestiaire#Hélico-parasite|hélico-parasites]]** (parasites nés du monolithe).
+- Deux combats en cascade : les **hôtes** très faibles, puis les **parasites** qui en jaillissent. Capture possible (revente).
+
 ## 4. La forêt & la Résistance
 → [[Les rebelles de la forêt]]
 - Premier contact méfiant, campement en cercle, crochets de quête (convoi, [[Le bouffon|Bouffon]], sanctuaire-fragment, taupe).

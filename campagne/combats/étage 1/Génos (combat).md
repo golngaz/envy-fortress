@@ -30,4 +30,7 @@ Il se recroqueville, mains jointes, tête baissée.
 
 # Fin du combat
 
-* 2 pièces de bronze
+* **Première mort** : 2 pièces de bronze (c'est tout ce qu'il porte).
+
+> [!info] Il revient — c'est un incarné
+> Génos est lui aussi **ancré au monolithe** (un des rares à prier encore la pierre). Après l'avoir tué, on le **revoit réapparaître près du monolithe** de l'église, intact. S'ils l'attaquent **de nouveau**, rien ne change… sauf qu'il ne **lâche plus aucun drop** (les 2 pièces ne tombent qu'une seule fois). On peut s'acharner : il reviendra, un peu plus las à chaque fois.

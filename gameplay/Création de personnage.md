@@ -8,7 +8,7 @@ Avant toute chose, le joueur donne un nom à son personnage. C'est le point de d
 
 ## Répartir les statistiques personnelles
 
-Par-dessus les statistiques de classe, le joueur dispose de **12 points de bonus personnels** à répartir librement entre les six statistiques (`CON`, `VIT`, etc.).
+Par-dessus les statistiques de classe, le joueur dispose de **12 points de bonus personnels** à répartir librement entre les six statistiques (`CON`, `VIT`, etc.). Les statistiques de **classe** valent toujours **18 points** au total : un personnage de niveau 1 dispose donc de **30 points** de statistiques (18 de classe + 12 personnels).
 
 La **statistique finale** d'un personnage est toujours la somme de sa valeur de classe et de son bonus personnel. Par exemple, un Mage qui investit 4 points en `bonus INT` ajoutera 4 à l'`INT` de base de sa classe.
 
@@ -24,6 +24,10 @@ Calcul : *((stat) / 6) - 1* (arrondi à l'inférieur). Exemple, John a 8 en `CON
 (8 / 6) - 1 = 0.333 soit +0 `CON`
 (0 / 6) - 1 = -1 `INT`
 (13 / 6) - 1 = 2.1666 soit +1 en `FOR`
+
+> [!info] Vous aurez forcément un −1
+> Une statistique **strictement sous 6** donne un modificateur de **−1**. Comme vous répartissez 30 points sur 6 statistiques (il en faudrait **36** pour toutes les amener à 6), **au moins une statistique restera sous 6** : tout personnage a donc **au moins un −1**.
+
 ## Hériter du passif de classe
 
 Chaque classe confère automatiquement un **passif unique** au personnage, sans choix à faire. Ce passif représente une aptitude distinctive de l'archétype.

@@ -49,7 +49,7 @@ Détail de l'énigme et solution complète : [[église & labyrinthe]]. Cadre gé
 - **Vulnérable** : ce qu'il sait fait de lui une cible. Piste de quête : le protéger, ou découvrir qu'on le traque déjà.
 
 > [!danger] Si les PJ l'attaquent
-> Génos ne sait pas se battre : il **supplie** et il **prie**. Voir [[campagne/combats/étage 1/Génos (combat)|Génos (combat)]]. Le tuer leur fait **perdre leur principale source d'information** sur l'étage — une perte sèche, pas une victoire.
+> Génos ne sait pas se battre : il **supplie** et il **prie**. Voir [[campagne/combats/étage 1/Génos (combat)|Génos (combat)]]. Mais il est **ancré au monolithe** : le tuer ne sert à rien, il **réapparaît près du monolithe**, intact. Au pire, ils se ferment ses confidences sur le moment — et il ne lâche plus le moindre butin si on s'acharne.
 
 > [!question] À trancher (MJ)
 > Lien possible entre l'architecte et le **clergé du monolithe** : simple témoin gênant, ou ancien fidèle de l'ordre qui vénérait le Magicien sans le savoir ?

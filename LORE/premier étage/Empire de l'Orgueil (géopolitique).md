@@ -16,7 +16,7 @@ Maître d'étage : [[LORE/Famille Sombreval/Hector Sombreval|Hector Sombreval]],
 - Doctrine : *« Nous ne renverserons pas un trône pour en ériger un autre. »* Ils construisent en cercle, pas en hauteur.
 
 ## 3. Le clergé du monolithe
-- L'**église bâtie autour du monolithe**, au centre de l'étage : jadis un lieu de culte fréquenté, aujourd'hui presque désert. On y vénérait la figure au bâton et au chapeau pointu (le [[Le Magicien|Magicien]], sans le savoir) représentée sur les vitraux.
+- L'**église bâtie autour du monolithe**, au centre de l'étage : jadis un lieu de culte fréquenté, aujourd'hui presque désert. On y vénérait la figure au bâton et au chapeau pointu (le [[Le Magicien|Magicien]], sans le savoir) représentée sur les vitraux. **Pourquoi l'église est désertée** : [[Le clergé du monolithe]].
 - Gardée par [[L'architecte]], qui **en sait trop** : il connaît la vraie nature de la forteresse (une machine), le rôle des [[Fragment du monolithe|fragments]] et la commande [[Shell Access]]. Méfiant, traqué pour ce qu'il sait.
 
 ## 4. Le Bouffon

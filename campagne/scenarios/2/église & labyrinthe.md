@@ -2,10 +2,13 @@ Première zone du [[Premier étage - Orgueil|premier étage (Orgueil)]]. Cadre g
 
 # Arrivée — l'église bâtie autour du monolithe
 
-Les aventuriers sortent du monolithe-ascenseur. Ils ne débarquent pas *à côté* du monolithe : **l'église a été construite tout autour de lui**. La colonne bleue traverse la nef de bas en haut, comme un pilier vivant ; l'autel, les bancs, les vitraux ont été disposés *en cercle* autour d'elle. Le lieu est à demi délabré, manifestement bien plus fréquenté autrefois.
+Les aventuriers sortent du monolithe-ascenseur. Ils ne débarquent pas *à côté* du monolithe : **l'église a été construite tout autour de lui**. La colonne bleu-noir traverse la nef de bas en haut, comme un pilier vivant ; l'autel, les bancs, les vitraux ont été disposés *en cercle* autour d'elle. Le lieu est à demi délabré, manifestement bien plus fréquenté autrefois.
 
 > [!tip] Narration
-> Le monolithe ne vous attendait pas dehors : il *est* le cœur de ce lieu. On a élevé l'église autour de lui comme on enferme une relique — ou comme une coquille protège ce qu'elle abrite. La colonne bleue monte droit à travers la voûte fendue, et son unique œil monochromatique, froid, vous suit de banc en banc. La poussière, les bancs renversés, les cierges éteints : ici, on priait. Plus maintenant.
+> Le monolithe ne vous attendait pas dehors : il *est* le cœur de ce lieu. On a élevé l'église autour de lui comme on enferme une relique — ou comme une coquille protège ce qu'elle abrite. La colonne bleu-noir monte droit à travers la voûte fendue, et son unique œil monochromatique, froid, vous suit de banc en banc. La poussière, les bancs renversés, les cierges éteints : ici, on priait. Plus maintenant.
+
+> [!note] Pourquoi l'église est-elle déserte ? (MJ)
+> L'ordre qui vénérait le monolithe s'est effondré — non par perte de foi, mais parce que son « miracle » est devenu insoutenable. Détail : [[Le clergé du monolithe]].
 
 Il y a des **vitraux** : sur plusieurs d'entre eux, à qui regarde attentivement ([[Jet d'observation (INT)]]), se distingue **une silhouette tenant un bâton, coiffée d'un chapeau pointu**. (C'est [[Le Magicien]] — les joueurs l'ignorent.)
 
@@ -95,10 +98,10 @@ Cette vue plante la **carte mentale** de l'étage : église (centre) → tour (p
 
 # Le fragment sur le chemin — entre l'église et la tour
 
-En quittant le labyrinthe vers la tour, les joueurs croisent, **à mi-chemin**, un **éclat bleu** planté dans le sol : un véritable [[LORE/Fragment du monolithe|fragment du monolithe]] tombé là, distinct de la grande colonne de l'église.
+En quittant le labyrinthe vers la tour, les joueurs croisent, **à mi-chemin**, un **éclat bleu-noir** planté dans le sol : un véritable [[LORE/Fragment du monolithe|fragment du monolithe]] tombé là, distinct de la grande colonne de l'église.
 
 > [!tip] Narration
-> Au bord du sentier, un **éclat bleu** de la taille d'un poing est fiché dans la pierre. Il pulse faiblement, du même froid que l'œil du monolithe. Quand on l'approche, on sent une attache — comme si quelque chose, en vous, reconnaissait ce point et voulait s'y raccrocher.
+> Au bord du sentier, un **éclat bleu-noir** de la taille d'un poing est fiché dans la pierre. Il pulse faiblement, du même froid que l'œil du monolithe. Quand on l'approche, on sent une attache — comme si quelque chose, en vous, reconnaissait ce point et voulait s'y raccrocher.
 
 > [!note] Ancrage (système de mort) — à ne pas survoler
 > C'est le **premier vrai fragment ancrable sur le chemin** : s'y lier (le toucher / s'y reposer) en fait le **point de résurrection** des PJ. **C'est ici qu'ils réapparaîtront** s'ils tombent juste après — notamment face au [[campagne/combats/étage 1/Le bouffon (combat)|bouffon]], à la sortie de la tour. Voir [[LORE/Fragment du monolithe]] pour le mécanisme complet. Assure-toi qu'ils le remarquent (au besoin via un [[Jet d'observation (INT)]]) **avant** d'atteindre la tour.
@@ -143,6 +146,10 @@ En **redescendant et en sortant** de la tour, les joueurs tombent sur une silhou
 
 > [!warning] Avant cette scène
 > Vérifie que les PJ ont bien **croisé le fragment sur le chemin** : c'est leur point de résurrection quand le bouffon les tue.
+
+## Après la tour — la geôle des suppliciés (optionnel)
+
+Sur le chemin de la forêt, un bâtiment qui **semble toujours occupé**, façon petite prison, entrée libre et sans gardes. Dedans, des gens qui se **torturent eux-mêmes** : premiers indices sur les **[[Bestiaire#Hélico-parasite|hélico-parasites]]**, et deux combats en cascade (hôtes faibles → parasites). Scène complète : [[La geôle des suppliciés]].
 
 # Suite
 

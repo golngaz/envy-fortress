@@ -41,7 +41,7 @@ Voir [[monstres/Le bouffon|la fiche]]. Rappels :
 Quand les PJ tombent, ne joue pas une fin : joue un **réveil**.
 
 > [!tip] Narration (au réveil)
-> Le noir. Puis une lumière bleue, froide, familière. Vous reprenez votre souffle, **intacts**, debout devant le **premier fragment du monolithe** — celui croisé **entre l'église et la tour**. Vous êtes revenus. Vous êtes **vivants**. Et vous comprenez, lentement, que la mort, ici, n'est pas une fin.
+> Le noir. Puis une lumière bleu-noir, froide, familière. Vous reprenez votre souffle, **intacts**, debout devant le **premier fragment du monolithe** — celui croisé **entre l'église et la tour**. Vous êtes revenus. Vous êtes **vivants**. Et vous comprenez, lentement, que la mort, ici, n'est pas une fin.
 
 > [!note] Mécanique
 > C'est le **point d'ancrage** décrit dans [[LORE/Fragment du monolithe]] : les PJ ré-instancient au dernier fragment auquel ils se sont liés. Cette première mort sert de **tutoriel implicite** au système de résurrection.

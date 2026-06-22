@@ -20,7 +20,7 @@ Il n'y a ni build, ni lint, ni suite de tests. La « tooling » se résume à :
 - **Simulation** : `python simulation_roue_d_initiative.py` simule la roue
   d'initiative (ordre de jeu basé sur la Vitesse). C'est le seul code exécutable du
   dépôt — un modèle autonome, sans dépendances, qui imite la mécanique décrite dans
-  `gameplay/Système de Vitesse (Roue d'Initiative).md`.
+  `gameplay/Système de Vitesse (Roue d’Initiative).md`.
 - **Export** : plugin `better-export-pdf` pour générer des PDF de règles/fiches.
 - `.gitignore` exclut les caches de workspace Obsidian ; `.gitattributes` force `eol=lf`.
 - `jdr.rar` est une archive binaire volumineuse (~22 Mo) — ne pas modifier.
@@ -29,8 +29,9 @@ Il n'y a ni build, ni lint, ni suite de tests. La « tooling » se résume à :
 
 Dossiers de premier niveau (chacun est une catégorie de wiki) :
 
-- `gameplay/` — règles centrales : `Gameplay.md`, `Glossaire.md` (réf. des termes),
-  `traits/` (les 6 stats), `jets/` (jets de dés par stat), `mécaniques/`, `dégats/`.
+- `gameplay/` — règles centrales. **Point d'entrée** : `Livret - Règles à flatifier.md`
+  (liste des pages « flatifiées » en un manuel imprimable). Aussi `Glossaire.md` (réf. des
+  termes), `traits/` (les 6 stats), `jets/` (jets de dés par stat), `mécaniques/`, `dégats/`.
 - `classes/` — classes jouables (Mage, Chevalier, Scélérat, Architecte, Dueliste).
 - `Sorts/Niveau N/` — sorts rangés par niveau, avec sous-dossiers thématiques
   (`soin/`, `sorts passifs/`, `Shell control/`).
