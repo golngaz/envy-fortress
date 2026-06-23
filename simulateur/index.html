@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simulateur de combat — La Forteresse de l'Envie</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="brand">⚔️ <b>Forteresse de l'Envie</b> — Simulateur de combat</div>
+    <nav class="tabs">
+      <button class="tab active" data-view="combat">Combat</button>
+      <button class="tab" data-view="cartes">Cartes</button>
+    </nav>
+  </header>
+
+  <!-- ============================ VUE COMBAT ============================ -->
+  <main id="view-combat" class="view active">
+    <section class="toolbar">
+      <button id="btn-add-pj" class="btn primary">+ Personnage</button>
+      <button id="btn-add-mob" class="btn">+ Monstre</button>
+      <span class="sep"></span>
+      <button id="btn-next-turn" class="btn accent">⏭ Tour global suivant</button>
+      <button id="btn-next-actor" class="btn">↪ Acteur suivant</button>
+      <button id="btn-reset-wheel" class="btn ghost">⟲ Roue</button>
+      <button id="btn-clear" class="btn ghost danger">🗑 Tout effacer</button>
+    </section>
+
+    <div class="combat-grid">
+      <aside class="wheel-panel">
+        <h2>Roue d'initiative <span class="turn-pill">Tour <span id="turn-num">1</span></span></h2>
+        <svg id="wheel-svg" viewBox="0 0 260 260" class="wheel"></svg>
+        <div class="wheel-manual">
+          <label>Ajuster l'acteur actif :</label>
+          <div class="manual-row">
+            <button id="btn-push" class="btn ghost" title="Repousser (recule)">⟵ repousser</button>
+            <input id="push-n" type="number" value="1" min="1" class="mini-num"/>
+            <button id="btn-pull" class="btn ghost" title="Avancer">avancer ⟶</button>
+          </div>
+        </div>
+        <h3>Ordre du tour</h3>
+        <ol id="order-list" class="order-list"></ol>
+        <h3>Journal</h3>
+        <ul id="log" class="log"></ul>
+      </aside>
+
+      <section class="combat-main">
+        <div id="reszone" class="reszone"></div>
+        <section id="combatants" class="combatants"></section>
+      </section>
+    </div>
+  </main>
+
+  <!-- ============================ VUE CARTES ============================ -->
+  <main id="view-cartes" class="view">
+    <section class="toolbar">
+      <label>Filtrer :
+        <select id="carte-filter">
+          <option value="all">Toutes</option>
+          <option value="attaque">Attaques</option>
+          <option value="defense">Défenses</option>
+          <option value="soin">Soins</option>
+          <option value="utilitaire">Utilitaires</option>
+          <option value="passif">Passifs</option>
+          <option value="shell">Shell Control</option>
+          <option value="arme">Armes</option>
+        </select>
+      </label>
+      <button id="btn-print" class="btn">🖨 Imprimer</button>
+      <span class="hint">Clic sur une carte pour la retourner (recto / verso).</span>
+    </section>
+    <section id="cartes-gallery" class="cartes-gallery"></section>
+  </main>
+
+  <!-- ============================== MODALE ============================== -->
+  <div id="modal-backdrop" class="modal-backdrop">
+    <div class="modal">
+      <button class="modal-close" data-close-modal>✕</button>
+      <span id="modal-title" class="modal-title"></span>
+
+      <!-- ---- PJ ---- -->
+      <form id="form-pj">
+        <div id="pane-pj">
+        <h2>Personnage</h2>
+        <div class="field"><label>Nom</label><input id="pj-name" placeholder="Nom du PJ"/></div>
+        <div class="grid2">
+          <div class="field"><label>Classe</label><select id="pj-classe"></select></div>
+          <div class="field"><label>Niveau</label><input id="pj-level" type="number" value="1" min="1"/></div>
+        </div>
+        <fieldset>
+          <legend>Bonus perso (12 points à répartir)</legend>
+          <div class="stat-grid">
+            <label>CON <input id="pj-con" type="number" value="0"/></label>
+            <label>FOR <input id="pj-for" type="number" value="0"/></label>
+            <label>VIT <input id="pj-vit" type="number" value="0"/></label>
+            <label>CTRL <input id="pj-ctrl" type="number" value="0"/></label>
+            <label>INT <input id="pj-int" type="number" value="0"/></label>
+            <label>VOL <input id="pj-vol" type="number" value="0"/></label>
+          </div>
+        </fieldset>
+        <div id="pj-preview" class="preview"></div>
+        <fieldset>
+          <legend>Équipement</legend>
+          <div class="field"><label>Arme</label><select id="pj-arme"></select></div>
+          <div class="grid2">
+            <div class="field"><label>Sort de défense</label><select id="pj-defense"></select></div>
+            <div class="field"><label>Shell Control</label><select id="pj-shell"></select></div>
+          </div>
+          <label class="sub-label">Sorts équipés (max 6)</label>
+          <div id="pj-sorts" class="spell-list"></div>
+        </fieldset>
+        <div class="modal-actions">
+          <button type="button" class="btn ghost" data-close-modal>Annuler</button>
+          <button type="submit" class="btn primary">Valider</button>
+        </div>
+        </div>
+      </form>
+
+      <!-- ---- Monstre ---- -->
+      <form id="form-mob" class="hidden">
+        <div id="pane-mob">
+        <h2>Monstre</h2>
+        <div class="grid2">
+          <div class="field"><label>Préréglage</label><select id="mob-preset"></select></div>
+          <div class="field"><label>Nom</label><input id="mob-name" placeholder="Nom du monstre"/></div>
+        </div>
+        <div class="field"><label>Niveau</label><input id="mob-level" type="number" value="1" min="1"/></div>
+        <fieldset>
+          <legend>Statistiques</legend>
+          <div class="stat-grid">
+            <label>CON <input id="mob-con" type="number" value="0"/></label>
+            <label>FOR <input id="mob-for" type="number" value="0"/></label>
+            <label>VIT <input id="mob-vit" type="number" value="0"/></label>
+            <label>CTRL <input id="mob-ctrl" type="number" value="0"/></label>
+            <label>INT <input id="mob-int" type="number" value="0"/></label>
+            <label>VOL <input id="mob-vol" type="number" value="0"/></label>
+          </div>
+        </fieldset>
+        <div id="mob-preview" class="preview"></div>
+        <div class="field"><label>Passif (affiché sur la fiche)</label><textarea id="mob-passif" rows="2"></textarea></div>
+        <fieldset>
+          <legend>Attaques <button type="button" id="mob-add-atk" class="btn ghost mini">+ attaque</button></legend>
+          <div id="mob-atks" class="atk-list"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Défense</legend>
+          <div class="grid2">
+            <div class="field"><label>Nom</label><input id="mob-def-nom" placeholder="Nom de la défense"/></div>
+            <div class="field"><label>Dé</label><input id="mob-def-de" placeholder="1D4…"/></div>
+          </div>
+          <div class="field"><label>Effet</label><input id="mob-def-eff" placeholder="Effet de la défense"/></div>
+        </fieldset>
+        <div class="modal-actions">
+          <button type="button" class="btn ghost" data-close-modal>Annuler</button>
+          <button type="submit" class="btn primary">Valider</button>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Données (éditables) -->
+  <script src="data/jetons.js"></script>
+  <script src="data/classes.js"></script>
+  <script src="data/sorts.js"></script>
+  <script src="data/armes.js"></script>
+  <script src="data/monstres.js"></script>
+  <!-- Moteur -->
+  <script src="js/rules.js"></script>
+  <script src="js/wheel.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

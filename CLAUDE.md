@@ -21,6 +21,27 @@ Il n'y a ni build, ni lint, ni suite de tests. La « tooling » se résume à :
   d'initiative (ordre de jeu basé sur la Vitesse). C'est le seul code exécutable du
   dépôt — un modèle autonome, sans dépendances, qui imite la mécanique décrite dans
   `gameplay/Système de Vitesse (Roue d’Initiative).md`.
+- **Simulateur de combat (web)** : dossier `simulateur/` — calculateur/fiche de
+  combat en HTML/CSS/JS vanilla (aucun build). Ouvrir `simulateur/index.html` ou
+  servir via `python -m http.server 8123 --directory simulateur`. Voir
+  `simulateur/CLAUDE.md` pour le détail. En résumé :
+  - **Aide de jeu, pas moteur** : ne lance aucun dé et ne décide d'aucune
+    victoire — le MJ saisit à la main les résultats des jets faits à la table.
+  - Gère plusieurs **PJ & monstres** avec stats de base + **stats dérivées**
+    (PV, cases/tours, poids, modificateurs) calculées comme dans `persos.base`.
+  - **PV / PA / Shell Control** modifiables à tout moment ; **jetons** d'altération
+    posables sur une **piste de durée** (Permanent + 1→6 tours, réduction manuelle),
+    palette configurable dans `data/jetons.js`.
+  - **Équipement** : PJ (arme + 6 sorts + défense + Shell Control), monstre
+    (attaques + défense + passif). **Flux d'action** : Sort (décompte les PA) /
+    Attaquer / 🎲 attaque aléatoire (monstre) → choix de cible ou AOE → la carte
+    jouée s'affiche **face à la carte de défense de la cible**.
+  - **Roue d'initiative** visuelle gérant déplacement, ordre et rejeux, ajustable
+    à la main (repousser/avancer).
+  - Onglet **Cartes** : sorts (dont Shell Control) et armes en cartes recto/verso
+    avec flip 3D, imprimables comme aide-mémoire pour les joueurs.
+  - Décision de règle assumée : déplacement roue = `floor(1 + VIT/3)` (modèle de
+    `persos.base`, qui prime sur l'ancien modèle « +2 bonus » du doc de la roue).
 - **Export** : plugin `better-export-pdf` pour générer des PDF de règles/fiches.
 - `.gitignore` exclut les caches de workspace Obsidian ; `.gitattributes` force `eol=lf`.
 - `jdr.rar` est une archive binaire volumineuse (~22 Mo) — ne pas modifier.

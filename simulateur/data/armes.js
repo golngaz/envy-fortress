@@ -1,0 +1,49 @@
+/* =============================================================================
+ *  ARMES  —  La Forteresse de l'Envie
+ * -----------------------------------------------------------------------------
+ *  Données de cartes pour les armes. Champ "niveauMin" = niveau requis (0 sinon).
+ *  provenance : "depart" | "loot" | "drop"
+ * ===========================================================================*/
+window.DB = window.DB || {};
+window.DB.armes = [
+  {
+    id: "epee-courte-usee", nom: "Épée courte usée", provenance: "depart", poids: 8, niveauMin: 0,
+    flavor: "Une lame basique, marquée par le temps. Rien d'exceptionnel, mais fiable.",
+    table: {
+      entetes: ["DD (1D6)", "Dégâts", "Spécial"],
+      lignes: [["1+", "Valeur du dé (+FOR)", "—"]]
+    }
+  },
+  {
+    id: "vieux-baton", nom: "Vieux bâton", provenance: "depart", poids: 6, niveauMin: 0,
+    flavor: "Bâton étrange que je possédais déjà lors de mon arrivée dans ce monde.",
+    table: {
+      entetes: ["DD (1D4)", "Dégâts", "Spécial"],
+      lignes: [["1+", "Valeur du dé", "+INT en dégât supplémentaire"]]
+    }
+  },
+  {
+    id: "dague-double-tranchant", nom: "Dague à double tranchant", provenance: "depart", poids: 3, niveauMin: 0,
+    flavor: "Lame noire et tranchante. Fragile, mais redoutable entre de bonnes mains.",
+    table: {
+      entetes: ["DD (1D4)(+VIT)", "Dégâts", "Spécial"],
+      lignes: [
+        ["2", "Valeur du dé", "—"],
+        ["3+", "Valeur du dé", "+2 dégâts"],
+        ["4", "Valeur du dé", "+3 dégâts"],
+        ["Succès critique", "Valeur du dé (+FOR)", "+5 dégâts"]
+      ]
+    }
+  },
+  {
+    id: "lame-vibrante", nom: "Lame vibrante", provenance: "depart", poids: 8, niveauMin: 0,
+    flavor: "Une arme fine parcourue de légères pulsations. Elle émet un bourdonnement discret quand on la saisit.",
+    table: {
+      entetes: ["DD (1D4)", "Dégâts", "Spécial", "Spécial 2"],
+      lignes: [
+        ["1+", "Valeur du dé", "Ignore la réduction de dégât éventuelle", "—"],
+        ["2+", "Valeur du dé (+FOR)", "Ignore la réduction de dégât éventuelle", "Ignore la défense ennemie"]
+      ]
+    }
+  }
+];

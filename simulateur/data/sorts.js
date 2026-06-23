@@ -1,0 +1,233 @@
+/* =============================================================================
+ *  SORTS  —  La Forteresse de l'Envie  (Niveau 1)
+ * -----------------------------------------------------------------------------
+ *  Données de mise en forme pour les CARTES recto/verso. Les sorts ne sont
+ *  PAS "joués" par le simulateur : les jets se font à la vraie table. Ces
+ *  cartes servent d'aide-mémoire aux joueurs.
+ *
+ *    type  : "attaque" | "defense" | "soin" | "passif" | "shell" | "utilitaire"
+ *    pa    : coût en PA (texte libre, ex "2", "2 ou 0", "3, 2 ou 0")
+ *    de    : dé à lancer (texte, ex "1D10 (+INT)") ou null
+ *    flavor: citation d'ambiance (verso)
+ *    desc  : description / effet hors-tableau
+ *    table : { entetes:[...], lignes:[[...]] } tableau de résolution (verso)
+ *    notes : remarques additionnelles
+ * ===========================================================================*/
+window.DB = window.DB || {};
+window.DB.sorts = [
+  /* ---------------------------- ATTAQUES ---------------------------------- */
+  {
+    id: "hall-humettes", nom: "Hall Humettes", type: "attaque", niveau: 1,
+    pa: "3", de: "1D10",
+    flavor: "Les sorts Hall Humettes sont très utiles pour faire de petits feux de camps sans trop se prendre la tête…",
+    table: {
+      entetes: ["DD (1D10)", "Dégâts", "Effet"],
+      lignes: [
+        ["4+", "valeur du dé", "Applique 1 Brûlure 🔥 à l'ennemi."],
+        ["10", "valeur du dé", "Applique 2 Brûlures 🔥 à l'ennemi."]
+      ]
+    }
+  },
+  {
+    id: "explosion-sismique", nom: "Explosion sismique", type: "attaque", niveau: 1,
+    pa: "15", de: "1D20 + 1D4 (+INT)",
+    table: {
+      entetes: ["DD", "Dégât", "Effet"],
+      lignes: [
+        ["1-5", "—", "S'ajoute un jeton Menacé ❗ à soi-même."],
+        ["6+", "Dégât des dés", "—"],
+        ["13+", "Dégât des dés", "Ajoute un jeton Menacé ❗ à tous les ennemis."]
+      ]
+    }
+  },
+  {
+    id: "decharge-opportuniste", nom: "Décharge opportuniste", type: "attaque", niveau: 1,
+    pa: "2 ou 0", de: "1D10 + 1D4",
+    flavor: "Une brève décharge d'énergie libérée lorsque le lanceur déborde de puissance, transformant un excès de ressources en une impulsion rapide.",
+    table: {
+      entetes: ["Coût", "DD", "Dégâts", "Spécial"],
+      lignes: [
+        ["2 PA (0 PA)", "1+", "valeur du dé", "Coûte 0 PA si le personnage possède ≥ 6 PA."]
+      ]
+    }
+  },
+  {
+    id: "opportuniste", nom: "Opportuniste", type: "attaque", niveau: 1,
+    pa: "1", de: "1D4",
+    table: {
+      entetes: ["DD (1D4)", "Dégâts", "Effet"],
+      lignes: [
+        ["1+", "valeur du dé", "Double les dégâts si l'ennemi visé est affecté par un état négatif."]
+      ]
+    }
+  },
+  {
+    id: "affaiblissement", nom: "Affaiblissement", type: "attaque", niveau: 1,
+    pa: "1", de: "1D10",
+    desc: "Affaiblit un personnage cible. JdS (FOR+).",
+    table: {
+      entetes: ["DD (1D10)", "Effet"],
+      lignes: [
+        ["1+", "Applique un jeton Affaiblissement 📉 (2) à l'ennemi visé."],
+        ["10+", "Applique un jeton supplémentaire."]
+      ]
+    }
+  },
+
+  /* ----------------------------- SOINS ------------------------------------ */
+  {
+    id: "protection-chevaliere", nom: "Protection chevalière", type: "soin", niveau: 1,
+    pa: "2", de: "1D10",
+    desc: "Protège un allié uniquement du prochain coup à son encontre. Valable un seul tour.",
+    table: {
+      entetes: ["DD (1D10)", "Effet 1", "Effet 2"],
+      lignes: [
+        ["1+", "Soigné du montant du dé", "—"],
+        ["8+", "Soigné de la totalité du coup", "—"],
+        ["10+", "Soigné de la totalité du coup", "Donne un Bouclier 🛡️ à cet allié."]
+      ]
+    }
+  },
+  {
+    id: "benediction-magicien", nom: "Bénédiction du Magicien", type: "soin", niveau: 1,
+    pa: "—", de: "1D10",
+    desc: "Soin polyvalent. En combat : soigne du montant du dé (2+). Hors combat : soigne l'équipe selon le DD (utilisable une seule fois entre deux Safe zones).",
+    table: {
+      entetes: ["DD (1D10)", "En combat", "Hors combat"],
+      lignes: [
+        ["2+", "Soigne du montant du dé", "Soigne l'équipe — si aucun membre mis à terre au dernier combat."],
+        ["5+", "—", "Soigne l'équipe — un mort ou moins au dernier combat."],
+        ["8+", "—", "Soigne l'équipe (sans condition)."]
+      ]
+    },
+    notes: ["Hors combat : utilisable une seule fois entre deux Safe zones."]
+  },
+
+  /* --------------------------- UTILITAIRES -------------------------------- */
+  {
+    id: "surcharge-mage", nom: "Surcharge de Mage", type: "utilitaire", niveau: 1,
+    pa: "0", de: "1D10 (+INT)",
+    flavor: "Le mage force le flux magique au-delà de ses limites… au prix de brûlures internes et d'un risque de paralysie soudaine.",
+    table: {
+      entetes: ["DD (1D10)(+INT)", "Effet", "Effet 2", "Effet 3"],
+      lignes: [
+        ["1", "Gagne 2 PA", "Paralysé 🥶 (1)", "S'inflige 1 Brûlure 🔥 (3)"],
+        ["2+", "Gagne 5 PA", "S'inflige 1 Brûlure 🔥 (3)", "—"],
+        ["10", "Gagne 4 PA", "S'inflige 1 Brûlure 🔥 (3)", "Gagne un jeton PA ⚡ (2)"]
+      ]
+    }
+  },
+  {
+    id: "evolution", nom: "Evolution", type: "utilitaire", niveau: 1,
+    pa: "3", de: "1D20 (+INT)",
+    table: {
+      entetes: ["DD (1D20)(+INT)", "Effet"],
+      lignes: [["4+", "Ajoute un jeton PA ⚡ en permanent."]]
+    }
+  },
+  {
+    id: "ordonner", nom: "Ordonner", type: "utilitaire", niveau: 1,
+    pa: "1", de: null,
+    desc: "Applique un jeton Menacé ❗ (Permanent) au personnage de son choix."
+  },
+  {
+    id: "organisation-strategique", nom: "Organisation stratégique", type: "utilitaire", niveau: 1,
+    pa: "3, 2 ou 0", de: "1D20 (+CTRL)",
+    desc: "Passe son tour et choisit deux alliés qui jouent l'un après l'autre. Ils consomment leur tour de jeu global (ne rejouent pas, sans toucher leur position sur la roue).",
+    table: {
+      entetes: ["1D20 (+CTRL)", "Effet"],
+      lignes: [
+        ["10+", "Coûte uniquement 2 PA."],
+        ["20", "La compétence est gratuite."]
+      ]
+    }
+  },
+
+  /* ----------------------------- PASSIFS ---------------------------------- */
+  {
+    id: "sous-pression", nom: "Sous Pression", type: "passif", niveau: 1,
+    pa: "0", de: null,
+    flavor: "La forteresse vous met à l'épreuve, vous ne pouvez pas flancher, pas aujourd'hui.",
+    desc: "Sort passif. Lorsque vos PV passent sous 50 %, vous gagnez instantanément 4 jetons Contrôle 🎮 (une seule fois par combat)."
+  },
+
+  /* -------------------------- DÉFENSE (sorts) ----------------------------- */
+  {
+    id: "defense-simple", nom: "Défense simple", type: "defense", niveau: 1,
+    pa: "—", de: "1D4 (+CON)",
+    table: {
+      entetes: ["DD (1D4)(+CON)", "Effet", "Effet 2"],
+      lignes: [
+        ["2+", "Bloque les dégâts de la valeur du dé", "—"],
+        ["4", "Bloque les dégâts de la valeur du dé", "+2 dégâts bloqués"]
+      ]
+    }
+  },
+  {
+    id: "reflet", nom: "Reflet", type: "defense", niveau: 1,
+    pa: "—", de: "1D4",
+    table: {
+      entetes: ["DD (1D4)", "Effet", "Effet 2"],
+      lignes: [
+        ["2+", "Renvoie la moitié des dégâts en Bruts", "—"],
+        ["4", "Renvoie la moitié des dégâts en Bruts", "Ne subit que la moitié des dégâts"]
+      ]
+    }
+  },
+  {
+    id: "tendre-autre-joue", nom: "Tendre l'autre joue", type: "defense", niveau: 1,
+    pa: "—", de: "1D4 (+CON)",
+    table: {
+      entetes: ["DD (1D4)(+CON)", "Effet"],
+      lignes: [["2+", "Prend les dégâts, mais gagne un Bouclier 🛡️."]]
+    }
+  },
+  {
+    id: "esquive-opportuniste", nom: "Esquive opportuniste", type: "defense", niveau: 1,
+    pa: "—", de: "1D20 (+VIT)",
+    flavor: "Le joueur se décide à esquiver cette attaque avec ses réflexes primitifs.",
+    table: {
+      entetes: ["DD (1D20)(+VIT)", "Effet"],
+      lignes: [
+        ["1", "Encaisser l'attaque OU esquiver pour la renvoyer sur un autre joueur au hasard (qui ne pourra pas se défendre)."],
+        ["3+", "Esquive ; l'attaque est renvoyée sur un autre joueur au hasard (qui se défend normalement)."],
+        ["10+", "Esquive ; l'attaque renvoyée sur un joueur au choix du défendeur (se défend normalement)."],
+        ["18+", "Esquive complètement l'attaque."]
+      ]
+    },
+    notes: ["S'il n'y a qu'un seul joueur dans le combat, il subit toujours les dégâts sauf sur 18+."]
+  },
+
+  /* --------------------------- SHELL CONTROL ------------------------------ */
+  {
+    id: "acces-gratuit", nom: "Accès gratuit", type: "shell", niveau: 1,
+    pa: "10 Contrôle", de: null,
+    desc: "Permet de jouer immédiatement un sort gratuitement. Le sort ainsi joué est considéré comme le sort de Shell Control (utilisé en action bonus)."
+  },
+  {
+    id: "speed-hack", nom: "Speed Hack", type: "shell", niveau: 1,
+    pa: "10 Contrôle", de: null,
+    desc: "Résout les effets de tous les ennemis immédiatement 2 fois."
+  },
+  {
+    id: "controle-cible", nom: "Contrôle ciblé", type: "shell", niveau: 1,
+    pa: "10 Contrôle", de: null,
+    desc: "Prend le contrôle d'un joueur ou ennemi pour effectuer 1 attaque de son kit immédiatement et gratuitement (applique ses propres modificateurs). Le contrôlé perd tous ses PA. Si c'est un allié, il perd les PA qu'il aurait dépensés pour le sort."
+  },
+  {
+    id: "courage-artificiel", nom: "Courage artificiel", type: "shell", niveau: 1,
+    pa: "10 Contrôle", de: null,
+    desc: "Tous les alliés du lanceur gagnent +10 PA."
+  },
+  {
+    id: "destins-intriques", nom: "Destins intriqués", type: "shell", niveau: 1,
+    pa: "10 Contrôle", de: null,
+    desc: "S'applique autant de Brûlures 🔥 permanentes qu'il désire (15 max) et applique le même nombre à un ennemi. Si le joueur meurt, l'ennemi peut retirer toutes ses brûlures permanentes ; si l'ennemi brûlé meurt, le joueur peut retirer les siennes."
+  },
+  {
+    id: "point-restauration", nom: "Point de restauration", type: "shell", niveau: 1,
+    pa: "10 Contrôle", de: null,
+    desc: "Restaure intégralement les PV de 2 alliés (PV ramenés à leur maximum). « On recharge un état sauvegardé : la blessure n'a jamais eu lieu. »",
+    notes: ["Débloqué en résolvant l'énigme de l'église (1er étage)."]
+  }
+];

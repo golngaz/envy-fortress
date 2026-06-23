@@ -80,6 +80,9 @@ Le joueur possède aussi une unique compétence de défense qu'il aura équipé 
 Généralement, il lance un dé selon le DD affiché et applique les effets annoncés dans le tableau.
 En cas de doute, les sorts de défense fonctionnent de la même manière que les sorts normaux, au détail près qu'ils ne coûtent *généralement* pas de PA.
 
+> [!warning] Sorts de zone (AOE) → aucune défense
+> Un **sort de zone** (AOE), qui frappe **plusieurs cibles** à la fois, **ne provoque pas de tour de défense** : aucune cible ne peut résoudre sa **compétence de défense** en réaction (ni un ennemi, ni un PJ pris dans la zone). En revanche, les **Jets de sauvegarde** éventuels du sort **restent dus** — ils font partie du sort lui-même. Terme défini dans le [[Glossaire]].
+
 ##### Jet de défense
 
 Dépend de la défense du personnage, en général il est possible de diviser/bloquer un certains nombre de dégâts selon les différentes conditions et DD annoncés.

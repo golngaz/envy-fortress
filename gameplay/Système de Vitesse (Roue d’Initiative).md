@@ -13,16 +13,14 @@ Le premier tour, tout les joueurs se placent sur la première case. On ajoute à
 # Principe  
 
 La roue comporte **6 cases** disposées en cercle. Il y a une [[Système de Vitesse (Roue d’Initiative)#Flèche|Flèche]] qui définit le début et la fin d'un **tour**. Le premier tour global, on place cette flèche au début de la case 1.
-Chaque pion (joueur ou ennemi) avance sur la roue à chaque [[tour global]] selon sa **valeur de Vitesse** :  
-- **Vitesse de base = +0** → avance de **1 case par tour**. 
-- Si vitesse finalement négative, alors le pion ne bouge pas.
-
-TODO revoir la roue avec les modificateurs écrits directement sur la fiche personnage
-
+Chaque pion (joueur ou ennemi) avance sur la roue à chaque [[tour global]] selon sa **valeur de Vitesse**. Le nombre de cases parcourues par tour est le **[[Bonus de nombre de cases]]** affiché sur la fiche, calculé comme `cases = ⌊1 + VIT/3⌋` :
+- **VIT = 0** → avance de **1 case par tour**.
+- Chaque tranche de **3 points de VIT** ajoute **1 case** (VIT 3 → 2, VIT 6 → 3, …).
+- Si la valeur finale est nulle ou négative, le pion **ne bouge pas**.
 
 > [!example]    
-> 1 case (sur la fiche) → avance de **3 cases par tour** (1 de base + 2 bonus).    
-> 8 cases (sur la fiche) → avance de **9 cases par tour**, soit **1 tour complet (6) + 3 cases** (modulo 6).
+> VIT 6 (soit « 3 cases » sur la fiche) → avance de **3 cases par tour**.    
+> VIT 21 (soit « 8 cases ») → avance de **8 cases par tour**, soit **1 tour complet (6) + 2 cases** (modulo 6).
 
 1. La flèche de départ se replace immédiatement sur la case du joueur le plus lent qu'elle marquait déjà. (c'est le joueurs le plus lent qui va alors toujours définir le début et la fin d'un tour à chaque tour global).
 2. Lorsqu'un ou plusieurs pions dépassent la flèche de départ, ils rejouent immédiatement (voir [[#Tour complet]]).
