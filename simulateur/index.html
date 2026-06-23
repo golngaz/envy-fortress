@@ -21,10 +21,15 @@
     <section class="toolbar">
       <button id="btn-add-pj" class="btn primary">+ Personnage</button>
       <button id="btn-add-mob" class="btn">+ Monstre</button>
+      <button id="btn-library" class="btn">📚 Bibliothèque</button>
       <span class="sep"></span>
       <button id="btn-next-turn" class="btn accent">⏭ Tour global suivant</button>
       <button id="btn-next-actor" class="btn">↪ Acteur suivant</button>
       <button id="btn-reset-wheel" class="btn ghost">⟲ Roue</button>
+      <span class="sep"></span>
+      <button id="btn-export" class="btn ghost">⬇️ Exporter</button>
+      <button id="btn-import" class="btn ghost">⬆️ Importer</button>
+      <input id="import-file" type="file" accept=".json,application/json" hidden />
       <button id="btn-clear" class="btn ghost danger">🗑 Tout effacer</button>
     </section>
 
@@ -89,6 +94,7 @@
           <div class="field"><label>Classe</label><select id="pj-classe"></select></div>
           <div class="field"><label>Niveau</label><input id="pj-level" type="number" value="1" min="1"/></div>
         </div>
+        <div id="pj-classe-info" class="class-info"></div>
         <fieldset>
           <legend>Bonus perso (12 points à répartir)</legend>
           <div class="stat-grid">
@@ -158,6 +164,16 @@
         </div>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- ========================= MODALE BIBLIOTHÈQUE ========================= -->
+  <div id="lib-backdrop" class="modal-backdrop">
+    <div class="modal">
+      <button class="modal-close" data-close-lib>✕</button>
+      <h2>📚 Bibliothèque</h2>
+      <p class="hint">Modèles enregistrés (PJ &amp; monstres). Réutilisables dans n'importe quel combat. Sauvegardés sur ce navigateur.</p>
+      <div id="lib-list" class="lib-list"></div>
     </div>
   </div>
 

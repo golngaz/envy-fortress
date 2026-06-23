@@ -6,22 +6,35 @@
  * ===========================================================================*/
 window.Store = (function () {
   const KEY = "fdle-simu-v1";
+  const LIBKEY = "fdle-simu-lib-v1";
   const MAX_DUR = 6;
   let state = { combatants: [], turn: 1, activeIdx: 0, log: [], resolution: null, chooser: null };
+  let lib = { items: [] };
   const listeners = [];
+
+  /** Normalise un objet état (champs manquants + migration des combattants). */
+  function normalize(s) {
+    s.combatants = s.combatants || [];
+    s.turn = s.turn || 1;
+    if (s.activeIdx == null) s.activeIdx = 0;
+    s.log = s.log || [];
+    if (s.resolution === undefined) s.resolution = null;
+    if (s.chooser === undefined) s.chooser = null;
+    s.combatants.forEach(migrate);
+    return s;
+  }
 
   function load() {
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) state = JSON.parse(raw);
     } catch (e) { /* ignore */ }
-    state.combatants = state.combatants || [];
-    state.turn = state.turn || 1;
-    if (state.activeIdx == null) state.activeIdx = 0;
-    state.log = state.log || [];
-    if (state.resolution === undefined) state.resolution = null;
-    if (state.chooser === undefined) state.chooser = null;
-    state.combatants.forEach(migrate);
+    normalize(state);
+    try {
+      const r = localStorage.getItem(LIBKEY);
+      if (r) lib = JSON.parse(r);
+    } catch (e) { /* ignore */ }
+    if (!lib.items) lib.items = [];
   }
 
   /** Migration douce des anciens objets combattants. */
@@ -165,12 +178,62 @@ window.Store = (function () {
     save();
   }
 
+  /* ----- bibliothèque (modèles réutilisables) ----- */
+  function saveLib() {
+    try { localStorage.setItem(LIBKEY, JSON.stringify(lib)); } catch (e) {}
+    listeners.forEach(fn => fn(state));
+  }
+  function getLibrary() { return lib.items; }
+
+  /** Copie « neutre » d'un combattant : identité/équipement conservés,
+   *  ressources de combat réinitialisées (PV au max, PA/Shell/jetons à 0). */
+  function cleanTemplate(c) {
+    const t = JSON.parse(JSON.stringify(c));
+    delete t.id; delete t.speed; delete t.vit;
+    t.pa = 0; t.shell = 0; t.abs = 0; t.bonusReplays = 0;
+    t.tokensTrack = {}; t.tokensPerm = {};
+    const d = Rules.derive(statsOf(t), t.level || 1);
+    t.pvMax = d.PV; t.pv = d.PV;
+    return t;
+  }
+  function saveToLibrary(id) {
+    const c = find(id); if (!c) return;
+    lib.items.push(cleanTemplate(c)); saveLib();
+  }
+  function removeFromLibrary(i) { lib.items.splice(i, 1); saveLib(); }
+  function addFromLibrary(i) {
+    const t = lib.items[i]; if (!t) return null;
+    return addCombatant(JSON.parse(JSON.stringify(t)));
+  }
+
+  /** Duplique un combattant présent dans le combat (ressources réinitialisées). */
+  function duplicate(id) {
+    const c = find(id); if (!c) return null;
+    const t = cleanTemplate(c);
+    t.name = (c.name || "") + " (copie)";
+    return addCombatant(t);
+  }
+
+  /* ----- export / import du combat complet ----- */
+  function exportJSON() {
+    return JSON.stringify({ version: 1, kind: "fdle-combat", state: state }, null, 2);
+  }
+  function importJSON(text) {
+    const obj = JSON.parse(text);
+    const s = (obj && obj.state) ? obj.state : obj; // tolère un état brut
+    if (!s || !Array.isArray(s.combatants)) throw new Error("Format de combat invalide.");
+    state = normalize(s);
+    save();
+  }
+
   return {
     MAX_DUR, load, save, subscribe, get, uid,
     statsOf, deriveOf,
-    addCombatant, updateCombatant, removeCombatant, find,
+    addCombatant, updateCombatant, removeCombatant, find, duplicate,
     addToken, shiftTokens,
     setChooser, clearChooser, setResolution, clearResolution,
-    nextTurn, resetWheel, log, clearAll
+    nextTurn, resetWheel, log, clearAll,
+    getLibrary, saveToLibrary, removeFromLibrary, addFromLibrary,
+    exportJSON, importJSON
   };
 })();

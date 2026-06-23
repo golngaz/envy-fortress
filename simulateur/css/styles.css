@@ -117,8 +117,6 @@ h2,h3{margin:.2em 0 .5em}
 .stat-chip{font-size:11px;background:#ffffff0a;border:1px solid var(--line);border-radius:6px;padding:2px 6px}
 .stat-chip b{color:var(--accent)} .stat-chip i{color:var(--muted);font-style:normal}
 
-.cbt-derived{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;color:var(--muted);margin-bottom:10px}
-
 /* resources */
 .cbt-resources{display:flex;flex-direction:column;gap:7px;margin-bottom:10px}
 .res{display:flex;align-items:center;gap:5px;flex-wrap:wrap;position:relative}
@@ -136,31 +134,22 @@ h2,h3{margin:.2em 0 .5em}
 .res.pv.warn .pv-bar span{background:linear-gradient(90deg,#f4b740,#ffd27a)}
 .res.pv.ko .pv-bar span{background:var(--danger)}
 
-/* tokens */
+/* tokens (chips posés sur la piste de durée) */
 .cbt-tokens{border-top:1px solid var(--line);padding-top:8px;margin-bottom:8px}
-.tok-row{display:flex;align-items:flex-start;gap:8px;margin-bottom:5px}
-.tok-label{font-size:11px;font-weight:700;color:var(--muted);width:74px;flex:0 0 74px;padding-top:3px}
-.tok-label.perm{color:var(--accent)}
-.tok-chips{display:flex;flex-wrap:wrap;gap:5px;flex:1}
-.tok-chip{display:inline-flex;align-items:center;gap:2px;border:1px solid var(--tk);
+.tok-label{font-size:11px;font-weight:700;color:var(--muted)}
+.tok-chip{display:inline-flex;align-items:center;gap:1px;border:1px solid var(--tk);
   border-radius:20px;padding:1px;background:color-mix(in srgb,var(--tk) 16%,transparent)}
-.tok-chip .tok-ico{font-size:14px}
-.tok-chip .tok-n{font-weight:800;font-size:12px;min-width:14px;text-align:center}
-.tok-up,.tok-dn{width:18px;height:18px;border-radius:50%;border:none;cursor:pointer;
-  background:#ffffff1a;color:var(--txt);font-weight:800;line-height:1;font-size:12px}
+.tok-chip .tok-ico{font-size:13px}
+.tok-chip .tok-n{font-weight:800;font-size:11px;min-width:12px;text-align:center}
+.tok-up,.tok-dn{width:16px;height:16px;border-radius:50%;border:none;cursor:pointer;
+  background:#ffffff1a;color:var(--txt);font-weight:800;line-height:1;font-size:11px}
 .tok-up:hover,.tok-dn:hover{background:var(--tk);color:#000}
-.tok-palette-wrap summary{cursor:pointer;color:var(--accent2);font-size:12px;font-weight:600;width:max-content}
-.tok-palette{margin-top:6px}
-.pal-line{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-bottom:4px}
-.pal-line>span{font-size:10px;color:var(--muted);width:48px}
-.tok-add{width:30px;height:30px;border-radius:8px;border:1px solid var(--tk);cursor:pointer;
-  background:color-mix(in srgb,var(--tk) 14%,transparent);font-size:16px}
-.tok-add:hover{background:var(--tk)}
 
 .cbt-actions{display:flex;flex-wrap:wrap;gap:5px}
 .act{font-size:11px;padding:5px 8px;border-radius:7px;border:1px solid var(--line);
   background:var(--panel2);color:var(--txt);cursor:pointer}
 .act:hover{border-color:var(--accent)}
+.act.primary-act{border-color:var(--accent2);background:#7a5cff22;color:#cdbcff}
 
 /* -------- équipement / passif (carte) -------- */
 .equip-sum{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:11px;color:var(--muted);
@@ -168,6 +157,24 @@ h2,h3{margin:.2em 0 .5em}
 .equip-sum span{white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
 .mob-passif{font-size:11px;color:#e7d8a0;background:#3a2f1233;border:1px solid #5a4a1d;
   border-radius:7px;padding:5px 7px;margin-bottom:8px}
+.mob-passif.pj{color:#cdbcff;background:#2a2542;border-color:#473b6e}
+.cbt-class{background:transparent;border:none;color:var(--muted);font-size:11px;cursor:pointer;
+  padding:0;text-align:left}
+.cbt-class:hover{color:var(--accent2)}
+
+/* info classe (modale) */
+.class-info{margin:-4px 0 10px}
+.class-info-box{background:#2a2542;border:1px solid #473b6e;border-radius:9px;padding:8px 10px;font-size:12px}
+.class-info-box em{color:#b9c0d4;font-style:italic}
+.ci-passif{color:#cdbcff;margin-top:5px;font-weight:600}
+
+/* bibliothèque */
+.lib-list{display:flex;flex-direction:column;gap:7px;max-height:60vh;overflow:auto}
+.lib-item{display:flex;align-items:center;gap:9px;padding:8px 10px;background:var(--bg2);
+  border:1px solid var(--line);border-radius:9px}
+.lib-name{font-weight:700;flex:0 0 auto}
+.lib-meta{color:var(--muted);font-size:12px;flex:1}
+.lib-del{color:var(--muted)} .lib-del:hover{color:var(--danger)}
 
 /* -------- piste de jetons (durées) -------- */
 .tok-track-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px}
@@ -208,7 +215,7 @@ h2,h3{margin:.2em 0 .5em}
 .res-side{flex:1;min-width:230px}
 .res-arrow{font-size:22px;align-self:center;color:var(--accent)}
 .res-cap{font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:600}
-.res-slot,.res-def-item{max-width:240px}
+.res-slot,.res-def-item{width: 100%; max-width:240px}
 .res-defs{display:flex;gap:12px;flex-wrap:wrap}
 .res-def-name{font-size:11px;color:var(--mob);font-weight:700;margin-bottom:3px}
 /* cartes compactes dans la zone résolution */

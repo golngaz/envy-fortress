@@ -38,6 +38,9 @@ Il n'y a ni build, ni lint, ni suite de tests. La « tooling » se résume à :
     jouée s'affiche **face à la carte de défense de la cible**.
   - **Roue d'initiative** visuelle gérant déplacement, ordre et rejeux, ajustable
     à la main (repousser/avancer).
+  - **Bibliothèque** (modèles PJ/monstres réutilisables), **duplication** d'un
+    combattant, et **export/import JSON** du combat complet (sauvegarde de session).
+    Passif de classe lisible au clic ; passif du monstre affiché en encadré.
   - Onglet **Cartes** : sorts (dont Shell Control) et armes en cartes recto/verso
     avec flip 3D, imprimables comme aide-mémoire pour les joueurs.
   - Décision de règle assumée : déplacement roue = `floor(1 + VIT/3)` (modèle de
@@ -61,6 +64,14 @@ Dossiers de premier niveau (chacun est une catégorie de wiki) :
 - `monstres/` — bestiaire (+ `monstres/sorts/` pour leurs capacités).
 - `campagne/` — contenu de la campagne en cours : `scenarios/`, `combats/` (par
   étage/lieu), `personnages/` (PJ et PNJ).
+  - **Fiches de combat** (`combats/…`, suffixées `(combat)` quand le nom entre en
+    collision avec un monstre/lore) : chaque fiche **détaille les monstres qui la
+    composent** (nombre + wikilinks vers `monstres/`), les **loots spéciaux**
+    éventuels, la **musique** d'ambiance et le **contexte** (lieu, déclencheur, lien
+    vers le scénario). Frontmatter `difficulty`. Liens externes (audio/vidéo)
+    **autorisés ici** (≠ livret).
+  - **Les scénarios renvoient toujours aux combats** par wikilink : un combat n'est
+    jamais détaillé dans le scénario, seulement référencé.
 - `LORE/` — univers, lieux (étages de la forteresse), familles (`Famille Sombreval`).
 
 ## Conventions à respecter

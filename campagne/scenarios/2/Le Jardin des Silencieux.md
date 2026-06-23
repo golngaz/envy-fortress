@@ -25,6 +25,12 @@ Des créatures errent dans les haies : les **Silencieux**. La règle, à faire s
 - **Grimper** les haies pour une vue à 360° (et dresser la **carte mentale** de l'étage) : procédure et description détaillées dans [[église & labyrinthe]] (section « Sortie »).
 - **Sur le chemin vers la tour** : le **premier [[LORE/Fragment du monolithe|fragment]] ancrable** de l'étage, leur futur **point de résurrection** — détaillé dans [[église & labyrinthe]].
 
+# Combats du jardin
+
+- **Ombres dans les haies** (facile-moyen) : [[campagne/combats/étage 1/Les ombres fuyantes (combat)|Les ombres fuyantes]] — embuscade quand le groupe s'égare.
+- **Gardien spectral** (boss optionnel) : [[campagne/combats/étage 1/Croque mort gardien (combat)|Le Croque mort gardien]] — intouchable tant que ses ombres vivent.
+- (+ le danger des **Silencieux** ci-dessus ; et les combats de la **tour** : voir [[église & labyrinthe]].)
+
 # Sortie
 
 Le jardin débouche sur la **vieille tour en ruine** (exposition sur l'orgueil, combat optionnel [[Garde de la tour]], puis la rencontre du [[LORE/premier étage/Le bouffon|bouffon]] à la redescente). Au-delà s'ouvre l'**orée de la forêt** → [[Les rebelles de la forêt]].

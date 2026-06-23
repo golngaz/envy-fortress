@@ -139,6 +139,7 @@ Ce qu'on y apprend / trouve :
 - Des **armes** (@todo armes) globalement médiocres, mais l'une possède un **passif intéressant** malgré ses faibles dégâts.
 - Possible **fragment** ancrable supplémentaire (point de résurrection avancé).
 - Combat optionnel : [[Garde de la tour]].
+- **Maître de la tour** : le vrai gardien des lieux, voilé par ses **[[Ombre de la tour|ombres]]** (intouchable tant qu'elles vivent, il les rappelle sans cesse). → [[campagne/combats/étage 1/partie 1/Le maître de la tour (combat)|le combat]] ; les [[campagne/combats/étage 1/partie 1/Les ombres (combat)|ombres seules]] font un amuse-bouche facile.
 
 ## Sortie de la tour — le bouffon
 

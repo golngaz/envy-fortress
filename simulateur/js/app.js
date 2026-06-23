@@ -13,6 +13,7 @@
 
   let editId = null;        // id du combattant en cours d'édition (modale), sinon null
   let mobAtkRows = [];      // tampon des lignes d'attaque (modale monstre)
+  const expandedPassifs = new Set(); // fiches PJ dont le passif de classe est déplié
 
   /* ------------------------------------------------------------------ Tabs */
   function initTabs() {
@@ -143,23 +144,36 @@
     </div>`;
   }
 
+  function classePassifHtml(classe) {
+    return `<div class="mob-passif pj">
+      ${classe.desc?`<em>${esc(classe.desc)}</em><br>`:''}
+      ${(classe.passifs||[]).map(p=>`★ ${esc(p)}`).join("<br>")}</div>`;
+  }
+
   function combatantCard(c, isActive) {
     const d = Store.deriveOf(c);
     const pvPct = Math.max(0, Math.min(100, Math.round(100 * c.pv / Math.max(1, c.pvMax))));
     const low = c.pv <= 0 ? "ko" : (pvPct <= 50 ? "warn" : "");
-    const classe = c.kind === "pj" ? classeById(c.classeId) : null;
+    const isPJ = c.kind === "pj";
+    const classe = isPJ ? classeById(c.classeId) : null;
+    const sub = isPJ
+      ? `<button class="cbt-sub cbt-class" data-id="${c.id}" title="Voir le passif de classe">${classe?esc(classe.nom):''} · niv ${c.level||1} ⓘ</button>`
+      : `<span class="cbt-sub">Monstre · niv ${c.level||1}</span>`;
 
     return `
     <div class="combatant ${c.kind} ${isActive?'active':''} ${c.pv<=0?'down':''}" data-id="${c.id}">
       <div class="cbt-head">
         <span class="kind-badge ${c.kind}">${c.kind==='pj'?'PJ':'PNJ'}</span>
         <input class="cbt-name" data-id="${c.id}" value="${esc(c.name)}" />
-        <span class="cbt-sub">${classe?esc(classe.nom):'Monstre'} · niv ${c.level||1}</span>
+        ${sub}
+        <button class="icon-btn dup" data-id="${c.id}" title="Dupliquer">⧉</button>
+        <button class="icon-btn save" data-id="${c.id}" title="Enregistrer dans la bibliothèque">💾</button>
         <button class="icon-btn edit" data-id="${c.id}" title="Éditer / équipement">⚙</button>
         <button class="icon-btn del" data-id="${c.id}" title="Retirer">✕</button>
       </div>
 
       <div class="cbt-stats">${statLine(c)}</div>
+      ${isPJ && classe && expandedPassifs.has(c.id) ? classePassifHtml(classe) : ''}
       ${loadoutSummary(c)}
 
       <div class="cbt-resources">
@@ -172,6 +186,7 @@
           <button class="res-heal" data-id="${c.id}" title="PV au max">⟳</button>
           <div class="pv-bar"><span style="width:${pvPct}%"></span></div>
         </div>
+        ${isPJ ? `
         <div class="res pa">
           <label>⚡ PA</label>
           <button class="res-dn" data-id="${c.id}" data-res="pa" data-d="-1">−</button>
@@ -184,7 +199,7 @@
           <input class="res-val" data-id="${c.id}" data-res="shell" value="${c.shell}" />
           <span class="res-max">/10</span>
           <button class="res-up" data-id="${c.id}" data-res="shell" data-d="1">+</button>
-        </div>
+        </div>` : ``}
       </div>
 
       ${tokenTrack(c)}
@@ -359,8 +374,22 @@
       const t = e.target;
       const id = t.dataset.id;
 
-      if (t.classList.contains("del")) { Store.removeCombatant(id); renderCombat(); return; }
+      if (t.classList.contains("del")) { expandedPassifs.delete(id); Store.removeCombatant(id); renderCombat(); return; }
       if (t.classList.contains("edit")) { openEdit(id); return; }
+      if (t.classList.contains("dup")) {
+        const n = Store.duplicate(id);
+        if (n) Store.log(`${n.name} ajouté (duplication).`);
+        renderCombat(); return;
+      }
+      if (t.classList.contains("save")) {
+        Store.saveToLibrary(id);
+        Store.log(`${(Store.find(id)||{}).name||''} enregistré dans la bibliothèque.`);
+        renderCombat(); return;
+      }
+      if (t.classList.contains("cbt-class")) {
+        if (expandedPassifs.has(id)) expandedPassifs.delete(id); else expandedPassifs.add(id);
+        renderCombat(); return;
+      }
 
       if (t.classList.contains("res-up") || t.classList.contains("res-dn")) {
         const c = Store.find(id), res = t.dataset.res;
@@ -605,8 +634,18 @@
       loadout: { sorts: sorts, defense: $("#pj-defense").value || null, shell: $("#pj-shell").value || null }
     };
   }
+  function renderClasseInfo() {
+    const k = classeById($("#pj-classe").value);
+    $("#pj-classe-info").innerHTML = k ? `
+      <div class="class-info-box">
+        <em>${esc(k.desc||"")}</em>
+        ${(k.passifs||[]).map(p=>`<div class="ci-passif">★ ${esc(p)}</div>`).join("")}
+      </div>` : "";
+  }
+
   function previewPJ() {
     const c = readPJ(), s = Store.statsOf(c), d = Rules.derive(s, c.level);
+    renderClasseInfo();
     const total = Rules.STATS.reduce((a,k)=>a+(c.bonus[k]||0),0);
     $("#pj-preview").innerHTML = `
       <div class="prev-stats">${Rules.STATS.map(k=>`<span class="stat-chip"><b>${k}</b> ${s[k]} <i>(${Rules.fmtMod(d.mods[k])})</i></span>`).join("")}</div>
@@ -690,11 +729,74 @@
     $("#btn-print").addEventListener("click", () => window.print());
   }
 
+  /* =============================================================== BIBLIOTHÈQUE */
+  function renderLibrary() {
+    const items = Store.getLibrary();
+    const list = $("#lib-list");
+    if (!items.length) { list.innerHTML = `<div class="empty">Bibliothèque vide. Cliquez 💾 sur une fiche pour l'enregistrer.</div>`; return; }
+    list.innerHTML = items.map((t, i) => {
+      const cl = t.kind === "pj" ? (classeById(t.classeId)||{}).nom : "Monstre";
+      return `<div class="lib-item">
+        <span class="kind-badge ${t.kind}">${t.kind==='pj'?'PJ':'PNJ'}</span>
+        <span class="lib-name">${esc(t.name)}</span>
+        <span class="lib-meta">${esc(cl||'')} · niv ${t.level||1}</span>
+        <button class="btn primary mini lib-add" data-i="${i}">+ Combat</button>
+        <button class="icon-btn lib-del" data-i="${i}" title="Supprimer">✕</button>
+      </div>`;
+    }).join("");
+  }
+
+  function bindLibrary() {
+    $("#btn-library").addEventListener("click", () => { renderLibrary(); $("#lib-backdrop").classList.add("open"); });
+    $$("[data-close-lib]").forEach(b => b.addEventListener("click", () => $("#lib-backdrop").classList.remove("open")));
+    $("#lib-backdrop").addEventListener("click", e => { if (e.target.id === "lib-backdrop") $("#lib-backdrop").classList.remove("open"); });
+    $("#lib-list").addEventListener("click", e => {
+      const t = e.target;
+      if (t.classList.contains("lib-add")) {
+        const c = Store.addFromLibrary(num(t.dataset.i,0));
+        if (c) Store.log(`${c.name} ajouté depuis la bibliothèque.`);
+        renderCombat();
+      }
+      if (t.classList.contains("lib-del")) {
+        if (confirm("Supprimer ce modèle de la bibliothèque ?")) { Store.removeFromLibrary(num(t.dataset.i,0)); renderLibrary(); }
+      }
+    });
+  }
+
+  /* =============================================================== EXPORT / IMPORT */
+  function download(filename, text) {
+    const blob = new Blob([text], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = filename; document.body.appendChild(a); a.click();
+    a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
+  }
+  function bindExportImport() {
+    $("#btn-export").addEventListener("click", () => {
+      download(`combat-forteresse-T${Store.get().turn}.json`, Store.exportJSON());
+    });
+    $("#btn-import").addEventListener("click", () => $("#import-file").click());
+    $("#import-file").addEventListener("change", e => {
+      const f = e.target.files && e.target.files[0]; if (!f) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        try {
+          Store.importJSON(ev.target.result);
+          expandedPassifs.clear();
+          renderCombat();
+          Store.log(`Combat importé (${Store.get().combatants.length} combattant(s)).`); Store.save();
+        } catch (err) { alert("Import impossible : " + err.message); }
+        $("#import-file").value = "";
+      };
+      reader.readAsText(f);
+    });
+  }
+
   /* ------------------------------------------------------------------- Init */
   function init() {
     Store.load();
     initTabs(); fillSelectClasses(); bindAddForms(); bindCombatEvents();
-    bindTurnControls(); bindCartes(); renderCombat();
+    bindTurnControls(); bindCartes(); bindLibrary(); bindExportImport(); renderCombat();
   }
   document.addEventListener("DOMContentLoaded", init);
 })();

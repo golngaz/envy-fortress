@@ -95,6 +95,16 @@ Les fichiers `data/*.js` sont volontairement de simples objets JS (≈ JSON) pou
     « sans cible ». La **zone de Résolution** affiche alors la carte jouée
     (sort/arme) **face à la carte de défense de la/des cible(s)**.
   - Plus **+1 PA**, **Concentration (+2)**, **Potion**.
+- **Passif de classe** : cliquer le nom de classe sur la fiche déplie ses passifs ;
+  ils s'affichent aussi en direct dans la modale d'ajout/édition (le passif du
+  monstre, lui, est toujours visible en encadré).
+- **Bibliothèque** (bouton 📚) : 💾 sur une fiche enregistre un **modèle** (PJ ou
+  monstre, ressources réinitialisées) ; on le réinjecte ensuite dans n'importe quel
+  combat. **⧉ Duplique** un combattant existant (ex. plusieurs monstres identiques).
+  Stockée à part dans `localStorage` (clé `fdle-simu-lib-v1`), survit au « Tout effacer ».
+- **Export / Import du combat complet** : **⬇️ Exporter** télécharge un **JSON** de
+  tout l'état (combattants, PV/PA/Shell, jetons, roue, journal) ; **⬆️ Importer**
+  recharge ce JSON. Idéal pour sauvegarder une session et la reprendre plus tard.
 - **Cartes** (onglet *Cartes*) : sorts (y compris **Shell Control**) et armes,
   recto/verso avec **flip 3D**, filtrables et **imprimables** (recto+verso côte à
   côte) pour servir d'aide-mémoire aux joueurs.

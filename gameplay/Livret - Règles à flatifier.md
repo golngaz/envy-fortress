@@ -4,6 +4,7 @@ visible: true
 ---
 [[Création de personnage]]
 [[Phases de progression]]
+[[Les dés]]
 [[Degré de difficulté (DD)]]
 [[Jet de sauvegarde]]
 [[Points de vies & Mort]]

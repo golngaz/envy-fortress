@@ -9,7 +9,7 @@ On la place au début de la première case au début du combat.
 # Détermination de l’ordre de jeu  
   
 Au **début de chaque tour global**, l’ordre des tours individuels est déterminé par son ordre sur la roue : le joueur le plus éloigné de la flèche commence et le joueur collé à la flèche sera dernier.
-Le premier tour, tout les joueurs se placent sur la première case. On ajoute à ce dé le [[Bonus de nombre de cases]]
+Le premier tour, tous les joueurs se placent sur la première case, puis avancent de leur [[Bonus de nombre de cases]] : c'est ce premier déplacement qui les étale sur la roue et fixe l'ordre.
 # Principe  
 
 La roue comporte **6 cases** disposées en cercle. Il y a une [[Système de Vitesse (Roue d’Initiative)#Flèche|Flèche]] qui définit le début et la fin d'un **tour**. Le premier tour global, on place cette flèche au début de la case 1.
@@ -35,6 +35,7 @@ Chaque pion (joueur ou ennemi) avance sur la roue à chaque [[tour global]] selo
 ## En cas d’égalité :  
 * Celui ayant la **Vitesse la plus élevée** est prioritaire.  
 * Si égalité de vitesse avec un/des PNJ, ce sont les PJ qui sont prioritaires.
+* Si la Vitesse ne les départage pas (deux PJ à Vitesse égale sur la même case), les PJ concernés se départagent au **dé** : chacun lance, le plus haut joue en premier.
   
 ---
 
