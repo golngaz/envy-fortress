@@ -16,3 +16,8 @@ difficulty: 3
 
 * Marbre noir sans valeur (parasites tués).
 * **Parasite vivant = marchandise rare** (parasites capturés) — à revendre plus tard.
+
+# Musique
+
+> [!todo] Musique
+> @todo : thème organique et stressant (chair, bourdonnement, urgence) pour la sortie des parasites.

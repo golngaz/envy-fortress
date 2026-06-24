@@ -11,6 +11,15 @@ level: 1
 > [!warning]
 > Ne pas regarder. Si tu croises son regard, elle attaque.
 
+> [!note] Les « Silencieux » du Jardin
+> Dans le [[Le Jardin des Silencieux|Jardin des Silencieux]], ces ombres sont les créatures que les habitants nomment les **Silencieux** : même entité, autre nom local. C'est d'elles que vient le danger de la zone.
+
+# Hors combat — le danger du regard (exploration)
+
+Tant qu'on n'est **pas** en combat, croiser une ombre dans les haies se joue comme une **tension d'exploration**, pas comme un tour par tour :
+- **Poser les yeux sur une ombre coûte la moitié de ses PV** (on baisse les yeux, on se guide à l'oreille, on se prévient entre PJ).
+- **Deux regards d'affilée sur la même ombre** → le **combat s'engage** (et les passifs ci-dessous s'appliquent).
+
 # Passifs
 
 > [!tip] Regard déclencheur

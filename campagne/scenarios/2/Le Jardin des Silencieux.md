@@ -10,14 +10,14 @@ Le **Jardin des Silencieux** est le **labyrinthe végétal qui encercle l'[[égl
 
 # Les Silencieux (danger de zone)
 
-Des créatures errent dans les haies : les **Silencieux**. La règle, à faire sentir par l'ambiance plutôt qu'à réciter :
+Des créatures errent dans les haies : les **Silencieux**. Ce sont les **[[Ombre fuyante|ombres fuyantes]]** — même entité, sous leur nom local. La règle, à faire sentir par l'ambiance plutôt qu'à réciter :
 
 - **Les regarder coûte cher** : quiconque pose les yeux sur un Silencieux perd **la moitié de ses PV**.
 - **Deux regards d'affilée** sur le même Silencieux → un **combat** s'engage à la place.
 - Ça se joue comme une **tension d'exploration** : baisser les yeux, se guider à l'oreille, se prévenir entre PJ (« le regarde pas ! »).
 
-> [!todo] À chiffrer
-> Fiche monstre du **Silencieux** à créer (PV, attaques, le combat déclenché au 2e regard). @todo : me préciser leur nature — muets, aveugles, traquent-ils au son ? À quoi ressemblent-ils ? — pour que j'écrive la fiche et leur comportement.
+> [!note] Fiche
+> Stats, passif *Regard déclencheur* et règle d'exploration complète : [[Ombre fuyante]]. Le combat déclenché au 2e regard se résout avec [[campagne/combats/étage 1/Les ombres fuyantes (combat)|Les ombres fuyantes]].
 
 # Traverser le jardin
 

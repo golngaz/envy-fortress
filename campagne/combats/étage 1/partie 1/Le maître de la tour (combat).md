@@ -25,3 +25,8 @@ difficulty: 4
 # Drop
 
 * Voir [[Maître de la tour]] (pièces + arme de la tour).
+
+# Musique
+
+> [!todo] Musique
+> @todo : thème de boss solennel et martial à choisir (orgueil de pierre, marbre et colonnes).

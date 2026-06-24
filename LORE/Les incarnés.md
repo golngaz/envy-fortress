@@ -7,4 +7,4 @@ Les personnages joués ne sont **pas** des membres de la [[Famille Sombreval]]. 
 Ils n'ont donc aucun lien de sang avec Miguel — ce qui ne les empêche pas d'être traqués, étudiés ou utilisés par la famille, persuadée qu'un incarné pourrait toujours se révéler être l'un des leurs.
 
 > [!important] Exception
-> [[Dulcina Sombreval]], la **vraie petite sœur** de [[Miguel Sombreval]], a elle aussi franchi un portail. Contrairement aux maîtres d'étage, elle n'appartient à aucune branche divergente : c'est la Dulcina de [[La Souche]]. Elle **suit les joueurs** dans leur ascension.
+> [[Dulcina Sombreval]], la **vraie petite sœur** de [[Miguel Sombreval]], a elle aussi franchi un portail. Contrairement aux maîtres d'étage, elle n'appartient à aucune branche divergente : c'est la Dulcina de [[La Souche]]. Elle **suit les joueurs** dans leur descente.

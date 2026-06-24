@@ -35,7 +35,7 @@ Si les joueurs meurent ou décident de se suicider, ils réapparaîtrons immédi
 
 3 Lapins blancs apparaissent mais paraissent un peu agressifs… Tout du moins, sur la défensive, ils portent un casque de soldat gris.
 
-1. [[Lapin soldat]]
+1. [[campagne/combats/plaine/Gardiens du monolithe (combat)|Gardiens du monolithe]]
 
 ## Toucher le monolithe : 
 

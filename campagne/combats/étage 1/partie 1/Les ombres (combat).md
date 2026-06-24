@@ -11,3 +11,8 @@ difficulty: 2
 > Les colonnes ne portent pas que des bannières : entre elles, des silhouettes d'encre se détachent et glissent vers vous, sans un bruit.
 
 Peu de PV, un peu fuyantes (elles esquivent parfois) — mais pas de passif méchant : un combat pour prendre ses marques.
+
+# Musique
+
+> [!todo] Musique
+> @todo : ambiance feutrée et tendue, discrète (amuse-bouche avant le boss).

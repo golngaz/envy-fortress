@@ -70,9 +70,25 @@ Dossiers de premier niveau (chacun est une catégorie de wiki) :
     éventuels, la **musique** d'ambiance et le **contexte** (lieu, déclencheur, lien
     vers le scénario). Frontmatter `difficulty`. Liens externes (audio/vidéo)
     **autorisés ici** (≠ livret).
+  - **Combats = puzzles** : conçois chaque rencontre comme un *combat-puzzle*. Une
+    stratégie basique (« on tape la cible la plus proche / la plus en avant jusqu'à
+    ce qu'elle tombe ») doit être **volontairement sous-optimale**. Le combat doit
+    récompenser la lecture d'un **mécanisme** : une boucle à briser (boss intouchable
+    tant que ses serviteurs vivent → cf. [[Maître de la tour]], [[Croque mort gardien]]),
+    une **condition** d'ouverture (humilier/isoler une clé de voûte, rompre une
+    formation, épuiser une réserve de défense), un ordre d'actions, un usage de l'AOE,
+    du terrain ou d'une altération. Le passif du monstre **est** l'énigme ; explicite
+    la solution en note MJ sans la rendre triviale.
   - **Les scénarios renvoient toujours aux combats** par wikilink : un combat n'est
     jamais détaillé dans le scénario, seulement référencé.
 - `LORE/` — univers, lieux (étages de la forteresse), familles (`Famille Sombreval`).
+- `assets/` — ressources non-wiki : `images/`, `musique/`, `police/`, `bases/`, et les
+  sources Photoshop des fiches (`fiche-personnage*.psb`). Référencé par les notes, pas
+  du contenu rédigé.
+- **Notes de travail à la racine** (méta, hors-wiki) : `TODO.md`, `Equilibrage.md`,
+  `brainstorm - idées.md`, `INSPIRATIONS.md`, `Matériel à concevoir.md`, `Musiques.md`,
+  `Cheat sheet Obsidian.md`. Ce sont des aide-mémoire de conception, pas des pages de
+  jeu — ne pas les traiter comme du wiki ni les inclure dans le livret.
 
 ## Conventions à respecter
 

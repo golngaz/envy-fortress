@@ -8,9 +8,6 @@ bonus VOL: 0
 bonus INT: 4
 level: 1
 joueur: visible
-inventaire:
-  - "[[Vieux bâton]]"
-  - "[[Morgenstern du géant bleu]]"
 ---
 # Passif
 

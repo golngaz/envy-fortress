@@ -47,7 +47,7 @@ Ce qu'Ilyan apporte aux joueurs :
 Piochez-en plusieurs ; chacun gagne la confiance des rebelles, renforce la Résistance et arme les joueurs contre Hector.
 
 ## A. Sauver un convoi de villageois
-Une **patrouille impériale** ([[Garde de la tour]] / soldats) traque des réfugiés fuyant l'impôt. Escorte/embuscade/évacuation. **Récompense** : confiance des rebelles + premiers villages qui basculent. *Première vraie démonstration que l'Empire saigne les siens — munition morale contre Hector.*
+Une **patrouille impériale** ([[campagne/combats/étage 1/partie 1/Patrouille impériale (combat)|Patrouille impériale]]) traque des réfugiés fuyant l'impôt. Escorte/embuscade/évacuation. **Récompense** : confiance des rebelles + premiers villages qui basculent. *Première vraie démonstration que l'Empire saigne les siens — munition morale contre Hector.*
 
 ## B. Récupérer les fragments du Bouffon
 [[Le bouffon]] rôde dans la forêt depuis ~50 ans avec des **[[Fragment du monolithe|fragments]] volés** au roi. Avec le nouveau système, ces fragments valent doublement (pouvoir **et** points d'ancrage/résurrection). Le Bouffon est **lucide derrière sa folie** : il marchande, teste l'humour et la patience des joueurs, et **connaît les secrets de la cour** (la folie du roi, ses peurs, une faille exploitable). Issues : le convaincre, le rouler, l'aider à régler un vieux compte. **Récompense** : fragments + un **levier intime** contre Hector.

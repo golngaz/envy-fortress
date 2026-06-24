@@ -12,3 +12,8 @@ difficulty: 1
 
 > [!tip] Désamorçage
 > Rien n'oblige à les tuer : la geôle n'a ni garde ni serrure, les PJ peuvent simplement partir (cf. [[Arrêter ou fuir un combat]]).
+
+# Musique
+
+> [!todo] Musique
+> @todo : ambiance malsaine et lente (geôle, automutilation sereine) — bascule plus stressante à la sortie des parasites.

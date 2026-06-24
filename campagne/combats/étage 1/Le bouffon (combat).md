@@ -61,3 +61,8 @@ S'ils décident d'y **retourner** affronter le bouffon (par fierté, curiosité 
 # Éviter la zone
 
 Rien ne les oblige à insister. Ils peuvent **contourner** toute la zone et **poursuivre vers le nord-ouest**, vers la suite de l'étage.
+
+# Musique
+
+> [!todo] Musique
+> @todo : thème inquiétant et joueur (valse de cirque grinçante, boîte à musique détraquée) pour le bouffon.
