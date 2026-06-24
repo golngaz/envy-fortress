@@ -1,6 +1,6 @@
 
 > [!danger] Note MJ
-> Le départ du premier scénario est un peu scripté, les joueurs peuvent faire peu de choses et dont finalement pressé par le temps. Avant d'entrer dans la forteresse, ils sont injecté par un programme qui s'occupe de les cloner en boucle pour tenter de les "inséminer" de force dans la forteresse. S'il meurent, il réapparaîtrons en boucle, seul le gardien des lieux (trop fort) garde des PV sans changement. Il représentent un changement, une brisure dans un espace hors du temps figé depuis l'équivalent de siècles ou millénaires. Bref ils peuvent même tenter un suicide, il réapparaîtrons toujours au nord
+> Le départ du premier scénario est un peu scripté, les joueurs peuvent faire peu de choses et dont finalement pressé par le temps. Avant d'entrer dans la forteresse, ils sont injecté par un programme qui s'occupe de les cloner en boucle pour tenter de les "inséminer" de force dans la forteresse. S'il meurent, il réapparaîtrons en boucle au milieu de la plaine. Ils peuvent même tenter un suicide, il réapparaîtrons toujours vers le nord de la plaine.
 # Introduction
 
 Vous vous retrouvez dans une salle mystique, vous demandant de choisir votre classe, vous avez à votre disposition : 
@@ -53,6 +53,17 @@ Si les joueurs meurent ou décident de se suicider, ils réapparaîtrons immédi
 
 
 2. [[campagne/combats/plaine/Le Soldat Bleu (combat)|Le Soldat bleu]]
+
+> [!danger] La cage — méthode de capture (MJ)
+> La cage n'est pas un décor : c'est le **piège** du géant. En son cœur luit un **fragment du monolithe**. Le plan du géant n'est pas de tuer les PJ, mais de les **broyer pour qu'ils réapparaissent dans la cage** — le fragment captif serait un ancrage plus proche que le cycle de la Couronne, et le piège se refermerait sur eux. Voir [[Fragment du monolithe#Les fragments comme points d'ancrage (résurrection)|l'ancrage]] et [[monstres/Le Soldat Bleu#La cage et le fragment (méthode de capture)|la fiche du géant]].
+>
+> **Mais les PJ ont de la chance** : au **premier coup** que la créature envoie, le fragment de la cage se fissure et tombe.
+
+> [!tip] Narration — le fragment se brise
+> Le colosse lève la cage et attaque subitement {{UN PJ}} .Le premier coup porté résonne… et c'est la **cage**, qui répond. Vous observez un objet noirâtre brillant plutôt imposant tomber hors de la cage et **tombe dans l'herbe** avec un tintement cristallin, son éclat s'éteignant aussitôt.
+
+> [!info] Conséquence mécanique (MJ)
+> Le fragment brisé, le piège est mort-né : à chaque mort ou suicide durant ce combat, les PJ réapparaissent au **dans le combat, en boucle** (cf. note d'intro). Ce moment **plante discrètement** la mécanique d'ancrage par fragment, révélée plus tard au [[Fragment du monolithe|panneau du Magicien]] — sans rien expliquer pour l'instant.
 
 Lorsque [[monstres/Le Soldat Bleu|Le Soldat Bleu]] est battu, Il se fige d'une matière qui semble être la même que celle du monolithe
 

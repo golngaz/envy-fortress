@@ -12,6 +12,9 @@
 
 [[Dulcina Sombreval|Dulcina]] ne sait pas qui elle est. Elle sait qu'elle s'appelle Dulcina. Le reste est brouillard. Des visages sans noms. Des voix sans visages. Une sensation persistante et inexplicable d'avoir perdu quelque chose ou quelqu'un.
 
+> [!note] Lore (MJ)
+> Dulcina est une **[[Dérivés, Passants et Absolus#Absolu|Absolue]]** : la **vraie** sœur de Miguel, de la Souche — à l'inverse des maîtres d'étage, qui sont des Dérivés. Elle l'ignore totalement. Fiche : [[Dulcina Sombreval]].
+
 ## Comportement
 
 Dulcina est courageuse sans le savoir — c'est-à-dire qu'elle agit par nécessité là où d'autres agiraient par conviction. Elle suit les joueurs parce que rester seule lui fait plus peur que l'inconnu. Elle pose beaucoup de questions, pas toujours aux bons moments. Elle ne ment pas, mais elle tait ce qu'elle ne comprend pas — ce qui représente, pour l'instant, à peu près tout.

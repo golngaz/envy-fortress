@@ -1,0 +1,149 @@
+/* =============================================================================
+ *  CARTES — Direction artistique « Arcane Glitch »
+ *  Voir simulateur/ART_DIRECTION.md
+ * -----------------------------------------------------------------------------
+ *  IMPORTANT (compat Firefox) : l'élément retourné en 3D (.carte-face) ne porte
+ *  AUCUN pseudo-élément ni mix-blend-mode — sinon Firefox casse le
+ *  backface-visibility (on ne voyait plus le dos). Tous les effets décoratifs
+ *  sont placés dans des enfants non-3D (.carte-art, .carte-body).
+ * ===========================================================================*/
+
+.cartes-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+
+/* ----- structure 3D / flip ----- */
+.carte{perspective:1400px;height:400px;cursor:pointer;--c:#7a5cff}
+.carte-inner{position:relative;width:100%;height:100%;
+  transition:transform .65s cubic-bezier(.45,.05,.25,1);transform-style:preserve-3d}
+.carte.flipped .carte-inner{transform:rotateY(180deg)}
+
+.carte-face{
+  position:absolute;inset:0;border-radius:16px;overflow:hidden;
+  display:flex;flex-direction:column;color:#e9e6ff;
+  -webkit-backface-visibility:hidden;backface-visibility:hidden;
+  background:
+    radial-gradient(130% 70% at 50% -10%, color-mix(in srgb,var(--c) 26%,transparent), transparent 62%),
+    linear-gradient(160deg,#1b1442 0%,#140e30 46%,#0b0818 100%);
+  /* liseré d'accent porté par la face elle-même (aucun pseudo : sûr pour le flip Firefox) */
+  border:1px solid color-mix(in srgb,var(--c) 55%,#2a2350);
+  border-top:3px solid var(--c);
+  box-shadow:0 8px 26px #000a, inset 0 0 0 1px color-mix(in srgb,var(--c) 22%,transparent),
+             inset 0 0 34px #7a5cff12;
+}
+.carte-recto{transform:rotateY(0deg)}      /* explicite : aide Firefox */
+.carte-verso{transform:rotateY(180deg)}
+
+/* ----- zone illustration (espace image) ----- */
+.carte-art{position:relative;height:158px;flex:0 0 auto;overflow:hidden;
+  background:
+    radial-gradient(80% 90% at 50% 20%, color-mix(in srgb,var(--c) 30%,transparent), transparent 70%),
+    linear-gradient(180deg,#221858,#0d0a1e);
+  border-bottom:1px solid color-mix(in srgb,var(--c) 40%,transparent)}
+.carte-art.has-img{background:#0b0818}
+.carte-art.has-img .carte-art-img{position:absolute;inset:0;
+  background-size:cover;background-position:center;transition:transform .6s ease}
+.carte:hover .carte-art.has-img .carte-art-img{transform:scale(1.06)}
+/* scanlines animées */
+.carte-art::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,#0b081833 0 1px,transparent 1px 3px);
+  opacity:.6;animation:scanDrift 6s linear infinite}
+/* balayage lumineux (shimmer) */
+.carte-art::after{content:"";position:absolute;top:0;bottom:0;width:55%;left:-60%;
+  pointer-events:none;transform:skewX(-18deg);
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--c) 38%,#ffffff22),transparent);
+  animation:shimmer 7s ease-in-out infinite}
+.carte:hover .carte-art::after{animation-duration:2.2s}
+/* halo + glyphe (cartes sans image) */
+.carte-art-glow{position:absolute;left:50%;top:46%;width:150px;height:150px;transform:translate(-50%,-50%);
+  border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle, color-mix(in srgb,var(--c) 55%,transparent), transparent 65%);
+  filter:blur(6px);animation:haloPulse 4.5s ease-in-out infinite}
+.carte-art-glyph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:64px;font-weight:800;color:color-mix(in srgb,var(--c) 75%,#fff);
+  text-shadow:0 0 18px color-mix(in srgb,var(--c) 70%,transparent);
+  animation:glyphFloat 6s ease-in-out infinite}
+.carte-art.has-img .carte-art-glow,.carte-art.has-img .carte-art-glyph{display:none}
+
+/* ----- corps texte ----- */
+.carte-body{flex:1 1 auto;display:flex;flex-direction:column;padding:12px 14px 13px;
+  overflow:hidden;position:relative}
+.verso-body{overflow:auto}
+.carte-coin{position:absolute;top:10px;right:12px;font-size:11px;font-weight:800;z-index:3;
+  color:color-mix(in srgb,var(--c) 72%,#fff);background:#000c;padding:2px 9px;border-radius:20px;
+  border:1px solid color-mix(in srgb,var(--c) 50%,transparent)}
+.carte-type{font-size:11px;text-transform:uppercase;letter-spacing:2px;font-weight:800;
+  color:color-mix(in srgb,var(--c) 80%,#fff)}
+.carte-nom{font-size:20px;margin:5px 0 9px;color:#fff;line-height:1.12;letter-spacing:.3px;
+  text-shadow:-1.2px 0 #2ff3e0aa,1.2px 0 #ff3d9a99;animation:titleGlitch 7s steps(1) infinite}
+.carte-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.badge{font-size:11px;font-weight:700;background:#ffffff12;border:1px solid #ffffff26;
+  padding:2px 8px;border-radius:6px;font-variant-numeric:tabular-nums}
+.badge-pa{background:color-mix(in srgb,var(--c) 34%,transparent);border-color:var(--c);color:#fff}
+.badge-de{background:#2ff3e01a;border-color:#39c5c0;color:#9af3ec;font-family:"Consolas",ui-monospace,monospace}
+.carte-flavor{font-style:italic;color:#c3bfe6;font-size:12px;border-left:2px solid var(--c);padding-left:8px;margin:4px 0}
+.carte-desc{font-size:12.5px;color:#dddaf2;margin:4px 0}
+.carte-desc.small{font-size:11px;color:#a8a3cc}
+.carte-note{font-size:11px;color:color-mix(in srgb,var(--c) 78%,#fff);margin:4px 0 0}
+.carte-flip-hint{margin-top:auto;text-align:right;font-size:10px;color:#7c77a3;padding-top:6px;
+  font-family:"Consolas",ui-monospace,monospace;letter-spacing:1px}
+.carte-table{width:100%;border-collapse:collapse;font-size:10.5px;margin-top:4px}
+.carte-table th{background:color-mix(in srgb,var(--c) 24%,transparent);text-align:left;padding:3px 5px;color:#fff;
+  border-bottom:1px solid color-mix(in srgb,var(--c) 48%,transparent)}
+.carte-table td{border-top:1px solid #ffffff14;padding:3px 5px;vertical-align:top;color:#d8d4f0}
+
+/* ----- accent par type (rouge/vert/jaune/bleu/violet/cyan/or) ----- */
+.type-border-attaque{--c:#e2533b} .type-border-defense{--c:#3d8bff}
+.type-border-soin{--c:#43c463} .type-border-passif{--c:#9b8cff}
+.type-border-utilitaire{--c:#f4b740} .type-border-shell{--c:#39c5c0}
+.type-border-arme{--c:#c0a060}
+
+/* Shell Control : traitement « code corrompu » renforcé */
+.type-border-shell .carte-type{font-family:"Consolas",ui-monospace,monospace}
+.type-border-shell .carte-nom{text-shadow:-1.4px 0 #2ff3e0cc,1.4px 0 #39c5c0aa}
+.type-border-shell .carte-art-glyph{font-family:"Consolas",ui-monospace,monospace;font-size:52px}
+
+/* ----- bouton supprimer (galerie) ----- */
+.carte-del{position:absolute;top:8px;left:10px;z-index:6;border:none;cursor:pointer;
+  width:27px;height:27px;border-radius:8px;background:#000a;color:#ff9a9a;font-size:13px;
+  line-height:1;opacity:0;transition:opacity .15s}
+.carte:hover .carte-del{opacity:1}
+.carte-del:hover{background:var(--danger);color:#fff}
+
+/* ----- hover ----- */
+.carte:hover .carte-inner{box-shadow:0 14px 40px #000a}
+.carte:hover .carte-nom{animation-duration:1.2s}
+
+/* ----- animations ----- */
+@keyframes scanDrift{from{background-position-y:0}to{background-position-y:3px}}
+@keyframes shimmer{0%{left:-60%}55%{left:140%}100%{left:140%}}
+@keyframes haloPulse{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}
+  50%{opacity:.8;transform:translate(-50%,-50%) scale(1.12)}}
+@keyframes glyphFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes titleGlitch{
+  0%,88%,100%{text-shadow:-1.2px 0 #2ff3e0aa,1.2px 0 #ff3d9a99;transform:translate(0)}
+  90%{text-shadow:-3px 0 #2ff3e0,2px 0 #ff3d9a;transform:translate(1px,-1px)}
+  92%{text-shadow:2px 0 #2ff3e0,-2px 0 #ff3d9a;transform:translate(-1px,1px)}
+  94%{text-shadow:-1.2px 0 #2ff3e0aa,1.2px 0 #ff3d9a99;transform:translate(0)}}
+
+@media (prefers-reduced-motion: reduce){
+  .carte-art::before,.carte-art::after,.carte-art-glow,.carte-art-glyph,.carte-nom{animation:none!important}
+}
+
+/* ============================== IMPRESSION ============================== */
+@media print{
+  #view-combat,#view-editeur{display:none!important}
+  #view-cartes.view{display:block!important;padding:0}
+  .cartes-gallery{grid-template-columns:repeat(2,1fr);gap:6mm}
+  .carte{height:auto;page-break-inside:avoid;perspective:none}
+  .carte-inner{transform:none!important}
+  .carte-face{position:relative;backface-visibility:visible;border:1px solid #999;
+    background:#fff;color:#000;box-shadow:none;margin-bottom:5mm}
+  .carte-face::before{border-top-color:#666;box-shadow:none}
+  .carte-art{height:120px}
+  .carte-art::before,.carte-art::after,.carte-nom{animation:none!important}
+  .carte-del{display:none!important}
+  .carte-verso{transform:none;display:block}
+  .carte-nom{color:#000;text-shadow:none!important}
+  .carte-desc,.carte-flavor{color:#222}
+  .carte-type,.carte-coin,.carte-note,.carte-flip-hint{color:#333!important;background:none!important}
+  .carte-table th{color:#000!important}.carte-table td{color:#111!important}
+}

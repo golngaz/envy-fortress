@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simulateur de combat — La Forteresse de l'Envie</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/cards.css" />
 </head>
 <body>
 
@@ -13,6 +14,7 @@
     <nav class="tabs">
       <button class="tab active" data-view="combat">Combat</button>
       <button class="tab" data-view="cartes">Cartes</button>
+      <button class="tab" data-view="editeur">Éditeur</button>
     </nav>
   </header>
 
@@ -37,12 +39,15 @@
       <aside class="wheel-panel">
         <h2>Roue d'initiative <span class="turn-pill">Tour <span id="turn-num">1</span></span></h2>
         <svg id="wheel-svg" viewBox="0 0 260 260" class="wheel"></svg>
+        <div class="frieze-wrap">
+          <label>Frise de priorité (ordre du tour) :</label>
+          <div id="frieze" class="frieze"></div>
+        </div>
         <div class="wheel-manual">
-          <label>Ajuster l'acteur actif :</label>
+          <label>Ajuster l'acteur actif (1 case) :</label>
           <div class="manual-row">
-            <button id="btn-push" class="btn ghost" title="Repousser (recule)">⟵ repousser</button>
-            <input id="push-n" type="number" value="1" min="1" class="mini-num"/>
-            <button id="btn-pull" class="btn ghost" title="Avancer">avancer ⟶</button>
+            <button id="btn-push" class="btn ghost" title="Reculer d'une case">⟵ repousser</button>
+            <button id="btn-pull" class="btn ghost" title="Avancer d'une case">avancer ⟶</button>
           </div>
         </div>
         <h3>Ordre du tour</h3>
@@ -77,6 +82,86 @@
       <span class="hint">Clic sur une carte pour la retourner (recto / verso).</span>
     </section>
     <section id="cartes-gallery" class="cartes-gallery"></section>
+  </main>
+
+  <!-- ============================ VUE ÉDITEUR =========================== -->
+  <main id="view-editeur" class="view">
+    <div class="editeur-grid">
+      <section class="eb-form">
+        <h2>Éditeur de carte</h2>
+        <p class="hint">Crée une carte à la main, puis <b>💾 Sauvegarde</b>-la sur le serveur
+          (écrite dans <code>data/sorts.json</code> / <code>data/armes.json</code>), ou exporte le JSON.</p>
+
+        <div class="grid2">
+          <div class="field"><label>Catégorie</label>
+            <select id="eb-kind">
+              <option value="sort">Sort</option>
+              <option value="arme">Arme</option>
+            </select>
+          </div>
+          <div class="field" id="eb-type-wrap"><label>Type de sort</label>
+            <select id="eb-type">
+              <option value="attaque">Attaque (rouge)</option>
+              <option value="soin">Soin (vert)</option>
+              <option value="utilitaire">Utilitaire (jaune)</option>
+              <option value="defense">Défense (bleu)</option>
+              <option value="passif">Passif (violet)</option>
+              <option value="shell">Shell Control (cyan)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field"><label>Nom</label><input id="eb-nom" placeholder="Nom de la carte"/></div>
+        <div class="field"><label>Image — nom du fichier seul (optionnel)</label>
+          <input id="eb-image" placeholder="foudre.png"/>
+          <div class="eb-upload-row">
+            <input id="eb-upload" type="file" accept="image/*"/>
+          </div>
+          <span class="hint">Upload « à la volée » : le fichier est enregistré dans
+            <code>assets/cartes/</code> et son nom repris ci-dessus. Format conseillé :
+            <b>portrait 3:4 (ex. 600×800), PNG ou JPG</b> — pas de recadrage automatique,
+            recadre toi-même avant. Une URL/chemin complet est aussi accepté.</span></div>
+
+        <div class="grid3">
+          <div class="field eb-sort-only"><label>Niveau</label><input id="eb-niveau" type="number" value="1" min="1"/></div>
+          <div class="field eb-sort-only"><label>PA</label><input id="eb-pa" placeholder="2, « 2 ou 0 », —"/></div>
+          <div class="field"><label>Dé</label><input id="eb-de" placeholder="1D10 (+INT)"/></div>
+          <div class="field eb-arme-only"><label>Poids</label><input id="eb-poids" type="number" value="5"/></div>
+          <div class="field eb-arme-only"><label>Provenance</label>
+            <select id="eb-prov"><option value="depart">départ</option><option value="loot">loot</option><option value="drop">drop</option></select></div>
+          <div class="field eb-arme-only"><label>Niveau min</label><input id="eb-nivmin" type="number" value="0" min="0"/></div>
+        </div>
+
+        <div class="field"><label>Citation / ambiance (optionnel)</label><textarea id="eb-flavor" rows="2"></textarea></div>
+        <div class="field eb-sort-only"><label>Description / effet hors-tableau (optionnel)</label><textarea id="eb-desc" rows="2"></textarea></div>
+        <div class="field eb-sort-only"><label>Notes (une par ligne, optionnel)</label><textarea id="eb-notes" rows="2"></textarea></div>
+
+        <fieldset>
+          <legend>Tableau de résolution
+            <button type="button" id="eb-add-col" class="btn ghost mini">+ col</button>
+            <button type="button" id="eb-del-col" class="btn ghost mini">− col</button>
+            <button type="button" id="eb-add-row" class="btn ghost mini">+ ligne</button>
+          </legend>
+          <div id="eb-table" class="eb-table"></div>
+        </fieldset>
+      </section>
+
+      <aside class="eb-side">
+        <h3>Aperçu</h3>
+        <div id="eb-preview" class="eb-preview"></div>
+        <div class="eb-export-bar">
+          <button id="eb-save" class="btn accent">💾 Sauvegarder sur le serveur</button>
+          <button id="eb-copy" class="btn primary">📋 Copier</button>
+          <button id="eb-download" class="btn">⬇️ .json</button>
+          <button id="eb-session" class="btn ghost">+ Session</button>
+        </div>
+        <p id="eb-msg" class="eb-msg"></p>
+        <textarea id="eb-json" class="eb-json" readonly></textarea>
+        <p class="hint">« Sauvegarder » écrit la carte (upsert par <code>id</code>) dans
+          <code>data/sorts.json</code>/<code>armes.json</code> via le serveur. « Session »
+          l'affiche seulement dans l'onglet Cartes jusqu'au rechargement.</p>
+      </aside>
+    </div>
   </main>
 
   <!-- ============================== MODALE ============================== -->
@@ -115,6 +200,7 @@
             <div class="field"><label>Shell Control</label><select id="pj-shell"></select></div>
           </div>
           <label class="sub-label">Sorts équipés (max 6)</label>
+          <input id="pj-sorts-filter" class="spell-filter" placeholder="🔎 filtrer les sorts…"/>
           <div id="pj-sorts" class="spell-list"></div>
         </fieldset>
         <div class="modal-actions">
@@ -147,11 +233,19 @@
         <div id="mob-preview" class="preview"></div>
         <div class="field"><label>Passif (affiché sur la fiche)</label><textarea id="mob-passif" rows="2"></textarea></div>
         <fieldset>
-          <legend>Attaques <button type="button" id="mob-add-atk" class="btn ghost mini">+ attaque</button></legend>
+          <legend>Attaques <button type="button" id="mob-add-atk" class="btn ghost mini">+ attaque vide</button></legend>
+          <div class="import-row">
+            <input id="mob-import-atk" list="dl-sorts-armes" placeholder="🔎 importer un sort / une arme…"/>
+            <button type="button" id="mob-import-atk-btn" class="btn ghost mini">↳ ajouter</button>
+          </div>
           <div id="mob-atks" class="atk-list"></div>
         </fieldset>
         <fieldset>
           <legend>Défense</legend>
+          <div class="import-row">
+            <input id="mob-import-def" list="dl-defenses" placeholder="🔎 importer un sort de défense…"/>
+            <button type="button" id="mob-import-def-btn" class="btn ghost mini">↳ remplir</button>
+          </div>
           <div class="grid2">
             <div class="field"><label>Nom</label><input id="mob-def-nom" placeholder="Nom de la défense"/></div>
             <div class="field"><label>Dé</label><input id="mob-def-de" placeholder="1D4…"/></div>
@@ -177,11 +271,14 @@
     </div>
   </div>
 
-  <!-- Données (éditables) -->
+  <!-- Listes d'autocomplétion (remplies au démarrage par app.js) -->
+  <datalist id="dl-sorts-armes"></datalist>
+  <datalist id="dl-defenses"></datalist>
+
+  <!-- Données : jetons/classes/monstres en .js (config commentée),
+       sorts/armes en .json (chargés par boot.js via fetch). -->
   <script src="data/jetons.js"></script>
   <script src="data/classes.js"></script>
-  <script src="data/sorts.js"></script>
-  <script src="data/armes.js"></script>
   <script src="data/monstres.js"></script>
   <!-- Moteur -->
   <script src="js/rules.js"></script>
@@ -189,5 +286,8 @@
   <script src="js/store.js"></script>
   <script src="js/cards.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/cardbuilder.js"></script>
+  <!-- Charge les JSON puis initialise (doit rester en dernier) -->
+  <script src="js/boot.js"></script>
 </body>
 </html>

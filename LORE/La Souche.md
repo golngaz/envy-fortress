@@ -11,6 +11,6 @@ La Souche est *sa* branche à lui : la seule réalité où ses souvenirs sont ex
 
 # Qui est de la Souche ?
 
-- [[Dulcina Sombreval]], la vraie petite sœur de Miguel, est à ce jour la seule incarnée formellement issue de la Souche. Elle [[Les incarnés|accompagne les joueurs]].
-- Les [[Les incarnés|personnages joueurs]] viennent d'univers étrangers : ils ne sont d'**aucune** branche Sombreval, ni de la Souche.
-- Les [[Maître d'étage|maîtres d'étage]] sont tous des **rejets** — des Sombreval venus de branches autres que la Souche.
+- [[Dulcina Sombreval]], la vraie petite sœur de Miguel, est à ce jour la seule incarnée formellement issue de la Souche — une **[[Dérivés, Passants et Absolus#Absolu|Absolue]]**. Elle [[Les incarnés|accompagne les joueurs]].
+- Les [[Les incarnés|personnages joueurs]] viennent d'univers étrangers : ils ne sont d'**aucune** branche Sombreval, ni de la Souche. Ce sont des **[[Dérivés, Passants et Absolus#Passant|Passants]]**.
+- Les [[Maître d'étage|maîtres d'étage]] sont tous des **[[Dérivés, Passants et Absolus#Dérivé|Dérivés]]** (« rejets ») — des Sombreval venus de branches autres que la Souche.

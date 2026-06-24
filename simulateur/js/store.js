@@ -16,11 +16,14 @@ window.Store = (function () {
   function normalize(s) {
     s.combatants = s.combatants || [];
     s.turn = s.turn || 1;
-    if (s.activeIdx == null) s.activeIdx = 0;
+    if (s.activeIdx == null) s.activeIdx = 0;       // = curseur dans la frise
     s.log = s.log || [];
     if (s.resolution === undefined) s.resolution = null;
     if (s.chooser === undefined) s.chooser = null;
+    if (s.flecheId === undefined) s.flecheId = null;
+    if (!Array.isArray(s.frieze)) s.frieze = null;
     s.combatants.forEach(migrate);
+    if (!s.frieze) rebuildFrieze(s);
     return s;
   }
 
@@ -47,6 +50,9 @@ window.Store = (function () {
     if (!c.tokensPerm) c.tokensPerm = {};
     delete c.tokens;
     if (c.kind === "pj" && !c.loadout) c.loadout = { sorts: [], defense: null, shell: null };
+    // position mod-6 (remplace l'ancienne position absolue `abs`)
+    if (c.pos == null) c.pos = c.abs != null ? (((c.abs % 6) + 6) % 6) : 0;
+    delete c.abs; delete c.bonusReplays;
   }
 
   function save() {
@@ -77,7 +83,7 @@ window.Store = (function () {
     if (c.shell == null) c.shell = 0;
     if (!c.tokensTrack) c.tokensTrack = {};
     if (!c.tokensPerm) c.tokensPerm = {};
-    if (c.abs == null) c.abs = 0;
+    if (c.pos == null) c.pos = 0;
     if (c.kind === "pj" && !c.loadout) c.loadout = { sorts: [], defense: null, shell: null };
     return c;
   }
@@ -86,6 +92,7 @@ window.Store = (function () {
     c.id = uid();
     defaults(c);
     state.combatants.push(c);
+    rebuildFrieze(state);
     save();
     return c;
   }
@@ -102,7 +109,10 @@ window.Store = (function () {
     state.combatants = state.combatants.filter(c => c.id !== id);
     if (state.resolution && (state.resolution.attackerId === id ||
         (state.resolution.targets || []).indexOf(id) >= 0)) state.resolution = null;
-    if (state.activeIdx >= state.combatants.length) state.activeIdx = 0;
+    if (state.flecheId === id) state.flecheId = null;
+    state.frieze = (state.frieze || []).filter(e => e.id !== id);
+    if (state.activeIdx >= state.frieze.length) state.activeIdx = Math.max(0, state.frieze.length - 1);
+    ensureFleche(state);
     save();
   }
   function find(id) { return state.combatants.find(c => c.id === id); }
@@ -146,27 +156,99 @@ window.Store = (function () {
   function setResolution(res) { state.resolution = res; save(); }
   function clearResolution() { state.resolution = null; save(); }
 
-  /* ----- tour global ----- */
+  /* ----- roue / frise de priorité ----- */
+  function computeSpeeds(s) {
+    s.combatants.forEach(c => {
+      const st = statsOf(c);
+      c.speed = Rules.derive(st, c.level || 1).casesABS;
+      c.vit = st.VIT;
+    });
+  }
+  function ensureFleche(s) {
+    if (!s.combatants.length) { s.flecheId = null; return; }
+    s.flecheId = Wheel.slowest(s.combatants, s.flecheId);
+  }
+  function flechePos(s) {
+    s = s || state;
+    const f = (s.combatants || []).find(c => c.id === s.flecheId);
+    return f ? Wheel.caseOf(f) : 0;
+  }
+
+  /** (Re)construit la frise : ordre de base (chacun 1×) + tours bonus à la FIN. */
+  function rebuildFrieze(s, doublings) {
+    computeSpeeds(s);
+    ensureFleche(s);
+    const F = flechePos(s);
+    const base = Wheel.baseOrder(s.combatants, F);
+    const frieze = base.map(c => ({ id: c.id, bonus: false }));
+    if (doublings) {
+      Object.keys(doublings).forEach(id => {
+        for (let i = 0; i < doublings[id]; i++) frieze.push({ id: id, bonus: true });
+      });
+    }
+    s.frieze = frieze;
+    s.activeIdx = 0;
+  }
+
+  /** Ajoute un tour bonus à la toute fin de la frise du tour courant. */
+  function appendBonus(id) {
+    if (!state.frieze) state.frieze = [];
+    state.frieze.push({ id: id, bonus: true });
+  }
+
   function nextTurn() {
+    computeSpeeds(state);
+    ensureFleche(state);
+    const F0 = flechePos(state);                     // flèche « de départ »
+    const doublings = {};
     state.combatants.forEach(c => {
-      const s = statsOf(c);
-      c.speed = Rules.derive(s, c.level || 1).casesABS;
-      c.vit = s.VIT;
+      const oldPos = Wheel.caseOf(c);
+      const sp = Math.max(0, c.speed || 0);
+      c.pos = (oldPos + sp) % Wheel.SIZE;            // déplacement mod-6 (mono-tour)
+      const n = Wheel.crossingsForward(oldPos, sp, F0);
+      if (n > 0) doublings[c.id] = (doublings[c.id] || 0) + n;
     });
-    // tours bonus = passages de la flèche PENDANT ce tour global uniquement
-    const before = Wheel.lapsToArrow(state.combatants);
-    Wheel.advance(state.combatants);
-    const after = Wheel.lapsToArrow(state.combatants);
-    state.combatants.forEach(c => {
-      c.bonusReplays = Math.max(0, (after[c.id] || 0) - (before[c.id] || 0));
-    });
+    rebuildFrieze(state, doublings);
+    const nb = Object.values(doublings).reduce((a, b) => a + b, 0);
+    if (nb) log(`${nb} tour(s) bonus ajouté(s) en fin de frise (dépassement de flèche).`);
     state.turn += 1;
-    state.activeIdx = 0;
     save();
   }
+
+  /** Déplacement manuel d'un pion (±1 case). Un dépassement de flèche ajoute un
+   *  tour bonus à la fin de la frise. */
+  function nudge(id, delta) {
+    const c = find(id); if (!c) return;
+    const F = flechePos(state);
+    const oldPos = Wheel.caseOf(c);
+    c.pos = (((oldPos + delta) % Wheel.SIZE) + Wheel.SIZE) % Wheel.SIZE;
+    let crossed = 0;
+    if (delta > 0) crossed = Wheel.crossingsForward(oldPos, delta, F);
+    else if (delta < 0) crossed = Wheel.crossingsBackward(oldPos, -delta, F);
+    for (let i = 0; i < crossed; i++) appendBonus(id);
+    // ré-ordonne la PARTIE DE BASE de la frise (l'avance change l'ordre), bonus conservés
+    reorderBase();
+    if (crossed) log(`${c.name} a doublé la flèche : +${crossed} tour bonus (fin de frise).`);
+    save();
+    return crossed;
+  }
+
+  /** Recalcule l'ordre des tours de base (sans bonus) après un déplacement manuel,
+   *  en conservant les tours bonus déjà acquis à la fin. */
+  function reorderBase() {
+    const bonuses = (state.frieze || []).filter(e => e.bonus);
+    const F = flechePos(state);
+    const base = Wheel.baseOrder(state.combatants, F).map(c => ({ id: c.id, bonus: false }));
+    state.frieze = base.concat(bonuses);
+    if (state.activeIdx >= state.frieze.length) state.activeIdx = Math.max(0, state.frieze.length - 1);
+  }
+
   function resetWheel() {
-    state.combatants.forEach(c => { c.abs = 0; c.bonusReplays = 0; });
-    state.turn = 1; state.activeIdx = 0; save();
+    state.combatants.forEach(c => { c.pos = 0; });
+    state.flecheId = null;
+    state.turn = 1;
+    rebuildFrieze(state);
+    save();
   }
   function log(msg) {
     state.log.unshift({ t: state.turn, m: msg });
@@ -174,7 +256,8 @@ window.Store = (function () {
     save();
   }
   function clearAll() {
-    state = { combatants: [], turn: 1, activeIdx: 0, log: [], resolution: null, chooser: null };
+    state = { combatants: [], turn: 1, activeIdx: 0, log: [], resolution: null, chooser: null,
+      flecheId: null, frieze: [] };
     save();
   }
 
@@ -190,7 +273,7 @@ window.Store = (function () {
   function cleanTemplate(c) {
     const t = JSON.parse(JSON.stringify(c));
     delete t.id; delete t.speed; delete t.vit;
-    t.pa = 0; t.shell = 0; t.abs = 0; t.bonusReplays = 0;
+    t.pa = 0; t.shell = 0; t.pos = 0;
     t.tokensTrack = {}; t.tokensPerm = {};
     const d = Rules.derive(statsOf(t), t.level || 1);
     t.pvMax = d.PV; t.pv = d.PV;
@@ -232,7 +315,7 @@ window.Store = (function () {
     addCombatant, updateCombatant, removeCombatant, find, duplicate,
     addToken, shiftTokens,
     setChooser, clearChooser, setResolution, clearResolution,
-    nextTurn, resetWheel, log, clearAll,
+    nextTurn, nudge, resetWheel, flechePos, log, clearAll,
     getLibrary, saveToLibrary, removeFromLibrary, addFromLibrary,
     exportJSON, importJSON
   };

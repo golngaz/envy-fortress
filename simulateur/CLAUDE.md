@@ -12,11 +12,23 @@ jetons, ordre sur la roue). Inspiration UX : l'app *Lotus* (compteurs Magic).
 
 ## Lancer l'outil
 
-Aucun build, aucune dépendance. Deux options :
+Aucun build, aucune dépendance (Python seul). Le simulateur doit être **servi**
+(les sorts/armes sont des `.json` chargés par `fetch`, bloqué en `file://`) et,
+pour la **sauvegarde depuis l'Éditeur**, il faut le petit serveur `serve.py` :
 
-- Ouvrir `simulateur/index.html` directement dans un navigateur, **ou**
-- Servir le dossier : `python -m http.server 8123 --directory simulateur`
-  puis ouvrir `http://localhost:8123` (config prête dans `.claude/launch.json`).
+- **Windows** : double-clic sur `lancer-simulateur.bat`
+- **Linux/macOS** : `./lancer-simulateur.sh`
+- **Manuel** : `python serve.py` (depuis `simulateur/`)
+
+puis ouvrir `http://localhost:8123` (config preview prête dans `.claude/launch.json`).
+`serve.py` écoute le port `8123` par défaut ou `$PORT` si défini (la preview met
+`autoPort`, donc un port libre si 8123 est déjà pris). Il sert les fichiers ET expose
+trois endpoints d'écriture : `save-card`, `delete-card`, `upload-image` (voir plus bas).
+Un simple `python -m http.server` fonctionne aussi en **lecture seule** (cartes
+affichables/imprimables) mais l'Éditeur ne pourra ni sauvegarder ni uploader.
+Ouvert en `file://`, le combat marche mais sorts/armes/cartes restent vides
+(bandeau d'avertissement). `boot.js` ajoute un cache-bust au `fetch` des JSON :
+après édition d'un `.json`, un simple rechargement suffit.
 
 L'état du combat est **persisté dans `localStorage`** (clé `fdle-simu-v1`).
 
@@ -25,23 +37,37 @@ L'état du combat est **persisté dans `localStorage`** (clé `fdle-simu-v1`).
 ```
 simulateur/
 ├─ index.html          structure + ordre de chargement des scripts
-├─ css/styles.css       thème sombre, cartes, impression
-├─ data/                DONNÉES ÉDITABLES (assignent dans window.DB)
-│  ├─ jetons.js          jetons/altérations (logo, couleur, max, négatif…)
-│  ├─ classes.js         5 classes + stats de base + passifs
-│  ├─ sorts.js           sorts (recto/verso des cartes)
-│  ├─ armes.js           armes (cartes)
-│  └─ monstres.js        bestiaire pré-rempli (stats + notes)
+├─ serve.py            serveur statique + API (save-card / delete-card / upload-image ; port $PORT|8123)
+├─ lancer-simulateur.bat / .sh   lanceurs (Windows / Linux-macOS) → serve.py
+├─ ART_DIRECTION.md     direction artistique des cartes + prompts IA
+├─ css/
+│  ├─ styles.css         thème sombre, UI combat/modales/éditeur, impression
+│  └─ cards.css          cartes « Arcane Glitch » (flip, zone image, animations)
+├─ data/
+│  ├─ jetons.js          jetons/altérations (.js commenté : logo, couleur, max…)
+│  ├─ classes.js         5 classes + stats de base + passifs (.js commenté)
+│  ├─ monstres.js        bestiaire (.js commenté : stats + passif + attaques + défense)
+│  ├─ sorts.json         sorts (JSON pur ; champ `image` = nom de fichier seul)
+│  └─ armes.json         armes (JSON pur ; champ `image` = nom de fichier seul)
 └─ js/
    ├─ rules.js           calculs de stats dérivées (cf. persos.base)
    ├─ wheel.js           roue d'initiative (déplacement, ordre, rejeu)
-   ├─ store.js           état + persistance localStorage
-   ├─ cards.js           rendu des cartes recto/verso
-   └─ app.js             UI (combat, modale d'ajout, roue, cartes)
+   ├─ store.js           état + persistance localStorage + bibliothèque + export/import
+   ├─ cards.js           rendu des cartes (zone image + glyphe ; IMG_BASE)
+   ├─ cardbuilder.js     éditeur de cartes manuel + export JSON (onglet Éditeur)
+   ├─ app.js             UI (combat, modale d'ajout, roue, cartes) — expose window.App
+   └─ boot.js            charge sorts.json/armes.json (fetch) puis App.init()
 ```
 
-Les fichiers `data/*.js` sont volontairement de simples objets JS (≈ JSON) pour
-être **modifiables facilement** sans outillage.
+- **`data/sorts.json` & `data/armes.json`** : JSON pur, chargés par `fetch` dans
+  `boot.js`. Format identique à la sortie de l'onglet **Éditeur** → coller un objet
+  exporté dans le tableau JSON suffit à ajouter une carte.
+- **`jetons.js`, `classes.js`, `monstres.js`** : restent du `.js` commenté
+  (assignent dans `window.DB`, chargés en `<script>` synchrone) car ils servent de
+  config documentée et ne passent pas par l'Éditeur.
+- **Champ `image`** : on ne met que le **nom du fichier** (ex. `foudre.png`) ;
+  `cards.js` préfixe `IMG_BASE` (`assets/cartes/`). Une URL ou un chemin complet
+  (avec `/`, `http`, `data:`) est gardé tel quel. Sinon → glyphe arcanique par type.
 
 ## Formules de stats dérivées (source : `campagne/personnages/persos.base`)
 
@@ -78,13 +104,36 @@ Les fichiers `data/*.js` sont volontairement de simples objets JS (≈ JSON) pou
   directe), utile en début de combat. PV borné par PV max ; Shell 0–10.
 - **Équipement (bouton ⚙ sur la fiche, ou à la création)** :
   - **PJ** : arme, **jusqu'à 6 sorts**, **1 sort de défense**, **1 Shell Control**.
+    Un champ **filtre** au-dessus de la liste de sorts aide à les retrouver.
   - **Monstre** : **attaques** (nom/dé/effet), **défense**, **passif** affiché en
-    encadré. Préréglages depuis `data/monstres.js`.
+    encadré. Préréglages depuis `data/monstres.js`. **Autocomplétion d'import**
+    (datalists `dl-sorts-armes` / `dl-defenses`) : taper un nom de sort/arme ajoute
+    une attaque pré-remplie ; un nom de sort de défense remplit le bloc Défense.
 - **Jetons sur piste de durée** : colonnes **P (permanent) + 1→6 tours**. On pose
   un jeton (palette `data/jetons.js`) à la durée voulue ; bouton **« −1 tour »**
   pour décaler toute la piste (réduction **manuelle**, comme à la table). `max`
   respecté, couleur + logo.
-- **Roue d'initiative** visuelle + liste d'ordre cliquable + journal d'actions.
+- Chaque fiche affiche le **déplacement par tour** décomposé en **cases + tours**
+  (ex. 8 cases ⇒ « 2 cases + 1 tour »), via `Rules.derive` (cases = casesABS%6,
+  tours = ⌊casesABS/6⌋).
+- **Roue d'initiative** visuelle (SVG persistant, thème arcanique : halo, anneaux
+  runiques tournants, jetons lumineux colorés PJ/PNJ portant les **2 premières
+  lettres** du nom). Les pions **s'animent** vers leur nouvelle case (transition CSS)
+  et un **éclat magique** se déclenche à chaque tour global. + liste d'ordre
+  cliquable + journal d'actions.
+  - **Modèle « un seul tour »** : positions en **mod-6** (`c.pos`, plus de distance
+    absolue ni de comptage de tours d'avance). La **flèche** = aiguille pivotant
+    depuis le centre vers le **pion le plus lent** (`Wheel.slowest`, plus faible
+    `casesABS`) = le dernier de la course.
+  - **Frise de priorité** (`state.frieze`, cubes colorés sous la roue) = l'ordre de
+    jeu du tour : un cube par combattant (par priorité : le plus éloigné de la flèche
+    d'abord), puis **un cube bonus à la TOUTE FIN** pour chaque **dépassement de
+    flèche**. Les dépassements sont détectés au **tour global** (`Wheel.crossingsForward`)
+    et lors des déplacements **manuels** avance/repousse (`Store.nudge` →
+    `crossingsForward/Backward`). Différer les bonus en fin de frise évite les
+    enchaînements de rejeux abusifs. Cliquer un cube (ou la liste d'ordre) sélectionne
+    l'acteur ; « Acteur suivant » avance le curseur.
+  - Ajustement manuel **±1 case** (repousser / avancer) sur l'acteur actif.
 - **Flux d'action** (les dés restent faits à la table) :
   - PJ **✨ Sort** → liste les sorts équipés, **décompte les PA** du sort choisi.
   - PJ **🗡️ Attaquer** → utilise l'**arme équipée**.
@@ -107,7 +156,35 @@ Les fichiers `data/*.js` sont volontairement de simples objets JS (≈ JSON) pou
   recharge ce JSON. Idéal pour sauvegarder une session et la reprendre plus tard.
 - **Cartes** (onglet *Cartes*) : sorts (y compris **Shell Control**) et armes,
   recto/verso avec **flip 3D**, filtrables et **imprimables** (recto+verso côte à
-  côte) pour servir d'aide-mémoire aux joueurs.
+  côte) pour servir d'aide-mémoire aux joueurs. Direction artistique « Arcane
+  Glitch » (bleu-violet, glitch subtil, accent coloré par type) décrite dans
+  `ART_DIRECTION.md` — ce fichier contient aussi **2 prompts IA** (style maître +
+  template par carte) pour générer les visuels.
+  - Style des cartes isolé dans **`css/cards.css`** (structure flip, zone image,
+    animations : halo pulsé, scanlines, shimmer, glitch du titre).
+  - **Zone image** : champ optionnel `image` (URL/chemin) sur un sort/arme/attaque ;
+    sinon un glyphe arcanique par type sert de placeholder.
+  - ⚠️ **Compat Firefox** : `.carte-face` (l'élément retourné en 3D) ne doit porter
+    NI pseudo-élément, NI `mix-blend-mode`, NI `filter`, sinon Firefox casse le
+    `backface-visibility` (on ne voyait plus le dos). Les effets vivent dans des
+    enfants non-3D (`.carte-art`, `.carte-body`).
+- **Éditeur de cartes** (onglet *Éditeur*, `js/cardbuilder.js`) : crée une carte à
+  la main (sort ou arme), aperçu live dans le vrai cadre.
+  - **💾 Sauvegarder sur le serveur** : `POST /api/save-card` → upsert (par `id`)
+    dans `data/sorts.json` / `data/armes.json` (nécessite `serve.py`).
+  - **Upload d'image à la volée** : choisir un fichier → aperçu instantané (data URL)
+    + `POST /api/upload-image?name=…` qui l'écrit dans `assets/cartes/`. Pas de
+    recadrage ni de vérif — format conseillé **portrait 3:4 (ex. 600×800), PNG/JPG**.
+  - Sinon, **export JSON** (copier / télécharger / ajouter à la session) reste
+    disponible pour une intégration manuelle.
+  - Endpoints servis par `serve.py` uniquement ; avec `python -m http.server`, ces
+    boutons renvoient une erreur explicite (lecture seule).
+- **Supprimer une carte** : dans l'onglet *Cartes*, un bouton 🗑 (au survol) sur
+  chaque carte appelle `POST /api/delete-card` (retire l'entrée par `id` du JSON).
+  L'**image n'est pas supprimée** du dossier `assets/cartes/` (volontaire).
+- **Affichage image** : le fond est posé en **`background-image` inline direct**
+  (pas via une variable CSS `--img`, peu fiable sous Firefox). Les images
+  s'affichent donc partout : galerie, aperçu de l'Éditeur et zone de Résolution.
 
 ## Conventions d'édition
 

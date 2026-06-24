@@ -39,17 +39,24 @@ Chaque pion (joueur ou ennemi) avance sur la roue à chaque [[tour global]] selo
   
 ---
 
-# Tour complet
+# Tour complet (dépassement de la flèche)
 
-Lorsqu'un ou plusieurs pions dépassent la flèche de départ, ils rejouent immédiatement. Si un pion fait plusieurs tours, il peut rejouer autant de fois que nécessaires.
+Lorsqu'un ou plusieurs pions **dépassent la flèche de départ**, ils gagnent un **tour bonus**. C'est aussi le cas lorsqu'un pion est amené à dépasser la flèche par un **[[Repousser|repoussement]]** (qu'il dépasse lui-même, ou qu'on repousse un autre pion derrière la flèche).
 
-> [!success]  Je confirme  
-  Il est en effet possible qu’un joueur ou un ennemi joue plusieurs fois d’affilée, voire presque à l’infini, en combinant ses actions avec des sorts de [[Vitesse (VIT)]]. Il suffit simplement d’être plus rapide. (ou de disposer d’une défense capable de contre-attaquer efficacement ?)  
-> > [!tip] Imagine cette situation…    
-> > Tu joues au *jeu des mains*, où l’objectif est de taper la main de ton adversaire. Mais il est beaucoup plus rapide que toi : tant qu’il esquive, tu ne peux jamais frapper. Il enchaîne les mouvements et frappe en boucle dès que tu es hors de portée, te laissant complètement bloqué tant que ta vitesse est insuffisante.
+> [!important] Frise de priorité
+> Pour **éviter les exploitations** (enchaîner des rejeux à l'infini), le tour bonus n'est **pas** joué « immédiatement après » : il est ajouté à la **toute fin de la _frise de priorité_** — une frise affichée sous la roue, faite de petits **cubes colorés** représentant, dans l'ordre, tous les tours du tour global en cours.
+> - Chaque combattant a d'abord **un cube** (son tour normal), rangé par priorité (le plus éloigné de la flèche d'abord).
+> - Chaque **dépassement de flèche** (par déplacement, avancée ou repoussement) ajoute **un cube bonus à la fin** de la frise.
+> - On joue la frise **de gauche à droite**.
+
+> [!note] Modèle « un seul tour »
+> On ne retient **pas** le nombre de tours d'avance : peu importe qu'un pion en double un autre puis se fasse redoubler — chaque dépassement vaut **un** cube bonus, et tout repart à neuf au tour global suivant.
+
+> [!success] Conséquence
+> Il reste possible de jouer plusieurs fois dans un tour global en étant plus rapide (les cubes bonus s'accumulent en fin de frise), mais comme ils sont **différés à la fin**, on ne peut plus enchaîner une boucle de rejeux instantanés.
 
 > [!note] Note
-> Les égalités fonctionnent de la même manière que [[#En cas d’égalité|précédemment]] (faire 2 tours et tomber sur la même case qu'un joueur qui n'en a fait qu'un ne constitue pas une égalité).
+> Les égalités fonctionnent de la même manière que [[#En cas d’égalité|précédemment]].
 
 # ![[Repousser]]
 
@@ -57,7 +64,7 @@ Lorsqu'un ou plusieurs pions dépassent la flèche de départ, ils rejouent imm�
 
 Voici les étapes résumés au début de chaque tour global
 
-1. Déplacement des joueurs en fonction de leur valeur de vitesse
-2. La flèche de marquage de tour est déplacée **en même temps** sur le premier joueur devant elle (elle le "suit").
-3. Les joueurs aillant dépassé le joueur le plus lent (marqué avec la flèche) rejouent autant de fois.
-4. Les joueurs jouent leur tour normalement, en fonction de leur priorité. Les plus éloignés de la flèche sont les plus rapides.
+1. Déplacement des joueurs en fonction de leur valeur de vitesse.
+2. La flèche reste sur le **plus lent** (le dernier de la course) et le suit.
+3. On construit la **frise de priorité** : un cube par joueur (rangés par priorité, le plus éloigné de la flèche d'abord), puis **un cube bonus en fin de frise** pour chaque pion ayant **dépassé la flèche** ce tour-ci.
+4. Les joueurs jouent leur tour en suivant la frise, **de gauche à droite**.

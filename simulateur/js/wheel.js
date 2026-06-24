@@ -1,79 +1,60 @@
 /* =============================================================================
- *  ROUE D'INITIATIVE  —  Système de Vitesse
+ *  ROUE D'INITIATIVE  —  Système de Vitesse (modèle « un seul tour »)
  * -----------------------------------------------------------------------------
- *  La roue a 6 cases. Chaque pion possède une position ABSOLUE cumulée (abs)
- *  et une vitesse de déplacement = casesABS (cases parcourues par tour global).
+ *  La roue a 6 cases. Chaque pion a une position `pos` dans [0,6) — on NE retient
+ *  PAS le nombre de tours d'avance (modèle mono-tour : si un pion en double un
+ *  autre puis se fait redoubler, les deux rejouent, sans accumulation).
  *
- *  - La flèche marque le pion le plus en retard (le plus lent) ; elle le suit.
- *    On la modélise par arrowAbs = min(abs).
- *  - Ordre de jeu : le plus éloigné de la flèche (abs - arrowAbs le + grand)
- *    joue en premier. Égalité → VIT la plus élevée, puis priorité aux PJ.
- *  - Rejeu : un pion qui dépasse la flèche d'un tour complet (6 cases) rejoue.
- *    nbActivations = floor((abs - arrowAbs)/6) + 1.
- *
- *  Tout est ajustable manuellement (repousser, déplacer) côté UI : ces
- *  fonctions ne font que recalculer l'ordre à partir des positions courantes.
+ *  - La flèche marque « le dernier de la course » = le pion le plus lent
+ *    (plus faible casesABS). Elle le suit.
+ *  - Doubler = passer la flèche. Chaque passage donne un TOUR BONUS, ajouté à la
+ *    TOUTE FIN de la frise de priorité (et non « immédiatement après »).
+ *  - L'ordre de base : le plus éloigné de la flèche (vers l'avant) joue en premier.
  * ===========================================================================*/
 window.Wheel = (function () {
   const SIZE = 6;
 
-  /** Avance tous les pions de leur vitesse (un tour global). */
-  function advance(pawns) {
-    pawns.forEach(p => {
-      p.abs = (p.abs || 0) + Math.max(0, p.speed || 0);
-    });
+  /** Position visuelle 0..5. */
+  function caseOf(p) { return (((p.pos || 0) % SIZE) + SIZE) % SIZE; }
+
+  /** Distance « vers l'avant » de pos par rapport à la flèche F (0..5). */
+  function forwardDist(pos, F) { return (((pos - F) % SIZE) + SIZE) % SIZE; }
+
+  /** Nombre de passages de la position F en avançant de `delta` cases depuis oldPos. */
+  function crossingsForward(oldPos, delta, F) {
+    if (delta <= 0) return 0;
+    let first = (((F - oldPos) % SIZE) + SIZE) % SIZE;
+    if (first === 0) first = SIZE;                 // pile sur F → tour complet pour la « passer »
+    return delta >= first ? 1 + Math.floor((delta - first) / SIZE) : 0;
   }
 
-  function arrowAbs(pawns) {
-    if (!pawns.length) return 0;
-    return Math.min.apply(null, pawns.map(p => p.abs || 0));
+  /** Nombre de passages de F en reculant de `delta` cases (delta > 0). */
+  function crossingsBackward(oldPos, delta, F) {
+    if (delta <= 0) return 0;
+    let first = (((oldPos - F) % SIZE) + SIZE) % SIZE;
+    if (first === 0) first = SIZE;
+    return delta >= first ? 1 + Math.floor((delta - first) / SIZE) : 0;
   }
 
-  /** Position visuelle sur la roue (0..5). */
-  function caseOf(pawn) {
-    return ((pawn.abs || 0) % SIZE + SIZE) % SIZE;
+  /** La flèche = le pion le plus lent (casesABS mini). Égalité → garde le courant. */
+  function slowest(pawns, currentId) {
+    if (!pawns.length) return null;
+    let min = Infinity;
+    pawns.forEach(p => { const s = p.speed || 0; if (s < min) min = s; });
+    const cands = pawns.filter(p => (p.speed || 0) === min).map(p => p.id);
+    if (currentId && cands.indexOf(currentId) >= 0) return currentId;
+    return cands[0];
   }
 
-  /** Nombre de tours bonus gagnés en passant la flèche PENDANT un tour global.
-   *  Les tours bonus sont propres au tour global courant (`pawn.bonusReplays`),
-   *  recalculés par Store.nextTurn — ils disparaissent au tour global suivant. */
-  function activations(pawn) {
-    return 1 + Math.max(0, pawn.bonusReplays || 0);
-  }
-
-  /**
-   * Renvoie la liste ordonnée des activations du tour :
-   * [{ pawn, repeat, total }] — repeat = n° d'activation (1, 2, …) pour les rejeux.
-   */
-  function order(pawns) {
-    const arrow = arrowAbs(pawns);
-    // Tri principal : distance à la flèche décroissante.
-    const sorted = pawns.slice().sort((a, b) => {
-      const da = (a.abs || 0) - arrow;
-      const db = (b.abs || 0) - arrow;
-      if (db !== da) return db - da;
+  /** Ordre de base (chaque pion une fois) : le plus en avant de la flèche d'abord. */
+  function baseOrder(pawns, F) {
+    return pawns.slice().sort((a, b) => {
+      const da = forwardDist(caseOf(a), F), db = forwardDist(caseOf(b), F);
+      if (db !== da) return db - da;                 // plus éloigné de la flèche d'abord
       if ((b.vit || 0) !== (a.vit || 0)) return (b.vit || 0) - (a.vit || 0);
-      // priorité aux PJ
-      return (a.isPlayer === b.isPlayer) ? 0 : (a.isPlayer ? -1 : 1);
+      return (a.isPlayer === b.isPlayer) ? 0 : (a.isPlayer ? -1 : 1); // PJ prioritaires
     });
-
-    const seq = [];
-    sorted.forEach(p => {
-      const n = activations(p);
-      for (let i = 1; i <= n; i++) seq.push({ pawn: p, repeat: i, total: n });
-    });
-    return seq;
   }
 
-  /** Nombre de tours bonus pour ce tour global, pour chaque pion :
-   *  (laps après déplacement) − (laps avant déplacement), relatif à la flèche.
-   *  À appeler AVANT puis APRÈS Wheel.advance via beforeLaps()/afterLaps(). */
-  function lapsToArrow(pawns) {
-    const arrow = arrowAbs(pawns);
-    const out = {};
-    pawns.forEach(p => { out[p.id] = Math.floor(((p.abs || 0) - arrow) / SIZE); });
-    return out;
-  }
-
-  return { SIZE, advance, arrowAbs, caseOf, activations, lapsToArrow, order };
+  return { SIZE, caseOf, forwardDist, crossingsForward, crossingsBackward, slowest, baseOrder };
 })();

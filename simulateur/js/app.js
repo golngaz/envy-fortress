@@ -14,6 +14,7 @@
   let editId = null;        // id du combattant en cours d'édition (modale), sinon null
   let mobAtkRows = [];      // tampon des lignes d'attaque (modale monstre)
   const expandedPassifs = new Set(); // fiches PJ dont le passif de classe est déplié
+  let lastResSig = null;             // signature de la zone de résolution (anti-rebuild)
 
   /* ------------------------------------------------------------------ Tabs */
   function initTabs() {
@@ -173,6 +174,8 @@
       </div>
 
       <div class="cbt-stats">${statLine(c)}</div>
+      <div class="cbt-move">🌀 Déplacement / tour&nbsp;: <b>${d.cases}</b> case(s) + <b>${d.tours}</b> tour(s)
+        <span class="muted tiny">(soit ${d.casesABS} case${d.casesABS>1?'s':''})</span></div>
       ${isPJ && classe && expandedPassifs.has(c.id) ? classePassifHtml(classe) : ''}
       ${loadoutSummary(c)}
 
@@ -231,9 +234,34 @@
     return t.defense ? Cards.mobCard(t.defense, "defense") : msgCard(esc(t.name) + " : pas de défense");
   }
 
+  /** Signature de l'état de résolution : si elle n'a pas changé, on ne reconstruit
+   *  pas la zone (sinon une carte retournée se remet sur le recto et les
+   *  animations redémarrent à chaque clic). */
+  function resSignature(r) {
+    if (!r) return "none";
+    const att = Store.find(r.attackerId);
+    const parts = [r.attackerId, r.cardType, r.cardId, r.needTarget ? 1 : 0,
+      r.aoe ? 1 : 0, (r.targets || []).join(","), att ? att.name : ""];
+    if (r.needTarget) {
+      parts.push(Store.get().combatants.map(c => c.id + ":" + c.name + ":" + c.kind).join("|"));
+    } else {
+      (r.targets || []).forEach(id => {
+        const t = Store.find(id);
+        if (t) {
+          const def = t.kind === "pj" ? (t.loadout && t.loadout.defense) : (t.defense && t.defense.nom);
+          parts.push(id + ":" + t.name + ":" + def);
+        }
+      });
+    }
+    return parts.join("§");
+  }
+
   function renderResolution() {
     const zone = $("#reszone");
     const r = Store.get().resolution;
+    const sig = resSignature(r);
+    if (sig === lastResSig) return;     // inchangé → préserve flip + animations
+    lastResSig = sig;
     if (!r) { zone.innerHTML = ""; zone.classList.remove("open"); return; }
     zone.classList.add("open");
     const attacker = Store.find(r.attackerId);
@@ -295,55 +323,160 @@
   }
 
   /* ------------------------------------------------------------ Roue / SVG */
-  function pawnsFromState() {
-    return Store.get().combatants.map(c => ({
-      ref: c, id: c.id, abs: c.abs || 0,
-      isPlayer: c.kind === "pj", vit: Store.statsOf(c).VIT,
-      bonusReplays: c.bonusReplays || 0
-    }));
+  /** Combattant actif = entrée courante de la frise de priorité. */
+  function activeCombatantId() {
+    const st = Store.get(), e = (st.frieze || [])[st.activeIdx];
+    return e ? e.id : null;
   }
-  function shortName(name) { return (name || "?").split(/\s+/)[0].slice(0, 8); }
+  /* ---- roue d'initiative (SVG persistant + pions animés) ---- */
+  const SVGNS = "http://www.w3.org/2000/svg";
+  const W = { cx: 130, cy: 130, R: 86, caseR: 22 };
+  let wheelBuilt = false;
+
+  /** Deux premières lettres du nom (espaces ignorés), en majuscules. */
+  function initials(name) {
+    const s = String(name || "?").replace(/\s+/g, "");
+    return (s.slice(0, 2) || "?").toUpperCase();
+  }
+  function caseCenter(i) {
+    const a = (-90 + i * 360 / Wheel.SIZE) * Math.PI / 180;
+    return { x: W.cx + W.R * Math.cos(a), y: W.cy + W.R * Math.sin(a), a: a };
+  }
+
+  function buildWheelSkeleton() {
+    let cases = "";
+    for (let i = 0; i < Wheel.SIZE; i++) {
+      const c = caseCenter(i);
+      const nx = W.cx + (W.R + 28) * Math.cos(c.a), ny = W.cy + (W.R + 28) * Math.sin(c.a);
+      cases += `<circle id="wcase-${i}" cx="${c.x.toFixed(1)}" cy="${c.y.toFixed(1)}" r="${W.caseR}" class="wcase"/>`;
+      cases += `<text x="${nx.toFixed(1)}" y="${(ny+3).toFixed(1)}" class="wnum">${i+1}</text>`;
+    }
+    $("#wheel-svg").innerHTML = `
+      <defs>
+        <radialGradient id="wheelGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#7a5cff" stop-opacity=".5"/>
+          <stop offset="60%" stop-color="#4da6ff" stop-opacity=".12"/>
+          <stop offset="100%" stop-color="#7a5cff" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="wglow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="2.4" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <circle cx="${W.cx}" cy="${W.cy}" r="124" class="wbackglow" fill="url(#wheelGlow)"/>
+      <circle cx="${W.cx}" cy="${W.cy}" r="${W.R+12}" class="wrune wrune-a"/>
+      <circle cx="${W.cx}" cy="${W.cy}" r="${W.R-10}" class="wrune wrune-b"/>
+      <circle cx="${W.cx}" cy="${W.cy}" r="${W.R}" class="wring"/>
+      <circle cx="${W.cx}" cy="${W.cy}" r="${W.R}" class="wflourish"/>
+      <g class="wheel-cases">${cases}</g>
+      <g class="wheel-arrow"><path class="warrow-needle" d="M0,-70 L5,-6 L-5,-6 Z"/><circle class="warrow-hub" r="4"/></g>
+      <text x="${W.cx}" y="${W.cy-5}" class="wcenter">TOUR</text>
+      <text x="${W.cx}" y="${W.cy+19}" class="wcenter big" id="wheel-turn-big">1</text>
+      <g class="wheel-pawns"></g>`;
+    wheelBuilt = true;
+  }
+
+  function updateWheel() {
+    if (!wheelBuilt) buildWheelSkeleton();
+    const st = Store.get();
+    const combatants = st.combatants;
+    const F = Store.flechePos();                    // case de la flèche (le plus lent)
+
+    for (let i = 0; i < Wheel.SIZE; i++) {
+      const el = document.getElementById("wcase-" + i);
+      if (el) el.classList.toggle("arrow", i === F && combatants.length > 0);
+    }
+    const am = $("#wheel-svg .wheel-arrow");
+    if (am) {
+      if (combatants.length) {
+        am.style.transform = `translate(${W.cx}px, ${W.cy}px) rotate(${F * 60}deg)`;
+        am.style.opacity = "1";
+      } else { am.style.opacity = "0"; }
+    }
+    const tb = document.getElementById("wheel-turn-big");
+    if (tb) tb.textContent = st.turn;
+
+    // pions : un <g> par combattant, positionné par transform (CSS transition)
+    const layer = $("#wheel-svg .wheel-pawns");
+    const byCase = {};
+    combatants.forEach(c => { const ci = Wheel.caseOf(c); (byCase[ci] = byCase[ci] || []).push(c); });
+    const seen = {};
+    Object.keys(byCase).forEach(ci => {
+      const arr = byCase[ci], cc = caseCenter(+ci);
+      arr.forEach((c, idx) => {
+        seen[c.id] = 1;
+        const isPJ = c.kind === "pj";
+        let g = document.getElementById("wp-" + c.id);
+        const fresh = !g;
+        if (fresh) {
+          g = document.createElementNS(SVGNS, "g");
+          g.id = "wp-" + c.id;
+          g.innerHTML = `<title></title><circle r="13" class="wtok"/><text class="wtok-lbl" y="4">${esc(initials(c.name))}</text>`;
+          g.addEventListener("mouseenter", () => {       // au survol : passe au-dessus
+            const par = g.parentNode; if (par && g !== par.lastChild) par.appendChild(g);
+          });
+          layer.appendChild(g);
+        } else {
+          const t = g.querySelector(".wtok-lbl");
+          if (t) t.textContent = initials(c.name);
+        }
+        g.setAttribute("class", "wpawn " + (isPJ ? "pj" : "mob"));
+        const tt = g.querySelector("title"); if (tt) tt.textContent = c.name;
+
+        const spread = 13, ty0 = -(arr.length - 1) / 2;
+        const tx = cc.x, ty = cc.y + (ty0 + idx) * spread;
+        if (fresh) {                       // placer sans animation à l'apparition
+          g.style.transition = "none";
+          g.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px)`;
+          g.getBoundingClientRect();        // reflow
+          g.style.transition = "";
+        } else {
+          g.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px)`;
+        }
+      });
+    });
+    Array.from(layer.children).forEach(g => {
+      if (!seen[g.id.replace("wp-", "")]) g.remove();
+    });
+  }
+
+  /** Petit éclat magique quand la roue tourne (tour global). */
+  function spinWheelFlourish() {
+    const svg = $("#wheel-svg"); if (!svg) return;
+    svg.classList.remove("spinning");
+    void svg.offsetWidth;                  // relance l'animation
+    svg.classList.add("spinning");
+    setTimeout(() => svg.classList.remove("spinning"), 950);
+  }
 
   function renderWheel() {
     const st = Store.get();
-    const pawns = pawnsFromState();
-    const arrow = Wheel.arrowAbs(pawns);
-    const cx = 130, cy = 130, R = 95, n = Wheel.SIZE;
-    let cases = "";
-    for (let i = 0; i < n; i++) {
-      const ang = (-90 + i * 360 / n) * Math.PI / 180;
-      const x = cx + R * Math.cos(ang), y = cy + R * Math.sin(ang);
-      const here = pawns.filter(p => Wheel.caseOf(p) === i);
-      const arrowHere = pawns.some(p => Wheel.caseOf(p) === i && (p.abs||0) === arrow);
-      cases += `<circle cx="${x}" cy="${y}" r="26" class="wcase ${arrowHere?'arrow':''}"/>`;
-      cases += `<text x="${x}" y="${y-30}" class="wnum">${i+1}</text>`;
-      let oy = y - 6;
-      here.forEach(p => {
-        cases += `<text x="${x}" y="${oy}" class="wpawn ${p.isPlayer?'pj':'mob'}">${esc(shortName(p.ref.name))}</text>`;
-        oy += 13;
-      });
-      if (arrowHere) cases += `<text x="${x}" y="${y+34}" class="warrow">▲ flèche</text>`;
-    }
-    $("#wheel-svg").innerHTML = `
-      <circle cx="${cx}" cy="${cy}" r="${R}" class="wring"/>${cases}
-      <text x="${cx}" y="${cy-6}" class="wcenter">Tour</text>
-      <text x="${cx}" y="${cy+16}" class="wcenter big">${st.turn}</text>`;
-
-    const seq = Wheel.order(pawns);
-    $("#order-list").innerHTML = seq.map((e, idx) => {
-      const active = idx === st.activeIdx;
-      const rep = e.total > 1 ? ` <span class="rep">×rejeu ${e.repeat}/${e.total}</span>` : "";
-      return `<li class="${active?'active':''} ${e.pawn.isPlayer?'pj':'mob'}" data-idx="${idx}">
-        <span class="ord-n">${idx+1}</span> ${esc(e.pawn.ref.name)}${rep}</li>`;
-    }).join("") || `<li class="muted">Aucun combattant</li>`;
+    updateWheel();
+    renderFrieze();
     $("#turn-num").textContent = st.turn;
+  }
+
+  /** Frise de priorité : cubes colorés (ordre de jeu du tour) + liste détaillée. */
+  function renderFrieze() {
+    const st = Store.get();
+    const frieze = st.frieze || [];
+    $("#frieze").innerHTML = frieze.length ? frieze.map((e, idx) => {
+      const c = Store.find(e.id); if (!c) return "";
+      const cls = (c.kind === "pj" ? "pj" : "mob") + (e.bonus ? " bonus" : "") + (idx === st.activeIdx ? " active" : "");
+      return `<button class="fcube ${cls}" data-idx="${idx}" title="${esc(c.name)}${e.bonus?' — tour bonus':''}">${esc(initials(c.name))}</button>`;
+    }).join("") : `<span class="muted tiny">—</span>`;
+    $("#order-list").innerHTML = frieze.map((e, idx) => {
+      const c = Store.find(e.id); if (!c) return "";
+      const tag = e.bonus ? ` <span class="rep">★ bonus</span>` : "";
+      return `<li class="${idx===st.activeIdx?'active':''} ${c.kind==='pj'?'pj':'mob'}" data-idx="${idx}">
+        <span class="ord-n">${idx+1}</span> ${esc(c.name)}${tag}</li>`;
+    }).join("") || `<li class="muted">Aucun combattant</li>`;
   }
 
   /* ------------------------------------------------------------------ Render */
   function renderCombat() {
     const st = Store.get();
-    const seq = Wheel.order(pawnsFromState());
-    const activeId = seq[st.activeIdx] ? seq[st.activeIdx].pawn.id : null;
+    const activeId = activeCombatantId();
     const wrap = $("#combatants");
     if (!st.combatants.length) {
       wrap.innerHTML = `<div class="empty">Aucun combattant. Ajoutez un PJ ou un monstre ci-dessus.</div>`;
@@ -424,7 +557,9 @@
       if (t.id === "res-clear") { Store.clearResolution(); renderCombat(); return; }
       if (t.classList.contains("tgt-btn")) { chooseTarget(t); return; }
 
-      // ordre
+      // ordre / frise : sélectionner une entrée
+      const fcube = t.closest(".fcube[data-idx]");
+      if (fcube) { Store.get().activeIdx = num(fcube.dataset.idx,0); Store.save(); renderCombat(); return; }
       const li = t.closest("#order-list li[data-idx]");
       if (li) { Store.get().activeIdx = num(li.dataset.idx,0); Store.save(); renderCombat(); }
     });
@@ -507,9 +642,9 @@
 
   /* --------------------------------------------------------- Turn controls */
   function bindTurnControls() {
-    $("#btn-next-turn").addEventListener("click", () => { Store.nextTurn(); Store.log(`— Tour global ${Store.get().turn} —`); renderCombat(); });
+    $("#btn-next-turn").addEventListener("click", () => { Store.nextTurn(); Store.log(`— Tour global ${Store.get().turn} —`); renderCombat(); spinWheelFlourish(); });
     $("#btn-next-actor").addEventListener("click", () => {
-      const st = Store.get(), len = Wheel.order(pawnsFromState()).length;
+      const st = Store.get(), len = (st.frieze || []).length;
       if (len) st.activeIdx = (st.activeIdx + 1) % len;
       Store.save(); renderCombat();
     });
@@ -517,16 +652,13 @@
       if (confirm("Réinitialiser la roue (case 1, tour 1) ? PV/PA/jetons conservés.")) { Store.resetWheel(); renderCombat(); }
     });
     $("#btn-clear").addEventListener("click", () => { if (confirm("Tout effacer ?")) { Store.clearAll(); renderCombat(); } });
-    $("#btn-push").addEventListener("click", () => nudgeActive(-num($("#push-n").value,1)));
-    $("#btn-pull").addEventListener("click", () => nudgeActive(num($("#push-n").value,1)));
+    $("#btn-push").addEventListener("click", () => nudgeActive(-1));
+    $("#btn-pull").addEventListener("click", () => nudgeActive(1));
   }
   function nudgeActive(delta) {
-    const st = Store.get(), seq = Wheel.order(pawnsFromState()), e = seq[st.activeIdx];
-    if (!e) return;
-    const c = Store.find(e.pawn.id);
-    c.abs = Math.max(0, (c.abs||0) + delta);
-    Store.log(`${c.name} ${delta<0?'repoussé':'avancé'} de ${Math.abs(delta)} case(s).`);
-    Store.save(); renderCombat();
+    const id = activeCombatantId(); if (!id) return;
+    Store.nudge(id, delta);             // déplace + détecte les dépassements de flèche
+    renderCombat();
   }
 
   /* ============================================================ Modale add/edit */
@@ -543,6 +675,26 @@
       .map(s => `<label class="spell-check"><input type="checkbox" value="${s.id}"/> <span>${esc(s.nom)} <em>${esc(s.pa)} PA · ${Cards.TYPE_LABEL[s.type]||s.type}</em></span></label>`).join("");
     $("#mob-preset").innerHTML = `<option value="">— vierge —</option>` +
       (window.DB.monstres||[]).map(m => `<option value="${m.id}">${esc(m.nom)}</option>`).join("");
+    fillDatalists();
+  }
+
+  /** Listes d'autocomplétion : sorts+armes (attaques) et défenses. */
+  function fillDatalists() {
+    const opt = arr => arr.map(x => `<option value="${esc(x.nom)}"></option>`).join("");
+    const dlSA = $("#dl-sorts-armes"), dlDef = $("#dl-defenses");
+    if (dlSA) dlSA.innerHTML = opt(window.DB.sorts||[]) + opt(window.DB.armes||[]);
+    if (dlDef) dlDef.innerHTML = opt((window.DB.sorts||[]).filter(s => s.type === "defense"));
+  }
+
+  /** Cherche un sort OU une arme par nom (insensible à la casse). */
+  function findByName(name) {
+    const n = (name||"").trim().toLowerCase(); if (!n) return null;
+    return (window.DB.sorts||[]).concat(window.DB.armes||[])
+      .find(x => (x.nom||"").toLowerCase() === n) || null;
+  }
+  function tableSummary(t) {
+    if (!t || !t.lignes) return "";
+    return t.lignes.map(l => l.filter(c => c && c !== "—").join(" : ")).filter(Boolean).join(" / ");
   }
 
   function bindAddForms() {
@@ -554,11 +706,17 @@
     ["pj-classe","pj-level","pj-con","pj-for","pj-vit","pj-ctrl","pj-int","pj-vol"]
       .forEach(idn => $("#"+idn).addEventListener("input", previewPJ));
     $("#pj-sorts").addEventListener("change", limitSorts);
+    $("#pj-sorts-filter").addEventListener("input", filterSorts);
+    $("#pj-sorts-filter").addEventListener("keydown", e => { if (e.key === "Enter") e.preventDefault(); });
 
     $("#mob-preset").addEventListener("change", () => loadPreset($("#mob-preset").value));
     ["mob-level","mob-con","mob-for","mob-vit","mob-ctrl","mob-int","mob-vol"]
       .forEach(idn => $("#"+idn).addEventListener("input", previewMob));
     $("#mob-add-atk").addEventListener("click", () => { mobAtkRows.push({nom:"",de:"",desc:""}); renderMobAtkRows(); });
+    $("#mob-import-atk-btn").addEventListener("click", importMobAttack);
+    $("#mob-import-atk").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); importMobAttack(); } });
+    $("#mob-import-def-btn").addEventListener("click", importMobDefense);
+    $("#mob-import-def").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); importMobDefense(); } });
 
     $("#form-pj").addEventListener("submit", e => { e.preventDefault(); submitPJ(); });
     $("#form-mob").addEventListener("submit", e => { e.preventDefault(); submitMob(); });
@@ -567,6 +725,32 @@
   function limitSorts() {
     const checked = $$("#pj-sorts input:checked");
     if (checked.length > 6) { checked[checked.length-1].checked = false; alert("6 sorts maximum."); }
+  }
+  function filterSorts() {
+    const q = $("#pj-sorts-filter").value.toLowerCase();
+    $$("#pj-sorts .spell-check").forEach(l => {
+      l.style.display = l.textContent.toLowerCase().indexOf(q) >= 0 ? "" : "none";
+    });
+  }
+
+  /* ---- import autocomplete (monstre) ---- */
+  function importMobAttack() {
+    const inp = $("#mob-import-atk"), it = findByName(inp.value);
+    if (!it) { alert("Sort/arme introuvable : « " + inp.value + " »"); return; }
+    mobAtkRows.push({
+      nom: it.nom, de: it.de || "",
+      desc: it.desc || tableSummary(it.table) || "",
+      table: it.table
+    });
+    inp.value = ""; renderMobAtkRows();
+  }
+  function importMobDefense() {
+    const inp = $("#mob-import-def"), it = findByName(inp.value);
+    if (!it) { alert("Sort introuvable : « " + inp.value + " »"); return; }
+    $("#mob-def-nom").value = it.nom;
+    $("#mob-def-de").value = it.de || "";
+    $("#mob-def-eff").value = it.desc || tableSummary(it.table) || "";
+    inp.value = ""; previewMob();
   }
 
   function openModal(which, prefill) {
@@ -718,11 +902,36 @@
   }
 
   /* =================================================================== CARTES */
+  function withDelete(el, kind, id) {
+    const b = document.createElement("button");
+    b.className = "carte-del"; b.title = "Supprimer cette carte"; b.textContent = "🗑";
+    b.addEventListener("click", ev => { ev.stopPropagation(); deleteCard(kind, id); });
+    el.appendChild(b);
+    return el;
+  }
   function renderCartes() {
     const filter = $("#carte-filter").value, gal = $("#cartes-gallery");
     gal.innerHTML = "";
-    if (filter === "all" || filter === "arme") (window.DB.armes||[]).forEach(a => gal.appendChild(Cards.armeCard(a)));
-    (window.DB.sorts||[]).forEach(s => { if (filter === "all" || filter === s.type) gal.appendChild(Cards.sortCard(s)); });
+    if (filter === "all" || filter === "arme")
+      (window.DB.armes||[]).forEach(a => gal.appendChild(withDelete(Cards.armeCard(a), "arme", a.id)));
+    (window.DB.sorts||[]).forEach(s => {
+      if (filter === "all" || filter === s.type) gal.appendChild(withDelete(Cards.sortCard(s), "sort", s.id));
+    });
+  }
+  function deleteCard(kind, id) {
+    if (!confirm("Supprimer définitivement cette carte des données ?\n(l'image éventuelle n'est pas supprimée)")) return;
+    fetch("api/delete-card", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ kind: kind, id: id })
+    })
+      .then(r => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
+      .then(() => {
+        const arr = kind === "arme" ? (window.DB.armes||[]) : (window.DB.sorts||[]);
+        const i = arr.findIndex(c => c.id === id);
+        if (i >= 0) arr.splice(i, 1);
+        renderCartes();
+      })
+      .catch(err => alert("Suppression impossible (" + err.message + ").\nLance le serveur avec serve.py (lanceur fourni)."));
   }
   function bindCartes() {
     $("#carte-filter").addEventListener("change", renderCartes);
@@ -798,5 +1007,7 @@
     initTabs(); fillSelectClasses(); bindAddForms(); bindCombatEvents();
     bindTurnControls(); bindCartes(); bindLibrary(); bindExportImport(); renderCombat();
   }
-  document.addEventListener("DOMContentLoaded", init);
+
+  // initialisé par js/boot.js après chargement des données JSON
+  window.App = { init: init, render: renderCombat };
 })();

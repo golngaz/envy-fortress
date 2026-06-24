@@ -22,9 +22,11 @@ Il n'y a ni build, ni lint, ni suite de tests. La « tooling » se résume à :
   dépôt — un modèle autonome, sans dépendances, qui imite la mécanique décrite dans
   `gameplay/Système de Vitesse (Roue d’Initiative).md`.
 - **Simulateur de combat (web)** : dossier `simulateur/` — calculateur/fiche de
-  combat en HTML/CSS/JS vanilla (aucun build). Ouvrir `simulateur/index.html` ou
-  servir via `python -m http.server 8123 --directory simulateur`. Voir
-  `simulateur/CLAUDE.md` pour le détail. En résumé :
+  combat en HTML/CSS/JS vanilla (aucun build, Python seul). À **servir** (sorts/armes
+  sont des `.json` chargés par `fetch`, bloqué en `file://`) via les lanceurs
+  `simulateur/lancer-simulateur.bat`/`.sh` ou `python serve.py` (depuis `simulateur/`).
+  `serve.py` ajoute deux endpoints d'écriture pour l'Éditeur (sauvegarde + upload
+  d'image). Voir `simulateur/CLAUDE.md` pour le détail. En résumé :
   - **Aide de jeu, pas moteur** : ne lance aucun dé et ne décide d'aucune
     victoire — le MJ saisit à la main les résultats des jets faits à la table.
   - Gère plusieurs **PJ & monstres** avec stats de base + **stats dérivées**
@@ -42,7 +44,14 @@ Il n'y a ni build, ni lint, ni suite de tests. La « tooling » se résume à :
     combattant, et **export/import JSON** du combat complet (sauvegarde de session).
     Passif de classe lisible au clic ; passif du monstre affiché en encadré.
   - Onglet **Cartes** : sorts (dont Shell Control) et armes en cartes recto/verso
-    avec flip 3D, imprimables comme aide-mémoire pour les joueurs.
+    avec flip 3D + **zone image** (champ `image`, fond en `background-image` inline),
+    suppression d'une carte (🗑, via serveur), imprimables comme aide-mémoire.
+    Direction artistique « Arcane Glitch » (bleu-violet, glitch léger) décrite dans
+    `simulateur/ART_DIRECTION.md` (avec 2 prompts IA) ; style isolé dans `css/cards.css`.
+  - Onglet **Éditeur** : créer une carte à la main, l'**uploader une image** (écrite
+    dans `assets/cartes/`) et la **sauvegarder sur le serveur** (upsert par `id`
+    dans `data/sorts.json` / `data/armes.json` via `serve.py`) ou l'exporter en JSON.
+    Champ `image` = nom de fichier seul, préfixé par le render.
   - Décision de règle assumée : déplacement roue = `floor(1 + VIT/3)` (modèle de
     `persos.base`, qui prime sur l'ancien modèle « +2 bonus » du doc de la roue).
 - **Export** : plugin `better-export-pdf` pour générer des PDF de règles/fiches.
