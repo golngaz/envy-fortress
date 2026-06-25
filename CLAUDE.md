@@ -17,16 +17,20 @@ Il n'y a ni build, ni lint, ni suite de tests. La « tooling » se résume à :
   `vault backup: {{date}}` (format `YYYY-MM-DD HH:mm:ss`), `pullBeforePush` actif,
   fusion via `merge`. Le travail normal se fait depuis Obsidian ; en CLI, fais des
   commits classiques sur `main`.
-- **Simulation** : `python simulation_roue_d_initiative.py` simule la roue
-  d'initiative (ordre de jeu basé sur la Vitesse). C'est le seul code exécutable du
-  dépôt — un modèle autonome, sans dépendances, qui imite la mécanique décrite dans
+- **Simulation de la roue** : la mécanique de la roue d'initiative (ordre de jeu
+  basé sur la Vitesse) vit désormais dans le **moteur testé** `simulateur/js/wheel.js`
+  (validé par `simulateur/tests/`, lancé via `npm test` ou la page **Tests** de
+  l'outil). Il modélise la mécanique décrite dans
   `gameplay/Système de Vitesse (Roue d’Initiative).md`.
 - **Simulateur de combat (web)** : dossier `simulateur/` — calculateur/fiche de
-  combat en HTML/CSS/JS vanilla (aucun build, Python seul). À **servir** (sorts/armes
-  sont des `.json` chargés par `fetch`, bloqué en `file://`) via les lanceurs
-  `simulateur/lancer-simulateur.bat`/`.sh` ou `python serve.py` (depuis `simulateur/`).
-  `serve.py` ajoute deux endpoints d'écriture pour l'Éditeur (sauvegarde + upload
-  d'image). Voir `simulateur/CLAUDE.md` pour le détail. En résumé :
+  combat en HTML/CSS/JS vanilla (aucun build). Le **serveur est en Node**
+  (`server.js`, zéro dépendance npm) et tout est **dockerisé**. À **servir**
+  (sorts/armes sont des `.json` chargés par `fetch`, bloqué en `file://`) via
+  `docker compose up serve` (ou `node server.js`, ou les lanceurs
+  `simulateur/lancer-simulateur.bat`/`.sh`). Tests : `docker compose run --rm test`
+  (ou `npm test`). `server.js` ajoute trois endpoints d'écriture pour l'Éditeur
+  (save-card / delete-card / upload-image). Voir `simulateur/CLAUDE.md` pour le
+  détail. En résumé :
   - **Aide de jeu, pas moteur** : ne lance aucun dé et ne décide d'aucune
     victoire — le MJ saisit à la main les résultats des jets faits à la table.
   - Gère plusieurs **PJ & monstres** avec stats de base + **stats dérivées**
@@ -50,7 +54,7 @@ Il n'y a ni build, ni lint, ni suite de tests. La « tooling » se résume à :
     `simulateur/ART_DIRECTION.md` (avec 2 prompts IA) ; style isolé dans `css/cards.css`.
   - Onglet **Éditeur** : créer une carte à la main, l'**uploader une image** (écrite
     dans `assets/cartes/`) et la **sauvegarder sur le serveur** (upsert par `id`
-    dans `data/sorts.json` / `data/armes.json` via `serve.py`) ou l'exporter en JSON.
+    dans `data/sorts.json` / `data/armes.json` via `server.js`) ou l'exporter en JSON.
     Champ `image` = nom de fichier seul, préfixé par le render.
   - Décision de règle assumée : déplacement roue = `floor(1 + VIT/3)` (modèle de
     `persos.base`, qui prime sur l'ancien modèle « +2 bonus » du doc de la roue).

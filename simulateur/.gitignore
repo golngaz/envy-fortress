@@ -1,0 +1,4 @@
+# Node portable déposé localement (lanceurs sans Docker ni installation système).
+node/
+node-v*-win-*/
+node-v*/

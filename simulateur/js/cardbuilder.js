@@ -148,7 +148,7 @@
     fetch("api/upload-image?name=" + encodeURIComponent(file.name), { method: "POST", body: file })
       .then(r => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
       .then(res => setMsg("✓ image enregistrée : assets/cartes/" + res.name))
-      .catch(err => setMsg("⚠️ Upload impossible (" + err.message + ") — aperçu local OK, mais lance le serveur via serve.py pour enregistrer le fichier.", true));
+      .catch(err => setMsg("⚠️ Upload impossible (" + err.message + ") — aperçu local OK, mais lance le serveur (lancer-simulateur.bat / .sh, ou node server.js) pour enregistrer le fichier.", true));
   }
 
   /* ----------------------------------------------- sauvegarde sur serveur */
@@ -172,7 +172,7 @@
           (res.replaced ? "carte remplacée" : "carte ajoutée") + " (" + res.count + " au total).");
       })
       .catch(err => setMsg("⚠️ Sauvegarde impossible (" + err.message +
-        "). Lance le serveur avec serve.py (lanceur fourni), pas « python -m http.server ».", true));
+        "). Lance le serveur (lancer-simulateur.bat / .sh, ou node server.js).", true));
   }
 
   /* --------------------------------------------------------------- init */

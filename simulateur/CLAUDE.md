@@ -12,23 +12,27 @@ jetons, ordre sur la roue). Inspiration UX : l'app *Lotus* (compteurs Magic).
 
 ## Lancer l'outil
 
-Aucun build, aucune dépendance (Python seul). Le simulateur doit être **servi**
-(les sorts/armes sont des `.json` chargés par `fetch`, bloqué en `file://`) et,
-pour la **sauvegarde depuis l'Éditeur**, il faut le petit serveur `serve.py` :
+Aucun build. **Serveur en Node** (`server.js`, **zéro dépendance npm** : modules
+natifs `http`/`fs`/`path`) et tout est **dockerisé** — rien à installer sur la
+machine hôte au-delà de Docker. Le simulateur doit être **servi** (les sorts/armes
+sont des `.json` chargés par `fetch`, bloqué en `file://`) ; le serveur expose aussi
+les trois endpoints d'écriture de l'Éditeur :
 
-- **Windows** : double-clic sur `lancer-simulateur.bat`
-- **Linux/macOS** : `./lancer-simulateur.sh`
-- **Manuel** : `python serve.py` (depuis `simulateur/`)
+- **Docker (recommandé)** : `docker compose up serve` → `http://localhost:8123`
+- **Node direct** : `npm start` (ou `node server.js`) depuis `simulateur/`
+- **Lanceurs** : `lancer-simulateur.bat` (Windows) / `./lancer-simulateur.sh`
+  (Linux-macOS) — ils préfèrent Docker, basculent sur Node, ouvrent le navigateur.
 
-puis ouvrir `http://localhost:8123` (config preview prête dans `.claude/launch.json`).
-`serve.py` écoute le port `8123` par défaut ou `$PORT` si défini (la preview met
-`autoPort`, donc un port libre si 8123 est déjà pris). Il sert les fichiers ET expose
-trois endpoints d'écriture : `save-card`, `delete-card`, `upload-image` (voir plus bas).
-Un simple `python -m http.server` fonctionne aussi en **lecture seule** (cartes
-affichables/imprimables) mais l'Éditeur ne pourra ni sauvegarder ni uploader.
-Ouvert en `file://`, le combat marche mais sorts/armes/cartes restent vides
+`server.js` écoute `8123` par défaut ou `$PORT` si défini (la preview
+`.claude/launch.json` met `autoPort` → un port libre si 8123 est pris). Il sert les
+fichiers statiques ET expose `save-card`, `delete-card`, `upload-image` (voir plus
+bas). Ouvert en `file://`, le combat marche mais sorts/armes/cartes restent vides
 (bandeau d'avertissement). `boot.js` ajoute un cache-bust au `fetch` des JSON :
 après édition d'un `.json`, un simple rechargement suffit.
+
+**Tests** : `docker compose run --rm test` (ou `npm test` → `node tests/run.js`),
+ou la **page dédiée** servie à `/tests/` (onglet **Tests** de l'outil). Ils valident
+le moteur de la roue (`js/wheel.js`).
 
 L'état du combat est **persisté dans `localStorage`** (clé `fdle-simu-v1`).
 
@@ -36,9 +40,12 @@ L'état du combat est **persisté dans `localStorage`** (clé `fdle-simu-v1`).
 
 ```
 simulateur/
-├─ index.html          structure + ordre de chargement des scripts
-├─ serve.py            serveur statique + API (save-card / delete-card / upload-image ; port $PORT|8123)
-├─ lancer-simulateur.bat / .sh   lanceurs (Windows / Linux-macOS) → serve.py
+├─ index.html          structure + ordre de chargement des scripts (+ onglet Tests → /tests/)
+├─ server.js           serveur Node statique + API (save-card / delete-card / upload-image ; port $PORT|8123) ; zéro dépendance
+├─ package.json        scripts npm : `start` (serveur), `test` (tests roue)
+├─ Dockerfile          image node:alpine
+├─ docker-compose.yml  services `serve` (port 8123) et `test`
+├─ lancer-simulateur.bat / .sh   lanceurs (Windows / Linux-macOS) → Docker, sinon Node
 ├─ ART_DIRECTION.md     direction artistique des cartes + prompts IA
 ├─ css/
 │  ├─ styles.css         thème sombre, UI combat/modales/éditeur, impression
@@ -49,14 +56,19 @@ simulateur/
 │  ├─ monstres.js        bestiaire (.js commenté : stats + passif + attaques + défense)
 │  ├─ sorts.json         sorts (JSON pur ; champ `image` = nom de fichier seul)
 │  └─ armes.json         armes (JSON pur ; champ `image` = nom de fichier seul)
-└─ js/
-   ├─ rules.js           calculs de stats dérivées (cf. persos.base)
-   ├─ wheel.js           roue d'initiative (déplacement, ordre, rejeu)
-   ├─ store.js           état + persistance localStorage + bibliothèque + export/import
-   ├─ cards.js           rendu des cartes (zone image + glyphe ; IMG_BASE)
-   ├─ cardbuilder.js     éditeur de cartes manuel + export JSON (onglet Éditeur)
-   ├─ app.js             UI (combat, modale d'ajout, roue, cartes) — expose window.App
-   └─ boot.js            charge sorts.json/armes.json (fetch) puis App.init()
+├─ js/
+│  ├─ rules.js           calculs de stats dérivées (cf. persos.base)
+│  ├─ wheel.js           MOTEUR roue d'initiative (pur, testable ; absolu + ligne de flèche `fa`)
+│  ├─ store.js           état + persistance localStorage + bibliothèque + export/import
+│  ├─ cards.js           rendu des cartes (zone image + glyphe ; IMG_BASE)
+│  ├─ cardbuilder.js     éditeur de cartes manuel + export JSON (onglet Éditeur)
+│  ├─ app.js             UI (combat, modale d'ajout, roue, cartes) — expose window.App
+│  └─ boot.js            charge sorts.json/armes.json (fetch) puis App.init()
+└─ tests/
+   ├─ harness.js         harnais de test minimal (Node + navigateur)
+   ├─ wheel.test.js      suites de tests de la roue (fonctions `suite*`)
+   ├─ run.js             runner Node (`npm test`)
+   └─ index.html         page de tests dédiée (servie à /tests/)
 ```
 
 - **`data/sorts.json` & `data/armes.json`** : JSON pur, chargés par `fetch` dans
@@ -86,13 +98,33 @@ simulateur/
 
 ## Roue d'initiative (`js/wheel.js`)
 
-- 6 cases. Chaque pion a une position **absolue cumulée** `abs` ; il avance de
-  `casesABS` cases à chaque tour global.
-- **Flèche** = pion le plus en retard (`arrowAbs = min(abs)`), elle le suit.
-- **Ordre** : le plus éloigné de la flèche joue en premier ; égalité → VIT la plus
-  haute, puis priorité aux **PJ**.
-- **Rejeu** : un pion qui dépasse la flèche d'un tour complet rejoue :
-  `nbActivations = floor((abs − arrowAbs)/6) + 1`.
+Moteur **pur et testable** (`Wheel.createEngine()`), validé par `tests/` (page
+`/tests/`, ou `npm test` / `docker compose run --rm test`). `store.js` ne fait que
+le **piloter** : il construit la liste des pions depuis les combattants (`pawnList`),
+appelle le moteur (`syncEngine`/`pullEngine`), et persiste son état dans `state.wheel`.
+Le modèle complet est documenté en tête de `js/wheel.js` ; en résumé :
+
+- **Positions ABSOLUES** : chaque combattant porte `c.wa` (entier cumulé). Case
+  visible (0..5) = `Wheel.caseOf(c)` = `((wa % 6) + 6) % 6`. L'absolu sert à compter
+  les **tours** ; l'ordre et l'affichage de la flèche raisonnent en cases visibles.
+- **Flèche, deux quantités** : `farrow` (case affichée) = la queue de course —
+  au tour global, la case du pion le plus en retard ; un **recul** depuis la case de
+  la flèche la fait **suivre** le pion reculé ; sinon elle ne remonte pas vers l'avant
+  tant que sa case reste occupée. Et `fa` (ligne en **absolu**, prise en **minimum
+  courant** du tour) = la référence stable pour les tours : un pion lapé qui ré-avance
+  **ne fait pas disparaître** les tours gagnés par les autres, mais un lappeur qui
+  recule reperd les siens (compte **live** sur `P.a`).
+- **Ordre** : le plus loin de la flèche (vers l'avant, en cases) joue d'abord, le
+  pion collé à la flèche en dernier ; égalité → VIT la plus haute, puis **PJ**.
+- **Cubes bonus** en fin de frise, dans l'ordre : **(1) tours** `⌊(P.a−fa)/6⌋`
+  journalisés (`lapLog`) donc **chronologiques** ; **(2) sous-tours** (un pion qui
+  partait derrière/sur la flèche la dépasse par l'avant) ; **(3) recaptures** (un pion
+  devant la flèche, repoussé dessus/derrière, fait rejouer la flèche).
+- **Base de frise FIGÉE** : l'ordre de jeu se (re)fixe au **tour global** (et à
+  l'ajout/retrait) ; un déplacement **manuel** (avance/repousse) **ne réordonne pas**
+  la frise — il ne fait qu'ajouter/retirer des **cubes bonus**.
+- **Modèle « un seul tour »** : tout repart au tour global suivant (toute la mémoire
+  — high-water, `fa`, `lapLog` — est remise à zéro).
 - Tout est **ajustable à la main** dans l'UI (boutons *repousser / avancer* sur
   l'acteur actif) pour gérer Repousser, effets spéciaux, ou corriger le MJ.
 
@@ -121,18 +153,18 @@ simulateur/
   lettres** du nom). Les pions **s'animent** vers leur nouvelle case (transition CSS)
   et un **éclat magique** se déclenche à chaque tour global. + liste d'ordre
   cliquable + journal d'actions.
-  - **Modèle « un seul tour »** : positions en **mod-6** (`c.pos`, plus de distance
-    absolue ni de comptage de tours d'avance). La **flèche** = aiguille pivotant
-    depuis le centre vers le **pion le plus lent** (`Wheel.slowest`, plus faible
-    `casesABS`) = le dernier de la course.
+  - **Modèle (cf. `js/wheel.js`)** : positions **absolues** `c.wa` (case visible via
+    `Wheel.caseOf`). La **flèche** = aiguille pivotant vers le **pion le plus en
+    retard** (`a` minimal) = le dernier de la course ; un **recul** la fait suivre le
+    pion reculé. Voir la section *Roue d'initiative* ci-dessus pour le détail des
+    rejeux (dépassement avant / pass arrière).
   - **Frise de priorité** (`state.frieze`, cubes colorés sous la roue) = l'ordre de
-    jeu du tour : un cube par combattant (par priorité : le plus éloigné de la flèche
-    d'abord), puis **un cube bonus à la TOUTE FIN** pour chaque **dépassement de
-    flèche**. Les dépassements sont détectés au **tour global** (`Wheel.crossingsForward`)
-    et lors des déplacements **manuels** avance/repousse (`Store.nudge` →
-    `crossingsForward/Backward`). Différer les bonus en fin de frise évite les
-    enchaînements de rejeux abusifs. Cliquer un cube (ou la liste d'ordre) sélectionne
-    l'acteur ; « Acteur suivant » avance le curseur.
+    jeu du tour : un cube par combattant (le plus éloigné de la flèche d'abord), puis
+    **un cube bonus à la TOUTE FIN** pour chaque **dépassement de flèche** (au tour
+    global comme aux déplacements **manuels** avance/repousse via `Store.nudge`).
+    Toute la logique vit dans le moteur `Wheel` (testé) ; `store.js` le pilote.
+    Cliquer un cube (ou la liste d'ordre) sélectionne l'acteur ; « Acteur suivant »
+    avance le curseur.
   - Ajustement manuel **±1 case** (repousser / avancer) sur l'acteur actif.
 - **Flux d'action** (les dés restent faits à la table) :
   - PJ **✨ Sort** → liste les sorts équipés, **décompte les PA** du sort choisi.
@@ -171,14 +203,14 @@ simulateur/
 - **Éditeur de cartes** (onglet *Éditeur*, `js/cardbuilder.js`) : crée une carte à
   la main (sort ou arme), aperçu live dans le vrai cadre.
   - **💾 Sauvegarder sur le serveur** : `POST /api/save-card` → upsert (par `id`)
-    dans `data/sorts.json` / `data/armes.json` (nécessite `serve.py`).
+    dans `data/sorts.json` / `data/armes.json` (nécessite `server.js`).
   - **Upload d'image à la volée** : choisir un fichier → aperçu instantané (data URL)
     + `POST /api/upload-image?name=…` qui l'écrit dans `assets/cartes/`. Pas de
     recadrage ni de vérif — format conseillé **portrait 3:4 (ex. 600×800), PNG/JPG**.
   - Sinon, **export JSON** (copier / télécharger / ajouter à la session) reste
     disponible pour une intégration manuelle.
-  - Endpoints servis par `serve.py` uniquement ; avec `python -m http.server`, ces
-    boutons renvoient une erreur explicite (lecture seule).
+  - Endpoints servis par `server.js` uniquement ; avec un simple serveur statique
+    (lecture seule), ces boutons renvoient une erreur explicite.
 - **Supprimer une carte** : dans l'onglet *Cartes*, un bouton 🗑 (au survol) sur
   chaque carte appelle `POST /api/delete-card` (retire l'entrée par `id` du JSON).
   L'**image n'est pas supprimée** du dossier `assets/cartes/` (volontaire).

@@ -3,8 +3,8 @@
  * -----------------------------------------------------------------------------
  *  sorts.json / armes.json sont de vrais fichiers JSON (faciles à éditer et à
  *  enrichir, ex. via l'onglet Éditeur). Ils sont chargés par fetch — le
- *  simulateur doit donc être SERVI (python -m http.server …), pas ouvert en
- *  file:// (fetch d'un fichier local est bloqué par le navigateur).
+ *  simulateur doit donc être SERVI (docker compose up serve, ou node server.js),
+ *  pas ouvert en file:// (fetch d'un fichier local est bloqué par le navigateur).
  * ===========================================================================*/
 (function () {
   "use strict";
@@ -37,7 +37,7 @@
       window.DB.armes = window.DB.armes || [];
       banner("⚠️ Impossible de charger <b>data/sorts.json</b> (" + e.message + ").<br>" +
         "Le simulateur doit être <b>servi</b> et non ouvert en <code>file://</code> :<br>" +
-        "<code>python -m http.server 8123 --directory simulateur</code> puis ouvrez " +
+        "<code>docker compose up serve</code> (ou <code>node server.js</code>) puis ouvrez " +
         "<code>http://localhost:8123</code>.");
     }
     if (window.App && window.App.init) window.App.init();

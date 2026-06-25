@@ -1,0 +1,11 @@
+# Rien de lourd ni de spécifique à l'hôte dans l'image.
+.git
+.idea
+node_modules
+npm-debug.log
+*.psb
+*.psd
+assets/*.psb
+# Node portable déposé localement pour les lanceurs sans Docker.
+node/
+node-v*/

@@ -1,0 +1,28 @@
+# =============================================================================
+#  Simulateur — La Forteresse de l'Envie
+# -----------------------------------------------------------------------------
+#  Deux usages, aucune install sur la machine hôte :
+#
+#    • Servir l'outil :   docker compose up serve     → http://localhost:8123
+#    • Lancer les tests : docker compose run --rm test
+#
+#  Le dossier courant est monté dans le conteneur : les sauvegardes de cartes
+#  (data/*.json) et les uploads d'images (assets/cartes/) persistent sur l'hôte,
+#  et l'édition de fichiers est prise en compte sans rebuild.
+# =============================================================================
+services:
+  serve:
+    build: .
+    image: fdle-simulateur
+    ports:
+      - "8123:8123"
+    volumes:
+      - .:/app
+    command: npm start
+
+  test:
+    build: .
+    image: fdle-simulateur
+    volumes:
+      - .:/app
+    command: npm test

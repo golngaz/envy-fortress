@@ -1,5 +1,9 @@
 Créé en l'an 1024, on ne sais pas si cet étage est le dernier pouvant apparaître, mais il semble clair qu'il fut conçu pour sa simplicité et son accueil qui semble être proches des clichés que l'on peut se faire d'un paradis immaculé.
 
+# Les ossements de l'assaut
+
+La plaine n'est pas vierge de toute histoire. En l'an 1058, [[L'assaut de la Couronne|une armée la traversa]], menée par [[Hector Sombreval]] pour atteindre le monolithe. Les gardiens de la plaine l'anéantirent. Comme rien ne s'altère sur la Couronne, ses soldats y gisent encore : des **squelettes dispersés** dans l'herbe figée, chacun serrant encore une **[[Amulette noire|amulette noire]]**. C'est sur ces morts que les incarnés d'aujourd'hui trouvent, sans le comprendre, le pouvoir d'une classe — et le droit de descendre.
+
 # Le gardien et sa cage (méthode de capture)
 
 La Couronne est gardée par un [[Les soldats du monolithe|soldat du monolithe]] : le [[Le Soldat Bleu|géant bleu]], né du monolithe lui-même et chargé d'arrêter quiconque cherche à descendre. Comme tout soldat, il **porte un [[Fragment du monolithe|fragment]]** — mais il ne s'en sert pas pour combattre : il l'a serti dans une **cage** qu'il tient à la main.

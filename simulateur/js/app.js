@@ -19,6 +19,7 @@
   /* ------------------------------------------------------------------ Tabs */
   function initTabs() {
     $$(".tab").forEach(t => t.addEventListener("click", () => {
+      if (!t.dataset.view) return;          // lien externe (ex. page Tests) → navigation normale
       $$(".tab").forEach(x => x.classList.remove("active"));
       $$(".view").forEach(v => v.classList.remove("active"));
       t.classList.add("active");
@@ -931,7 +932,7 @@
         if (i >= 0) arr.splice(i, 1);
         renderCartes();
       })
-      .catch(err => alert("Suppression impossible (" + err.message + ").\nLance le serveur avec serve.py (lanceur fourni)."));
+      .catch(err => alert("Suppression impossible (" + err.message + ").\nLance le serveur (lancer-simulateur.bat / .sh, ou node server.js)."));
   }
   function bindCartes() {
     $("#carte-filter").addEventListener("change", renderCartes);

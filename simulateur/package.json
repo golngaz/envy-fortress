@@ -1,0 +1,19 @@
+{
+  "name": "fdle-simulateur",
+  "version": "1.0.0",
+  "description": "Simulateur de combat — La Forteresse de l'Envie (serveur statique + API cartes, et tests de la roue d'initiative).",
+  "private": true,
+  "type": "commonjs",
+  "bin": {
+    "fdle-simulateur": "server.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/run.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tests unitaires — Simulateur</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { font: 14px/1.5 system-ui, sans-serif; background: #14101f; color: #e8e4f5; margin: 0; padding: 24px; }
+    a.retour { color: #9b8cff; text-decoration: none; font-size: 13px; }
+    a.retour:hover { text-decoration: underline; }
+    h1 { font-size: 18px; margin: 8px 0 4px; }
+    p.hint { color: #a89fc4; margin: 0 0 16px; }
+    h2.summary { font-size: 16px; margin: 16px 0 10px; }
+    h2.ok { color: #79e08a; } h2.ko { color: #ff6b81; }
+    #out div.line { padding: 2px 10px; border-radius: 4px; font-family: ui-monospace, SFMono-Regular, monospace; }
+    #out div.ok { color: #9fe6ab; }
+    #out div.ko { color: #ff8a9b; background: #3a1320; }
+    button#rerun { margin-left: 12px; background: #2a2140; color: #e8e4f5; border: 1px solid #4a3d72;
+      border-radius: 6px; padding: 4px 12px; cursor: pointer; font: inherit; }
+    button#rerun:hover { background: #352a52; }
+  </style>
+</head>
+<body>
+  <a class="retour" href="../index.html">← Retour au simulateur</a>
+  <h1>Tests unitaires — Roue d'initiative
+    <button id="rerun" type="button">Relancer</button>
+  </h1>
+  <p class="hint">Page dédiée aux tests JS. À servir (non <code>file://</code>) :
+    <code>npm start</code> ou <code>docker compose up serve</code>, puis
+    <code>/tests/</code>. En CLI : <code>npm test</code>.</p>
+
+  <div id="out">Chargement…</div>
+
+  <!-- Moteur + harnais + suites (ordre de chargement important) -->
+  <script src="../js/wheel.js"></script>
+  <script src="./harness.js"></script>
+  <script src="./wheel.test.js"></script>
+  <script>
+    (function () {
+      "use strict";
+      function render() {
+        var summary = window.TestHarness.runSuites(window.WheelTests.SUITES);
+        var lines = summary.checks.map(function (c) {
+          return '<div class="line ' + (c.ok ? "ok" : "ko") + '">' +
+            (c.ok ? "✓" : "✗") + " " + c.name +
+            (c.ok ? "" : " — obtenu " + JSON.stringify(c.got) +
+              ", attendu " + JSON.stringify(c.expected)) + "</div>";
+        }).join("");
+        var box = document.getElementById("out");
+        box.innerHTML = '<h2 class="summary ' + (summary.failed.length ? "ko" : "ok") + '">' +
+          summary.text + "</h2>" + lines;
+        if (typeof console !== "undefined") console.log(summary.text);
+      }
+      document.getElementById("rerun").addEventListener("click", render);
+      render();
+    })();
+  </script>
+</body>
+</html>
