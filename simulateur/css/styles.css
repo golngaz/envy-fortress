@@ -82,8 +82,10 @@ h2,h3{margin:.2em 0 .5em}
 .wcase.arrow{fill:#2a2150;stroke:var(--accent);stroke-width:2.5;filter:drop-shadow(0 0 5px var(--accent))}
 .wnum{fill:#6f6aa0;font-size:10px;font-weight:700;text-anchor:middle}
 
-/* pions : jetons lumineux positionnés/déplacés par transform */
-.wheel-pawns .wpawn{transition:transform .65s cubic-bezier(.45,.05,.25,1);cursor:pointer}
+/* pions : jetons lumineux ; le trajet le long de l'anneau est animé en JS
+   (boucle rAF en polaire, cf. app.js) — pas de transition CSS sur transform,
+   sinon elle interpolerait en ligne droite (corde) et lutterait avec le rAF. */
+.wheel-pawns .wpawn{cursor:pointer}
 .wpawn .wtok{stroke-width:1.5;filter:drop-shadow(0 0 4px currentColor);
   transition:transform .18s ease, filter .18s ease;transform-box:fill-box;transform-origin:center}
 .wpawn:hover .wtok{transform:scale(1.4);filter:drop-shadow(0 0 10px currentColor)}

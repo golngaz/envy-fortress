@@ -82,15 +82,25 @@ Dossiers de premier niveau (chacun est une catégorie de wiki) :
     composent** (nombre + wikilinks vers `monstres/`), les **loots spéciaux**
     éventuels, la **musique** d'ambiance et le **contexte** (lieu, déclencheur, lien
     vers le scénario). Frontmatter `difficulty`. Liens externes (audio/vidéo)
-    **autorisés ici** (≠ livret).
+    **autorisés ici** (≠ livret). Chaque fiche **s'ouvre sur un résumé très condensé
+    de la stratégie/solution** (callout `> [!abstract] Solution express (MJ)`, à lire
+    en premier) : en 3-4 lignes, comment on gagne, pour qu'un MJ saisisse la rencontre
+    d'un coup d'œil avant le détail.
+  - **Système de combat = J-RPG en tour par tour** : on **cible des cibles** (PJ,
+    monstres, sbires, victimes), point. **Pas de zones, de positions, de
+    portée/déplacement tactique, de couverture/cachettes, ni d'« actions spéciales »
+    improvisées** (secouer, escalader, renverser un décor…). Une **AOE** = **plusieurs
+    cibles désignées** d'un coup, pas une aire géographique. Pour **retirer une
+    altération** à une cible (p. ex. réveiller un charmé), un **allié la frappe** — il
+    n'existe pas de manipulation hors-attaque. Conçois les combats dans ce cadre.
   - **Combats = puzzles** : conçois chaque rencontre comme un *combat-puzzle*. Une
     stratégie basique (« on tape la cible la plus proche / la plus en avant jusqu'à
     ce qu'elle tombe ») doit être **volontairement sous-optimale**. Le combat doit
     récompenser la lecture d'un **mécanisme** : une boucle à briser (boss intouchable
     tant que ses serviteurs vivent → cf. [[Maître de la tour]], [[Croque mort gardien]]),
     une **condition** d'ouverture (humilier/isoler une clé de voûte, rompre une
-    formation, épuiser une réserve de défense), un ordre d'actions, un usage de l'AOE,
-    du terrain ou d'une altération. Le passif du monstre **est** l'énigme ; explicite
+    formation, épuiser une réserve de défense), un ordre d'actions, un usage de l'AOE
+    ou d'une altération. Le passif du monstre **est** l'énigme ; explicite
     la solution en note MJ sans la rendre triviale.
   - **Les scénarios renvoient toujours aux combats** par wikilink : un combat n'est
     jamais détaillé dans le scénario, seulement référencé.

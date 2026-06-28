@@ -58,7 +58,7 @@ simulateur/
 │  └─ armes.json         armes (JSON pur ; champ `image` = nom de fichier seul)
 ├─ js/
 │  ├─ rules.js           calculs de stats dérivées (cf. persos.base)
-│  ├─ wheel.js           MOTEUR roue d'initiative (pur, testable ; absolu + ligne de flèche `fa`)
+│  ├─ wheel.js           MOTEUR roue d'initiative (pur, testable, typé JSDoc ; positions absolues + ligne de flèche `arrowLine`)
 │  ├─ store.js           état + persistance localStorage + bibliothèque + export/import
 │  ├─ cards.js           rendu des cartes (zone image + glyphe ; IMG_BASE)
 │  ├─ cardbuilder.js     éditeur de cartes manuel + export JSON (onglet Éditeur)
@@ -104,29 +104,44 @@ le **piloter** : il construit la liste des pions depuis les combattants (`pawnLi
 appelle le moteur (`syncEngine`/`pullEngine`), et persiste son état dans `state.wheel`.
 Le modèle complet est documenté en tête de `js/wheel.js` ; en résumé :
 
-- **Positions ABSOLUES** : chaque combattant porte `c.wa` (entier cumulé). Case
-  visible (0..5) = `Wheel.caseOf(c)` = `((wa % 6) + 6) % 6`. L'absolu sert à compter
-  les **tours** ; l'ordre et l'affichage de la flèche raisonnent en cases visibles.
-- **Flèche, deux quantités** : `farrow` (case affichée) = la queue de course —
+- **Positions ABSOLUES** : chaque combattant porte `c.wa` côté Store (entier cumulé),
+  reflété sur `positionAbsolue` côté pion. Case visible (0..5) = `Wheel.caseOf(c)` =
+  `((wa % 6) + 6) % 6`. L'absolu sert à compter les **tours** ; l'ordre et l'affichage
+  de la flèche raisonnent en cases visibles.
+- **Flèche, deux quantités** : `arrowCase` (case affichée 0..5) = la queue de course —
   au tour global, la case du pion le plus en retard ; un **recul** depuis la case de
   la flèche la fait **suivre** le pion reculé ; sinon elle ne remonte pas vers l'avant
-  tant que sa case reste occupée. Et `fa` (ligne en **absolu**, prise en **minimum
-  courant** du tour) = la référence stable pour les tours : un pion lapé qui ré-avance
-  **ne fait pas disparaître** les tours gagnés par les autres, mais un lappeur qui
-  recule reperd les siens (compte **live** sur `P.a`).
+  tant que sa case reste occupée. Et `arrowLine` (ligne en **absolu**, prise en
+  **minimum courant** du tour) = la référence stable pour les tours : un pion lapé qui
+  ré-avance **ne fait pas disparaître** les tours gagnés par les autres, mais un
+  lappeur qui recule reperd les siens (compte **live** sur `positionAbsolue`).
 - **Ordre** : le plus loin de la flèche (vers l'avant, en cases) joue d'abord, le
   pion collé à la flèche en dernier ; égalité → VIT la plus haute, puis **PJ**.
-- **Cubes bonus** en fin de frise, dans l'ordre : **(1) tours** `⌊(P.a−fa)/6⌋`
-  journalisés (`lapLog`) donc **chronologiques** ; **(2) sous-tours** (un pion qui
-  partait derrière/sur la flèche la dépasse par l'avant) ; **(3) recaptures** (un pion
-  devant la flèche, repoussé dessus/derrière, fait rejouer la flèche).
+- **Cubes bonus** en fin de frise, dans l'ordre : **(1) tours**
+  `⌊(positionAbsolue − arrowLine)/6⌋` journalisés (`lapCubes`) donc **chronologiques** ;
+  **(2) sous-tours** (un pion qui partait derrière/sur la flèche la dépasse par
+  l'avant) ; **(3) recaptures** (un pion devant la flèche, repoussé dessus/derrière,
+  fait rejouer la flèche).
 - **Base de frise FIGÉE** : l'ordre de jeu se (re)fixe au **tour global** (et à
   l'ajout/retrait) ; un déplacement **manuel** (avance/repousse) **ne réordonne pas**
-  la frise — il ne fait qu'ajouter/retirer des **cubes bonus**.
-- **Modèle « un seul tour »** : tout repart au tour global suivant (toute la mémoire
-  — high-water, `fa`, `lapLog` — est remise à zéro).
+  la frise — il ne fait qu'ajouter des **cubes bonus** à la fin sur un dépassement de
+  flèche (les tours déjà gagnés restent : *sticky*, jamais retirés au recul).
+- **Modèle « un seul tour »** : tout repart au tour global suivant. La mémoire
+  (high-water, `arrowLine`, `lapCubes`) est remise à zéro **et** les positions sont
+  **repliées sur une seule fenêtre de tour** (`collapseToOneLap`, cases visibles
+  préservées) : les écarts multi-tours accumulés s'effacent, donc **les cubes bonus
+  disparaissent d'un tour sur l'autre** — seuls ceux gagnés pendant le tour en cours
+  restent.
+- **Réinitialisation** (`engine.reset`, piloté par `Store.resetWheel`) : tous les
+  pions case 1 (`positionAbsolue = 0`), tour 1, flèche et frise à neuf ; les PV/PA/
+  jetons des combattants sont **conservés** (gérés côté Store).
 - Tout est **ajustable à la main** dans l'UI (boutons *repousser / avancer* sur
   l'acteur actif) pour gérer Repousser, effets spéciaux, ou corriger le MJ.
+- **Typage** : `js/wheel.js` est entièrement typé en **JSDoc** (typedefs `Pion`,
+  `CubeFrise`, `EtatRoue`, `Moteur` + `@param`/`@returns` sur chaque fonction). Le
+  champ d'état interne s'appelle `self`. **Cette version de la logique est gelée** :
+  les `tests/wheel.test.js` (132/132) en sont le contrat — toute modif doit les
+  garder verts.
 
 ## Fonctionnalités
 
@@ -230,3 +245,19 @@ Le modèle complet est documenté en tête de `js/wheel.js` ; en résumé :
 - Toute nouvelle **formule** dérivée → `js/rules.js`, en gardant `persos.base`
   comme référence.
 - Garder le **français** partout (noms, libellés, commentaires).
+
+## Style de code (OBLIGATOIRE)
+
+- **TOUJOURS nommer les variables en entier** — jamais d'abréviation. Écrire
+  `options` (pas `opts`), `vitesse` (pas `vit`), `pion` (pas `p`), `numeroCase`
+  (pas `c`), `self`/`etat` (pas `E`), `index` (pas `i`/`r`), `candidats` (pas `cands`),
+  etc. Seul `id` (identifiant) est toléré car c'est aussi un nom de propriété
+  partagé. Les noms doivent se lire comme une phrase.
+- **Une seule instruction par ligne** : jamais deux `;` sur la même ligne, jamais
+  un `if` collé à une autre instruction.
+- **Une ligne vide avant un `if`** (sauf s'il est la première instruction d'un bloc).
+- **Pas de ternaire imbriqué** : un seul ternaire est déjà limite — préférer une
+  **variable intermédiaire bien nommée** ou un `if/else` explicite. Pour toute
+  condition non triviale, créer une variable (`var transfertLegitime = …`) plutôt
+  qu'un ternaire en ligne.
+- Code **aéré** : grouper par sections commentées, espacer les blocs logiques.

@@ -34,7 +34,13 @@
 - Premier contact méfiant, campement en cercle, crochets de quête (convoi, [[Le bouffon|Bouffon]], sanctuaire-fragment, taupe).
 - Rencontre avec **Ilyan**.
 
-## 5. Retourner l'orgueil contre l'Empereur
+## 5. Le village en fête — le piège déguisé en récompense
+→ [[Le village en fête]]
+- Escortés par des **révolutionnaires de la forêt**, les PJ s'arrêtent à **la Belle Veillée**, un campement de plaisirs (fête foraine médiévale) en contrebas du grand village d'**Hautregard**.
+- Chaque attraction est un **point d'intérêt** (jeux, théâtre, diseuse, manège, banquet) cachant un **indice** : la fête entière est **un seul monstre**, [[La Réjouissance]], qui attire et digère ses convives.
+- **Montée de tension** : trop d'indices → des PNJ de l'escorte **disparaissent** ou deviennent **hébétés/drogués**, le masque tombe → combat-puzzle [[campagne/combats/étage 1/Le village en fête (combat)|Le village en fête (combat)]] (réveiller les victimes pour exposer le **Cœur**).
+
+## 999. Retourner l'orgueil contre l'Empereur
 → [[Les rebelles de la forêt]] (section « Le tournant »)
 - [[campagne/combats/étage 1/Hector Sombreval (combat)|Hector]] est un **boss-mur** : on ne le bat pas de force, on retourne son **orgueil** contre lui (pacte d'Orgueil, isolement, humiliation, diversion).
 - Descente vers l'étage suivant + flashback de [[La petite fille|Dulcina]].

@@ -39,12 +39,14 @@
       round: function () { e.globalTurn(); return this; },
       advance: function (id) { e.advance(id); return this; },
       retreat: function (id) { e.retreat(id); return this; },
+      reset: function () { e.reset(); return this; },
 
       caseOf: function (id) { return e.caseOfId(id) + 1; },
       arrowCase: function () { return e.arrowCase() + 1; },
+      turn: function () { return e.turn; },
       frieze: function () { return e.friezeIds(); },
       nBonus: function () { return e.bonuses().length; },
-      count: function (id) {
+      countInFrieze: function (id) {
         return e.friezeIds().filter(function (x) { return x === id; }).length;
       }
     };
@@ -133,13 +135,14 @@
     eq("2e PJ1 case 3", w.caseOf("PJ1"), 3);
     eq("2e M1 case 2", w.caseOf("M1"), 2);
     eq("2e flèche case 2", w.arrowCase(), 2);
-    eq("2e PJ1 rejoue (x2 dans la frise)", w.count("PJ1"), 2);
+    eq("2e PJ1 rejoue (x2 dans la frise)", w.countInFrieze("PJ1"), 1);
+    eq("2f frise M1,PJ1,PJ1,M1", w.frieze(), ["M1", "PJ1"]);
 
     w = duoDevant().advance("PJ1").advance("PJ1").retreat("PJ1");
     eq("2f PJ1 case 2", w.caseOf("PJ1"), 2);
     eq("2f M1 case 2", w.caseOf("M1"), 2);
     eq("2f flèche case 2", w.arrowCase(), 2);
-    eq("2f frise M1,PJ1,PJ1,M1", w.frieze(), ["M1", "PJ1", "PJ1", "M1"]);
+    eq("2f frise M1,PJ1,PJ1,M1", w.frieze(), ["M1", "PJ1"]);
   }
 
   /* =====================================================================
@@ -273,7 +276,7 @@
     w = makeWheel()
       .add("PJ1", 0, true).add("F", 21)
       .place("PJ1", 1).place("F", 1).arrow(1).start().round();
-    eq("rapide F rejoue (lap)", w.count("F"), 2);
+    eq("rapide F rejoue (lap)", w.countInFrieze("F"), 2);
     eq("rapide F case (1+8) mod6 → 3", w.caseOf("F"), 3);
 
     // Aller-retour neutre n'ajoute aucun rejeu.
@@ -285,11 +288,11 @@
       .add("A", 0, true).add("B", 6)
       .place("A", 1).place("B", 1).arrow(1).start();
     w.round();
-    eq("t1 B pas de rejeu", w.count("B"), 1);
+    eq("t1 B pas de rejeu", w.countInFrieze("B"), 1);
     w.round();
-    eq("t2 B pas de rejeu", w.count("B"), 1);
+    eq("t2 B pas de rejeu", w.countInFrieze("B"), 1);
     w.round();
-    eq("t3 B rejoue (lead 6)", w.count("B"), 2);
+    eq("t3 B rejoue (lead 6)", w.countInFrieze("B"), 2);
 
     // Utilitaires purs.
     eq("Wheel.caseOf(7)=1", Wheel.caseOf(7), 1);
@@ -306,20 +309,137 @@
     var w = makeWheel()
       .add("PJ1", 0, true).add("F", 21)
       .place("PJ1", 1).place("F", 1).arrow(1).start().round();
-    eq("S7 F a gagné un tour (cube F)", w.count("F"), 2);
+    eq("S7 F a gagné un tour (cube F)", w.countInFrieze("F"), 2);
 
     // Le MJ repousse F d'une case : le tour gagné DOIT rester.
     w.retreat("F");
-    eq("S7 recul 1 : F garde son tour", w.count("F"), 2);
+    eq("S7 recul 1 : F garde son tour", w.countInFrieze("F"), 2);
 
     // Reculs supplémentaires : toujours pas de retrait.
     w.retreat("F").retreat("F").retreat("F");
-    eq("S7 reculs multiples : F garde son tour", w.count("F"), 2);
+    eq("S7 reculs multiples : F garde son tour", w.countInFrieze("F"), 2);
     eq("S7 toujours exactement 1 cube bonus", w.nBonus(), 1);
 
     // Ré-avancer ne duplique pas le cube (high-water, pas de re-comptage).
     w.advance("F").advance("F").advance("F").advance("F");
-    eq("S7 ré-avance : pas de doublon de tour", w.count("F"), 2);
+    eq("S7 ré-avance : pas de doublon de tour", w.countInFrieze("F"), 2);
+  }
+  
+  function bug3(eq) {
+    var w = makeWheel()
+      .add("PJ", 3, true).add("M1", 0)
+      .place("PJ", 1).place("M1", 1).arrow(1).start();
+    
+
+    w.advance("M1");
+	w.advance("PJ");
+	w.advance("PJ");
+	w.advance("PJ");
+	w.advance("PJ");
+	w.advance("PJ");
+	
+	eq("1a flèche ne change pas du test", w.arrowCase(), 2);
+
+    eq("M1 avance, PJ avance de 5", w.countInFrieze("M1"), 1);
+	eq("-", w.countInFrieze("PJ"), 1);
+	eq("frise inchangée", w.frieze(), ["PJ", "M1"]);
+	
+	w.advance("PJ");
+	eq("1a flèche ne change pas du test", w.arrowCase(), 2);
+	eq("PJ avance de 1", w.countInFrieze("M1"), 1);
+	eq("-", w.countInFrieze("PJ"), 1);
+	eq("frise inchangée (nooormalement)", w.frieze(), ["PJ", "M1"]); // corrigé : plus de cube parasite
+	
+	w.advance("PJ"); 
+	eq("1a flèche ne change pas du test", w.arrowCase(), 2);
+	eq("PJ avance de 1", w.countInFrieze("M1"), 1);
+	eq("-", w.countInFrieze("PJ"), 2);
+	eq("PJ rattrape la flèche (case 2) → +1 cube", w.frieze(), ["PJ", "M1", "PJ"]);
+  }
+
+  /* =====================================================================
+   *  SUITE 8 — bouton « Réinitialiser la roue » (engine.reset)
+   *  Tout revient à neuf : case 1, tour 1, flèche sur la queue, frise = base.
+   * ===================================================================== */
+  function suiteReset(eq) {
+    // Reset après plusieurs tours globaux (et un lap de F).
+    var w = makeWheel()
+      .add("PJ1", 0, true).add("F", 21)
+      .place("PJ1", 1).place("F", 1).arrow(1).start();
+    w.round().round();
+    w.reset();
+    eq("R1 PJ1 case 1", w.caseOf("PJ1"), 1);
+    eq("R1 F case 1", w.caseOf("F"), 1);
+    eq("R1 flèche case 1", w.arrowCase(), 1);
+    eq("R1 tour 1", w.turn(), 1);
+    eq("R1 aucun cube bonus", w.nBonus(), 0);
+    eq("R1 frise = base (F devant, PJ1)", w.frieze(), ["F", "PJ1"]);
+
+    // Reset après un lap qui a créé un cube bonus (F rejoue au tour global).
+    w = makeWheel()
+      .add("PJ1", 0, true).add("F", 21)
+      .place("PJ1", 1).place("F", 1).arrow(1).start().round();
+    eq("R2 avant reset : un cube bonus (lap)", w.nBonus(), 1);
+    w.reset();
+    eq("R2 reset efface les cubes", w.nBonus(), 0);
+    eq("R2 frise = base F,PJ1", w.frieze(), ["F", "PJ1"]);
+    eq("R2 PJ1 & F case 1", [w.caseOf("F"), w.caseOf("PJ1")], [1, 1]);
+
+    // Reset puis on rejoue : la roue repart proprement d'un état neuf.
+    w = trio().round().round().reset().round();
+    eq("R3 après reset+tour : PJ1 case 2", w.caseOf("PJ1"), 2);
+    eq("R3 après reset+tour : flèche case 2 (queue)", w.arrowCase(), 2);
+    eq("R3 après reset+tour : frise M2,M1,PJ1", w.frieze(), ["M2", "M1", "PJ1"]);
+  }
+
+  /* =====================================================================
+   *  SUITE 9 — modèle « un seul tour » : les cubes bonus DISPARAISSENT au tour
+   *  global (sauf ceux réellement gagnés ce tour-là). Régression : les écarts
+   *  multi-tours accumulés gardaient les cubes en permanence.
+   * ===================================================================== */
+  function suiteBonusResetTourGlobal(eq) {
+    // (1) Cubes de recul (sous-tours) effacés au tour global suivant.
+    var w = trioPJ();
+    for (var i = 0; i < 11; i++) { w.retreat("M2"); }
+    eq("B1 reculs : 2 cubes bonus", w.nBonus(), 2);
+    w.round();
+    eq("B1 après tour global : cubes effacés", w.nBonus(), 0);
+    eq("B1 frise = base (un cube par pion)", w.frieze().length, 3);
+
+    // (2) Le cube d'un lappeur disparaît le tour où il ne lape PLUS, et revient
+    //     quand il relape (B vit6 lape A vit0 tous les 3 tours).
+    var w2 = makeWheel()
+      .add("A", 0, true).add("B", 6)
+      .place("A", 1).place("B", 1).arrow(1).start();
+    w2.round().round().round();
+    eq("B2 t3 : B a lapé (cube)", w2.nBonus(), 1);
+    w2.round();
+    eq("B2 t4 : le cube de B a disparu", w2.nBonus(), 0);
+    w2.round();
+    eq("B2 t5 : toujours pas de cube", w2.nBonus(), 0);
+    w2.round();
+    eq("B2 t6 : B relape (cube)", w2.nBonus(), 1);
+
+    // (3) Cube créé par une AVANCE MANUELLE : effacé au tour global.
+    var w3 = makeWheel()
+      .add("A", 0, true).add("B", 0)
+      .place("A", 1).place("B", 1).arrow(1).start();
+    for (var k = 0; k < 6; k++) { w3.advance("A"); } // A fait un tour complet → double la flèche
+    eq("B3 avance manuelle : un cube", w3.nBonus(), 1);
+    w3.round();
+    eq("B3 après tour global : cube effacé", w3.nBonus(), 0);
+
+    // (4) Les cases visibles ne bougent PAS à cause du repli (mod 6 préservé).
+    var w4 = makeWheel()
+      .add("A", 0, true).add("B", 6)
+      .place("A", 1).place("B", 1).arrow(1).start();
+    w4.round().round().round();
+    var casesAvant = [w4.caseOf("A"), w4.caseOf("B")];
+    w4.round();
+    var casesApres = [w4.caseOf("A"), w4.caseOf("B")];
+    // le repli est invisible : les cases avancent normalement (A +1, B +3), pas de saut
+    eq("B4 A avance d'1 case", casesApres[0], ((casesAvant[0] - 1 + 1) % 6) + 1);
+    eq("B4 B avance de 3 cases", casesApres[1], ((casesAvant[1] - 1 + 3) % 6) + 1);
   }
 
   var SUITES = [
@@ -329,7 +449,10 @@
     suiteNudgesManuels,
     suiteReculsLourds,
     suiteCasParticuliers,
-    suiteTourSticky
+    suiteTourSticky,
+	bug3,
+    suiteReset,
+    suiteBonusResetTourGlobal
   ];
 
   return { Wheel: Wheel, makeWheel: makeWheel, SUITES: SUITES };

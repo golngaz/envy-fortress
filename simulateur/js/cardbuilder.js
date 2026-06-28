@@ -169,7 +169,7 @@
         const i = arr.findIndex(c => c.id === card.id);
         if (i >= 0) arr[i] = card; else arr.push(card);
         setMsg("✓ Sauvegardé dans data/" + res.file + " — " +
-          (res.replaced ? "carte remplacée" : "carte ajoutée") + " (" + res.count + " au total).");
+          (res.replaced ? "carte remplacée" : "carte ajoutée") + " (" + res.countInFrieze + " au total).");
       })
       .catch(err => setMsg("⚠️ Sauvegarde impossible (" + err.message +
         "). Lance le serveur (lancer-simulateur.bat / .sh, ou node server.js).", true));

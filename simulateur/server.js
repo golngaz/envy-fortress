@@ -96,7 +96,7 @@ async function saveCard(req, res) {
   const replaced = idx >= 0;
   if (replaced) arr[idx] = card; else arr.push(card);
   await writeJSONFile(fpath, arr);
-  sendJSON(res, 200, { ok: true, file: fname, replaced, count: arr.length });
+  sendJSON(res, 200, { ok: true, file: fname, replaced, countInFrieze: arr.length });
 }
 
 async function deleteCard(req, res) {
@@ -112,7 +112,7 @@ async function deleteCard(req, res) {
   const kept = arr.filter((c) => c.id !== cid);
   const removed = kept.length < arr.length;
   await writeJSONFile(fpath, kept);
-  sendJSON(res, 200, { ok: true, file: fname, removed, count: kept.length });
+  sendJSON(res, 200, { ok: true, file: fname, removed, countInFrieze: kept.length });
 }
 
 async function uploadImage(req, res, query) {

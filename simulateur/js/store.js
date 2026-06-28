@@ -188,7 +188,7 @@ window.Store = (function () {
   /** Recopie l'état du moteur vers le Store (positions, frise, flèche, tour). */
   function pullEngine(s) {
     const e = engine();
-    e.pawns.forEach(p => { const c = (s.combatants || []).find(x => x.id === p.id); if (c) c.wa = p.a; });
+    e.pawns.forEach(pion => { const c = (s.combatants || []).find(x => x.id === pion.id); if (c) c.wa = pion.positionAbsolue; });
     s.frieze = e.frieze.map(x => ({ id: x.id, bonus: x.bonus }));
     s.flecheId = e.flecheId;
     s.turn = e.turn;
@@ -235,12 +235,11 @@ window.Store = (function () {
     return crossed;
   }
 
+  /** Bouton « Réinitialiser la roue » : tous les pions case 1, tour 1, flèche et
+   *  frise à neuf (PV/PA/jetons conservés). Délègue au moteur (engine.reset). */
   function resetWheel() {
     const e = syncEngine(state);
-    e.pawns.forEach(p => { p.a = 0; });
-    e._state.flecheId = null;
-    e._state.turn = 1;
-    e.start();
+    e.reset();
     state.turn = 1;
     pullEngine(state);
     state.activeIdx = 0;

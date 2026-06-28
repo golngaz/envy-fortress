@@ -333,6 +333,18 @@
   const SVGNS = "http://www.w3.org/2000/svg";
   const W = { cx: 130, cy: 130, R: 86, caseR: 22 };
   let wheelBuilt = false;
+  let arrowAngle = 0;   // angle ACCUMULÉ de la flèche (jamais remis mod 360) :
+                        // évite que l'aiguille « revienne en arrière » au passage 6→1 / 1→6.
+
+  // Position POLAIRE animée de chaque pion (id -> { angle continu, rayon, … }).
+  // Le trajet est interpolé en angle+rayon (le long de l'anneau), pas en ligne
+  // droite : un pion ne coupe jamais à travers le cercle (6→1, tour multi-cases),
+  // et un clic rapide re-cible depuis la position courante (plus de saccades).
+  let pawnAnim = {};
+  let pawnRAF = null;
+  const PAWN_DUR = 650;   // durée du trajet le long de l'anneau (ms)
+  const reduceMotion = typeof matchMedia === "function"
+    && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /** Deux premières lettres du nom (espaces ignorés), en majuscules. */
   function initials(name) {
@@ -342,6 +354,67 @@
   function caseCenter(i) {
     const a = (-90 + i * 360 / Wheel.SIZE) * Math.PI / 180;
     return { x: W.cx + W.R * Math.cos(a), y: W.cy + W.R * Math.sin(a), a: a };
+  }
+
+  /* --- animation des pions LE LONG DE L'ANNEAU (trajet polaire) ------------ */
+
+  /** Pose un pion à (angle°, rayon) en coordonnées de la roue. */
+  function applyPawnTransform(g, angleDeg, radius) {
+    const a = angleDeg * Math.PI / 180;
+    const x = W.cx + radius * Math.cos(a);
+    const y = W.cy + radius * Math.sin(a);
+    g.style.transform = `translate(${x.toFixed(2)}px, ${y.toFixed(2)}px)`;
+  }
+
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  /** Boucle d'animation : avance chaque pion vers sa cible (angle + rayon). */
+  function tickPawns() {
+    pawnRAF = null;
+    const now = performance.now();
+    let encore = false;
+
+    Object.keys(pawnAnim).forEach(id => {
+      const p = pawnAnim[id];
+
+      if (!p.target) {
+        return;
+      }
+
+      let k = p.dur > 0 ? (now - p.t0) / p.dur : 1;
+
+      if (k > 1) {
+        k = 1;
+      }
+
+      const progres = easeInOutCubic(k);
+      p.angle = p.from.angle + (p.target.angle - p.from.angle) * progres;
+      p.radius = p.from.radius + (p.target.radius - p.from.radius) * progres;
+
+      if (p.g) {
+        applyPawnTransform(p.g, p.angle, p.radius);
+      }
+
+      if (k >= 1) {
+        p.angle = p.target.angle;
+        p.radius = p.target.radius;
+        p.target = null;
+      } else {
+        encore = true;
+      }
+    });
+
+    if (encore) {
+      pawnRAF = requestAnimationFrame(tickPawns);
+    }
+  }
+
+  function ensurePawnRAF() {
+    if (!pawnRAF) {
+      pawnRAF = requestAnimationFrame(tickPawns);
+    }
   }
 
   function buildWheelSkeleton() {
@@ -390,7 +463,13 @@
     const am = $("#wheel-svg .wheel-arrow");
     if (am) {
       if (combatants.length) {
-        am.style.transform = `translate(${W.cx}px, ${W.cy}px) rotate(${F * 60}deg)`;
+        // plus court chemin : on ajoute le delta normalisé dans (-180, 180] à
+        // l'angle accumulé, pour que la flèche ne fasse jamais le tour complet.
+        const cible = F * 60;
+        const actuelNorm = ((arrowAngle % 360) + 360) % 360;
+        let delta = ((cible - actuelNorm + 540) % 360) - 180;
+        arrowAngle += delta;
+        am.style.transform = `translate(${W.cx}px, ${W.cy}px) rotate(${arrowAngle}deg)`;
         am.style.opacity = "1";
       } else { am.style.opacity = "0"; }
     }
@@ -424,20 +503,40 @@
         g.setAttribute("class", "wpawn " + (isPJ ? "pj" : "mob"));
         const tt = g.querySelector("title"); if (tt) tt.textContent = c.name;
 
-        const spread = 13, ty0 = -(arr.length - 1) / 2;
-        const tx = cc.x, ty = cc.y + (ty0 + idx) * spread;
-        if (fresh) {                       // placer sans animation à l'apparition
-          g.style.transition = "none";
-          g.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px)`;
-          g.getBoundingClientRect();        // reflow
-          g.style.transition = "";
+        // cible : angle de la case + léger étalement RADIAL si plusieurs pions empilés.
+        const spread = 13, base = -(arr.length - 1) / 2;
+        const radiusCible = W.R + (base + idx) * spread;
+        const angleBrut = -90 + (+ci) * 360 / Wheel.SIZE;
+
+        if (fresh || !pawnAnim[c.id]) {            // apparition : pose directe, sans trajet
+          pawnAnim[c.id] = { angle: angleBrut, radius: radiusCible, target: null, g: g };
+          applyPawnTransform(g, angleBrut, radiusCible);
         } else {
-          g.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px)`;
+          const p = pawnAnim[c.id];
+          p.g = g;
+          // angle cible CONTINU : plus court chemin depuis l'angle courant → le pion
+          // longe l'anneau (6→1 ne traverse plus le cercle), depuis sa position en cours.
+          const angleContinu = p.angle + (((angleBrut - p.angle) % 360 + 540) % 360 - 180);
+          const dejaArrive = Math.abs(angleContinu - p.angle) < 0.01
+            && Math.abs(radiusCible - p.radius) < 0.01;
+
+          if (!dejaArrive) {
+            p.from = { angle: p.angle, radius: p.radius };
+            p.target = { angle: angleContinu, radius: radiusCible };
+            p.t0 = performance.now();
+            p.dur = reduceMotion ? 0 : PAWN_DUR;
+            ensurePawnRAF();
+          }
         }
       });
     });
     Array.from(layer.children).forEach(g => {
-      if (!seen[g.id.replace("wp-", "")]) g.remove();
+      const id = g.id.replace("wp-", "");
+
+      if (!seen[id]) {
+        delete pawnAnim[id];
+        g.remove();
+      }
     });
   }
 
