@@ -51,6 +51,7 @@ window.Store = (function () {
     if (!c.tokensPerm) c.tokensPerm = {};
     delete c.tokens;
     if (c.kind === "pj" && !c.loadout) c.loadout = { sorts: [], defense: null, shell: null };
+    if (c.blocked == null) c.blocked = false;       // « bloqué » : hors combat / ne peut agir
     // position absolue cumulée `wa` (remplace les anciens `pos` mod-6 / `abs`)
     if (c.wa == null) c.wa = (c.pos != null ? c.pos : (c.abs != null ? c.abs : 0));
     delete c.abs; delete c.bonusReplays; delete c.pos;
@@ -85,6 +86,7 @@ window.Store = (function () {
     if (!c.tokensTrack) c.tokensTrack = {};
     if (!c.tokensPerm) c.tokensPerm = {};
     if (c.wa == null) c.wa = 0;
+    if (c.blocked == null) c.blocked = false;
     if (c.kind === "pj" && !c.loadout) c.loadout = { sorts: [], defense: null, shell: null };
     return c;
   }
@@ -167,7 +169,8 @@ window.Store = (function () {
     });
   }
 
-  /** Liste de pions pour le moteur (positions absolues `wa`). */
+  /** Liste de pions pour le moteur (positions absolues `wa`).
+   *  Les « bloqués » restent sur la roue/frise (juste marqués) → pas de filtre. */
   function pawnList(s) {
     computeSpeeds(s);
     return s.combatants.map(c => ({
@@ -237,6 +240,18 @@ window.Store = (function () {
 
   /** Bouton « Réinitialiser la roue » : tous les pions case 1, tour 1, flèche et
    *  frise à neuf (PV/PA/jetons conservés). Délègue au moteur (engine.reset). */
+  /** Bascule l'état « bloqué » d'un combattant (hors combat / ne peut agir).
+   *  Il reste présent sur la roue et dans la frise — seulement marqué. */
+  function toggleBlocked(id) {
+    const c = find(id);
+
+    if (!c) return;
+
+    c.blocked = !c.blocked;
+    save();
+    return c.blocked;
+  }
+
   function resetWheel() {
     const e = syncEngine(state);
     e.reset();
@@ -268,7 +283,7 @@ window.Store = (function () {
   function cleanTemplate(c) {
     const t = JSON.parse(JSON.stringify(c));
     delete t.id; delete t.speed; delete t.vit;
-    t.pa = 0; t.shell = 0; t.wa = 0;
+    t.pa = 0; t.shell = 0; t.wa = 0; t.blocked = false;
     t.tokensTrack = {}; t.tokensPerm = {};
     const d = Rules.derive(statsOf(t), t.level || 1);
     t.pvMax = d.PV; t.pv = d.PV;
@@ -310,7 +325,7 @@ window.Store = (function () {
     addCombatant, updateCombatant, removeCombatant, find, duplicate,
     addToken, shiftTokens,
     setChooser, clearChooser, setResolution, clearResolution,
-    nextTurn, nudge, resetWheel, flechePos, log, clearAll,
+    nextTurn, nudge, resetWheel, toggleBlocked, flechePos, log, clearAll,
     getLibrary, saveToLibrary, removeFromLibrary, addFromLibrary,
     exportJSON, importJSON
   };

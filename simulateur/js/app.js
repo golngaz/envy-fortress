@@ -129,6 +129,10 @@
   }
 
   function actionRow(c) {
+    if (c.blocked) {
+      return `<div class="cbt-actions blocked-note">⛔ Bloqué — hors combat, ne peut pas agir.</div>`;
+    }
+
     if (c.kind === "pj") {
       return `<div class="cbt-actions">
         <button class="act" data-id="${c.id}" data-act="pa1">+1 PA</button>
@@ -162,12 +166,17 @@
       ? `<button class="cbt-sub cbt-class" data-id="${c.id}" title="Voir le passif de classe">${classe?esc(classe.nom):''} · niv ${c.level||1} ⓘ</button>`
       : `<span class="cbt-sub">Monstre · niv ${c.level||1}</span>`;
 
+    const blockTitle = c.blocked
+      ? "Débloquer"
+      : "Bloquer : hors combat / ne peut pas agir";
+
     return `
-    <div class="combatant ${c.kind} ${isActive?'active':''} ${c.pv<=0?'down':''}" data-id="${c.id}">
+    <div class="combatant ${c.kind} ${isActive?'active':''} ${c.pv<=0?'down':''} ${c.blocked?'blocked':''}" data-id="${c.id}">
       <div class="cbt-head">
         <span class="kind-badge ${c.kind}">${c.kind==='pj'?'PJ':'PNJ'}</span>
         <input class="cbt-name" data-id="${c.id}" value="${esc(c.name)}" />
         ${sub}
+        <button class="icon-btn block ${c.blocked?'on':''}" data-id="${c.id}" title="${blockTitle}" aria-pressed="${c.blocked?'true':'false'}">⛔</button>
         <button class="icon-btn dup" data-id="${c.id}" title="Dupliquer">⧉</button>
         <button class="icon-btn save" data-id="${c.id}" title="Enregistrer dans la bibliothèque">💾</button>
         <button class="icon-btn edit" data-id="${c.id}" title="Éditer / équipement">⚙</button>
@@ -500,8 +509,8 @@
           const t = g.querySelector(".wtok-lbl");
           if (t) t.textContent = initials(c.name);
         }
-        g.setAttribute("class", "wpawn " + (isPJ ? "pj" : "mob"));
-        const tt = g.querySelector("title"); if (tt) tt.textContent = c.name;
+        g.setAttribute("class", "wpawn " + (isPJ ? "pj" : "mob") + (c.blocked ? " blocked" : ""));
+        const tt = g.querySelector("title"); if (tt) tt.textContent = c.name + (c.blocked ? " (bloqué)" : "");
 
         // cible : angle de la case + léger étalement RADIAL si plusieurs pions empilés.
         const spread = 13, base = -(arr.length - 1) / 2;
@@ -562,8 +571,8 @@
     const frieze = st.frieze || [];
     $("#frieze").innerHTML = frieze.length ? frieze.map((e, idx) => {
       const c = Store.find(e.id); if (!c) return "";
-      const cls = (c.kind === "pj" ? "pj" : "mob") + (e.bonus ? " bonus" : "") + (idx === st.activeIdx ? " active" : "");
-      return `<button class="fcube ${cls}" data-idx="${idx}" title="${esc(c.name)}${e.bonus?' — tour bonus':''}">${esc(initials(c.name))}</button>`;
+      const cls = (c.kind === "pj" ? "pj" : "mob") + (e.bonus ? " bonus" : "") + (idx === st.activeIdx ? " active" : "") + (c.blocked ? " blocked" : "");
+      return `<button class="fcube ${cls}" data-idx="${idx}" title="${esc(c.name)}${e.bonus?' — tour bonus':''}${c.blocked?' — bloqué':''}">${esc(initials(c.name))}</button>`;
     }).join("") : `<span class="muted tiny">—</span>`;
     $("#order-list").innerHTML = frieze.map((e, idx) => {
       const c = Store.find(e.id); if (!c) return "";
@@ -608,6 +617,11 @@
       const id = t.dataset.id;
 
       if (t.classList.contains("del")) { expandedPassifs.delete(id); Store.removeCombatant(id); renderCombat(); return; }
+      if (t.classList.contains("block")) {
+        const bloque = Store.toggleBlocked(id);
+        Store.log(`${(Store.find(id)||{}).name||''} ${bloque ? "bloqué (hors combat)" : "débloqué"}.`);
+        renderCombat(); return;
+      }
       if (t.classList.contains("edit")) { openEdit(id); return; }
       if (t.classList.contains("dup")) {
         const n = Store.duplicate(id);

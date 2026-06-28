@@ -140,7 +140,7 @@ Le modèle complet est documenté en tête de `js/wheel.js` ; en résumé :
 - **Typage** : `js/wheel.js` est entièrement typé en **JSDoc** (typedefs `Pion`,
   `CubeFrise`, `EtatRoue`, `Moteur` + `@param`/`@returns` sur chaque fonction). Le
   champ d'état interne s'appelle `self`. **Cette version de la logique est gelée** :
-  les `tests/wheel.test.js` (132/132) en sont le contrat — toute modif doit les
+  les `tests/wheel.test.js` (143/143) en sont le contrat — toute modif doit les
   garder verts.
 
 ## Fonctionnalités
@@ -149,6 +149,10 @@ Le modèle complet est documenté en tête de `js/wheel.js` ; en résumé :
   affichées (PV, cases/tours, poids, modificateurs).
 - **PV / PA / Shell Control** modifiables **à tout moment** (boutons ± ou saisie
   directe), utile en début de combat. PV borné par PV max ; Shell 0–10.
+- **Bloqué** (bouton ⛔ sur la fiche, `c.blocked`) : marque un combattant hors
+  combat / incapable d'agir → **fiche en rouge**, actions remplacées par une note,
+  ses boutons d'action masqués. Il **reste présent sur la roue et dans la frise**
+  (pion et cube marqués en rouge/barrés), il n'en est **pas** retiré.
 - **Équipement (bouton ⚙ sur la fiche, ou à la création)** :
   - **PJ** : arme, **jusqu'à 6 sorts**, **1 sort de défense**, **1 Shell Control**.
     Un champ **filtre** au-dessus de la liste de sorts aide à les retrouver.

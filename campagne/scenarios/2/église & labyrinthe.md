@@ -5,35 +5,40 @@ Première zone du [[Premier étage - Orgueil|premier étage (Orgueil)]]. Cadre g
 Les aventuriers sortent du monolithe-ascenseur. Ils ne débarquent pas *à côté* du monolithe : **l'église a été construite tout autour de lui**. La colonne bleu-noir traverse la nef de bas en haut, comme un pilier vivant ; l'autel, les bancs, les vitraux ont été disposés *en cercle* autour d'elle. Le lieu est à demi délabré, manifestement bien plus fréquenté autrefois.
 
 > [!tip] Narration
-> Le monolithe ne vous attendait pas dehors : il *est* le cœur de ce lieu. On a élevé l'église autour de lui comme on enferme une relique — ou comme une coquille protège ce qu'elle abrite. La colonne bleu-noir monte droit à travers la voûte fendue, et son unique œil monochromatique, froid, vous suit de banc en banc. La poussière, les bancs renversés, les cierges éteints : ici, on priait. Plus maintenant.
+> Le monolithe *est* le cœur de ce lieu. On a élevé l'église autour de lui comme on enferme une relique — ou comme une coquille protège ce qu'elle abrite. La colonne bleu-noir monte droit à travers la voûte fendue. La poussière, les bancs renversés, les cierges éteints : ici, on priait. Ce n'est plus le cas aujourd'hui
 
 > [!note] Pourquoi l'église est-elle déserte ? (MJ)
-> L'ordre qui vénérait le monolithe s'est effondré — non par perte de foi, mais parce que son « miracle » est devenu insoutenable. Détail : [[Le clergé du monolithe]].
+> L'ordre qui vénérait le monolithe s'est effondré — non par perte de foi, mais après qu'un « miracle » apparut. Détail : [[Le clergé du monolithe]].
 
-Il y a des **vitraux** : sur plusieurs d'entre eux, à qui regarde attentivement ([[Jet d'observation (INT)]]), se distingue **une silhouette tenant un bâton, coiffée d'un chapeau pointu**. (C'est [[Le Magicien]] — les joueurs l'ignorent.)
+Il y a des **vitraux** : sur plusieurs d'entre eux, à qui regarde attentivement ([[Jet d'observation (INT)]]), se distingue **une silhouette tenant un bâton, coiffée d'un chapeau pointu**.
 
 > [!note] Ancrage (système de mort)
 > Le monolithe de l'église est le **premier [[Fragment du monolithe|fragment]] ancrable** de l'étage. Dès que les joueurs s'y lient (en le touchant / s'y reposant), il devient leur **point de résurrection** sur ce palier. À mémoriser : c'est ici qu'ils reviendront s'ils tombent.
 
+Sur un [[Jet d'observation (INT)]] sur l'autel, il y avait, avant, une statue au centre de l'autel qui a été retiré, brutalement.
 ## À la porte — [[L'architecte]] (la personne qui en sait trop)
 
-**Génos**, un vieil homme, est appuyé près du portail ; il les regarde sortir du monolithe comme on regarde un mauvais présage. *(Il ne donne son nom qu'une fois en confiance.)* Il **en sait beaucoup trop** : la vraie nature des lieux (une machine), le rôle des fragments, la commande [[Shell Access]]. C'est la **première vraie source d'info** de l'étage. Fiche complète et répliques : [[L'architecte]].
+
+> [!info] Nom
+> Il s'appelle **Génos**. Il ne le donne pas spontanément : il faut gagner sa confiance (bon jet social, ou énigme résolue seuls) pour qu'il le lâche.
+
+> [!tip] Narration (première vision)
+> Un vieil homme se tient sur le pas de la porte. Mains larges et abîmées de bâtisseur, dos voûté, regard méfiant qui jauge chacun de vos gestes avant même votre premier mot.
+
+**Génos**, un vieil homme, est appuyé près du portail ; il les regarde sortir du monolithe comme on regarde un mauvais présage. *(Il ne donne son nom qu'une fois en confiance.)*. Il **en sait beaucoup trop** : la vraie nature des lieux (une machine), le rôle des fragments. C'est la **première vraie source d'info** de l'étage. Fiche complète et répliques : [[L'architecte]].
 
 > [!quote] Premier contact (méfiant)
-> « Tiens. Encore quelqu'un qui sort de la pierre. Vous n'êtes pas d'ici — personne d'ici n'ose plus approcher le monolithe. Dites-moi d'où vous venez, et je déciderai si je vous parle. »
-
-Il **teste** les joueurs (il craint des espions impériaux). Tant qu'ils ne l'ont pas rassuré — ils ne connaissent rien à l'Empire, ils viennent « d'ailleurs » — ou résolu l'énigme seuls, il reste avare. Une fois en confiance, il lâche, par bribes :
-
-> [!quote] La géopolitique de l'étage, dans sa bouche (s'ils l'interrogent)
-> **Sur l'Empire** : « Ici, c'est l'Empire un seul homme compte : le roi [[LORE/Famille Sombreval/Hector Sombreval|Hector]]. »
-> **Sur la forêt** : « Au sud, la forêt. L'Empereur n'y va pas. »
-> **Sur l'église** : « Cette église, c'est moi qui l'ai finie. Elle attends son retour »
-
-> [!quote] Sur la mort (le système de fragments)
-> « Vous mourrez en ce monde. Mais de ce que je vois, ce ne sera peu être pas la fin. »
+> « Tiens. Encore quelqu'un qui sort de la pierre. Vous n'êtes pas d'ici — personne d'ici n'ose plus approcher le monolithe. Je pense savoir d'où vous venez. »
 
 > [!quote] Indice d'énigme
 > « Tout ce que vous trouverez, rapportez-le à l'homme pieux, il en est le gardien. » 
+
+### Question sur les vitraux
+* Ces vitraux comme sont une frise. [[Jet d'observation (INT)]] permet de déceler que l'homme regrette d'avoir dit ça.
+* S'il insistent il pourra leur dire qu'ils représentent une frise représentant l'histoire de dieu. 
+
+### Si les PJ l'attaquent
+* [[Génos (combat)]]
 
 ## L'arrivée de la fille inconnue
 
@@ -49,7 +54,10 @@ Si la scène de la Couronne s'est bien passée, **[[La petite fille|Dulcina]] de
 
 Affichés tels quels (gauche→droite), les fragments ne forment qu'un charabia. Il faut **remettre les six vitraux-histoire dans l'ordre où la chose fut vécue** — l'ordre d'une création.
 
-![[vitraux-enigme.svg]]
+TODO à reprendre avec les bons symbole et le magicien qui ne prie pas, celui qui prie est un prêtre.
+ᚦᛁᚲ ᛖᚾ ᚷᛈᛈ ᚠ ᚦᚦ ᚲᛖᛖ ᛒᛈᛁᚱᛈᚱ
+
+![[Pasted image 20260628154320.png]]
 *Disposition des 7 vitraux autour de la nef : les 6 fenêtres-histoire (ordre d'affichage) et, au-dessus de l'autel, le 7e — l'homme en **prière**, à qui s'adresse la réponse. Visuel montrable aux joueurs.*
 
 > [!example]- Les vitraux (clé MJ)

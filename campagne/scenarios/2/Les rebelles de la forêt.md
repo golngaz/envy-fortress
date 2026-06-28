@@ -69,13 +69,3 @@ Le fil de l'étage converge ici : Hector ne se bat pas, il se **piège** par son
 
 > [!warning] Note d'équilibrage
 > Hector reste un **boss-mur** tant que les joueurs n'ont pas réuni les conditions (alliés, leviers, isolement). C'est *voulu* : on ne gagne pas l'étage de l'orgueil par la force, mais en retournant l'orgueil contre lui-même. Reste à fixer s'il **meurt**, **fuit**, ou **abdique** — et le sort qu'on réserve à [[Ilyan de la forêt ignorée|Ilyan]] (refuse-t-il le trône, fidèle à *« on ne renverse pas un trône pour en ériger un autre »* ?).
-
-# 5. Récompenses de fin d'étage
-- **Accès** au palier inférieur (descente via le monolithe).
-- Fragments accumulés (pouvoirs + ancrages).
-- Un **flashback de Dulcina** déclenché par la chute de l'Empire (un visage, une voix de sa vraie famille — graine de la révélation [[La Souche]]).
-- L'arme à passif de la tour, le butin du palais d'Icare si exploré.
-
-> [!question] À trancher (MJ)
-> - Cause profonde à exploiter contre l'Empire : pure tyrannie fiscale, ou un **secret** plus sombre d'Hector ?
-> - [[Le palais d'Icare]] : en faire un **donjon optionnel** (la démesure d'Icare, un fragment de haut niveau gardé) ?
