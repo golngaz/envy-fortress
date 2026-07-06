@@ -26,6 +26,12 @@
       $("#view-" + t.dataset.view).classList.add("active");
       if (t.dataset.view === "cartes") renderCartes();
     }));
+
+    // deep-link : ouvrir directement un onglet via l'URL (ex. index.html#outils)
+    const vueDemandee = location.hash.replace("#", "");
+    const ongletDemande = $(`.tab[data-view="${vueDemandee}"]`);
+
+    if (ongletDemande) ongletDemande.click();
   }
 
   /* =================================================================== HELPERS */
