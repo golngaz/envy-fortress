@@ -4,6 +4,10 @@ Une **forteresse immense et ancienne** flotte majestueusement dans le **vide d�
 
 Elle est composée de six étages.
 
+> [!danger] La vraie nature des lieux (secret de campagne — MJ uniquement)
+> La forteresse est une **simulation** : l'ordinateur démesuré de [[Miguel Sombreval|Miguel]] devenu un monde (cf. [[L'envie de Miguel]]). Mais ce n'est ni un rêve ni une « machine » à engrenages : **tout y est réel pour qui s'y trouve** — la matière, la douleur, la mort, les habitants. Un monde calculé, et pourtant vrai sur place.
+> **Règle d'or** : cette information vit **uniquement dans le LORE**. Les pages de campagne et les PNJ ne l'énoncent **jamais** — elle se fait *comprendre* par bribes ([[Shell Access]], [[Fragment du monolithe|fragments]], [[L'alphabet du monolithe]], vitraux…) et ne se *dit* qu'à la toute fin de la campagne, si elle arrive un jour.
+
 # Origines
 
 À l'origine, la forteresse a été créée par [[Le Magicien]], elle n'était qu'une simple salle entourée de néant. Il a passé une éternité à s'ennuyer, contemplant le néant avant que son objectif de retrouver sa famille le rappelle à la raison, il décida d'améliorer la structure de la forteresse en ajoutant un étage, plus large, avec une pleine pour contempler le néant qu'il amoncela d'étoiles et créa un ciel, un soleil. Un beau jour, des personnage apparurent, et en discutant avec eux, il comprit que ces gens furent téléporté depuis le lieu et l'époque du massacre. Son invention avait bien un espoir de fonctionner, afin de retrouver sa famille. 

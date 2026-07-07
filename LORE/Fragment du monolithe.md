@@ -18,7 +18,7 @@ Cependant, posséder un niveau d’accès ne garantit pas un libre passage. L’
 
 Tous les fragments, où qu'ils soient tombés, demeurent **reliés au monolithe principal** — l'unique colonne qui transperce la forteresse de haut en bas et dont la base plonge **tout en bas**, au [[Shell Access|cœur]] de la structure. Un fragment n'est jamais vraiment isolé : c'est un **nœud** du même réseau, une terminaison du monolithe-mère.
 
-Pour un [[Les incarnés|incarné]], cette propriété est vitale. En se liant à un fragment (en le touchant, en s'y reposant), il y **ancre son état**. S'il vient à mourir, le monolithe le **ré-instancie au dernier fragment** auquel il s'est lié — comme une sauvegarde rechargée depuis le cœur de la machine. La mort n'est donc pas une fin, mais un **retour en arrière** : on se réveille au dernier fragment ancré, intact, là où l'on s'était lié pour la dernière fois.
+Pour un [[Les incarnés|incarné]], cette propriété est vitale. En se liant à un fragment (en le touchant, en s'y reposant), il y **ancre son état**. S'il vient à mourir, le monolithe le **ré-instancie au dernier fragment** auquel il s'est lié — comme une sauvegarde rechargée depuis le cœur de la simulation. La mort n'est donc pas une fin, mais un **retour en arrière** : on se réveille au dernier fragment ancré, intact, là où l'on s'était lié pour la dernière fois.
 
 Les fragments sont **dispersés sur chaque étage** : les trouver, les activer et s'y lier dessine la véritable carte de progression d'un incarné. Plus on descend, plus on se rapproche du monolithe principal — et du cœur dont tout dépend.
 

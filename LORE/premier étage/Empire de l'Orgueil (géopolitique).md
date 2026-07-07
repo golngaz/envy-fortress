@@ -17,7 +17,7 @@ Maître d'étage : [[LORE/Famille Sombreval/Hector Sombreval|Hector Sombreval]],
 
 ## 3. Le clergé du monolithe
 - L'**église bâtie autour du monolithe**, au centre de l'étage : jadis un lieu de culte fréquenté, aujourd'hui presque désert. On y vénérait la figure au bâton et au chapeau pointu (le [[Le Magicien|Magicien]], sans le savoir) représentée sur les vitraux. **Pourquoi l'église est désertée** : [[Le clergé du monolithe]].
-- Gardée par [[L'architecte]], qui **en sait trop** : il connaît la vraie nature de la forteresse (une machine), le rôle des [[Fragment du monolithe|fragments]] et la commande [[Shell Access]]. Méfiant, traqué pour ce qu'il sait.
+- Gardée par [[L'architecte]], qui **en sait trop** : il connaît la vraie nature de la forteresse (une simulation), le rôle des [[Fragment du monolithe|fragments]] et la commande [[Shell Access]]. Méfiant, traqué pour ce qu'il sait.
 
 ## 4. Le Bouffon
 - Ancien bouffon du roi, en fuite depuis ~50 ans (cf. [[Le bouffon]]). Lucide derrière sa folie feinte, il connaît les secrets de la cour — et a **volé des fragments** en partant. Électron libre dans la forêt : allié possible, traître possible, source d'informations à coup sûr.

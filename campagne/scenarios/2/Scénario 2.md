@@ -9,7 +9,7 @@
 ## 1. Arrivée — l'église autour du monolithe
 → [[église & labyrinthe]]
 - Sortie du monolithe-ascenseur, **dans** l'église qui l'enserre.
-- [[L'architecte]], la personne **qui en sait trop**.
+- [[L'architecte]], la personne **qui en sait trop**. Une fois la confiance gagnée (après les vitraux) : sa **question** « *Qu'allez-vous faire, maintenant ?* » — diagnostic des envies du groupe + carotte de la descente (répliques dans sa fiche).
 - Arrivée de la fille inconnue : [[La petite fille|Dulcina]], qui les a suivis.
 - **Ancrage** du premier [[Fragment du monolithe|fragment]] (point de résurrection — cf. nouveau système de mort).
 

@@ -9,16 +9,34 @@ generator**. Section 9 gives two ready-to-use prompts.
 
 ## 1. Concept in one line
 
-> Hand-painted **arcane magic** meets **corrupted code** — a dark blue-violet
-> world where spellcraft and reality glitch at the seams. Mystical first,
-> digital second; the glitch is a *flavor*, never the subject.
+> Every spell is **computed at the root, real at the tip**: the effect springs
+> from a visible **technological source** — circuitry, an emitter, floating
+> bits — and what comes out is a completely **organic, believable phenomenon**.
+> A real flame born from an electronic ignition, hex digits still drifting at
+> its base.
 
-The fiction backs this: the Fortress is a reality that can be *hacked*
-(Shell Control, "Shell Access", the Architecte who edits the rules of the world).
-So magic and a thin layer of broken-pixel/datamosh corruption coexist.
+The fiction backs this: the Fortress computes everything, yet everything in it
+is *real* on site (Shell Control, "Shell Access", the world that can be
+hacked). Every card shows exactly that seam: **digital at the origin, nature
+at the result**.
 
-**Golden rule:** *a little bit glitched, but not too much.* If a viewer's first
-word is "glitch art" instead of "magic card", the effect has gone too far.
+### The three zones of every card
+
+1. **The source (tech)** — where the spell is "executed": glowing etched
+   circuit traces, a compact emitter or holo-glyph array, drifting luminous
+   bits / hex digits, thin UI ticks. This is where ALL the glitch language
+   lives.
+2. **The transition (materialization)** — a narrow seam where data becomes
+   matter: voxels melting into sparks, wireframe gaining real texture, pixels
+   rounding into droplets. Keep it short — a hand's width, never half the image.
+3. **The effect (organic)** — the phenomenon itself, rendered like the real
+   thing: fire with natural flame licks, heat shimmer and soft smoke; water
+   with true refraction; living leaves; honest steel. **No pixelation, no
+   scanlines, no geometric edges here.**
+
+**Golden rule:** *tech at the root, nature at the tip.* If the flame itself
+looks digital, the image has failed; if no circuitry or bits are visible at
+its origin, it has failed the other way.
 
 ---
 
@@ -73,9 +91,10 @@ Notes:
 
 ---
 
-## 3. Glitch language (subtle)
+## 3. Glitch language (confined to the source & transition zones)
 
-Allowed, in small doses:
+Allowed, in small doses — **only on the tech source and the materialization
+seam, never on the organic effect**:
 - 1–3 px chromatic aberration (cyan/magenta) on the silhouette and text edges.
 - 2–4 thin horizontal displacement slices ("datamosh") crossing the subject.
 - Faint CRT scanlines over the whole frame (low opacity).
@@ -84,6 +103,8 @@ Allowed, in small doses:
 - Sparse luminous **hex digits, runic glyphs and thin UI ticks** in the haze.
 
 Forbidden:
+- Any glitch, pixelation or scanlines **on the organic effect itself** — the
+  flame / water / growth / metal must stay natural and believable.
 - Full-frame noise, heavy VHS distortion, unreadable smears.
 - Glitch covering the subject's face/focal point.
 - Neon overload — the base must stay dark and moody.
@@ -96,8 +117,12 @@ Forbidden:
   card's accent color separating the subject from the dark. Deep vignette.
 - **Surface:** painterly digital illustration with a faint film grain; subtle
   arcane bloom around light sources.
-- **Energy:** volumetric, semi-transparent, flowing — like ink in water crossed
-  with light streaks; it picks up the accent hue.
+- **Effect rendering (organic zone):** volumetric and believable — real flame
+  licks, liquid refraction, plant fibres, drifting smoke; it picks up the
+  accent hue but keeps **natural shapes** (no geometric or pixel edges).
+- **Source rendering (tech zone):** crisp luminous micro-detail — etched
+  circuit traces, small emitter lenses, floating bits/hex digits in the accent
+  color, thin holographic ticks.
 - **Depth:** subject sharp in front; background = soft runic geometry, a large
   faint sigil ring, drifting particles, blurred glyph fog.
 
@@ -130,15 +155,20 @@ Forbidden:
 
 ## 7. Per-type subject & mood cheat-sheet
 
-| Type | Suggested subject motifs | Mood keywords |
-|------|--------------------------|---------------|
-| Attack (red) | bursting sigil, ember vortex, cracked shockwave, weaponized rune | violent, kinetic, hot |
-| Heal (green) | blooming sigil, life-thread filaments, soft orb, mending light | gentle, sacred, calm |
-| Utility (yellow) | interlocking glyph-gears, clockwork rune, golden schematic | clever, precise, scholarly |
-| Defense (blue) | hex shield wall, ward circle, crystalline barrier | solid, vigilant, geometric |
-| Passive (violet) | ambient aura, drifting motes, halo, latent rune | quiet, ever-present, dreamy |
-| Shell Control (cyan) | holographic terminal, hex-code stream, fractured UI, "Shell Access" glyph | digital, intrusive, uncanny |
-| Weapon (gold) | the physical weapon on a void plinth, faint forge glow, metal & wear | tangible, forged, heavy |
+Each motif follows the grammar **organic effect ⟵ tech source**:
+
+| Type | Suggested subject motifs (effect ⟵ source) | Mood keywords |
+|------|--------------------------------------------|---------------|
+| Attack (red) | a real roaring flame / lightning arc / shockwave igniting out of a circuit-etched emitter, bits drifting at its root | violent, kinetic, hot |
+| Heal (green) | real living leaves, petals or soft mending light growing out of a green circuit lattice, sap-like glow in the traces | gentle, sacred, calm |
+| Utility (yellow) | real brass gears, tools or golden dust assembling themselves out of a glowing schematic wireframe | clever, precise, scholarly |
+| Defense (blue) | a wall of real ice / stone / dense light projected by small hovering emitter nodes, wireframe solidifying into true matter | solid, vigilant, geometric |
+| Passive (violet) | natural motes, fireflies or mist leaking from faint circuitry buried under the ground or skin | quiet, ever-present, dreamy |
+| Shell Control (cyan) | **the exception — fully digital, no organic tip**: holographic terminal, hex-code stream, fractured UI, "Shell Access" glyph | digital, intrusive, uncanny |
+| Weapon (gold) | the physical weapon on a void plinth, honest metal and wear, faint circuit engravings along the fuller fading into plain steel | tangible, forged, heavy |
+
+> **Shell Control** is the one type whose effect never materializes: it *is*
+> the system, so the image stays pure interface from root to tip.
 
 ---
 
@@ -161,16 +191,19 @@ Paste this verbatim as the **style half** of any prompt; it defines the whole
 look without naming a subject.
 
 ```
-Arcane glitch trading-card illustration, dark blue-violet magical atmosphere
-(deep indigo #140E30 to royal violet #1B1442, void black #0D0A1E vignette),
-painterly digital concept art, dramatic low-key lighting with a coloured rim
-light, volumetric semi-transparent energy like ink-in-water and light streaks,
-a large faint glowing rune/sigil ring behind the subject, drifting magical
-particles and a few shattered-pixel shards dissolving at the edges, subtle
-glitch flavor only: 1-3px cyan (#2FF3E0) and magenta (#FF3D9A) chromatic
-aberration on edges, a couple of thin horizontal datamosh slices, faint CRT
-scanlines, sparse luminous runic glyphs and hex digits in the haze; magic first
-and digital corruption second; cinematic, high detail, soft film grain, darker
+Arcane tech-to-organic trading-card illustration, dark blue-violet magical
+atmosphere (deep indigo #140E30 to royal violet #1B1442, void black #0D0A1E
+vignette), painterly digital concept art, dramatic low-key lighting with a
+coloured rim light; the spell effect is BORN FROM TECHNOLOGY: at the base a
+glowing circuit-etched source or compact emitter with drifting luminous bits,
+binary digits and hex fragments, then a narrow materialization seam where
+voxels and wireframe melt into real matter, and above it a completely ORGANIC,
+believable phenomenon with natural shapes — volumetric, photoreal-leaning yet
+painterly, absolutely no pixelation or scanlines on the effect itself; subtle
+glitch flavor confined to the source zone: 1-3px cyan (#2FF3E0) and magenta
+(#FF3D9A) chromatic aberration, thin CRT scanlines, floating code fragments;
+a large faint glowing rune/sigil ring behind the subject; technology at the
+root, nature at the tip; cinematic, high detail, soft film grain, darker
 bottom third, centered subject, generous negative space, no text, no border.
 ```
 
@@ -182,29 +215,42 @@ Use the per-type accent + motifs from sections 2.3 and 7.
 ```
 {{PROMPT_A}}
 
-Subject: {{SUBJECT}} — the visual of the {{TYPE_EN}} card "{{CARD_NAME}}".
-Dominant accent colour {{ACCENT_NAME}} ({{ACCENT_HEX}}): the energy, the rune
-ring and the rim light all read {{ACCENT_NAME}}. Mood: {{MOOD_KEYWORDS}}.
-Composition: single central focal element over a {{ACCENT_NAME}} arcane glow,
-{{EXTRA_MOTIFS}}. Aspect ratio 3:4.
+Subject: {{ORGANIC_EFFECT}} emerging from {{TECH_SOURCE}} — the visual of the
+{{TYPE_EN}} card "{{CARD_NAME}}". The effect itself looks completely real and
+organic; the technology stays at its root only. Dominant accent colour
+{{ACCENT_NAME}} ({{ACCENT_HEX}}): the energy, the rune ring and the rim light
+all read {{ACCENT_NAME}}. Mood: {{MOOD_KEYWORDS}}. Composition: tech source
+anchored low-center, organic effect blooming upward over a {{ACCENT_NAME}}
+arcane glow, {{EXTRA_MOTIFS}}. Aspect ratio 3:4.
 
 Negative prompt: text, watermark, logo, UI text, caption, border frame,
-signature, photorealistic photo, lowres, blurry subject, oversaturated neon,
-heavy noise, full-screen glitch, extra limbs, deformed.
+signature, lowres, blurry subject, oversaturated neon, heavy noise,
+full-screen glitch, pixelated flame, digital-looking effect, extra limbs,
+deformed.
 ```
+
+Fill `{{TECH_SOURCE}}` with the executing device (circuit-etched emitter, holo
+rune-board, buried circuit lattice, hovering emitter nodes…) and
+`{{ORGANIC_EFFECT}}` with the real-world phenomenon (a true flame, living
+vines, a wall of ice, a healing bloom…). For **Shell Control** cards, skip the
+grammar: describe a fully digital subject instead (see section 7).
 
 ### 9.3 Worked examples
 
 **Hall Humettes** (Attack / red — fire bolt):
 ```
 {{PROMPT_A}}
-Subject: a swirling ember vortex erupting from a cracked fire rune, small
-campfire sparks — the visual of the Attack card "Hall Humettes". Dominant accent
-colour red (#E2533B): energy, rune ring and rim light all read red-orange. Mood:
-violent, kinetic, hot. Composition: single central burning sigil over a red
-arcane glow, ember particles and faint glitch shards drifting upward. 3:4.
-Negative prompt: text, watermark, logo, UI text, border frame, photorealistic,
-lowres, blurry subject, oversaturated neon, full-screen glitch, deformed.
+Subject: a real, natural flame — believable fire licks, heat shimmer, soft
+smoke — igniting out of a compact circuit-etched emitter, luminous bits and
+hex digits drifting at the flame's root, a few voxels melting into embers at
+the seam — the visual of the Attack card "Hall Humettes". The flame itself
+looks completely real; only its origin is technological. Dominant accent
+colour red (#E2533B): energy, rune ring and rim light all read red-orange.
+Mood: violent, kinetic, hot. Composition: emitter anchored low-center, fire
+blooming upward over a red arcane glow. 3:4.
+Negative prompt: text, watermark, logo, UI text, border frame, lowres, blurry
+subject, oversaturated neon, full-screen glitch, pixelated flame,
+digital-looking fire, deformed.
 ```
 
 **Point de restauration** (Shell Control / cyan — full heal save-state):
@@ -213,10 +259,11 @@ lowres, blurry subject, oversaturated neon, full-screen glitch, deformed.
 Subject: a holographic teal save-point glyph / restore icon made of fractured
 UI panels and a flowing hex-code stream, a faint healed silhouette re-forming
 from pixels — the visual of the Shell Control card "Point de restauration".
-Dominant accent colour cyan (#39C5C0), strong digital/holographic glitch (this
-type leans hardest into the corruption). Mood: digital, uncanny, restorative.
-Composition: central terminal-like glyph over a cyan glow, scanlines, floating
-hex digits, "Shell Access" energy. 3:4.
+Shell Control is the exception: fully digital from root to tip, no organic
+materialization — this card IS the system. Dominant accent colour cyan
+(#39C5C0), strong digital/holographic glitch. Mood: digital, uncanny,
+restorative. Composition: central terminal-like glyph over a cyan glow,
+scanlines, floating hex digits, "Shell Access" energy. 3:4.
 Negative prompt: text, watermark, logo, UI text, border frame, photorealistic,
 lowres, blurry subject, full-screen glitch, deformed.
 ```
@@ -224,24 +271,31 @@ lowres, blurry subject, full-screen glitch, deformed.
 **Défense simple** (Defense / blue — basic ward):
 ```
 {{PROMPT_A}}
-Subject: a hexagonal azure ward / shield wall of crystalline runes flaring on
-impact — the visual of the Defense card "Défense simple". Dominant accent colour
-blue (#3D8BFF). Mood: solid, vigilant, geometric. Composition: central hex
-barrier over a blue arcane glow, ward-circle behind, sparse glitch fringe. 3:4.
-Negative prompt: text, watermark, logo, UI text, border frame, photorealistic,
-lowres, blurry subject, full-screen glitch, deformed.
+Subject: a wall of real, translucent ice with natural fractures and frost —
+true frozen matter, believable refraction — being projected by small hovering
+emitter nodes, a thin blue wireframe still solidifying into ice at its lower
+edge, faint hex digits drifting around the emitters — the visual of the
+Defense card "Défense simple". The barrier itself looks like real ice; only
+its projectors are technological. Dominant accent colour blue (#3D8BFF).
+Mood: solid, vigilant, geometric. Composition: emitter nodes low, ice wall
+rising over a blue arcane glow, ward-circle behind. 3:4.
+Negative prompt: text, watermark, logo, UI text, border frame, lowres, blurry
+subject, full-screen glitch, pixelated ice, digital-looking barrier, deformed.
 ```
 
 **Épée courte usée** (Weapon / gold — worn shortsword):
 ```
 {{PROMPT_A}}
-Subject: a worn, time-marked short sword resting on a dark void plinth, faint
-forge-gold rim light on the chipped blade — the visual of the Weapon card "Épée
-courte usée". Dominant accent gold/bronze (#C0A060), almost no magic glow, focus
-on metal, wear and edge. Mood: tangible, forged, reliable. Composition: single
-centered weapon, soft violet ambience, very subtle glitch only. 3:4.
-Negative prompt: text, watermark, logo, UI text, border frame, photorealistic,
-lowres, blurry subject, oversaturated neon, full-screen glitch, deformed.
+Subject: a worn, time-marked short sword resting on a dark void plinth — honest
+steel, chips and scratches, completely real metal — with faint circuit
+engravings along the fuller that glow softly near the guard and fade into
+plain worn steel toward the tip, faint forge-gold rim light — the visual of
+the Weapon card "Épée courte usée". Dominant accent gold/bronze (#C0A060),
+almost no magic glow, focus on metal, wear and edge. Mood: tangible, forged,
+reliable. Composition: single centered weapon, soft violet ambience, glitch
+confined to the circuit engravings. 3:4.
+Negative prompt: text, watermark, logo, UI text, border frame, lowres, blurry
+subject, oversaturated neon, full-screen glitch, sci-fi laser sword, deformed.
 ```
 
 ---
