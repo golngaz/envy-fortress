@@ -9,7 +9,7 @@ S'il y a plusieurs jetons bénédiction, on les résout tous (sauf s'il n'y a pl
 
 La défense est jouée juste après, si nécessaire.
 
-| DD (1D6) +CTRL | Effet 1                        | Effet 2                                 |
+| DD 1D6(+CTRL) | Effet 1                        | Effet 2                                 |
 | -------------- | ------------------------------ | --------------------------------------- |
 | 1+             | protégé du montant du dé       |                                         |
 | 5+             | protégé de la totalité du coup |                                         |

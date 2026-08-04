@@ -31,7 +31,7 @@ Au premier regard, un bonheur sans défaut : des lampions qui ne s'éteignent ja
 > La Réjouissance n'a **pas de tête à trancher** : son seul point vital est le **Cœur de fête**, un orgue de chair battant **enfoui sous la grande tente du banquet** (la « table d'honneur »). Il ne s'expose que lorsque le **leurre cesse de fonctionner**.
 
 > [!tip] Passif — La fête continue (la défense « intuable »)
-> Tant qu'**au moins une attraction joue**, la Réjouissance se **pavane** : quand elle défend, elle se dote d'**1 [[Jeton Bénédiction]]** et d'**1 [[Jeton Bouclier]]** (deux coups encaissés) **et se soigne de quelques PV** (≈ 1D6). Ses **PV descendent quand même** (ce n'est pas de l'invulnérabilité), mais entre les deux protections et le petit soin, elle **semble** intuable. Voir [[#La fête continue|sa défense]].
+> Tant qu'**au moins une attraction joue**, la Réjouissance se **pavane** : quand elle défend, elle se dote d'**1 [[Jeton Bénédiction]]** et d'**1 [[Jeton Bouclier]]** (deux coups encaissés) **et se soigne de quelques PV** (≈ 1D6). Elle **perd quand même des `PV`** (ce n'est pas de l'invulnérabilité), mais entre les deux protections et le petit soin, elle **semble** intuable. Voir [[#La fête continue|sa défense]].
 
 > [!danger] Passif — Le Cœur dénudé fait tomber la défense
 > Quand **les 5 attractions sont éteintes**, le **Cœur de fête** se **dénude** (sous la tente du banquet) et la Réjouissance **ne peut plus lancer La fête continue** : plus aucun [[Jeton Bénédiction]], la **défense disparaît complètement**. On l'achève alors **à PV nus**. *(Si une attraction est rallumée, la défense revient.)*
@@ -40,28 +40,28 @@ Au premier regard, un bonheur sans défaut : des lampions qui ne s'éteignent ja
 > À son tour, si une proie redevient disponible (une victime réveillée qu'on a laissée se faire re-charmer), la Réjouissance **rallume une attraction** : elle **re-charme** une cible (cf. *Berceuse*), le Cœur se **renfouit** et **la défense revient**. *(La boucle : éteindre les attractions ouvre la fenêtre, le monstre cherche sans cesse à en rallumer une.)*
 
 > [!danger] Passif — La gueule se referme (le timer)
-> Une fois démasquée, la place-gueule **se referme**. On la suit avec un **[[Jeton PA]] posé sur la case PA de cette fiche**, réglé sur **6** : **−1 à chaque tour du monstre**. À **0**, la **gueule claque** (coup fatal + 2 [[Jeton Charme]] à quiconque est sur la place). Détails : [[campagne/combats/étage 1/Le village en fête (combat)#Le compte à rebours — la mâchoire se referme|fiche de combat]].
+> Une fois démasquée, la place-gueule **se referme**. On la suit avec un **[[Jeton PA]] posé sur la case PA de cette fiche**, réglé sur **6** : il **perd 1 tour à chaque tour du monstre**. À **0** il **expire** et la **gueule claque** (coup fatal + 2 [[Jeton Charme]] à quiconque est sur la place). Détails : [[campagne/combats/étage 1/Le village en fête (combat)#Le compte à rebours — la mâchoire se referme|fiche de combat]].
 
 > [!tip] Passif — La douleur la fait sursauter (Rieurs)
-> Gorgée, la bête ne sent presque rien… **sauf un coup sur un [[Rieur]]** (excroissance-nerf à vif). **Crever un Rieur** la fait **tressaillir** et **rouvrir** la gueule : le jeton-mâchoire **recule de 1** (max 6). Elle **fait repousser 1 Rieur par round**. *Frapper un Rieur ne lui inflige aucun dégât* : ça ne fait que **gagner du temps**.
+> Gorgée, la bête ne sent presque rien… **sauf un coup sur un [[Rieur]]** (excroissance-nerf à vif). **Crever un Rieur** la fait **tressaillir** et **rouvrir** la gueule : le jeton-mâchoire **gagne 1 tour** (max 6). Elle **fait repousser 1 Rieur par round**. *Frapper un Rieur ne lui inflige aucun dégât* : ça ne fait que **gagner du temps**.
 
 > [!info] Réveiller une victime (l'action-clé)
-> Une victime charmée porte un [[Jeton Charme]] (voir combat). On la **réveille** en la **faisant frapper par un allié** : chaque coup retire **1 [[Jeton Charme]]**. Sans charme, elle se réveille et **éteint son attraction**. *(Il faut donc **cogner** le proche charmé pour le sauver.)* Le coup **inflige bien ses dégâts** à l'allié — privilégier un **petit sort de dégâts** pour limiter la casse.
+> Une victime charmée porte un [[Jeton Charme]] (voir combat). On la **réveille** en la **faisant frapper par un allié** : chaque coup lui fait **perdre 1 [[Jeton Charme]]**. Sans charme, elle se réveille et **éteint son attraction**. *(Il faut donc **cogner** le proche charmé pour le sauver.)* Le coup **inflige bien ses dégâts** à l'allié — privilégier un **petit sort de dégâts** pour limiter la casse.
 
 # Attaques
 
 Tant que le Cœur est enfoui, la Réjouissance agit **par ses organes** (elle ne « frappe » pas comme un corps). Choix (1D6 en [[Mode normal]], MJ en [[Mode difficile]]) — mais **si une attraction peut être rallumée, elle privilégie Berceuse**.
 
-| DD (1D6) |                              |
+| DD 1D6 |                              |
 | -------- | ---------------------------- |
 | 1-2      | [[#Berceuse]]                |
 | 3-4      | [[#Étreinte des fanons]]     |
 | 5-6      | [[#Régurgitation sucrée]]    |
 
 ## Berceuse (VOL)
-Charme une cible (PJ ou PNJ) qui n'est pas déjà réveillée de force ce tour-ci. **JdS (VOL+)** ; échec → la cible gagne 1 [[Jeton Charme]] et **rejoint une attraction** (rallume un organe). À 2 jetons Charme, la cible **s'endort** (hors-jeu, en cours de digestion) jusqu'à réveil.
+Charme une cible (PJ ou PNJ) qui n'est pas déjà réveillée de force ce tour-ci. **JdS (+VOL)** ; échec → la cible gagne 1 [[Jeton Charme]] et **rejoint une attraction** (rallume un organe). À 2 jetons Charme, la cible **s'endort** (hors-jeu, en cours de digestion) jusqu'à réveil.
 
-| DD (1D10) | Effet sur l'échec du JdS |
+| DD 1D10 | Effet sur l'échec du JdS |
 | --------- | ------------------------ |
 | 4+        | +1 [[Jeton Charme]]       |
 | 8+        | +1 [[Jeton Charme]], la cible **lâche son tour** (extase) |
@@ -70,7 +70,7 @@ Charme une cible (PJ ou PNJ) qui n'est pas déjà réveillée de force ce tour-c
 ## Étreinte des fanons (FOR)
 Les tentes se referment comme des mâchoires molles sur une cible imprudente.
 
-| DD (1D10) | Attaque     |                                          |
+| DD 1D10 | Attaque     |                                          |
 | --------- | ----------- | ---------------------------------------- |
 | 4+        | dégât du dé |                                          |
 | 8+        | dégât du dé | + cible **entravée** (collée à la chair) |
@@ -79,7 +79,7 @@ Les tentes se referment comme des mâchoires molles sur une cible imprudente.
 ## Régurgitation sucrée (CTRL) — AOE
 Recrache un flot de sirop bouillant et de friandises gâtées sur **plusieurs cibles désignées**.
 
-| DD (1D10) | Effet (sur chaque cible)                        |
+| DD 1D10 | Effet (sur chaque cible)                        |
 | --------- | ----------------------------------------------- |
 | 4+        | dégât du dé                                      |
 | 8+        | dégât du dé + [[Jeton Englué]] (déplacement réduit) |
@@ -94,9 +94,9 @@ Active **tant qu'au moins une attraction joue** (Cœur enfoui). Quand la Réjoui
 - gagne **1 [[Jeton Bouclier]]** (résolu en 1D10, cf. [[Jeton Bouclier]]) ;
 - **se soigne de quelques PV** (≈ **1D6**, à ajuster).
 
-Deux protections par tour **plus** un petit soin : d'où la **sensation** qu'elle est intuable — mais un groupe qui frappe plus fort et plus souvent que ça **fait quand même baisser ses PV**.
+Deux protections par tour **plus** un petit soin : d'où la **sensation** qu'elle est intuable — mais un groupe qui frappe plus fort et plus souvent que ça **lui fait quand même perdre des `PV`**.
 
-| DD (1D6) +CTRL | Effet du [[Jeton Bénédiction]] |
+| DD 1D6(+CTRL) | Effet du [[Jeton Bénédiction]] |
 | -------------- | ------------------------------ |
 | 1+             | protégé du montant du dé       |
 | 5+             | protégé de la totalité du coup |

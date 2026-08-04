@@ -16,7 +16,7 @@ level: 1
 # Attaques
 
 
-| DD (1D4) | Attaque     |                          |
+| DD 1D4 | Attaque     |                          |
 | -------- | ----------- | ------------------------ |
 | 2+       | dégât du dé |                          |
 | 4        | dégât du dé | +1 [[Bruts\|Dégât brut]] |
@@ -25,7 +25,7 @@ level: 1
 
 Il met sa tête en avant pour tenter de parer le coup.
 
-| 1D4 | Effet                  |
+| DD 1D4 | Effet                  |
 | --- | ---------------------- |
 | 1+  | Défend la valeur du dé |
 

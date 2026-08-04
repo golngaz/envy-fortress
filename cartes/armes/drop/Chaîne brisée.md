@@ -7,7 +7,7 @@ poids: 18
 
 Arme à allonge : on la fait tourner puis claquer. Médiocre en dégâts bruts, mais elle **entrave** — son vrai usage est de **clouer un ennemi sur place** plutôt que de l'abattre.
 
-| DD (1D6) | Dégâts       | Spécial                                                                 |
+| DD 1D6 | Dégâts       | Spécial                                                                 |
 | -------- | ------------ | ----------------------------------------------------------------------- |
 | 1+       | Valeur du dé |                                                                         |
 | 5+       | Valeur du dé | La cible est **entravée** jusqu'à la fin de son prochain tour           |

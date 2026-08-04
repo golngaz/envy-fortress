@@ -2,7 +2,7 @@
 PA: "1"
 joueur: visible
 ---
-**JdS(+INT)(DD12)** ^d136ef
+**JdS (DD12)(+INT)** ^d136ef
 
 En cas d'échec, le joueur se retrouve dans un lieu spécial lié à son lore, au hasard : ^464216
 

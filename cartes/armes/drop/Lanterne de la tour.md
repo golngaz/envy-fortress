@@ -7,7 +7,7 @@ poids: 11
 
 Arme médiocre en dégâts — on cogne avec le boîtier — mais au **passif défensif** rare : elle fait de son porteur un veilleur à son tour.
 
-| DD (1D4) | Dégâts       | Spécial |
+| DD 1D4 | Dégâts       | Spécial |
 | -------- | ------------ | ------- |
 | 1+       | Valeur du dé |         |
 

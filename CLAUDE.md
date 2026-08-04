@@ -105,7 +105,7 @@ quand tu renommes ou crées des notes.
 
 **Mise en forme** — callouts Obsidian (`> [!tip]`, `> [!abstract]`, `> [!info]`,
 `> [!danger]`) pour passifs et encadrés ; tableaux de résolution avec une colonne
-`DD (1D10)` (Degré de Difficulté) listant les effets par palier (`4+`, `8`, `10+`…).
+`DD 1D10` (Degré de Difficulté) listant les effets par palier (`4+`, `8`, `10+`…).
 
 **Fichiers `.base`** — bases de données Obsidian (vues tabulaires), pas du markdown.
 
@@ -115,6 +115,24 @@ quand tu renommes ou crées des notes.
 Sauvegarde · `DD` Degré de Difficulté · **Altération** = état symbolisé par un jeton ·
 **Phases de progression** (temps réel) vs **Phases de combat** (tour par tour) ·
 **Safe zone** (repos / changement d'équipement).
+
+**Vocabulaire imposé (ne pas dévier)** :
+- **Durée d'un jeton** : il **perd 1 tour** / **gagne 1 tour** (jamais « descend »,
+  « réduit », « décale d'un cran ») ; à 0 il **expire**. `case` reste réservé à la
+  **roue d'initiative**. **Retirer** un jeton = l'enlever **avant terme** ; **perdre
+  1 jeton** = en enlever un d'une pile (cumul). Piste : **P + 1→7 tours**, et un tour
+  est un tour **du porteur** (un rapide décompte deux fois par tour global).
+- **PV** : on en **perd** / on en **gagne** (jamais « descendent », « récupèrent »).
+- **Tables de combat** : en-tête `DD 1D6+1D4(+CTRL)` — dé(s) puis modificateur
+  facultatif entre parenthèses.
+- **Jets de sauvegarde** : `JdS 1D10(DD4)(+CON)` — dé facultatif (**1D20** par
+  défaut), DD facultatif (**DD10** par défaut), puis le modificateur. Les jets de
+  combat (sorts/attaques/défense) **ne sont pas des JdS**.
+- **Type de jet nommé → on ne détaille pas** : si le jet porte un nom, on écrit
+  **seulement le wikilink du jet** (`[[Jet de résistance (CON)]] (DD8)`, le DD
+  uniquement s'il n'est pas celui par défaut) — jamais `JdS (…)([[Jet …|+CON]])`.
+  La syntaxe `JdS …` ne sert qu'aux jets **sans type nommé**.
+- **Modificateur** : toujours **préfixé**, `+CON` / `+CTRL` (jamais `CON+`).
 
 ## Règle d'écriture — pages du livret
 > Ce livret est **aplati** (« flatifié ») en un seul document imprimable. Les pages listées ci-dessous doivent donc être **autonomes**, comme un vrai manuel — pas comme un wiki :
@@ -288,10 +306,11 @@ Le modèle complet est documenté en tête de `js/wheel.js` ; en résumé :
     encadré. Préréglages depuis `data/monstres.js`. **Autocomplétion d'import**
     (datalists `dl-sorts-armes` / `dl-defenses`) : taper un nom de sort/arme ajoute
     une attaque pré-remplie ; un nom de sort de défense remplit le bloc Défense.
-- **Jetons sur piste de durée** : colonnes **P (permanent) + 1→6 tours**. On pose
-  un jeton (palette `data/jetons.js`) à la durée voulue ; bouton **« −1 tour »**
-  pour décaler toute la piste (réduction **manuelle**, comme à la table). `max`
-  respecté, couleur + logo.
+- **Jetons sur piste de durée** : colonnes **P (permanent) + 1→7 tours**
+  (`Store.MAX_DUR`, les colonnes CSS s'adaptent toutes seules). On pose un jeton
+  (palette `data/jetons.js`) à la durée voulue ; bouton **« −1 tour »** pour faire
+  **perdre 1 tour** à toute la piste (décompte **manuel**, comme à la table) — les
+  jetons du slot 1 **expirent**. `max` respecté, couleur + logo.
 - Chaque fiche affiche le **déplacement par tour** décomposé en **cases + tours**
   (ex. 8 cases ⇒ « 2 cases + 1 tour »), via `Rules.derive` (cases = casesABS%6,
   tours = ⌊casesABS/6⌋).

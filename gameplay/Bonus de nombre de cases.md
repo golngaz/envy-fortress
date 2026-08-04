@@ -1,7 +1,7 @@
 ---
 joueur: visible
 ---
-Souvent désigné simplement par « cases », le **bonus de nombre de cases** apparaît sur la fiche personnage et dépend de la [[Vitesse (VIT)]]. Il est indépendant de l'**additionneur de VIT** (le modificateur), également présent sur la fiche, qui sert pour les jets ([[Jet de sauvegarde]]) ou pour ajouter un bonus à la VIT.
+Souvent désigné simplement par « cases », le **bonus de nombre de cases** apparaît sur la fiche personnage et dépend de la [[Vitesse (VIT)]]. Il est indépendant du **modificateur de Vitesse** (`+VIT`), également présent sur la fiche, qui sert pour les jets ([[Jet de sauvegarde]]) ou pour ajouter un bonus à la VIT.
 
 Il indique de **combien de cases** un pion avance sur la [[Système de Vitesse (Roue d’Initiative)|roue d'initiative]] à chaque [[tour global]].
 

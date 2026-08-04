@@ -52,6 +52,6 @@
 ## Ilyan
 [[Ilyan de la forêt ignorée|Ilyan]] vit au fond de la forêt. Il est le **fils** du roi [[campagne/combats/étage 1/Hector Sombreval (combat)|Hector Sombreval]] (exilé pour avoir douté en public) — il détient donc quantité d'informations que les joueurs peuvent lui soutirer avec les bons jets.
 
-Son lien de sang avec le roi est l'information qu'il partagera le plus difficilement : il faut de **très bons scores** et des questions directes — **JdS (INT+)** et **JdS (CTRL+)**.
+Son lien de sang avec le roi est l'information qu'il partagera le plus difficilement : il faut de **très bons scores** et des questions directes — **JdS (+INT)** et **JdS (+CTRL)**.
 
-Un **JdS (CTRL+)** permet aussi de percer ses silences sur l'Empire (failles de la cour, folie de l'Empereur).
+Un **JdS (+CTRL)** permet aussi de percer ses silences sur l'Empire (failles de la cour, folie de l'Empereur).

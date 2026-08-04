@@ -22,7 +22,7 @@ La lapin rouge aux yeux bleus sert d'exemple de fiche monstre que peut lire le M
 
 ## Coup de boule (FOR)
 
-| DD (1D20) | Attaque      | Attaque      | Effet          | Condition                            |
+| DD 1D20 | Attaque      | Attaque      | Effet          | Condition                            |
 | --------- | ------------ | ------------ | -------------- | ------------------------------------ |
 | 2+        | Dégâts du dé |              |                |                                      |
 | 15+       | Dégâts du dé | +5 dégâts    | Brule la cible |                                      |
@@ -38,7 +38,7 @@ La condition s'applique uniquement à l'effet dans ce cas précis.
 
 ## Feu Infernal
 
-| DD (1D4) | Effet       | Effet                        | [[Jet de sauvegarde\|JdS]]            |
+| DD 1D4 | Effet       | Effet                        | [[Jet de sauvegarde\|JdS]]            |
 | -------- | ----------- | ---------------------------- | ------------------------------------- |
 | 2+       | dégât du dé | Applique 2 [[Jeton Brûlure]] | [[Constitution (CON)\|CON]] DD10 +INT |
 
@@ -46,7 +46,7 @@ La condition s'applique uniquement à l'effet dans ce cas précis.
 
 ## Tu as osé
 
-| DD (1D4) | Dégât                    | Effet               | JdS                         |
+| DD 1D4 | Dégât                    | Effet               | JdS                         |
 | -------- | ------------------------ | ------------------- | --------------------------- |
 | 1+       | Inflige les dégâts du dé | Inflige une brûlure | [[Constitution (CON)\|CON]] |
 

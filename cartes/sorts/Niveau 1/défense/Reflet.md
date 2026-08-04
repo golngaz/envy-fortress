@@ -7,7 +7,7 @@
 
 
 
-| DD (1D10)(+CTRL) | Effet                                                                           | Important  | Effet      |
+| DD 1D10(+CTRL) | Effet                                                                           | Important  | Effet      |
 | ---------------- | ------------------------------------------------------------------------------- | ---------- | ---------- |
 | 5+               | Renvoie la moitié des dégâts en [[Bruts]] (Ne subit que la moitié des dégâts)   | Maximum 10 |            |
 | 10               | Renvoie la totalité des dégâts en [[Bruts]] (Ne subit que la moitié des dégâts) | Maximum 10 | Gagne 3 PA |

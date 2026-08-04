@@ -17,7 +17,7 @@ Dans le **[[Le Jardin des Silencieux|labyrinthe végétal]]** qui encercle l'ég
 - **3 à 4 × [[Ombre fuyante]]** (à ajuster au groupe).
 
 Rappels utiles :
-- Passif **Regard déclencheur** : au début du tour d'une ombre, le dernier PJ à l'avoir frappée fait un **JdS (VOL+)** ou subit une attaque bonus.
+- Passif **Regard déclencheur** : au début du tour d'une ombre, le dernier PJ à l'avoir frappée fait un **JdS (+VOL)** ou subit une attaque bonus.
 - Attaque **Saisissement** (1D4).
 
 # Loots spéciaux

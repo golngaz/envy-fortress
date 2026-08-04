@@ -28,7 +28,7 @@
 
 ## C. La diseuse de bonne aventure
 - **Ce qu'on y fait** : [[Jet de détermination (VOL)]] pour résister à sa parole ; elle flatte (*« un grand destin, un cœur si brave »*) et **incite à rester** « le temps que les astres tournent ».
-- **Indice caché** : un **JdS (CTRL+)** réussi la prend en défaut — elle **ne cligne jamais des yeux**, sa peau est **tiède comme de la viande**, et elle « lit » à tous **exactement le même avenir glorieux**. Elle redoute une seule question : *« où sont passés ceux d'avant ? »* — et **change de sujet** trop vite.
+- **Indice caché** : un **JdS (+CTRL)** réussi la prend en défaut — elle **ne cligne jamais des yeux**, sa peau est **tiède comme de la viande**, et elle « lit » à tous **exactement le même avenir glorieux**. Elle redoute une seule question : *« où sont passés ceux d'avant ? »* — et **change de sujet** trop vite.
 
 ## D. Le manège tracté (chevaux de bois, roue tournée à bras)
 - **Ce qu'on y fait** : un tour grisant ; sensation d'ivresse douce, perte de la notion du temps.
@@ -36,7 +36,7 @@
 
 ## E. Le grand banquet (la table d'honneur)
 - **Ce qu'on y fait** : nourriture et vin à volonté, **gratuits**. Mange-t-on assez, on s'assoupit, repu et heureux.
-- **Indice caché** : la nourriture **n'a aucun goût de faim rassasiée** — on mange et on a **encore plus faim** (digestion inversée : c'est *vous* qu'on prépare). **Sous** la grande tente du banquet bat le **Cœur de fête** (le seul point vital du monstre) — repérable par un **JdS (CTRL+)** très dur, ou en y revenant une fois la vérité connue.
+- **Indice caché** : la nourriture **n'a aucun goût de faim rassasiée** — on mange et on a **encore plus faim** (digestion inversée : c'est *vous* qu'on prépare). **Sous** la grande tente du banquet bat le **Cœur de fête** (le seul point vital du monstre) — repérable par un **JdS (+CTRL)** très dur, ou en y revenant une fois la vérité connue.
 
 > [!example] Récapitulatif des indices (compteur MJ)
 > Tient le **compteur de curiosité**. Indices majeurs disponibles :
@@ -76,7 +76,7 @@ Les révolutionnaires qui accompagnent les PJ ; ils servent d'**indicateur émot
 
 # 4. Vaincre — renvoi au combat
 
-Le combat est un **puzzle** : sa **défense** (*La fête continue* : 1 [[Jeton Bénédiction]] + 1 [[Jeton Bouclier]] + petit soin par tour) le fait paraître intuable, même si ses **PV descendent**. La clé : **faire frapper les victimes charmées par les alliés** (de préférence un **petit sort de dégâts**, dont les PNJ de l'escorte) pour **éteindre les 5 attractions**, **dénuder le Cœur de fête** et **faire tomber la défense** — tout en **frappant les [[Rieur|Rieurs]]** pour retarder la **mâchoire** qui se referme (jeton-mâchoire). Détail complet, boucle et conseils : **[[campagne/combats/étage 1/Le village en fête (combat)|Le village en fête (combat)]]**.
+Le combat est un **puzzle** : sa **défense** (*La fête continue* : 1 [[Jeton Bénédiction]] + 1 [[Jeton Bouclier]] + petit soin par tour) le fait paraître intuable, même s'il **perd bien des `PV`**. La clé : **faire frapper les victimes charmées par les alliés** (de préférence un **petit sort de dégâts**, dont les PNJ de l'escorte) pour **éteindre les 5 attractions**, **dénuder le Cœur de fête** et **faire tomber la défense** — tout en **frappant les [[Rieur|Rieurs]]** pour retarder la **mâchoire** qui se referme (jeton-mâchoire). Détail complet, boucle et conseils : **[[campagne/combats/étage 1/Le village en fête (combat)|Le village en fête (combat)]]**.
 
 # 5. Récompenses & suites
 - Le **fragment digéré** (point d'ancrage) trouvé dans le Cœur — précieux si près du front (cf. crochet [[Les rebelles de la forêt|Le sanctuaire endormi]]).

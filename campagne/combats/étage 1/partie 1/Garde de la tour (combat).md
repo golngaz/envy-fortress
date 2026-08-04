@@ -16,11 +16,11 @@ difficulty: 3
 2. Tant que sa **lanterne brûle**, il **regagne 3 jetons au début de son tour** (max 10). Mais sa lenteur (`VIT -3`) fait qu'il **rejoue rarement** : entre deux de ses tours, le groupe agit plusieurs fois.
 3. **Deux voies pour ouvrir la fenêtre :**
    - **Éteindre la lanterne** (la vraie solution) — l'asperger, l'arracher, la briser : un [[Jet de réflexe (VIT)]] ou [[Jet de puissance (FOR)]] au contact. Lanterne éteinte = **plus aucun jeton ne se régénère**.
-   - **Le noyer sous les attaques** — chaque PJ qui frappe retire un jeton. À plusieurs, on en retire **plus de 3 par ronde** : ses réserves fondent plus vite qu'il ne les recharge.
+   - **Le noyer sous les attaques** — chaque PJ qui frappe lui fait perdre un jeton. À plusieurs, il en perd **plus de 3 par ronde** : ses réserves fondent plus vite qu'il ne les recharge.
 4. **Jetons à 0** → il n'a plus que sa défense de base : son gros `CON 12` tombe vite. **Concentrez les dégâts** dans cette fenêtre avant son prochain tour.
 
 > [!note] Conseils MJ
-> - Un seul gros frappeur qui tape en boucle est **le piège** : il gaspille ses coups sur des jetons (4+ les réduit de moitié). Mieux vaut **des attaques nombreuses** (effeuiller les jetons) ou **viser la lanterne**.
+> - Un seul gros frappeur qui tape en boucle est **le piège** : il gaspille ses coups sur des jetons (sur 4+, le jeton annule la moitié des dégâts). Mieux vaut **des attaques nombreuses** (effeuiller les jetons) ou **viser la lanterne**.
 > - Les **AOE** ne provoquent pas de défense (cf. [[Combat]]) — mais ici la défense vient des jetons, à voir comment tu tranches : je suggère qu'une AOE **ne consomme pas** de jeton (donc ne les vide pas) — d'où l'intérêt d'**éteindre la lanterne** plutôt que de tout brûler à l'aveugle.
 
 # Drop

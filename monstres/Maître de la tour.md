@@ -22,14 +22,14 @@ Une figure droite et silencieuse, drapée d'ombres mouvantes qui ne le quittent 
 
 Choix de l'attaque (1D4 en [[Mode normal]], MJ en [[Mode difficile]]) — mais **s'il ne lui reste aucune ombre, il privilégie Rappel des ombres** pour se re-voiler.
 
-| DD (1D4) |                          |
+| DD 1D4 |                          |
 | -------- | ------------------------ |
 | 1        | [[#Rappel des ombres]]   |
 | 2+       | [[#Frappe du maître]]    |
 
 ## Frappe du maître (FOR)
 
-| DD (1D4) | Attaque     |                          |
+| DD 1D4 | Attaque     |                          |
 | -------- | ----------- | ------------------------ |
 | 2+       | dégât du dé |                          |
 | 4+       | dégât du dé | +2 [[Bruts\|dégâts bruts]] |
@@ -42,7 +42,7 @@ Invoque immédiatement **2 [[Ombre de la tour|ombres]]** (**4 max** sur le terra
 
 ## Manteau d'ombre
 
-| DD (1D4) | Effet                                |
+| DD 1D4 | Effet                                |
 | -------- | ------------------------------------ |
 | 3+       | Réduit les dégâts de moitié           |
 

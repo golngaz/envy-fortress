@@ -21,7 +21,7 @@ Sert :
 3. **Rompre la formation** (la solution) :
    - **Abattre ou humilier le Sergent** (le faire chuter, le toucher dans le dos via contournement, briser sa parade, le ridiculiser : [[Jet de manipulation (CTRL)]] / [[Jet de réflexe (VIT)]]) ;
    - ou **séparer les gardes** : terrain, [[Chaîne brisée|entrave/traction]] pour casser l'adjacence, AOE qui les disperse.
-4. **Formation rompue** → les gardes perdent leurs bonus et font un **JdS (VOL+)** ; échec = ils **paniquent** (orgueil brisé : perte d'action ou repli). On nettoie alors sans peine.
+4. **Formation rompue** → les gardes perdent leurs bonus et font un **JdS (+VOL)** ; échec = ils **paniquent** (orgueil brisé : perte d'action ou repli). On nettoie alors sans peine.
 
 > [!note] Difficulté
 > À caler entre les [[Lapin soldat|Lapins soldats]] (1) et le [[monstres/Le Soldat Bleu|Soldat Bleu]]. Plus de gardes = formation plus dure à rompre par simple attrition → pousse encore plus vers la stratégie « viser le Sergent ».
