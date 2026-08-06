@@ -28,7 +28,7 @@ Au début du tour, il a une apparence de géant, mais vulnérable, il possède a
 
 # Attaques
 
-| DD (1D20) | Attaque           |
+| DD 1D20 | Attaque           |
 | --------- | ----------------- |
 | 1-17      | Attaque de base   |
 | 18+       | ![[Bannissement du soldat bleu#^d136ef]]![[Bannissement du soldat bleu#^464216]] |

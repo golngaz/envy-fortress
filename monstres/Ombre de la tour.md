@@ -17,7 +17,7 @@ Une silhouette d'encre qui glisse le long des colonnes, sans visage, sans poids.
 
 ## Caresse d'ombre
 
-| DD (1D4) | Attaque     |                          |
+| DD 1D4 | Attaque     |                          |
 | -------- | ----------- | ------------------------ |
 | 2+       | dégât du dé |                          |
 | 4+       | dégât du dé | +1 [[Bruts\|dégât brut]] |
@@ -26,7 +26,7 @@ Une silhouette d'encre qui glisse le long des colonnes, sans visage, sans poids.
 
 ## Insaisissable
 
-| DD (1D4) | Effet                                            |
+| DD 1D4 | Effet                                            |
 | -------- | ------------------------------------------------ |
 | 4+       | Corps d'ombre : **annule** les dégâts (esquive)  |
 

@@ -29,7 +29,7 @@ Heaumes dorés, armures trop astiquées pour la nuit. Ils avancent en formation 
 
 ## Lance en parade (FOR)
 
-| DD (1D4) | Attaque     |                          |
+| DD 1D4 | Attaque     |                          |
 | -------- | ----------- | ------------------------ |
 | 2+       | dégât du dé |                          |
 | 4+       | dégât du dé | +1 [[Bruts\|dégât brut]] |
@@ -38,7 +38,7 @@ Heaumes dorés, armures trop astiquées pour la nuit. Ils avancent en formation 
 
 ## Bouclier doré
 
-| DD (1D4) | Effet                                             |
+| DD 1D4 | Effet                                             |
 | -------- | ------------------------------------------------- |
 | 4+       | Réduit les dégâts de moitié (esquive du bouclier) |
 
@@ -62,6 +62,6 @@ Heaumes dorés, armures trop astiquées pour la nuit. Ils avancent en formation 
 > [!danger] Formation rompue
 > Dès que le Sergent **tombe**, est **Humilié**, **ou** qu'il ne reste plus 2 gardes adjacents → la *Formation dorée* s'effondre :
 > - les gardes **perdent** réduction de front et bonus brut ;
-> - chaque garde fait un **JdS [[Jet de détermination (VOL)\|(VOL+)]]** : sur un échec, l'orgueil brisé le fait **paniquer** (il perd son action, ou recule d'une case sans attaquer).
+> - chaque garde fait un **[[Jet de détermination (VOL)]]** : sur un échec, l'orgueil brisé le fait **paniquer** (il perd son action, ou recule d'une case sans attaquer).
 
 Drop du Sergent : **12 pièces de bronze** + (au gré du MJ) un fanion ou un insigne doré revendable.

@@ -9,7 +9,7 @@
 ## 1. Arrivée — l'église autour du monolithe
 → [[église & labyrinthe]]
 - Sortie du monolithe-ascenseur, **dans** l'église qui l'enserre.
-- [[L'architecte]], la personne **qui en sait trop**.
+- [[L'architecte]], la personne **qui en sait trop**. Une fois la confiance gagnée (après les vitraux) : sa **question** « *Qu'allez-vous faire, maintenant ?* » — diagnostic des envies du groupe + carotte de la descente (répliques dans sa fiche).
 - Arrivée de la fille inconnue : [[La petite fille|Dulcina]], qui les a suivis.
 - **Ancrage** du premier [[Fragment du monolithe|fragment]] (point de résurrection — cf. nouveau système de mort).
 
@@ -52,6 +52,6 @@
 ## Ilyan
 [[Ilyan de la forêt ignorée|Ilyan]] vit au fond de la forêt. Il est le **fils** du roi [[campagne/combats/étage 1/Hector Sombreval (combat)|Hector Sombreval]] (exilé pour avoir douté en public) — il détient donc quantité d'informations que les joueurs peuvent lui soutirer avec les bons jets.
 
-Son lien de sang avec le roi est l'information qu'il partagera le plus difficilement : il faut de **très bons scores** et des questions directes — **JdS (INT+)** et **JdS (CTRL+)**.
+Son lien de sang avec le roi est l'information qu'il partagera le plus difficilement : il faut de **très bons scores** et des questions directes — **JdS (+INT)** et **JdS (+CTRL)**.
 
-Un **JdS (CTRL+)** permet aussi de percer ses silences sur l'Empire (failles de la cour, folie de l'Empereur).
+Un **JdS (+CTRL)** permet aussi de percer ses silences sur l'Empire (failles de la cour, folie de l'Empereur).

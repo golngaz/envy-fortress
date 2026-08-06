@@ -9,8 +9,8 @@ Posé par [[La Réjouissance]] (et son attaque [[La Réjouissance#Berceuse|Berce
 - À **2 jetons** (max), la cible **s'endort** : hors-jeu, en cours de digestion, jusqu'à réveil.
 
 > [!info] Briser le charme
-> On **réveille** une cible charmée en la **faisant frapper par un allié** : chaque coup lui retire **1 jeton Charme** (pas d'action spéciale, c'est une attaque). Sans charme, elle se réveille et l'**attraction liée s'éteint**.
+> On **réveille** une cible charmée en la **faisant frapper par un allié** : chaque coup lui fait **perdre 1 jeton Charme** (pas d'action spéciale, c'est une attaque). Sans charme, elle se réveille et l'**attraction liée s'éteint**.
 
-|        | Effet            |
-| ------ | ---------------- |
-| Un allié la frappe | Retire 1 jeton (à 0, réveil → l'attraction liée s'éteint) |
+| Condition          | Effet                                                            |
+| ------------------ | ---------------------------------------------------------------- |
+| Un allié la frappe | **Perd 1 jeton** (à 0, réveil → l'attraction liée s'éteint) |

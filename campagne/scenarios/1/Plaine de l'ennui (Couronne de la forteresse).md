@@ -3,9 +3,7 @@
 > Devant vous s’étend une immensément grande plaine, un océan d’herbes vertes qui semble s’étirer à perte de vue.
 > Le ciel au-dessus est d’un bleu éclatant, toujours baigné d’une lumière immuable.  
 > Le silence est total : pas de vent, pas d’oiseaux, aucun mouvement. Tout semble figé, artificiel, comme une peinture vivante.  
-> 
-> Et pourtant, malgré cette uniformité, vos yeux finissent toujours par accrocher **un gigantesque monolithe bleu-noir**, haut d’une dizaine de mètres.  
-> Lisse, sans fissure, il est orné d’un unique œil monochromatique, froid, immobile… mais qui donne l’impression d’observer chacun de vos gestes.
+
 
 
 Ronde pourtant délimité par une fin, le vide. Le tout est arrondis. Les joueurs peuvent aller explorer le bord s'il décident de ne pas aller immédiatement au monolithe
@@ -28,4 +26,4 @@ Si jamais les joueurs traînent trop :
 > 
 > L’herbe verdoyante commence à jaunir par endroits, comme si le monde lui-même se desséchait sous vos yeux. 
 
-"Vous prenez tous un jeton [[Jeton Température]]" et l'on passe en tour par tour
+"Vous prenez tous un jeton [[Jeton Température|Température (2)]]" et l'on passe en tour par tour

@@ -30,7 +30,7 @@ Au premier coup d'œil, une cible **dérisoire** : une silhouette maigre en cost
 
 Une chiquenaude méprisante, presque pour rire — tant qu'il s'amuse encore d'eux.
 
-| DD (1D10) | Effet                                                  |
+| DD 1D10 | Effet                                                  |
 | --------- | ------------------------------------------------------ |
 | 1+        | 1 dégât, applique 1 [[Jeton menacé]] à la cible        |
 | 8+        | Applique en plus 1 [[Jeton Exposé]]                     |
@@ -39,16 +39,16 @@ Une chiquenaude méprisante, presque pour rire — tant qu'il s'amuse encore d'e
 
 S'il décide que le spectacle a assez duré — ou si un PJ **tente de se concentrer**.
 
-| DD (1D10) | Effet                                                                 |
+| DD 1D10 | Effet                                                                 |
 | --------- | --------------------------------------------------------------------- |
-| 1+        | Inflige des dégâts égaux aux **PV max** de la cible — **JdS [[Jet de détermination (VOL)\|VOL]] DD10 +INT** pour n'en subir que la moitié |
+| 1+        | Inflige des dégâts égaux aux **PV max** de la cible — **[[Jet de détermination (VOL)]]** pour n'en subir que la moitié |
 | 10+       | Aucun JdS possible : la cible tombe à **0 PV**                         |
 
 # Défense
 
 ## « On ne touche pas l'artiste »
 
-| DD (1D10) | Effet                                                                   |
+| DD 1D10 | Effet                                                                   |
 | --------- | ----------------------------------------------------------------------- |
 | 1+        | Annule l'attaque ; déclenche **Représailles de scène** sur l'assaillant |
 

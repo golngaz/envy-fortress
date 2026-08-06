@@ -7,7 +7,7 @@
 window.Store = (function () {
   const KEY = "fdle-simu-v1";
   const LIBKEY = "fdle-simu-lib-v1";
-  const MAX_DUR = 6;
+  const MAX_DUR = 7;   // piste de durée : 1..7 tours (+ la case Permanent)
   let state = { combatants: [], turn: 1, activeIdx: 0, log: [], resolution: null, chooser: null };
   let lib = { items: [] };
   const listeners = [];
@@ -140,7 +140,7 @@ window.Store = (function () {
     save();
   }
 
-  /** Réduit toute la piste d'un tour (slot d -> d-1 ; slot 1 expire). */
+  /** Fait perdre 1 tour à toute la piste (slot d -> d-1 ; le slot 1 expire). */
   function shiftTokens(id) {
     const c = find(id); if (!c) return;
     const t = c.tokensTrack || {}, nt = {};

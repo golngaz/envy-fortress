@@ -25,7 +25,7 @@ Sur un [[Jet d'observation (INT)]] sur l'autel, il y avait, avant, une statue au
 > [!tip] Narration (première vision)
 > Un vieil homme se tient sur le pas de la porte. Mains larges et abîmées de bâtisseur, dos voûté, regard méfiant qui jauge chacun de vos gestes avant même votre premier mot.
 
-**Génos**, un vieil homme, est appuyé près du portail ; il les regarde sortir du monolithe comme on regarde un mauvais présage. *(Il ne donne son nom qu'une fois en confiance.)*. Il **en sait beaucoup trop** : la vraie nature des lieux (une machine), le rôle des fragments. C'est la **première vraie source d'info** de l'étage. Fiche complète et répliques : [[L'architecte]].
+**Génos**, un vieil homme, est appuyé près du portail ; il les regarde sortir du monolithe comme on regarde un mauvais présage. *(Il ne donne son nom qu'une fois en confiance.)*. Il **en sait beaucoup trop** : la vraie nature des lieux (secret MJ — voir [[La Forteresse de l'envie]], à ne **jamais** énoncer aux joueurs), le rôle des fragments. C'est la **première vraie source d'info** de l'étage. Fiche complète et répliques : [[L'architecte]].
 
 > [!quote] Premier contact (méfiant)
 > « Tiens. Encore quelqu'un qui sort de la pierre. Vous n'êtes pas d'ici — personne d'ici n'ose plus approcher le monolithe. Je pense savoir d'où vous venez. »

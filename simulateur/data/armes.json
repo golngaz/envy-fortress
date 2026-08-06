@@ -8,7 +8,7 @@
     "image": "",
     "flavor": "Une lame basique, marquée par le temps. Rien d'exceptionnel, mais fiable.",
     "table": {
-      "entetes": ["DD (1D6)", "Dégâts", "Spécial"],
+      "entetes": ["DD 1D6", "Dégâts", "Spécial"],
       "lignes": [["1+", "Valeur du dé (+FOR)", "—"]]
     }
   },
@@ -21,7 +21,7 @@
     "image": "",
     "flavor": "Bâton étrange que je possédais déjà lors de mon arrivée dans ce monde.",
     "table": {
-      "entetes": ["DD (1D4)", "Dégâts", "Spécial"],
+      "entetes": ["DD 1D4", "Dégâts", "Spécial"],
       "lignes": [["1+", "Valeur du dé", "+INT en dégât supplémentaire"]]
     }
   },
@@ -34,7 +34,7 @@
     "image": "",
     "flavor": "Lame noire et tranchante. Fragile, mais redoutable entre de bonnes mains.",
     "table": {
-      "entetes": ["DD (1D4)(+VIT)", "Dégâts", "Spécial"],
+      "entetes": ["DD 1D4(+VIT)", "Dégâts", "Spécial"],
       "lignes": [
         ["2", "Valeur du dé", "—"],
         ["3+", "Valeur du dé", "+2 dégâts"],
@@ -52,7 +52,7 @@
     "image": "",
     "flavor": "Une arme fine parcourue de légères pulsations. Elle émet un bourdonnement discret quand on la saisit.",
     "table": {
-      "entetes": ["DD (1D4)", "Dégâts", "Spécial", "Spécial 2"],
+      "entetes": ["DD 1D4", "Dégâts", "Spécial", "Spécial 2"],
       "lignes": [
         ["1+", "Valeur du dé", "Ignore la réduction de dégât éventuelle", "—"],
         ["2+", "Valeur du dé (+FOR)", "Ignore la réduction de dégât éventuelle", "Ignore la défense ennemie"]

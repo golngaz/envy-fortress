@@ -26,6 +26,12 @@
       $("#view-" + t.dataset.view).classList.add("active");
       if (t.dataset.view === "cartes") renderCartes();
     }));
+
+    // deep-link : ouvrir directement un onglet via l'URL (ex. index.html#outils)
+    const vueDemandee = location.hash.replace("#", "");
+    const ongletDemande = $(`.tab[data-view="${vueDemandee}"]`);
+
+    if (ongletDemande) ongletDemande.click();
   }
 
   /* =================================================================== HELPERS */
@@ -75,7 +81,7 @@
       <div class="cbt-tokens">
         <div class="tok-track-head">
           <span class="tok-label">Jetons par durée</span>
-          <button class="tok-shift" data-id="${c.id}" title="Réduire toute la piste d'un tour">⬇️ −1 tour</button>
+          <button class="tok-shift" data-id="${c.id}" title="Chaque jeton perd 1 tour (ceux à 0 expirent)">⬇️ −1 tour</button>
         </div>
         <div class="dur-track">${cols}</div>
         <div class="tok-addline">

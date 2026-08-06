@@ -19,8 +19,8 @@
 | **« Ozymandias » (Shelley) + Tour de Babel** | *« Look on my Works, ye Mighty, and despair! »* — un colosse brisé au milieu du désert, la gloire qui survit à l'empire mort. Babel = bâtir jusqu'au ciel par orgueil, châtié. | Cœur thématique du **Palais d'Icare** (§2) : monument **inachevé** qui se fissure, chantier abandonné, inscriptions vantardes à moitié effacées. |
 | **Shadow of the Colossus** | Abattre des **colosses de pierre** monumentaux ; mélancolie de détruire quelque chose de beau ; une malédiction-machine derrière le mythe. | Modèle du combat **Le Colosse inachevé** (§3) et du registre émotionnel de [[Le Soldat Bleu]] : tuer un monument n'est pas une victoire joyeuse. |
 | **Hollow Knight** | Royaume **figé dans sa gloire fanée**, Cité des Larmes, statues de héros, un roi disparu. Grandeur morte qui pleut sur elle-même. | Esthétique de **La cour figée** (§2) : nobles pétrifiés en pleine révérence, splendeur arrêtée nette. |
-| **Dark Souls / Elden Ring** | Feux de camp / sites de grâce = **points de résurrection** ; rois orgueilleux (Gwyn, Godfrey) ; un **cycle-machine** se cache derrière le mythe religieux. | Conforte le respawn-[[Fragment du monolithe]] et l'archétype boss-roi d'[[Hector Sombreval]]. Le « feu » qu'on relie = la machine. |
-| **Le Magicien d'Oz** | *« Ne faites pas attention à l'homme derrière le rideau »* — le tout-puissant est un imposteur projetant une image. | Écho direct au [[Le bouffon]] (*« le rideau ne tombe jamais »*) et au Magicien-machine. L'Orgueil = théâtre, et quelqu'un tient les cordes. |
+| **Dark Souls / Elden Ring** | Feux de camp / sites de grâce = **points de résurrection** ; rois orgueilleux (Gwyn, Godfrey) ; un **cycle-machine** se cache derrière le mythe religieux. | Conforte le respawn-[[Fragment du monolithe]] et l'archétype boss-roi d'[[Hector Sombreval]]. Le « feu » qu'on relie = la simulation. |
+| **Le Magicien d'Oz** | *« Ne faites pas attention à l'homme derrière le rideau »* — le tout-puissant est un imposteur projetant une image. | Écho direct au [[Le bouffon]] (*« le rideau ne tombe jamais »*) et au Magicien derrière sa simulation. L'Orgueil = théâtre, et quelqu'un tient les cordes. |
 | **Le Faune (*Pan's Labyrinth*) — l'Homme Pâle + *Le Voyage de Chihiro*** | Le **banquet qu'il ne faut surtout pas toucher** ; les parents changés en porcs au festin ; manger = se perdre. | Renforce déjà [[Le village en fête]] / La Réjouissance : la fête est une bouche. Sert de référence pour doser l'horreur du piège. |
 | **NieR (Automata/Replicant) + SOMA** | Êtres **simulés qui doutent d'être « réels »** ; conscience-copie ; *suis-je l'original ou la reproduction ?* | Branche directe sur la torture de Miguel ([[Dérivés, Passants et Absolus]], [[La Souche]]). Sert les **indices de lore** semés sur l'étage (§5). |
 | **Miroir du Riséd (*Harry Potter*) + Narcisse + Miroir de Blanche-Neige** | Le miroir qui montre le **désir le plus profond** / le moi idéalisé / *« qui est la plus belle »*. On s'y perd à se contempler. | Socle de **La Galerie des Glaces** (§2) et de **La tentation de gloire** (§4). Rappel : Ilyan dit qu'*on perce l'orgueil avec un miroir*. |
@@ -146,7 +146,7 @@ comme levier contre l'Empire ?
 ### Le culte redirigé
 Pour obtenir l'aide de **Génos** ou créer la brèche vers Hector, il faut peut-être **humilier
 publiquement le faux culte d'Hector** ([[Le clergé du monolithe]]). Mais briser cette idole, c'est
-**briser la foi de gens ordinaires** qui n'ont que ça. La vérité (une machine) console-t-elle ?
+**briser la foi de gens ordinaires** qui n'ont que ça. La vérité (une simulation) console-t-elle ?
 
 ---
 
@@ -165,4 +165,4 @@ publiquement le faux culte d'Hector** ([[Le clergé du monolithe]]). Mais briser
 - **Les fragments volés du [[Le bouffon|Bouffon]]** = points de sauvegarde → *foreshadow* du
   respawn (Hyperion / Dark Souls), confirmé brutalement par la mort tutorielle face à lui.
 - **Inscriptions en [[L'alphabet du monolithe]]** gravées sur les socles des monuments : sous la
-  vantardise impériale, des mots déchiffrables liés à **Shell Access** / au cœur de la machine.
+  vantardise impériale, des mots déchiffrables liés à **Shell Access** / au cœur de la simulation.

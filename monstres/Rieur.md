@@ -21,7 +21,7 @@ Petite **excroissance** de [[La Réjouissance]] : un **masque de carnaval grima�
 ## Grimace élastique
 Le masque caoutchouteux se distend parfois et le coup glisse dessus.
 
-| DD (1D6) +CTRL | Effet                                                        |
+| DD 1D6(+CTRL) | Effet                                                        |
 | -------------- | ------------------------------------------------------------ |
 | 1-5            | Le masque **éclate** : le Rieur est **détruit** (déclenche *Nerf à vif*). |
 | 6+             | Le coup **glisse** : le Rieur **survit** ce tour-ci (réessayer). |

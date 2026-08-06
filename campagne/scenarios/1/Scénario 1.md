@@ -10,7 +10,7 @@ Les joueurs n'apparaissent pas ensemble. Chacun reprend conscience **seul**, à 
 
 ![[Plaine de l'ennui (Couronne de la forteresse)]]
 
-> [!tip] Placement des joueurs (MJ)
+> [!info] Placement des joueurs (MJ)
 > Dispose-les loin les uns des autres. **Place-en au moins un près du bord** de la plaine, là où l'herbe s'arrête sur le gouffre : c'est lui qui tombera le plus facilement sur le premier squelette. Les autres errent vers le centre, attirés par le monolithe.
 
 # Trouver son amulette (le choix de classe)
@@ -18,7 +18,7 @@ Les joueurs n'apparaissent pas ensemble. Chacun reprend conscience **seul**, à 
 Il n'y a plus de voix pour leur attribuer une classe. À la place, la plaine est **jonchée de squelettes** : les soldats de [[L'assaut de la Couronne|l'assaut d'Hector]], morts ici en l'an 1058, que rien ne fait pourrir sur la Couronne. Chacun serre encore une **[[Amulette noire|amulette noire]]**.
 
 > [!tip] Narration — un squelette dans l'herbe
-> Quelque chose accroche votre pied. En écartant les hautes herbes, vous découvrez des ossements blanchis, à demi enfoncés dans la terre figée — un casque cabossé, une cage thoracique brisée. Entre les doigts crispés du mort luit un petit objet d'un noir profond, froid : une pierre taillée, à peine plus grosse qu'une pièce, qui semble **avaler** la lumière du faux soleil.
+> Quelque chose accroche votre pied. En écartant les hautes herbes, vous découvrez des ossements blanchis, à demi enfoncés dans la terre figée — un casque cabossé, une cage thoracique brisée. Entre les doigts crispés du mort luit un petit objet d'un noir profond, froid : une pierre taillée, à peine plus grosse qu'une pièce.
 
 Chaque joueur doit trouver **son** squelette et **son** amulette. Au contact, l'amulette se fond en lui : elle **disparaît**, et il **devient** une classe. Au même instant, le monolithe le *reconnaît* — il pourra désormais en franchir le seuil.
 
@@ -32,7 +32,7 @@ Chaque joueur doit trouver **son** squelette et **son** amulette. Au contact, l'
 > - **[[Mage]]** — « Le monde ralentit d'un battement. Le brouillard qui encombrait votre esprit se dissipe ; tout vous paraît soudain ordonné, prévisible, à portée de main — comme si vous saviez ce qui va arriver une fraction de seconde avant les autres. »
 > - **[[Dueliste]]** — « Une légèreté grisante vous gagne, comme si le sol vous lâchait sans vous faire tomber. Votre cœur s'emballe, vos pieds réclament déjà la course ; il vous semble que le vent, absent de cette plaine figée, s'est réfugié dans vos jambes. »
 > - **[[Architecte]]** — « L'espace d'un instant, le monde se fendille. Sous l'herbe, sous le ciel, vous devinez des lignes, des armatures, une trame invisible qui tient tout en place — et l'intuition vertigineuse que ces lignes pourraient être déplacées. »
-> - **[[Scélérat]]** — « Une ombre se love au creux de votre ventre, basse et patiente. Vos yeux trouvent d'instinct les angles morts, les dos offerts, l'instant précis où l'autre cligne des yeux. Quelque chose en vous vient d'apprendre à attendre. »
+> - **[[Scélérat]]** — « Un froid doux vous coule dans les veines, presque agréable. Votre cœur ralentit, se fait discret, comme s'il apprenait à se taire — et le silence de la plaine, soudain, ne vous semble plus un vide mais un complice. Au fond de vous naît un plaisir trouble, inavouable : celui d'en savoir plus qu'on ne vous en croit. »
 
 # Explorer la plaine
 

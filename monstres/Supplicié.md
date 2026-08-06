@@ -19,7 +19,7 @@ Maigre, le regard fixe, une **plaie en hélice** mal cicatrisée sur le sternum.
 
 Il se lacère et presse les PJ de l'imiter. Il ne cherche pas à blesser autrui.
 
-| DD (1D10) | Effet                                                              |
+| DD 1D10 | Effet                                                              |
 | --------- | ------------------------------------------------------------------ |
 | 1+        | Aucun dégât. Applique 1 [[Jeton menacé]] à un PJ (l'horreur de la scène) |
 
@@ -27,7 +27,7 @@ Il se lacère et presse les PJ de l'imiter. Il ne cherche pas à blesser autrui.
 
 ## « Encore »
 
-| DD (1D10) | Effet                                                                    |
+| DD 1D10 | Effet                                                                    |
 | --------- | ------------------------------------------------------------------------ |
 | 1+        | Il **n'esquive pas** : il accueille le coup, aucune réduction (la douleur l'apaise) |
 

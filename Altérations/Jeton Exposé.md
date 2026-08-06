@@ -6,4 +6,4 @@ max: 1
 ---
 
 Le personnage ciblé par une attaque ne peut pas se défendre s'il possède un **jeton exposé**. 
-Il descend le jeton d'un cran après chaque attaque reçue.
+Le jeton **perd 1 tour** après chaque attaque reçue (à 0, il **expire**).

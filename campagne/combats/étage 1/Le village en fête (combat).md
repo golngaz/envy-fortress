@@ -3,10 +3,10 @@ difficulty: 5
 ---
 
 > [!abstract] Solution express (MJ) — à lire en premier
-> Le boss a une **défense qui le fait paraître « intuable »** (*La fête continue* : il se couvre d'**1 [[Jeton Bénédiction]] + 1 [[Jeton Bouclier]]** et **se soigne un peu** chaque tour). On **ne brute-force pas**. Ses **5 attractions** sont chacune tenues par une **victime charmée** : faites vos **alliés frapper ces victimes** (idéalement un **petit sort de dégâts**) pour les **réveiller** et **éteindre** les attractions. Les 5 éteintes → le **Cœur de fête** se **dénude** et **la défense tombe** → on l'achève à PV nus. Pendant ce temps, **frappez les [[Rieur|Rieurs]]** pour faire **reculer le jeton-mâchoire** (timer) avant qu'il n'atteigne 0 et que la gueule ne claque.
+> Le boss a une **défense qui le fait paraître « intuable »** (*La fête continue* : il se couvre d'**1 [[Jeton Bénédiction]] + 1 [[Jeton Bouclier]]** et **se soigne un peu** chaque tour). On **ne brute-force pas**. Ses **5 attractions** sont chacune tenues par une **victime charmée** : faites vos **alliés frapper ces victimes** (idéalement un **petit sort de dégâts**) pour les **réveiller** et **éteindre** les attractions. Les 5 éteintes → le **Cœur de fête** se **dénude** et **la défense tombe** → on l'achève à PV nus. Pendant ce temps, **frappez les [[Rieur|Rieurs]]** pour faire **faire gagner 1 tour au jeton-mâchoire** (timer) avant qu'il n'atteigne 0 et que la gueule ne claque.
 
 > [!warning] Lecture MJ — la fête EST le monstre
-> Boss-puzzle de l'étape [[Le village en fête]] (Scénario 2). Le campement de plaisirs **la Belle Veillée** est en réalité un seul organisme : [[La Réjouissance]]. Sa défense (*[[La Réjouissance#La fête continue|La fête continue]]*) donne la **sensation** qu'il est intuable — mais ses **PV descendent** bel et bien : la vraie clé est de **réveiller les victimes** pour **éteindre les attractions**, **dénuder le Cœur** et **faire tomber la défense**. Fiche : [[La Réjouissance]].
+> Boss-puzzle de l'étape [[Le village en fête]] (Scénario 2). Le campement de plaisirs **la Belle Veillée** est en réalité un seul organisme : [[La Réjouissance]]. Sa défense (*[[La Réjouissance#La fête continue|La fête continue]]*) donne la **sensation** qu'il est intuable — mais il **perd bel et bien des `PV`** : la vraie clé est de **réveiller les victimes** pour **éteindre les attractions**, **dénuder le Cœur** et **faire tomber la défense**. Fiche : [[La Réjouissance]].
 
 # Contexte & déclencheur
 
@@ -19,15 +19,15 @@ La halte joyeuse vire au cauchemar quand les PJ ont accumulé **trop d'indices**
 # Monstres
 
 - **1 × [[La Réjouissance]]** — le village-monstre. **PV bien réels** (CON correcte), mais une **défense** (*La fête continue* : 1 [[Jeton Bénédiction]] + 1 [[Jeton Bouclier]] + petit soin/tour) qui encaisse presque tout : il faut **dénuder le Cœur** pour la faire **tomber**.
-- **[[Rieur|Les Rieurs]]** (sbires) — petites **excroissances** en masques grimaçants sur tiges de chair, qui poussent sur les fanons. **Ce ne sont pas des gens.** Sans attaque : on les **frappe** pour **reculer le jeton-mâchoire** (timer). La Réjouissance en **fait repousser 1 par round**.
+- **[[Rieur|Les Rieurs]]** (sbires) — petites **excroissances** en masques grimaçants sur tiges de chair, qui poussent sur les fanons. **Ce ne sont pas des gens.** Sans attaque : on les **frappe** pour **faire gagner 1 tour au jeton-mâchoire** (timer). La Réjouissance en **fait repousser 1 par round**.
 - Les **5 attractions** et leurs **victimes charmées** — pas des combattants à part, mais des **cibles à frapper** (réveiller), **PNJ de l'escorte** compris.
 
 # La mécanique-énigme (la boucle à briser)
 
 > [!note] Comment on gagne
-> 1. **La défense la rend quasi-intuable.** Tant qu'**au moins une attraction joue**, la Réjouissance se couvre chaque tour d'**1 [[Jeton Bénédiction]] + 1 [[Jeton Bouclier]]** et **se soigne un peu** (*La fête continue*) : la plupart des coups sont encaissés. On **peut** la blesser (ses PV descendent), mais lentement — pas par la force seule.
+> 1. **La défense la rend quasi-intuable.** Tant qu'**au moins une attraction joue**, la Réjouissance se couvre chaque tour d'**1 [[Jeton Bénédiction]] + 1 [[Jeton Bouclier]]** et **se soigne un peu** (*La fête continue*) : la plupart des coups sont encaissés. On **peut** la blesser (elle perd bien des `PV`), mais lentement — pas par la force seule.
 > 2. Une attraction est « active » tant qu'une **victime charmée** y reste (un PNJ charmé, ou un PJ tombé sous *Berceuse* — elle porte un [[Jeton Charme]]).
-> 3. **Réveiller** une victime = un **allié la frappe**. Chaque coup retire **1 [[Jeton Charme]]** ; sans charme, la victime se réveille et **son attraction s'éteint**. *(Oui : pour sauver un proche charmé, il faut le **cogner**.)* Le coup **inflige bien ses dégâts** à la victime → privilégier un **petit sort de dégâts** pour la libérer sans l'amocher.
+> 3. **Réveiller** une victime = un **allié la frappe**. Chaque coup lui fait **perdre 1 [[Jeton Charme]]** ; sans charme, la victime se réveille et **son attraction s'éteint**. *(Oui : pour sauver un proche charmé, il faut le **cogner**.)* Le coup **inflige bien ses dégâts** à la victime → privilégier un **petit sort de dégâts** pour la libérer sans l'amocher.
 > 4. Les **5 attractions éteintes** → le **Cœur de fête** se **dénude** sous la tente du banquet **et** la Réjouissance **ne peut plus lancer sa défense** : *La fête continue* tombe, plus de Bénédiction. On l'achève alors **à PV nus**.
 > 5. À son tour, si une victime redevient disponible, la Réjouissance **re-charme** (*Berceuse* / *Le festin se rallume*) → l'attraction se **rallume**, le Cœur se **renfouit** et **la défense revient**. **La fenêtre se referme.**
 
@@ -41,12 +41,12 @@ La halte joyeuse vire au cauchemar quand les PJ ont accumulé **trop d'indices**
 
 > [!danger] Le jeton-mâchoire (le timer)
 > Quand le masque tombe, le MJ annonce que **la place est une mâchoire qui se referme**, et il la **matérialise** : il prend un **[[Jeton PA]]** et le pose sur le **numéro de la fiche** de [[La Réjouissance]] (sa case de PA), réglé sur **6**.
-> - **À chaque tour du monstre** : le jeton **descend de 1** (la gueule se referme d'un cran).
-> - **Frapper un [[Rieur]]** : le jeton **recule de 1** (la gueule se rouvre), **sans jamais dépasser 6**.
-> - **À 0 → la gueule claque.** Tout PJ/PNJ encore sur la place subit un **coup fatal** (au choix MJ) **et** gagne **2 [[Jeton Charme]]** (avalé) : réveil (mort/ancrage) au prochain [[Fragment du monolithe|fragment]]. Si **tous** sont avalés → la Belle Veillée gagne (voir échec).
+> - **À chaque tour du monstre** : le jeton **perd 1 tour** (la gueule se referme un peu plus).
+> - **Frapper un [[Rieur]]** : le jeton **gagne 1 tour** (la gueule se rouvre), **sans jamais dépasser 6**.
+> - **À 0 le jeton expire → la gueule claque.** Tout PJ/PNJ encore sur la place subit un **coup fatal** (au choix MJ) **et** gagne **2 [[Jeton Charme]]** (avalé) : réveil (mort/ancrage) au prochain [[Fragment du monolithe|fragment]]. Si **tous** sont avalés → la Belle Veillée gagne (voir échec).
 
 > [!tip] La vraie tension (pour le MJ)
-> Chaque tour, le groupe **arbitre ses actions** entre **(1) réveiller les victimes** (frapper les charmés → éteindre les attractions), **(2) frapper les Rieurs** (faire reculer le jeton-mâchoire) et **(3) cogner le Cœur** une fois dénudé. Trop de réveils sans toucher un Rieur → la gueule claque. Trop de Rieurs → on n'expose jamais le Cœur. Idéal : **remonter le jeton-mâchoire près de 6** juste avant d'éteindre les dernières attractions, puis **tout donner sur le Cœur**.
+> Chaque tour, le groupe **arbitre ses actions** entre **(1) réveiller les victimes** (frapper les charmés → éteindre les attractions), **(2) frapper les Rieurs** (faire faire gagner 1 tour au jeton-mâchoire) et **(3) cogner le Cœur** une fois dénudé. Trop de réveils sans toucher un Rieur → la gueule claque. Trop de Rieurs → on n'expose jamais le Cœur. Idéal : **remonter le jeton-mâchoire près de 6** juste avant d'éteindre les dernières attractions, puis **tout donner sur le Cœur**.
 
 > [!danger] Conditions d'échec
 > - **La gueule claque** (jeton-mâchoire à 0) avec tous les PJ encore sur la place.

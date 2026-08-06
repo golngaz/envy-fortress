@@ -10,9 +10,9 @@ TODO préciser ici uniquement que ce jeton compte comme un extension de la défe
 
 Certaines attaques ne peuvent pas être défendues par un jeton bouclier.
 
-Le jeton, une fois utilisé est **supprimé**.
+Une fois utilisé, le jeton **expire** (même en cas d'échec critique).
 
-| 1D10 | Effet                  |
+| DD 1D10 | Effet                  |
 | ---- | ---------------------- |
 | 2+   | Réduit la valeur du dé |
 | 10   | Annule tous les dégâts |

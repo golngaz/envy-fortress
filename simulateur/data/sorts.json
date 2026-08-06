@@ -10,7 +10,7 @@
     "flavor": "Les sorts Hall Humettes sont très utiles pour faire de petits feux de camps sans trop se prendre la tête…",
     "table": {
       "entetes": [
-        "DD (1D10)",
+        "DD 1D10",
         "Dégâts",
         "Effet"
       ],
@@ -97,7 +97,7 @@
     "image": "",
     "table": {
       "entetes": [
-        "DD (1D4)",
+        "DD 1D4",
         "Dégâts",
         "Effet"
       ],
@@ -118,10 +118,10 @@
     "pa": "1",
     "de": "1D10",
     "image": "",
-    "desc": "Affaiblit un personnage cible. JdS (FOR+).",
+    "desc": "Affaiblit un personnage cible. JdS (+FOR).",
     "table": {
       "entetes": [
-        "DD (1D10)",
+        "DD 1D10",
         "Effet"
       ],
       "lignes": [
@@ -147,7 +147,7 @@
     "desc": "Protège un allié uniquement du prochain coup à son encontre. Valable un seul tour.",
     "table": {
       "entetes": [
-        "DD (1D10)",
+        "DD 1D10",
         "Effet 1",
         "Effet 2"
       ],
@@ -181,7 +181,7 @@
     "desc": "Soin polyvalent. En combat : soigne du montant du dé (2+). Hors combat : soigne l'équipe selon le DD (utilisable une seule fois entre deux Safe zones).",
     "table": {
       "entetes": [
-        "DD (1D10)",
+        "DD 1D10",
         "En combat",
         "Hors combat"
       ],
@@ -218,7 +218,7 @@
     "flavor": "Le mage force le flux magique au-delà de ses limites… au prix de brûlures internes et d'un risque de paralysie soudaine.",
     "table": {
       "entetes": [
-        "DD (1D10)(+INT)",
+        "DD 1D10(+INT)",
         "Effet",
         "Effet 2",
         "Effet 3"
@@ -255,7 +255,7 @@
     "image": "",
     "table": {
       "entetes": [
-        "DD (1D20)(+INT)",
+        "DD 1D20(+INT)",
         "Effet"
       ],
       "lignes": [
@@ -323,7 +323,7 @@
     "image": "",
     "table": {
       "entetes": [
-        "DD (1D4)(+CON)",
+        "DD 1D4(+CON)",
         "Effet",
         "Effet 2"
       ],
@@ -351,7 +351,7 @@
     "image": "",
     "table": {
       "entetes": [
-        "DD (1D4)",
+        "DD 1D4",
         "Effet",
         "Effet 2"
       ],
@@ -379,7 +379,7 @@
     "image": "",
     "table": {
       "entetes": [
-        "DD (1D4)(+CON)",
+        "DD 1D4(+CON)",
         "Effet"
       ],
       "lignes": [
@@ -401,7 +401,7 @@
     "flavor": "Le joueur se décide à esquiver cette attaque avec ses réflexes primitifs.",
     "table": {
       "entetes": [
-        "DD (1D20)(+VIT)",
+        "DD 1D20(+VIT)",
         "Effet"
       ],
       "lignes": [

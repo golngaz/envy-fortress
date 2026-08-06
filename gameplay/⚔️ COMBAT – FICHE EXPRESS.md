@@ -16,8 +16,8 @@
 ## 🧙 Tour Joueur
 
 ➕ +1 PA
-💥 Applique effets des jetons
-⬇️ Décale jetons (0 = retiré)  
+💥 Applique effets des jetons (+1 PA par jeton PA)
+⬇️ Chaque jeton perd 1 tour (0 = expire · **P** ne se décompte pas)  
 🎬 **1 action**
 
 ### 🎬 Actions (1)
@@ -35,6 +35,8 @@
 ---
 
 ## 👹 Tour Ennemi
+
+💥 Effets de ses jetons, puis ⬇️ chacun perd 1 tour
 
 🎯 Cible :
 - 🎲 normal = aléatoire

@@ -6,7 +6,7 @@ S'il le décident, ils peuvent, dans le désordre
 
 ## Se reposer
 
-Il récupèrent tous leurs points de vies (même les personnages en *phase de progression*\*) et remettent leurs points de [[Shell Control]] à 0.
+Ils **regagnent tous leurs `PV`** (même les personnages en *phase de progression*\*) et remettent leurs points de [[Shell Control]] à 0.
 
 C'est aussi ici qu'ils peuvent distribuer leurs statistiques gagnées via les gains de niveaux, et ainsi, décider de .
 

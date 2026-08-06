@@ -7,15 +7,18 @@ Correspond à une esquive/annulation du sort reçu, toutes les attaques ne peuve
 Un JdS s'effectue toujours avec **1D20**, sauf indication contraire, et y ajoute son **modificateur de statistique**. et un degré de difficulté (DD) annoncé sur l'attaque, le statut ou autre. Si le dé atteint la valeur ou +, le jet de sauvegarde est une réussite.
 
 > [!tip] Exemple
-> Les JdS sont noté comme tel : **JdS(CON+)(DD4)**
+> Les JdS sont noté comme tel : **JdS(CON+)(DD4)** (ou [[Jet de réflexe (VIT)]] par exemple)
 > Ici un personnage ayant 4 en CON+ jette le dé, s'il obtient un 2, il y ajoute 4 et obtient alors 6. On dit qu'il réussit sont jet de sauvegarde
 >
 > Si le joueur obtient 1, il a forcément raté son JdS (**échec critique**)
 >
-> pour **JdS(VIT+)**
-> Le joueur qui a VIT+2 jette le dé 20. S'il obtient 7, il y ajoute 2, il a donc fait 9, ce qui représente un **échec de JdS** (il fallait obtenir 10)
+> pour **JdS (+VIT)** (donc 1D20, DD10)
+> Le joueur qui a **+VIT de 2** jette le dé 20. S'il obtient 7, il y ajoute 2, il a donc fait 9, ce qui représente un **échec de JdS** (il fallait obtenir 10)
 
-Si le modificateur est négatif, on ne peut pas aller en dessous de 0.
+Si le modificateur est négatif, le total d'un **JdS** ne peut pas descendre en dessous de 0.
+
+> [!warning] Uniquement pour les JdS
+> Cette limite vaut **pour les jets de sauvegarde**. Les jets de **sorts, d'attaques et de défense en combat** ne sont **pas** des JdS mais une **mécanique propre au combat** : leurs modificateurs s'y appliquent **toujours**, y compris quand ils font passer le total en négatif. Cf. [[Combat]].
 ## Echec critique
 
 > [!warning] Portée — l'échec critique ne concerne **que les Jets de sauvegarde**

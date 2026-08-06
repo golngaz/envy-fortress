@@ -2,7 +2,7 @@
 joueur: visible
 ---
 
-Les PJ remettent les [[Point d'action|PA]] à zéro. Les points de vies ne changent pas en dehors des combats, donc ils gardent ce qu'ils avaient, de même pour les points de [[Shell Control]]. La [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] est réinitialisé sur la première case.
+Les PJ remettent les [[Point d'action|PA]] à zéro. Les PJ ne perdent ni ne gagnent de `PV` en dehors des combats, donc ils gardent ce qu'ils avaient, de même pour les points de [[Shell Control]]. La [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] est réinitialisée sur la première case.
 
 # Points d'action
 
@@ -22,7 +22,7 @@ Le tour commence avec les déplacements. Voir [[Système de Vitesse (Roue d’In
 
 1. Le joueur gagne +1 PA
 2. Le joueur applique les effets des différents jetons de statuts (dégâts, altérations, températures, etc.). Ainsi que les bonus lui permettant de gagner des PA ou autre gains. On applique les effets dans l'ordre désiré par le joueur.
-3. Il décale les jetons sur la fiche d'un tour en dessous pour chaque jeton (on dit qu'il **réduit de 1 le jeton**). (Retire le jeton, lorsqu'il arrive à 0).
+3. Il **décompte ses jetons** : chacun **perd 1 tour** (on le décale d'une colonne sur la piste de durée de la fiche). Un jeton qui atteint 0 **expire** — on le retire. Les jetons posés sur la case **Permanent (P)** ne perdent jamais de tour. Cf. [[Jetons et statuts]].
 4. Il peut effectuer une [[#Action]]. et une [[#Action bonus]], dans l'ordre qu'il souhaite.
 
 #### Action
@@ -42,15 +42,18 @@ Le joueur peut aussi utiliser son sort de [[Shell Control]] s'il consomme les 10
 
 Le joueur peut utiliser un des 6 sorts équipés afin d'attaquer un ennemi préalablement désigné par le joueur. Le joueur **dépense le coût en PA** du sort à utiliser (ou autres conditions).
 Il est nécessaire de regarder les conditions éventuelles du sort, chaque sort est unique.
-Généralement il est nécessaire de lancer un dé, le dé à prendre est précisé dans la première case. On ajoute le modificateur si précisé (exemple : **1D20(+INT)**), signifie qu'on lance un dé 20 et on y ajoute le modificateur de `INT`). Puis l'on regarde dans chaque ligne les effets à appliquer selon le résultat obtenu. Sur 4+ on applique l'effet de la ligne si on obtient 4 ou +.
+Généralement il est nécessaire de lancer un dé, le dé à prendre est précisé dans la première colonne de la table, en en-tête, sous la forme **`DD 1D20(+INT)`** : on lance un dé 20 et on y ajoute le modificateur de `INT`. Le modificateur est facultatif (`DD 1D10` = 1D10 sans modificateur), et plusieurs dés peuvent être demandés (`DD 1D6+1D4(+CTRL)` = on lance 1D6 **et** 1D4, on additionne, puis on ajoute `+CTRL`). Puis l'on regarde dans chaque ligne les effets à appliquer selon le résultat obtenu : sur `4+` on applique l'effet de la ligne si le total atteint 4 ou plus.
 Lorsqu'un effet est présent sous un autre effet, dans la même colonne. On ignore alors les autres lignes. (généralement, un sort cumule des effets en + ou fait grossir les "conséquences").
 
 Si le résultat d'un sort est négatif ou "ne fait rien". Le cout en PA aura quand même été dépensé et ne peut être remboursé.
 
 Les modificateurs de sorts doivent **toujours** s'appliquer (même en négatif !).
 
-> [!warning] Pas d'échec critique sur les sorts et attaques
-> Lancer un sort (ou une attaque) est un **jet de dé de résolution** : on lit le **tableau** du sort, ce n'est **pas un [[Jet de sauvegarde|JdS]]**. Il n'y a donc **pas d'échec critique** ici — un 1 donne simplement la **ligne la plus basse** du tableau, et les **modificateurs s'appliquent toujours** (cf. ci-dessus, même en négatif). L'échec critique reste **réservé aux JdS** (et aux jets de réflexe, observation, etc., qui en sont).
+> [!info] Un jet de combat n'est pas un [[Jet de sauvegarde|JdS]]
+> Les jets de **sorts, d'attaques et de défense** faits pendant un combat sont une **mécanique propre au combat**, pas des jets de sauvegarde : ils gardent leur modificateur **même négatif**, et le total peut donc tomber **à 0 ou en dessous** (le sort ne fait alors rien, et les PA restent dépensés). La règle du **plancher à 0** ne concerne que les **JdS**, qui restent dus quand un sort en demande un.
+
+> [!warning] Echec critique
+> Si un joueur obtient 1, c'est un échec critique, ce qui signifie qu'on **ne prends pas compte des modificateurs** dans ce cas là.
 
 ##### Sorts passifs
 
@@ -93,7 +96,7 @@ chaque ligne remplace la précédente sur **la même colonne**. Si la case est v
 > [!example]
 > 
 > 
-> | DD (1D20) | Effet              | Effet 2      | Effet 3     |
+> | DD 1D20 | Effet              | Effet 2      | Effet 3     |
 > |-----------|--------------------|---------------------------|-------------|
 > | 5+        | Bloque le nombre   |                           |             |
 > | 8+        | Bloque le nombre   | 1 Brûlure à l'attaquant   |             |
@@ -109,7 +112,7 @@ chaque ligne remplace la précédente sur **la même colonne**. Si la case est v
 
 1. L'ennemi attaque un joueur aléatoirement en [[Mode normal]]. C'est le MJ qui choisie la meilleure décision d'après lui en [[Mode difficile]].
 2. L'ennemi lance un dé pour déterminer une attaque s'il en a plusieurs (attaque avec son arme ou sort, le choix est précisé sur la fiche du monstre). S'il n'en a qu'une, il l'utilise à chaque tour.
-	* Si le joueur est touché, il applique les altérations d'état **s'il y en a** en posant le jeton correspondant dans le tableau "Etat" dans la fiche de personnage, sur la ligne correspondante au nombre de tours à appliquer. (Certaines altérations nécessiteront des jets de dés).
+	* Si le joueur est touché, il applique les altérations d'état **s'il y en a** en posant le jeton correspondant sur la **piste de durée** de sa fiche de personnage, sur la colonne correspondant au **nombre de tours** à appliquer (ou sur **Permanent (P)** si le jeton ne se décompte pas). (Certaines altérations nécessiteront des jets de dés).
 	* Si le joueur n'est pas touché car il a bloqué/esquivé/réduit 100% des dégâts, les altérations ne s'appliquent généralement pas, sauf si précisé. Dans le cas des attaques bloqués, cela dépends des types d'[[Altérations.base|Altérations]].
 
 3. Si le joueur ciblé est attaqué par une attaque ou un sort, il **peut** maintenant utiliser son sort spécial de défense. Certains sorts possèdent des [[Jet de sauvegarde|Jets de sauvegardes]] à réussir afin d'éviter un sort, le joueur **peut** annuler l'effet d'un sort s'il réussi son jet.
@@ -125,7 +128,7 @@ Les joueurs ne peuvent pas quitter librement un combat en cours. Mais un combat 
 > - **le MJ le décide**.
 >
 > **Trêve** (les deux camps renoncent) : le combat s'arrête aussitôt, on repasse en temps réel et on applique la fin de combat habituelle.
-> **Fuite** (un seul personnage) : déclarée à son tour. Hors de portée de tout ennemi → il part sans jet ; sinon, **JdS (VIT+)** pour rompre le contact (échec = tour perdu, il reste engagé). Un ennemi peut le poursuivre ou le laisser filer.
+> **Fuite** (un seul personnage) : déclarée à son tour. Hors de portée de tout ennemi → il part sans jet ; sinon, **JdS (+VIT)** pour rompre le contact (échec = tour perdu, il reste engagé). Un ennemi peut le poursuivre ou le laisser filer.
 
 Un combat peut débuter sans que tous les joueurs y participent. Les joueurs absents sont tout de même représentés sur la [[Système de Vitesse (Roue d’Initiative)|Roue d'initiative]] et se déplacent normalement selon leurs statistiques de [[Vitesse (VIT)]]. Ils ne peuvent cependant ni être ciblés, ni attaquer. Lorsque c'est leur tour dans le combat, ils peuvent interagir avec l'environnement extérieur au combat pour une séquence d'actions équivalant à une dizaine de secondes environ — c'est le MJ qui tranche en cas de doute.
 

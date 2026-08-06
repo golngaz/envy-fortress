@@ -38,7 +38,7 @@ window.DB.monstres = [
       {
         nom: "Coup de boule (FOR)", de: "1D20",
         table: {
-          entetes: ["DD (1D20)", "Attaque", "Effet"],
+          entetes: ["DD 1D20", "Attaque", "Effet"],
           lignes: [
             ["2+", "Dégâts du dé", "—"],
             ["15+", "Dégâts du dé +5", "Brûle la cible"],
@@ -49,7 +49,7 @@ window.DB.monstres = [
       {
         nom: "Feu Infernal", de: "1D4",
         table: {
-          entetes: ["DD (1D4)", "Effet", "JdS"],
+          entetes: ["DD 1D4", "Effet", "JdS"],
           lignes: [["2+", "Dégât du dé + 2 Brûlures 🔥", "CON DD10 +INT"]]
         }
       }
@@ -57,7 +57,7 @@ window.DB.monstres = [
     defense: {
       nom: "Tu as osé", de: "1D4",
       table: {
-        entetes: ["DD (1D4)", "Dégât", "Effet", "JdS"],
+        entetes: ["DD 1D4", "Dégât", "Effet", "JdS"],
         lignes: [["1+", "Dégâts du dé", "Inflige une brûlure 🔥", "CON"]]
       }
     },

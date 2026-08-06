@@ -13,10 +13,10 @@ VOL: 3
 
 Il joint les mains et prie. **Aucun dégât** — il ne *peut* pas blesser.
 
-| DD (1D10) | Effet                                                                                                                                                                                                 |
+| DD 1D10 | Effet                                                                                                                                                                                                 |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1+        |                                                                                                                                                                                                       |
-| 5+        | Frapper un homme pieux qui ne se défense pas fait vaciller l'esprit des PJ, ils doivent tous réussir un **JdS [[Jet de détermination (VOL)\|VOL]]**. Chaque échec donne un [[Jeton affaiblissement]]. |
+| 5+        | Frapper un homme pieux qui ne se défense pas fait vaciller l'esprit des PJ, ils doivent tous réussir un **[[Jet de détermination (VOL)]]**. Chaque échec donne un [[Jeton affaiblissement]]. |
 
 # Défense
 
@@ -24,7 +24,7 @@ Il joint les mains et prie. **Aucun dégât** — il ne *peut* pas blesser.
 
 Il se recroqueville, mains jointes, tête baissée.
 
-| DD (1D10) | Effet                                                                               |
+| DD 1D10 | Effet                                                                               |
 | --------- | ----------------------------------------------------------------------------------- |
 | 6+        | Il se protège instinctivement : **réduit les dégâts de moitié** (arrondi supérieur) |
 

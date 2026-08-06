@@ -35,4 +35,4 @@ Miguel avait sans doute déjà croisé ce genre de promesse *avant* le drame. C'
 
 L'ironie est cruelle. La phrase qu'il n'a jamais entendue — *« ce n'est qu'une reproduction qui s'en approche »* — est exactement le **doute** qui le dévore aujourd'hui face à [[Les incarnés|ses incarnés]] (voir [[Le Magicien]]). Il a méprisé l'imitation sans savoir que l'émission n'avait jamais promis autre chose ; et il ne pourra jamais être certain que son propre miracle vaut mieux qu'une copie.
 
-Il a voulu un ordinateur si vaste, si puissant qu'il n'abriterait pas une imitation mais l'**être réel** : ce petit PC du reportage est devenu une forteresse, un monde, un monolithe. Et la question reste, intacte, au cœur de la machine.
+Il a voulu un ordinateur si vaste, si puissant qu'il n'abriterait pas une imitation mais l'**être réel** : ce petit PC du reportage est devenu une forteresse, un monde, un monolithe. Et la question reste, intacte, au cœur de la simulation.

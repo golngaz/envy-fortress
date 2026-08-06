@@ -19,7 +19,7 @@ Créature d'acier hérissée de lames, surgie hors du temps, à la fois bourreau
 
 ### Le TechnoCore & la vérité-machine
 Sous la religion et le merveilleux, une **machine** : IA, réseau, réalité fabriquée que les habitants prennent pour naturelle.
-→ Inspire le secret central : la forteresse **est une machine**, le [[Le Magicien|Magicien]] un « dieu » qui n'en est pas un, [[Shell Access]] = l'accès au système.
+→ Inspire le secret central : la forteresse **est une simulation** (où tout est bien réel sur place), le [[Le Magicien|Magicien]] un « dieu » qui n'en est pas un, [[Shell Access]] = l'accès au système.
 
 ### Ton & narration
 Vérité dévoilée par **fragments**, beauté triste, merveilleux qui cache de la SF.

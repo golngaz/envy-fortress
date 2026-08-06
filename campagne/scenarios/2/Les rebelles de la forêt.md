@@ -31,11 +31,11 @@ Campement mobile, sobre, organisé en **cercle** (pas de chef au centre, pas d'e
 > [!quote] Sur Hector (sans avouer le lien de sang)
 > « L'Empereur ne se bat pas comme un homme : il se bat comme un orgueil. On ne le perce pas avec une lame — on le perce avec un miroir. » *(un temps)* « Aidez-nous, et je vous montrerai la porte du bas. »
 
-> [!quote] S'ils percent son secret (très bons jets — JdS INT+ et CTRL+)
+> [!quote] S'ils percent son secret (très bons jets — JdS +INT et +CTRL)
 > *(long silence)* « …Hector Sombreval est mon père. J'ai posé une question de trop, un soir, devant sa cour. Le lendemain, mon nom n'existait plus. » *(il pose son outil)* « Maintenant vous savez. Servez-vous-en bien, ou pas du tout. »
 
 > [!info] Information verrouillée (rappel)
-> Lui arracher l'aveu qu'il est le **fils d'Hector** demande de très bons scores et des questions directes : **JdS (INT+)** et **JdS (CTRL+)**. Cet aveu ouvre : son histoire complète, sa connaissance intime de l'Empire, et sa pleine coopération.
+> Lui arracher l'aveu qu'il est le **fils d'Hector** demande de très bons scores et des questions directes : **JdS (+INT)** et **JdS (+CTRL)**. Cet aveu ouvre : son histoire complète, sa connaissance intime de l'Empire, et sa pleine coopération.
 
 Ce qu'Ilyan apporte aux joueurs :
 - La **carte politique** réelle de l'étage (forces, faiblesses, l'impôt qui saigne les villages, la folie croissante de l'Empereur).
