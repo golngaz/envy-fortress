@@ -26,7 +26,7 @@ window.DB.jetons = [
   {
     id: "bouclier", nom: "Bouclier", icone: "🛡️", couleur: "#3d8bff",
     negatif: false, max: 1, permanent: false, ignoreBouclier: false,
-    desc: "Dépensé AVANT une attaque défendable : 1D10 → 2+ réduit la valeur du dé, 10 annule tout. Supprimé après usage (même échec critique)."
+    desc: "Dépensé AVANT une attaque défendable : 1D10 → 2+ réduit la valeur du dé, 10 annule tout. Supprimé après usage."
   },
   {
     id: "fantomatique", nom: "Fantomatique", icone: "👻", couleur: "#39c5c0",

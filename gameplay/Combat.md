@@ -49,8 +49,8 @@ Si le résultat d'un sort est négatif ou "ne fait rien". Le cout en PA aura qua
 
 Les modificateurs de sorts doivent **toujours** s'appliquer (même en négatif !).
 
-> [!warning] Echec critique
-> Si un joueur obtient 1, c'est un échec critique, ce qui signifie qu'on **ne prends pas compte des modificateurs** dans ce cas là.
+> [!warning] Pas d'échec critique sur les sorts et attaques
+> Lancer un sort (ou une attaque) est un **jet de dé de résolution** : on lit le **tableau** du sort, ce n'est **pas un [[Jet de sauvegarde|JdS]]**. Il n'y a donc **pas d'échec critique** ici — un 1 donne simplement la **ligne la plus basse** du tableau, et les **modificateurs s'appliquent toujours** (cf. ci-dessus, même en négatif). L'échec critique reste **réservé aux JdS** (et aux jets de réflexe, observation, etc., qui en sont).
 
 ##### Sorts passifs
 

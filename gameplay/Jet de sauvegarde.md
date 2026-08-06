@@ -18,6 +18,10 @@ Un JdS s'effectue toujours avec **1D20**, sauf indication contraire, et y ajoute
 Si le modificateur est négatif, on ne peut pas aller en dessous de 0.
 ## Echec critique
 
+> [!warning] Portée — l'échec critique ne concerne **que les Jets de sauvegarde**
+> L'échec critique est une mécanique **réservée aux JdS**, ce qui inclut **tous les « jets » du jeu** ([[Jet de réflexe (VIT)|réflexe]], [[Jet d'observation (INT)|observation]], [[Jet de puissance (FOR)|puissance]], [[Jet de manipulation (CTRL)|manipulation]], [[Jet de détermination (VOL)|détermination]], [[Jet de persuasion (INT)|persuasion]], [[Jet de résistance (CON)|résistance]]…) : ce **sont** des JdS.
+> Il **ne s'applique pas** aux **jets de dés de résolution** (lancer d'un sort, d'une attaque, d'une défense, d'un [[Jeton Bouclier]]…). Sur ces **tableaux**, un 1 (ou le score minimal) n'est **pas** un échec critique : il donne simplement la **ligne la plus basse** du tableau, et les **modificateurs s'appliquent toujours**. Ces lancers s'équilibrent **par leurs tableaux** (paliers DD), pas par une règle d'échec critique.
+
 Lorsque l'on obtient le chiffre 1 sur n'importe quel dé, cela est toujours considéré comme un **échec critique**. Et ceci, quel que soit le modificateur à appliquer. On considère alors toujours le Jet de sauvegarde comme raté, et les modificateurs ne sont pas appliqués (on considère qu'on a fait 1).
 
 **Sur plusieurs dés**, l'échec critique correspond au **score minimal** du jet, c'est-à-dire **tous les dés sur leur plus petite face en même temps** (par ex. **2** sur 2D6, **3** sur 3D4). Seul ce résultat le plus bas possible est un échec critique — un total faible obtenu autrement n'en est pas un.
